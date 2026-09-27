@@ -1,0 +1,957 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#fefaff", "inverse-surface": "#2f3034", "on-primary": "#ffffff", "on-secondary": "#ffffff", "on-background": "#1a1b1f", "secondary-container": "#316bf3", "on-tertiary-fixed": "#0c006b", "surface-dim": "#dbd9df", "outline-variant": "#c1c6d6", "error": "#ba1a1a", "surface-container": "#efedf3", "tertiary-fixed-dim": "#c2c1ff", "secondary": "#0051d5", "on-error-container": "#93000a", "inverse-primary": "#abc7ff", "on-secondary-fixed-variant": "#003ea8", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#abc7ff", "on-primary-fixed": "#001b3f", "surface-container-low": "#f4f3f8", "on-surface": "#1a1b1f", "on-surface-variant": "#414753", "primary": "#0059b5", "secondary-fixed-dim": "#b4c5ff", "surface-container-highest": "#e3e2e7", "on-tertiary-fixed-variant": "#332dbc", "on-primary-container": "#fcfbff", "on-primary-fixed-variant": "#00458f", "on-secondary-container": "#fefcff", "background": "#faf8fe", "error-container": "#ffdad6", "surface-bright": "#faf8fe", "primary-container": "#0071e3", "primary-fixed": "#d7e2ff", "tertiary-fixed": "#e2dfff", "inverse-on-surface": "#f1f0f6", "tertiary": "#4a47d2", "surface-container-high": "#e9e7ed", "surface": "#faf8fe", "on-tertiary": "#ffffff", "tertiary-container": "#6462ec", "surface-tint": "#005cbb", "on-secondary-fixed": "#00174b", "on-error": "#ffffff", "secondary-fixed": "#dbe1ff", "outline": "#717785", "surface-variant": "#e3e2e7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1rem", "space-xl": "2rem", "space-md": "0.75rem", "space-lg": "1.25rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "display-lg-mobile": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "display-lg": ["Inter"], "mono-code": ["JetBrains Mono"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "19px", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "mono-code": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-semibold">Dogfood</span><span class="font-label-sm text-label-sm tracking-wider text-on-surface-variant uppercase font-medium">Organizer Suite</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span>Overview</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="events" href="#"><span class="material-symbols-outlined text-[18px]">event</span>Events</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="participants" href="#"><span class="material-symbols-outlined text-[18px]">group</span>Participants</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="teams" href="#"><span class="material-symbols-outlined text-[18px]">diversity_3</span>Teams</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="submissions" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span>Submissions</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="eligibility" href="#"><span class="material-symbols-outlined text-[18px]">verified</span>Eligibility</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="judges" href="#"><span class="material-symbols-outlined text-[18px]">gavel</span>Judges</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="judging" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span>Judging</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="normalization" href="#"><span class="material-symbols-outlined text-[18px]">tune</span>Normalization</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="results" href="#"><span class="material-symbols-outlined text-[18px]">leaderboard</span>Results</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="certificates" href="#"><span class="material-symbols-outlined text-[18px]">workspace_premium</span>Certificates</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="archive" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span>Archive</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span>Settings</a></nav></div></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container-low"><div class="flex items-center justify-between px-space-sm py-space-xs rounded bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)]"><span class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface font-medium"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Cluster OK</span><span class="font-mono-code text-mono-code text-on-surface-variant">99.98%</span></div><div class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant font-label-sm text-label-sm"><span>Docs &amp; API</span><span class="font-mono-code text-mono-code text-primary font-medium">v2.4-prod</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-shrink-0"><div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)] text-on-surface font-label-md text-label-md font-medium cursor-pointer hover:bg-surface-container-low transition-colors"><span>AI Agents World Cup 2025</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden xl:flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-high text-on-surface font-mono-code text-mono-code"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span>us-east-cluster · OK · 99.98%</span></div></div><div class="flex-1 max-w-xl mx-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px] pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-12 rounded-lg bg-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-[0_1px_3px_rgba(0,0,0,0.02)] transition-all" placeholder="Search telemetry, submissions, dossiers..." type="text"><kbd class="absolute right-2.5 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-label-sm">⌘K</kbd></div></div><div class="flex items-center gap-space-md flex-shrink-0"><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm py-1 pr-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)]"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-medium leading-none">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-0.5">Lead Organizer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Toolbar -->
+<div class="w-full bg-surface-container-high/60 backdrop-blur-md px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Preview State Simulator:</span>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest p-1 rounded-full shadow-sm">
+<button class="state-pill px-space-md py-1 rounded-full font-label-sm text-label-sm font-medium bg-primary text-on-primary transition-all shadow-xs" id="btn-state-default" onclick="switchState('default')">
+          Default (68% Pacing)
+        </button>
+<button class="state-pill px-space-md py-1 rounded-full font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-all" id="btn-state-complete" onclick="switchState('complete')">
+          Fully Complete (100%)
+        </button>
+<button class="state-pill px-space-md py-1 rounded-full font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-all" id="btn-state-unstarted" onclick="switchState('unstarted')">
+          Not Started (0%)
+        </button>
+<button class="state-pill px-space-md py-1 rounded-full font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-all" id="btn-state-shortfall" onclick="switchState('shortfall')">
+          Overdue Shortfall
+        </button>
+<button class="state-pill px-space-md py-1 rounded-full font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-all" id="btn-state-skeleton" onclick="switchState('skeleton')">
+          Loading Skeletons
+        </button>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-mono-code text-label-sm">
+<span class="inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Telemetry: Sync #4109</span>
+<span class="text-outline-variant">/</span>
+<span>Quorum: 3.00 ballots / project</span>
+</div>
+</div>
+<!-- Main View Container -->
+<div class="p-space-lg lg:p-space-xl flex flex-col gap-space-xl max-w-[1600px] mx-auto w-full">
+<!-- PAGE HEADER -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg tracking-tight text-on-surface font-semibold">Judging Progress</h1>
+<!-- Dynamic Overall Completion Pill -->
+<div class="flex items-center gap-1.5 px-space-md py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md font-medium shadow-xs" id="header-stat-chip">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span id="header-stat-chip-text">68% Complete · 231 of 340 evaluations submitted</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          AI Agents World Cup 2025 · Monitor jury completion, ballot coverage, and track-level pacing
+        </p>
+</div>
+<!-- Action Utilities -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-all shadow-sm font-label-md text-label-md font-medium active:scale-95" onclick="triggerToast('Ballot audit matrix exported to CSV')">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">file_download</span>
+<span>Export Ballot Audit (CSV)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-all shadow-sm font-label-md text-label-md font-medium active:scale-95" onclick="triggerToast('Automated nudge dispatched to 3 behind/unstarted jurors')">
+<span class="material-symbols-outlined text-[18px] text-tertiary">send</span>
+<span>Batch Nudge Reminders (3)</span>
+</button>
+<div class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-mono-code">Live Syncing (15s)</span>
+</div>
+</div>
+</div>
+<!-- DYNAMIC BANNER SLOT (Normal Alert / 100% Celebration / Overdue Emergency / Unstarted) -->
+<div class="w-full" id="banner-slot">
+<!-- Default Frosted Amber Action Card -->
+<div class="rounded-xl p-space-md lg:p-space-lg bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest to-surface-container-high/40">
+<div class="flex items-start md:items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">crisis_alert</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Attention Needed: Jury Quorum Gaps Detected</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+              3 judges haven't submitted their first ballot and 5 projects remain below the 3-juror quorum cutoff (Deadline in 2d 14h).
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0 self-end md:self-auto">
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-medium shadow-xs hover:bg-primary transition-all" onclick="triggerToast('Juror reminder broadcasts queued')">
+            Send Juror Nudge Email
+          </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md font-medium" onclick="triggerToast('Rebalancing 5 at-risk projects into active juror pools')">
+            Rebalance Under-allocated Projects
+          </button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="this.closest('#banner-slot').classList.add('hidden')" title="Dismiss">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SKELETON PLACEHOLDER (Hidden by default) -->
+<div class="hidden flex-col gap-space-xl animate-pulse" id="skeleton-container">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<div class="h-28 rounded-xl bg-surface-container-high"></div>
+<div class="h-28 rounded-xl bg-surface-container-high"></div>
+<div class="h-28 rounded-xl bg-surface-container-high"></div>
+<div class="h-28 rounded-xl bg-surface-container-high"></div>
+<div class="h-28 rounded-xl bg-surface-container-high"></div>
+</div>
+<div class="h-56 rounded-xl bg-surface-container-high"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-7 h-96 rounded-xl bg-surface-container-high"></div>
+<div class="lg:col-span-5 h-96 rounded-xl bg-surface-container-high"></div>
+</div>
+</div>
+<!-- MAIN DATA CONTENT -->
+<div class="flex flex-col gap-space-xl" id="content-container">
+<!-- TOP SUMMARY STRIP: 5 Cupertino Stat Cards -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wide font-medium">Expected Ballots</span>
+<span class="material-symbols-outlined text-[18px]">ballot</span>
+</div>
+<div class="my-space-xs">
+<span class="font-display-lg text-display-lg font-semibold text-on-surface tracking-tight" id="stat-total">340</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="font-mono-code text-on-surface font-medium">3.00</span> per project quorum
+          </span>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wide font-medium">Completed</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+</div>
+<div class="my-space-xs">
+<span class="font-display-lg text-display-lg font-semibold text-on-surface tracking-tight" id="stat-completed">231</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span id="stat-pace">+24 in last 2h (Active)</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wide font-medium">Remaining Ballots</span>
+<span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-semibold text-on-surface tracking-tight" id="stat-remaining">109</span>
+<span class="font-label-md text-label-md text-primary font-medium" id="stat-progress-pct">68%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" id="stat-progress-bar" style="width: 68%;"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wide font-medium">Not Yet Started</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">pending</span>
+</div>
+<div class="my-space-xs">
+<span class="font-display-lg text-display-lg font-semibold text-on-surface tracking-tight" id="stat-unstarted">3</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant ml-1 font-normal">Judges</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-medium w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            Awaiting 1st ballot
+          </span>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wide font-medium">Behind Schedule</span>
+<span class="material-symbols-outlined text-[18px] text-error">history_toggle_off</span>
+</div>
+<div class="my-space-xs">
+<span class="font-display-lg text-display-lg font-semibold text-on-surface tracking-tight" id="stat-behind">2</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant ml-1 font-normal">Judges</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-medium w-fit">
+            Past 48h milestone
+          </span>
+</div>
+</div>
+<!-- OVERALL PROGRESS VISUALIZATION CARD (Track / Chamber breakdown) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-semibold text-on-surface">Cohort Evaluation Completion</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Real-time ballot saturation mapped against technical evaluation tracks</span>
+</div>
+<!-- Segmented Tab Toggle -->
+<div class="inline-flex p-1 bg-surface-container rounded-lg self-start sm:self-auto">
+<button class="px-space-md py-1 rounded font-label-md text-label-md font-medium bg-surface-container-lowest text-on-surface shadow-xs transition-all" id="tab-track" onclick="toggleCohortView('track')">
+              By Track (Active)
+            </button>
+<button class="px-space-md py-1 rounded font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface transition-all" id="tab-chamber" onclick="toggleCohortView('chamber')">
+              By Chamber
+            </button>
+</div>
+</div>
+<!-- Track Visualization Rows -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-space-xl gap-y-space-md" id="cohort-track-view">
+<!-- Track 1 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low/70">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">code_blocks</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Autonomous Code Synthesis</span>
+</div>
+<span class="font-mono-code text-label-md font-semibold text-on-surface">82% <span class="text-on-surface-variant font-normal">(82/100)</span></span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden my-1">
+<div class="bg-secondary h-full rounded-full transition-all duration-700" style="width: 82%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-secondary font-medium"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>On Track</span>
+<span class="font-mono-code">18 ballots needed</span>
+</div>
+</div>
+<!-- Track 2 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low/70">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">security</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Deterministic Safety &amp; Guardrails</span>
+</div>
+<span class="font-mono-code text-label-md font-semibold text-on-surface">65% <span class="text-on-surface-variant font-normal">(52/80)</span></span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden my-1">
+<div class="bg-primary h-full rounded-full transition-all duration-700" style="width: 65%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-primary font-medium"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Normal Pace</span>
+<span class="font-mono-code">28 ballots needed</span>
+</div>
+</div>
+<!-- Track 3 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low/70">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">hub</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Multi-Tool &amp; Agentic RAG</span>
+</div>
+<span class="font-mono-code text-label-md font-semibold text-on-surface">70% <span class="text-on-surface-variant font-normal">(56/80)</span></span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden my-1">
+<div class="bg-tertiary h-full rounded-full transition-all duration-700" style="width: 70%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-tertiary font-medium"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>On Track</span>
+<span class="font-mono-code">24 ballots needed</span>
+</div>
+</div>
+<!-- Track 4 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low/70">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-error">memory</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Local / Edge LLM Deployment</span>
+</div>
+<span class="font-mono-code text-label-md font-semibold text-on-surface">51% <span class="text-on-surface-variant font-normal">(41/80)</span></span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden my-1">
+<div class="bg-outline text-error h-full rounded-full transition-all duration-700 bg-secondary" style="width: 51%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-on-surface-variant font-medium"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Behind Pace</span>
+<span class="font-mono-code text-error font-medium">39 ballots needed</span>
+</div>
+</div>
+</div>
+<!-- Alternate Chamber View (Toggled via JS) -->
+<div class="hidden grid-cols-1 md:grid-cols-3 gap-space-md" id="cohort-chamber-view">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Chamber Alpha (Core Arch)</span>
+<span class="font-mono-code text-label-md font-semibold">78%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">94 / 120 completed</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Chamber Beta (Safety / RedTeam)</span>
+<span class="font-mono-code text-label-md font-semibold">62%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 62%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">74 / 120 completed</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Chamber Gamma (Edge &amp; Infra)</span>
+<span class="font-mono-code text-label-md font-semibold">63%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 63%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">63 / 100 completed</span>
+</div>
+</div>
+<!-- Footer Metric / Velocity Note -->
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Estimated time to chamber quorum close: <strong class="text-on-surface font-medium">~18 hours</strong> at current juror pacing.</span>
+</div>
+<span class="font-mono-code text-label-sm text-on-surface-variant hidden sm:inline">Pacing standard: 1.25 ballots/hr/juror</span>
+</div>
+</div>
+<!-- TWO-PANEL WORKSPACE: (60% Juror Roster & Pacing / 40% Quorum Coverage Gaps) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANEL: Judge Roster & Pacing (Col 7) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm flex flex-col overflow-hidden">
+<!-- Panel Header -->
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md font-semibold text-on-surface">Juror Allocation &amp; Pacing</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Individual evaluation progress across 34 invited domain judges</p>
+</div>
+<!-- Search & Filter Controls -->
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-on-surface-variant text-[16px] pointer-events-none">filter_list</span>
+<select class="h-8 pl-8 pr-6 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer" id="judge-filter-select" onchange="filterJudgeList(this.value)">
+<option value="all">All Jurors (7 shown)</option>
+<option value="behind">Behind / Not Started</option>
+<option value="complete">Completed Only</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Judge List Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md font-medium">Juror / Affiliation</th>
+<th class="py-space-sm px-space-md font-medium">Progress</th>
+<th class="py-space-sm px-space-md font-medium">Status</th>
+<th class="py-space-sm px-space-md font-medium text-right">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y divide-transparent" id="judge-roster-tbody">
+<!-- Juror 1 -->
+<tr class="judge-row hover:bg-surface-container-low/60 transition-colors" data-status="ontrack">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md font-semibold flex-shrink-0">
+                        ER
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Dr. Elena Rostova</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Stanford AI Lab</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between font-mono-code text-label-sm">
+<span>7/10</span>
+<span class="text-primary font-medium">70%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 70%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>On Track
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container font-label-sm text-label-sm font-medium text-on-surface transition-colors" onclick="triggerToast('Viewing ballot dossier for Dr. Elena Rostova')">
+                      Dossier
+                    </button>
+</td>
+</tr>
+<!-- Juror 2 -->
+<tr class="judge-row hover:bg-surface-container-low/60 transition-colors" data-status="complete">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-label-md font-semibold flex-shrink-0">
+                        MV
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Marcus Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">KernelSec Systems</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between font-mono-code text-label-sm">
+<span>10/10</span>
+<span class="text-secondary font-medium">100%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-medium">
+<span class="material-symbols-outlined text-[14px]">check</span>Completed
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container font-label-sm text-label-sm font-medium text-on-surface transition-colors" onclick="triggerToast('Reviewing submitted ballots for Marcus Vance')">
+                      Review (10)
+                    </button>
+</td>
+</tr>
+<!-- Juror 3 -->
+<tr class="judge-row hover:bg-surface-container-low/60 transition-colors" data-status="behind">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-label-md font-semibold flex-shrink-0">
+                        AM
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Alex Mercer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">AlgoInt Labs</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between font-mono-code text-label-sm">
+<span>4/11</span>
+<span class="text-error font-medium">36%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 36%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>Behind (7 left)
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-medium hover:bg-primary transition-all" onclick="triggerToast('Nudge sent directly to Alex Mercer via Slack/Email')">
+                      Nudge Judge
+                    </button>
+</td>
+</tr>
+<!-- Juror 4 -->
+<tr class="judge-row hover:bg-surface-container-low/60 transition-colors" data-status="unstarted">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center font-label-md font-semibold flex-shrink-0">
+                        SC
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Sophia Chen</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lattice Compute</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between font-mono-code text-label-sm">
+<span>0/7</span>
+<span class="text-tertiary font-medium">0%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 0%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Not Started
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm font-medium hover:bg-tertiary/90 transition-all" onclick="triggerToast('Priority SMS/Email ping dispatched to Sophia Chen')">
+                      Urgent Ping
+                    </button>
+</td>
+</tr>
+<!-- Juror 5 -->
+<tr class="judge-row hover:bg-surface-container-low/60 transition-colors" data-status="complete">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-label-md font-semibold flex-shrink-0">
+                        RA
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Rachel Adams</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Anthropic Ecosystem Fellow</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between font-mono-code text-label-sm">
+<span>6/6</span>
+<span class="text-secondary font-medium">100%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-medium">
+<span class="material-symbols-outlined text-[14px]">check</span>Completed
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container font-label-sm text-label-sm font-medium text-on-surface transition-colors" onclick="triggerToast('Rachel Adams dossier downloaded')">
+                      Review (6)
+                    </button>
+</td>
+</tr>
+<!-- Juror 6 -->
+<tr class="judge-row hover:bg-surface-container-low/60 transition-colors" data-status="ontrack">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md font-semibold flex-shrink-0">
+                        PP
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Priya Patel</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DeepLogic</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between font-mono-code text-label-sm">
+<span>6/8</span>
+<span class="text-primary font-medium">75%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>On Track
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container font-label-sm text-label-sm font-medium text-on-surface transition-colors" onclick="triggerToast('Viewing dossier for Priya Patel')">
+                      Dossier
+                    </button>
+</td>
+</tr>
+<!-- Juror 7 -->
+<tr class="judge-row hover:bg-surface-container-low/60 transition-colors" data-status="behind">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-label-md font-semibold flex-shrink-0">
+                        KT
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Dr. Kenjiro Takahashi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tokyo Tech Research</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex justify-between font-mono-code text-label-sm">
+<span>2/8</span>
+<span class="text-error font-medium">25%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>Behind (6 left)
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-medium hover:bg-primary transition-all" onclick="triggerToast('Nudge sent to Dr. Kenjiro Takahashi')">
+                      Nudge Judge
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-low/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Showing 7 priority flagged jurors of 34 active</span>
+<button class="text-primary hover:underline font-medium" onclick="triggerToast('Loading full roster of 34 judges...')">View All 34 Jurors →</button>
+</div>
+</div>
+<!-- RIGHT PANEL: Project Quorum & Coverage Gaps (Col 5) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-md text-headline-md font-semibold text-on-surface">Projects Below Quorum</h2>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">5 At Risk</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Every project requires a minimum quorum of <strong>3 completed ballots</strong> before entering Normalization.
+              </p>
+</div>
+</div>
+<!-- Project Cards List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Project 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">zkEval Protocol</span>
+<span class="font-mono-code text-label-sm text-on-surface font-medium bg-surface-container-highest px-2 py-0.5 rounded">2 of 3 Ballots</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Team: TraceProof</span>
+<span class="text-error font-medium">Needs 1 evaluation</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last ballot: 42m ago</span>
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-medium hover:bg-primary transition-all" onclick="triggerToast('Backup juror assigned to zkEval Protocol')">
+                  Assign Backup Juror
+                </button>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">MicroJail Security</span>
+<span class="font-mono-code text-label-sm text-error font-medium bg-error-container px-2 py-0.5 rounded">1 of 3 Ballots</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Team: SecureRuntime</span>
+<span class="text-error font-medium">Needs 2 evaluations (1 overdue)</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-error">Juror overdue by 6 hours</span>
+<button class="px-space-sm py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-medium hover:bg-secondary/90 transition-all" onclick="triggerToast('Expedited evaluation ticket created for MicroJail Security')">
+                  Expedite Review
+                </button>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">OmniSynth RAG</span>
+<span class="font-mono-code text-label-sm text-on-surface font-medium bg-surface-container-highest px-2 py-0.5 rounded">2 of 3 Ballots</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Team: SynthLabs</span>
+<span class="text-secondary font-medium">1 ballot in-draft</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Draft updated 8m ago</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container font-label-sm text-label-sm font-medium text-on-surface transition-colors" onclick="triggerToast('Auto-save sync ping sent to drafting juror')">
+                  Ping Drafter
+                </button>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">AutoAgent Kernel</span>
+<span class="font-mono-code text-label-sm text-error font-medium bg-error-container px-2 py-0.5 rounded">1 of 3 Ballots</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Team: AutoKernel</span>
+<span class="text-error font-medium">Needs 2 evaluations</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">In Chamber Gamma</span>
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-medium hover:bg-primary transition-all" onclick="triggerToast('2 available reserve jurors dispatched to AutoAgent Kernel')">
+                  Dispatch Reserves
+                </button>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">DeepMemory VectorFS</span>
+<span class="font-mono-code text-label-sm text-on-surface font-medium bg-surface-container-highest px-2 py-0.5 rounded">2 of 3 Ballots</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Team: MemoryScale</span>
+<span class="text-on-surface-variant font-medium">Needs 1 evaluation</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assigned to Dr. Kenjiro</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container font-label-sm text-label-sm font-medium text-on-surface transition-colors" onclick="triggerToast('Reassigned VectorFS ballot to standby juror pool')">
+                  Reassign Juror
+                </button>
+</div>
+</div>
+</div>
+<!-- Bottom Audit Note -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span><strong>32 Projects</strong> have reached full 3/3 ballot quorum.</span>
+</span>
+<a class="text-primary hover:underline font-medium inline-flex items-center gap-0.5" href="#" onclick="triggerToast('Opening Quorum Audit Log dialog...')">
+<span>View Audit Log</span>
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Feedback Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toast">
+<div class="bg-inverse-surface text-inverse-on-surface px-space-lg py-space-sm rounded-xl shadow-xl flex items-center gap-space-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-inverse-primary text-[18px]">info</span>
+<span id="toast-message">Action successful</span>
+</div>
+</div>
+</div>
+<script>
+  function triggerToast(msg) {
+    const toast = document.getElementById('toast');
+    const label = document.getElementById('toast-message');
+    if (!toast || !label) return;
+    label.textContent = msg;
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 2800);
+  }
+
+  function toggleCohortView(tab) {
+    const trackView = document.getElementById('cohort-track-view');
+    const chamberView = document.getElementById('cohort-chamber-view');
+    const tabTrack = document.getElementById('tab-track');
+    const tabChamber = document.getElementById('tab-chamber');
+
+    if (tab === 'track') {
+      trackView.classList.remove('hidden');
+      trackView.classList.add('grid');
+      chamberView.classList.add('hidden');
+      chamberView.classList.remove('grid');
+
+      tabTrack.className = "px-space-md py-1 rounded font-label-md text-label-md font-medium bg-surface-container-lowest text-on-surface shadow-xs transition-all";
+      tabChamber.className = "px-space-md py-1 rounded font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface transition-all";
+    } else {
+      chamberView.classList.remove('hidden');
+      chamberView.classList.add('grid');
+      trackView.classList.add('hidden');
+      trackView.classList.remove('grid');
+
+      tabChamber.className = "px-space-md py-1 rounded font-label-md text-label-md font-medium bg-surface-container-lowest text-on-surface shadow-xs transition-all";
+      tabTrack.className = "px-space-md py-1 rounded font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface transition-all";
+    }
+  }
+
+  function filterJudgeList(filter) {
+    const rows = document.querySelectorAll('.judge-row');
+    rows.forEach(row => {
+      const status = row.getAttribute('data-status');
+      if (filter === 'all') {
+        row.classList.remove('hidden');
+      } else if (filter === 'behind') {
+        if (status === 'behind' || status === 'unstarted') {
+          row.classList.remove('hidden');
+        } else {
+          row.classList.add('hidden');
+        }
+      } else if (filter === 'complete') {
+        if (status === 'complete') {
+          row.classList.remove('hidden');
+        } else {
+          row.classList.add('hidden');
+        }
+      }
+    });
+  }
+
+  function switchState(stateName) {
+    const buttons = document.querySelectorAll('.state-pill');
+    buttons.forEach(b => {
+      b.className = "state-pill px-space-md py-1 rounded-full font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-all";
+    });
+
+    const activeBtn = document.getElementById('btn-state-' + stateName);
+    if (activeBtn) {
+      activeBtn.className = "state-pill px-space-md py-1 rounded-full font-label-sm text-label-sm font-medium bg-primary text-on-primary transition-all shadow-xs";
+    }
+
+    const content = document.getElementById('content-container');
+    const skeleton = document.getElementById('skeleton-container');
+    const bannerSlot = document.getElementById('banner-slot');
+    bannerSlot.classList.remove('hidden');
+
+    if (stateName === 'skeleton') {
+      content.classList.add('hidden');
+      skeleton.classList.remove('hidden');
+      skeleton.classList.add('flex');
+      bannerSlot.classList.add('hidden');
+      return;
+    } else {
+      content.classList.remove('hidden');
+      skeleton.classList.add('hidden');
+      skeleton.classList.remove('flex');
+    }
+
+    const headerChipText = document.getElementById('header-stat-chip-text');
+    const statTotal = document.getElementById('stat-total');
+    const statCompleted = document.getElementById('stat-completed');
+    const statRemaining = document.getElementById('stat-remaining');
+    const statProgressPct = document.getElementById('stat-progress-pct');
+    const statProgressBar = document.getElementById('stat-progress-bar');
+    const statUnstarted = document.getElementById('stat-unstarted');
+    const statBehind = document.getElementById('stat-behind');
+
+    if (stateName === 'default') {
+      headerChipText.textContent = "68% Complete · 231 of 340 evaluations submitted";
+      statTotal.textContent = "340";
+      statCompleted.textContent = "231";
+      statRemaining.textContent = "109";
+      statProgressPct.textContent = "68%";
+      statProgressBar.style.width = "68%";
+      statUnstarted.textContent = "3";
+      statBehind.textContent = "2";
+
+      bannerSlot.innerHTML = `
+        <div class="rounded-xl p-space-md lg:p-space-lg bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest to-surface-container-high/40">
+          <div class="flex items-start md:items-center gap-space-md">
+            <div class="w-10 h-10 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-[24px]">crisis_alert</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Attention Needed: Jury Quorum Gaps Detected</span>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                3 judges haven't submitted their first ballot and 5 projects remain below the 3-juror quorum cutoff (Deadline in 2d 14h).
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-xs flex-shrink-0 self-end md:self-auto">
+            <button onclick="triggerToast('Juror reminder broadcasts queued')" class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-medium shadow-xs hover:bg-primary transition-all">
+              Send Juror Nudge Email
+            </button>
+            <button onclick="triggerToast('Rebalancing 5 at-risk projects into active juror pools')" class="px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md font-medium">
+              Rebalance Under-allocated Projects
+            </button>
+            <button onclick="this.closest('#banner-slot').classList.add('hidden')" class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" title="Dismiss">
+              <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          </div>
+        </div>
+      `;
+    } else if (stateName === 'complete') {
+      headerChipText.textContent = "100% Complete · All 340 ballots submitted";
+      statTotal.textContent = "340";
+      statCompleted.textContent = "340";
+      statRemaining.textContent = "0";
+      statProgressPct.textContent = "100%";
+      statProgressBar.style.width = "100%";
+      statUnstarted.textContent = "0";
+      statBehind.textContent = "0";
+
+      bannerSlot.innerHTML = `
+        <div class="rounded-xl p-space-md lg:p-space-lg bg-secondary-container text-on-secondary-container shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+          <div class="flex items-start md:items-center gap-space-md">
+            <div class="w-10 h-10 rounded-xl bg-surface-container-lowest/20 flex items-center justify-center flex-shrink-0 text-on-secondary-container">
+              <span class="material-symbols-outlined text-[26px]">celebration</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm font-semibold">Ballot Collection Complete: 100% Quorum Achieved</span>
+              <p class="font-body-md text-body-md opacity-90 mt-0.5">
+                All 340 ballots submitted and verified. Cohort is ready to proceed to Z-Score &amp; Bayesian Normalization.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-sm flex-shrink-0 self-end md:self-auto">
+            <a href="#" onclick="triggerToast('Transferring cohort to Normalization Suite...')" class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md font-semibold shadow-sm hover:bg-surface-container-low transition-all inline-flex items-center gap-1.5">
+              <span>Open Normalization Workspace</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      `;
+    } else if (stateName === 'unstarted') {
+      headerChipText.textContent = "Judging Window Not Open · 0 of 340 submitted";
+      statTotal.textContent = "340";
+      statCompleted.textContent = "0";
+      statRemaining.textContent = "340";
+      statProgressPct.textContent = "0%";
+      statProgressBar.style.width = "0%";
+      statUnstarted.textContent = "34";
+      statBehind.textContent = "0";
+
+      bannerSlot.innerHTML = `
+        <div class="rounded-xl p-space-md lg:p-space-lg bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+          <div class="flex items-start md:items-center gap-space-md">
+            <div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0 text-on-surface-variant">
+              <span class="material-symbols-outlined text-[24px]">lock_clock</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Evaluation Window Opens in 04h 22m</span>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                Submissions freeze at 18:00 UTC. Roster ballot assignments are currently locked in staging mode.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-xs flex-shrink-0 self-end md:self-auto">
+            <button onclick="triggerToast('Broadcasting rubric guidelines to 34 jurors')" class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-medium hover:bg-primary transition-all">
+              Broadcast Rubric Guide
+            </button>
+          </div>
+        </div>
+      `;
+    } else if (stateName === 'shortfall') {
+      headerChipText.textContent = "DEADLINE PASSED · 326 of 340 submitted (14 Missing)";
+      statTotal.textContent = "340";
+      statCompleted.textContent = "326";
+      statRemaining.textContent = "14";
+      statProgressPct.textContent = "95%";
+      statProgressBar.style.width = "95%";
+      statUnstarted.textContent = "0";
+      statBehind.textContent = "6";
+
+      bannerSlot.innerHTML = `
+        <div class="rounded-xl p-space-md lg:p-space-lg bg-error-container text-on-error-container shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+          <div class="flex items-start md:items-center gap-space-md">
+            <div class="w-10 h-10 rounded-xl bg-error text-on-error flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-[24px]">warning</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm font-semibold">Deadline Passed with 14 Unsubmitted Evaluations</span>
+              <p class="font-body-md text-body-md opacity-90 mt-0.5">
+                Judging cutoff reached 1 hour ago. 4 projects are missing 3-ballot quorum and cannot be normalized.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-xs flex-shrink-0 self-end md:self-auto">
+            <button onclick="triggerToast('Emergency lead organizer overrides assigned')" class="px-space-md py-2 rounded-lg bg-error text-on-error font-label-md text-label-md font-semibold hover:opacity-90 shadow-sm transition-all">
+              Trigger Emergency Reallocation
+            </button>
+            <button onclick="triggerToast('Deadline extended by 2 hours for active draft authors')" class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-error-container font-label-md text-label-md font-medium hover:bg-surface-container-low transition-all">
+              Extend Window +2h
+            </button>
+          </div>
+        </div>
+      `;
+    }
+  }
+</script></main></div></body></html>

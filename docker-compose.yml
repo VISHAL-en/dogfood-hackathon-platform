@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  dogfood-platform:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dogfood-portal
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DB_PATH=/app/data/dogfood.sqlite
+      - FRONTEND_DIST_PATH=/app/dist/public
+    volumes:
+      - dogfood_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  dogfood_data:
+    name: dogfood_data

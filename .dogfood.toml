@@ -1,0 +1,56 @@
+# DOGFOOD 2026 Official Acceptance Configuration
+# Evaluated by run.py against the local running application
+
+[server]
+base_url = "http://localhost:3000"
+
+[check_1]
+name = "Public gallery endpoint returns HTTP 200"
+endpoint = "/gallery"
+method = "GET"
+expected_status = 200
+
+[check_2]
+name = "Configured fixture project title appears in public gallery response"
+endpoint = "/gallery"
+method = "GET"
+expected_status = 200
+expected_project_title = "Fixture Project Alpha"
+
+[check_3]
+name = "Participant attempting to POST a submission to closed-event fixture receives a 4xx response"
+endpoint = "/submissions"
+method = "POST"
+headers = { "Authorization" = "Bearer dogfood_token_participant", "Content-Type" = "application/json" }
+body = { "eventId" = "event_closed_fixture", "title" = "Closed Submission Attempt", "shortDescription" = "Should fail", "description" = "Should fail because event is closed" }
+expected_status_min = 400
+expected_status_max = 499
+
+[check_4]
+name = "Judge A can access configured judge-scores route and receives HTTP 200"
+endpoint = "/judge/scores"
+method = "GET"
+headers = { "Authorization" = "Bearer dogfood_token_judge_a" }
+expected_status = 200
+
+[check_5]
+name = "Judge B attempting to access Judge A's peer scores receives HTTP 401 or 403"
+endpoint = "/judge/scores/peer"
+method = "GET"
+headers = { "Authorization" = "Bearer dogfood_token_judge_b" }
+expected_statuses = [401, 403]
+
+[check_6]
+name = "Participant attempting to access judge scores receives HTTP 401 or 403"
+endpoint = "/judge/scores"
+method = "GET"
+headers = { "Authorization" = "Bearer dogfood_token_participant" }
+expected_statuses = [401, 403]
+
+[check_7]
+name = "Organizer can access CSV export and receives HTTP 200, with first line containing a comma"
+endpoint = "/exports/scores.csv?eventId=event_dogfood_2026"
+method = "GET"
+headers = { "Authorization" = "Bearer dogfood_token_organizer" }
+expected_status = 200
+require_first_line_comma = true

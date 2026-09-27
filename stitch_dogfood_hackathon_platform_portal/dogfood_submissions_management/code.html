@@ -1,0 +1,1410 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed-dim":"#c2c1ff","outline":"#717785","secondary-fixed-dim":"#b4c5ff","secondary-container":"#316bf3","on-surface":"#1a1b1f","surface-tint":"#005cbb","on-tertiary-fixed":"#0c006b","surface-container-high":"#e9e7ed","on-error-container":"#93000a","error-container":"#ffdad6","surface-container-highest":"#e3e2e7","primary-container":"#0071e3","on-secondary":"#ffffff","surface":"#faf8fe","outline-variant":"#c1c6d6","tertiary":"#4a47d2","error":"#ba1a1a","on-error":"#ffffff","on-secondary-fixed":"#00174b","primary-fixed-dim":"#abc7ff","on-tertiary":"#ffffff","background":"#faf8fe","surface-dim":"#dbd9df","tertiary-fixed":"#e2dfff","inverse-surface":"#2f3034","on-primary":"#ffffff","on-background":"#1a1b1f","on-primary-fixed":"#001b3f","surface-variant":"#e3e2e7","inverse-primary":"#abc7ff","surface-container":"#efedf3","inverse-on-surface":"#f1f0f6","primary-fixed":"#d7e2ff","on-tertiary-fixed-variant":"#332dbc","on-primary-container":"#fcfbff","surface-container-low":"#f4f3f8","on-secondary-fixed-variant":"#003ea8","secondary":"#0051d5","surface-bright":"#faf8fe","tertiary-container":"#6462ec","on-tertiary-container":"#fefaff","on-primary-fixed-variant":"#00458f","surface-container-lowest":"#ffffff","on-secondary-container":"#fefcff","primary":"#0059b5","secondary-fixed":"#dbe1ff","on-surface-variant":"#414753"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-sm":"0.5rem","space-md":"0.75rem","margin-desktop":"3rem","space-lg":"1.25rem","space-xs":"0.25rem",margin:"1rem",gutter:"1rem","space-xl":"2rem","margin-tablet":"2rem","gutter-desktop":"1.5rem"},fontFamily:{"headline-md":["Inter"],"mono-code":["JetBrains Mono"],"body-md":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"],"display-lg-mobile":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"]},fontSize:{"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"mono-code":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"body-md":["13px",{lineHeight:"19px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.01em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.005em",fontWeight:"400"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"600"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 overflow-hidden"><div class="h-14 px-space-md flex items-center gap-space-sm bg-surface-container-lowest/80 backdrop-blur-md"><img alt="Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XFolziqjX2O3dIfh14x-0pksaympgFfP4_AHvWofl_NJ4aWB-bcIhJV87ZncKEY3qGSKoZ-lgovdenQDBhHa-EXUB0-p-vq5fwNG3WrVxSM4gg2JeG2n711UpoLXyVmrmxsNoTWjRpbhXhXfI7h7KpEoEFCJ97iiGNlaWheup3EvMx6RKOhEPMUQJNbzMqyvXDuYqJoBlviuPHWYJstuz94qCkbiefh8sCaRkklhnTmlJ_q80ber93ukl8"><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight truncate">Dogfood</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-medium">Organizer Suite</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-sm space-y-0.5"><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_1px_2px_rgba(0,113,227,0.2)] rounded-lg"><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="overview" href="#">Overview</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="events" href="#">Events</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="participants" href="#">Participants</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="teams" href="#">Teams</a><a aria-current="page" class="flex items-center px-space-md py-1.5 transition-colors bg-primary-container text-on-primary-container font-semibold shadow-[0_1px_2px_rgba(0,113,227,0.2)] rounded-lg" data-path="submissions" href="#">Submissions</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="eligibility" href="#">Eligibility</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="judges" href="#">Judges</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="judging" href="#">Judging</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="normalization" href="#">Normalization</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="results" href="#">Results</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="certificates" href="#">Certificates</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="archive" href="#">Archive</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="settings" href="#">Settings</a></nav></div></div><div class="p-space-sm bg-surface-container-low/60"><div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)] flex flex-col gap-1"><div class="flex items-center justify-between font-mono-code text-mono-code"><span class="flex items-center gap-1.5 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>Cluster OK</span><span class="font-medium text-on-surface">99.98%</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-0.5"><span>Docs &amp; API</span><span class="font-mono-code text-mono-code text-outline">v2.4-prod</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><button class="h-8 px-space-sm py-1 bg-surface-container-low hover:bg-surface-container-high text-on-surface rounded-lg transition-colors flex items-center gap-1.5 font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] text-primary">token</span><span class="font-semibold">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></button><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low font-mono-code text-mono-code text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>us-east-cluster</span><span>•</span><span class="text-primary font-medium">OK</span><span>•</span><span>99.98%</span></div></div><div class="flex items-center gap-space-md"><div class="relative w-64"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">search</span><input class="w-full h-8 pl-8 pr-8 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] transition-all" placeholder="Search telemetry, teams..." type="text"><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono-code text-[10px] text-on-surface-variant bg-surface-container-highest px-1 py-0.5 rounded leading-none">⌘K</span></div><div class="flex items-center gap-1.5"><button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors relative"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-2"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Lead Organizer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_1px_2px_rgba(0,89,181,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative pt-14 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Controller & Developer Harness -->
+<div class="bg-surface-container-low px-space-lg py-2 flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm shadow-[inset_0_-1px_0_rgba(0,0,0,0.05)]">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 font-mono-code font-semibold uppercase tracking-wider text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        Interactive Harness:
+      </span>
+<span class="hidden sm:inline text-on-surface-variant">Click states to simulate live desk operations:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-semibold shadow-sm transition-all hover:bg-surface-container-high" id="sim-btn-table" onclick="setState('table')">Table View</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" id="sim-btn-grid" onclick="setState('grid')">Grid View Mode</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" id="sim-btn-drawer" onclick="setState('drawer')">Dossier Drawer Open</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" id="sim-btn-selected" onclick="setState('selected')">Rows Selected (2)</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" id="sim-btn-missing" onclick="setState('missing')">Missing Submissions</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" id="sim-btn-empty" onclick="setState('empty')">Empty State</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" id="sim-btn-loading" onclick="setState('loading')">Loading Skeletons</button>
+</div>
+</div>
+<div class="p-space-lg lg:p-space-xl space-y-space-lg max-w-[1720px] mx-auto w-full">
+<!-- Header Block -->
+<div class="flex flex-col gap-space-md">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Events</a>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">AI Agents World Cup 2025</a>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="font-medium text-on-surface">Submissions</span>
+</nav>
+<!-- Title + Controls Row -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg font-semibold tracking-tight text-on-surface">Submissions</h1>
+<!-- Counter Pill -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-medium shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>29 of 34 teams submitted</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            AI Agents World Cup 2025 • Triage submission completeness, verify artifact digests, and monitor evaluation readiness
+          </p>
+</div>
+<!-- Action cluster -->
+<div class="flex flex-wrap items-center gap-2">
+<!-- View switcher segmented pill -->
+<div class="inline-flex p-0.5 rounded-xl bg-surface-container-high shadow-inner">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium shadow-sm transition-all" id="view-table-btn" onclick="setViewMode('table')">
+<span class="material-symbols-outlined text-[16px] text-primary">table_chart</span>
+<span>Table</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all" id="view-grid-btn" onclick="setViewMode('grid')">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+<span>Grid</span>
+</button>
+</div>
+<!-- Secondary button -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">ios_share</span>
+<span>Export CSV</span>
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_drop_down</span>
+</button>
+<!-- Primary intake button -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_1px_3px_rgba(0,89,181,0.25)] transition-all active:scale-[0.985]">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Manual Intake</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Stat Cards Strip (Frosted Cupertino Cards) -->
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-space-md">
+<!-- 1. Total Registered -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Registered Teams</span>
+<span class="material-symbols-outlined text-[18px] text-outline">group_work</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface leading-tight">34 Teams</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="text-primary font-mono-code font-medium">100%</span> cohort capacity
+          </div>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full w-full rounded-full"></div>
+</div>
+</div>
+<!-- 2. Submitted & Locked -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Submitted &amp; Locked</span>
+<span class="material-symbols-outlined text-[18px] text-primary">lock_clock</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface leading-tight">26 Filed</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="text-primary font-mono-code font-medium">76.5%</span> OCI &amp; repo frozen
+          </div>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full w-[76.5%] rounded-full"></div>
+</div>
+</div>
+<!-- 3. Draft In-Progress -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Drafts Active</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">edit_note</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface leading-tight">3 Drafts</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="text-tertiary font-medium">Active</span> push &lt; 4h ago
+          </div>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary h-full w-[25%] rounded-full"></div>
+</div>
+</div>
+<!-- 4. Not Started -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Missing Submissions</span>
+<span class="material-symbols-outlined text-[18px] text-error">warning</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface leading-tight flex items-baseline gap-2">
+<span>5 Missing</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-semibold">Triage</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="text-error font-medium">Needs organizer call</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-error h-full w-[14.7%] rounded-full"></div>
+</div>
+</div>
+<!-- 5. Evaluation Readiness -->
+<div class="col-span-2 md:col-span-1 p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Juror Readiness</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface leading-tight">24 / 29 Ready</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="text-on-surface-variant">5 pending verification</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full w-[82.7%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Filter & Toolbar Row -->
+<div class="p-space-sm rounded-2xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.04)] flex flex-col xl:flex-row xl:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-2 flex-1">
+<!-- Search with ⌘K -->
+<div class="relative min-w-[280px] flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[16px] text-outline">search</span>
+<input class="w-full h-9 pl-9 pr-9 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest shadow-[inset_0_1px_2px_rgba(0,0,0,0.03)] transition-all" id="submission-search" oninput="handleSearch(this.value)" placeholder="Search project name, team, repo slug, commit SHA..." type="text">
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-mono-code text-[11px] text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded">⌘K</span>
+</div>
+<!-- Track Filter -->
+<div class="relative">
+<select class="h-9 pl-3 pr-8 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md appearance-none cursor-pointer hover:bg-surface-container-high focus:outline-none transition-all" id="filter-track" onchange="applyFilters()">
+<option value="all">All Tracks (4)</option>
+<option value="autonomous">Autonomous Code</option>
+<option value="rag">Multi-Tool &amp; RAG</option>
+<option value="safety">Deterministic Safety</option>
+<option value="edge">Local / Edge LLM</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Submission Status Filter -->
+<div class="relative">
+<select class="h-9 pl-3 pr-8 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md appearance-none cursor-pointer hover:bg-surface-container-high focus:outline-none transition-all" id="filter-status" onchange="applyFilters()">
+<option value="all">All Statuses</option>
+<option value="submitted">Submitted (26)</option>
+<option value="draft">Draft (3)</option>
+<option value="not-started">Not Started (5)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Eligibility Status Filter -->
+<div class="relative">
+<select class="h-9 pl-3 pr-8 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md appearance-none cursor-pointer hover:bg-surface-container-high focus:outline-none transition-all" id="filter-eligibility" onchange="applyFilters()">
+<option value="all">All Eligibility</option>
+<option value="verified">Verified OCI</option>
+<option value="ebpf">eBPF Cleared</option>
+<option value="pending">Pending Review</option>
+<option value="waiver">Waiver Missing</option>
+<option value="disqualified">Disqualified</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Judging Status Filter -->
+<div class="relative">
+<select class="h-9 pl-3 pr-8 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md appearance-none cursor-pointer hover:bg-surface-container-high focus:outline-none transition-all" id="filter-judging" onchange="applyFilters()">
+<option value="all">All Judging</option>
+<option value="completed">Completed (5/5)</option>
+<option value="progress">In Progress</option>
+<option value="not-started">Not Started</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+<!-- Reset & Count indicator -->
+<div class="flex items-center justify-between xl:justify-end gap-3 px-2 py-1 text-on-surface-variant font-label-sm text-label-sm">
+<span id="results-count-label">Showing 1 – 8 of 34 submissions</span>
+<button class="text-primary hover:underline font-medium" onclick="resetFilters()">Reset</button>
+</div>
+</div>
+<!-- MAIN VIEW 1: MASTER DATA TABLE VIEW -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.02)] overflow-hidden" id="view-container-table">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider select-none">
+<th class="w-12 px-4 py-3.5 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer align-middle" id="master-checkbox" onchange="toggleSelectAll(this)" type="checkbox">
+</th>
+<th class="px-4 py-3.5 font-semibold">Project &amp; Summary</th>
+<th class="px-4 py-3.5 font-semibold">Team &amp; Roster</th>
+<th class="px-4 py-3.5 font-semibold">Track</th>
+<th class="px-4 py-3.5 font-semibold">Submission Status</th>
+<th class="px-4 py-3.5 font-semibold">Eligibility Verification</th>
+<th class="px-4 py-3.5 font-semibold">Juror Progress</th>
+<th class="px-4 py-3.5 font-semibold">Submitted (UTC)</th>
+<th class="w-10 px-4 py-3.5 text-center font-semibold"></th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md" id="submissions-tbody">
+<!-- Row 1: AgentBench Zero -->
+<tr class="submission-row hover:bg-surface-container-low/60 transition-colors group cursor-pointer" onclick="handleRowClick(event, 'AgentBench Zero')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" onchange="updateSelectedCount()" type="checkbox" value="sub-1">
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed flex items-center justify-center text-primary font-mono-code font-bold text-xs shrink-0 shadow-sm">
+                    AZ
+                  </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">AgentBench Zero</span>
+<span class="material-symbols-outlined text-[14px] text-outline hover:text-primary" title="Live Video Pitch Available">smart_display</span>
+<span class="material-symbols-outlined text-[14px] text-outline hover:text-primary" title="Github OCI Digest Validated">terminal</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-xs">Autonomous multi-file refactoring sandbox</p>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-on-surface">
+<span>Neural Vanguard</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high text-[10px] text-on-surface-variant uppercase font-mono-code">Capt</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-semibold flex items-center justify-center">ER</span>
+<span>Elena Rostova + 2</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed/60 text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Autonomous Code
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="inline-flex items-center gap-1.5 text-primary font-label-md text-label-md font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Submitted
+                  </span>
+<span class="font-mono-code text-[11px] text-outline">sha256:8b4ef2</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+                  Verified OCI
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Completed (5/5)</span>
+</div>
+<span class="font-mono-code text-[11px] text-primary">Avg 94.2 pts</span>
+</div>
+</td>
+<td class="px-4 py-3.5 font-mono-code text-[11px] text-on-surface-variant whitespace-nowrap">
+                Nov 12, 19:42 UTC
+              </td>
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<button class="w-7 h-7 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: OmniSynth RAG -->
+<tr class="submission-row hover:bg-surface-container-low/60 transition-colors group cursor-pointer" onclick="handleRowClick(event, 'OmniSynth RAG')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" onchange="updateSelectedCount()" type="checkbox" value="sub-2">
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary font-mono-code font-bold text-xs shrink-0 shadow-sm">
+                    OS
+                  </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">OmniSynth RAG</span>
+<span class="material-symbols-outlined text-[14px] text-outline hover:text-primary">smart_display</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-xs">Deterministic hybrid vector retriever</p>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-on-surface">
+<span>DeepLogic</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high text-[10px] text-on-surface-variant uppercase font-mono-code">Capt</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-semibold flex items-center justify-center">PP</span>
+<span>Priya Patel + 3</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed/60 text-on-secondary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Multi-Tool &amp; RAG
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="inline-flex items-center gap-1.5 text-primary font-label-md text-label-md font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Submitted
+                  </span>
+<span class="font-mono-code text-[11px] text-outline">sha256:3f1aa9</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">security</span>
+                  eBPF Cleared
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary">pending</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">In Progress (4/5)</span>
+</div>
+<span class="font-mono-code text-[11px] text-outline">80% ballots recorded</span>
+</div>
+</td>
+<td class="px-4 py-3.5 font-mono-code text-[11px] text-on-surface-variant whitespace-nowrap">
+                Nov 12, 21:10 UTC
+              </td>
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<button class="w-7 h-7 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: zkEval Protocol -->
+<tr class="submission-row hover:bg-surface-container-low/60 transition-colors group cursor-pointer" onclick="handleRowClick(event, 'zkEval Protocol')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" onchange="updateSelectedCount()" type="checkbox" value="sub-3">
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary font-mono-code font-bold text-xs shrink-0 shadow-sm">
+                    ZK
+                  </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">zkEval Protocol</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-mono-code">WIP</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-xs">Zero-knowledge agent proof validator</p>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-on-surface">
+<span>TraceProof</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-5 h-5 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed text-[10px] font-semibold flex items-center justify-center">CZ</span>
+<span>Chloe Zhang + 1</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed/60 text-on-tertiary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Deterministic Safety
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="inline-flex items-center gap-1.5 text-tertiary font-label-md text-label-md font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    Draft
+                  </span>
+<span class="font-mono-code text-[11px] text-outline">Edited 2h ago</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-outline">hourglass_empty</span>
+                  Pending Review
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">radio_button_unchecked</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Not Started (0/5)</span>
+</div>
+<span class="font-mono-code text-[11px] text-outline">Blocked by freeze</span>
+</div>
+</td>
+<td class="px-4 py-3.5 font-mono-code text-[11px] text-outline whitespace-nowrap">
+                —
+              </td>
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<button class="w-7 h-7 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: NanoEdge LLM -->
+<tr class="submission-row hover:bg-surface-container-low/60 transition-colors group cursor-pointer" onclick="handleRowClick(event, 'NanoEdge LLM')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" onchange="updateSelectedCount()" type="checkbox" value="sub-4">
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface font-mono-code font-bold text-xs shrink-0 shadow-sm">
+                    NE
+                  </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">NanoEdge LLM</span>
+<span class="material-symbols-outlined text-[14px] text-outline hover:text-primary">smart_display</span>
+<span class="material-symbols-outlined text-[14px] text-outline hover:text-primary">terminal</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-xs">Sub-100ms quantized inference on Raspberry Pi</p>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-on-surface">
+<span>MicroCore Labs</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant text-[10px] font-semibold flex items-center justify-center">KS</span>
+<span>Kenji Sato · Solo</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Local / Edge LLM
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="inline-flex items-center gap-1.5 text-primary font-label-md text-label-md font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Submitted
+                  </span>
+<span class="font-mono-code text-[11px] text-outline">sha256:a19ce4</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+                  Verified OCI
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Completed (5/5)</span>
+</div>
+<span class="font-mono-code text-[11px] text-primary">Avg 91.0 pts</span>
+</div>
+</td>
+<td class="px-4 py-3.5 font-mono-code text-[11px] text-on-surface-variant whitespace-nowrap">
+                Nov 12, 18:05 UTC
+              </td>
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<button class="w-7 h-7 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: MicroJail Security (Missing) -->
+<tr class="submission-row bg-error-container/10 hover:bg-error-container/20 transition-colors group cursor-pointer" onclick="handleRowClick(event, 'MicroJail Security')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" onchange="updateSelectedCount()" type="checkbox" value="sub-5">
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-error-container flex items-center justify-center text-error font-mono-code font-bold text-xs shrink-0 shadow-sm">
+                    MJ
+                  </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">MicroJail Security</span>
+<span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container text-[10px] font-semibold">MISSING</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-xs">eBPF kernel containment for rogue tool loops</p>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-on-surface">
+<span>SecureRuntime</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-5 h-5 rounded-full bg-error-container text-on-error-container text-[10px] font-semibold flex items-center justify-center">JB</span>
+<span>Jordan Bell + 1</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed/60 text-on-tertiary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Deterministic Safety
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="inline-flex items-center gap-1.5 text-error font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                    Not Started
+                  </span>
+<span class="font-mono-code text-[11px] text-error font-medium">Missing submission</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">report</span>
+                  Waiver Missing (1)
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">radio_button_unchecked</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Not Started (0/5)</span>
+</div>
+<span class="font-mono-code text-[11px] text-outline">No artifact to grade</span>
+</div>
+</td>
+<td class="px-4 py-3.5 font-mono-code text-[11px] text-outline whitespace-nowrap">
+                —
+              </td>
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<button class="w-7 h-7 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: HyperScale Eval -->
+<tr class="submission-row hover:bg-surface-container-low/60 transition-colors group cursor-pointer" onclick="handleRowClick(event, 'HyperScale Eval')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" onchange="updateSelectedCount()" type="checkbox" value="sub-6">
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-outline font-mono-code font-bold text-xs shrink-0 shadow-sm">
+                    HE
+                  </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">HyperScale Eval</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-xs">Distributed synthetic evaluation harness</p>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-on-surface">
+<span>HyperScale Agents</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant text-[10px] font-semibold flex items-center justify-center">AM</span>
+<span>Alex Mercer + 3</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed/60 text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Autonomous Code
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="inline-flex items-center gap-1.5 text-tertiary font-label-md text-label-md font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    Draft
+                  </span>
+<span class="font-mono-code text-[11px] text-outline">Freeze appeal pending</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container/60 text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">block</span>
+                  Disqualified (COI)
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">block</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Disqualified</span>
+</div>
+<span class="font-mono-code text-[11px] text-outline">Lead mentor conflict</span>
+</div>
+</td>
+<td class="px-4 py-3.5 font-mono-code text-[11px] text-outline whitespace-nowrap">
+                —
+              </td>
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<button class="w-7 h-7 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 7: RAG Core Pipeline -->
+<tr class="submission-row hover:bg-surface-container-low/60 transition-colors group cursor-pointer" onclick="handleRowClick(event, 'RAG Core Pipeline')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" onchange="updateSelectedCount()" type="checkbox" value="sub-7">
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary font-mono-code font-bold text-xs shrink-0 shadow-sm">
+                    RC
+                  </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">RAG Core Pipeline</span>
+<span class="material-symbols-outlined text-[14px] text-outline hover:text-primary">smart_display</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-xs">Real-time context window compression</p>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-on-surface">
+<span>OmniTool Collective</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-semibold flex items-center justify-center">DK</span>
+<span>David Kim + 2</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed/60 text-on-secondary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Multi-Tool &amp; RAG
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="inline-flex items-center gap-1.5 text-primary font-label-md text-label-md font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Submitted
+                  </span>
+<span class="font-mono-code text-[11px] text-outline">sha256:7e0b23</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+                  Verified OCI
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary">pending</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">In Progress (2/5)</span>
+</div>
+<span class="font-mono-code text-[11px] text-outline">40% ballots recorded</span>
+</div>
+</td>
+<td class="px-4 py-3.5 font-mono-code text-[11px] text-on-surface-variant whitespace-nowrap">
+                Nov 12, 23:14 UTC
+              </td>
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<button class="w-7 h-7 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 8: On-Device Eval -->
+<tr class="submission-row hover:bg-surface-container-low/60 transition-colors group cursor-pointer" onclick="handleRowClick(event, 'On-Device Eval')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" onchange="updateSelectedCount()" type="checkbox" value="sub-8">
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface font-mono-code font-bold text-xs shrink-0 shadow-sm">
+                    OD
+                  </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface group-hover:text-primary transition-colors">On-Device Eval</span>
+<span class="material-symbols-outlined text-[14px] text-outline hover:text-primary">smart_display</span>
+<span class="material-symbols-outlined text-[14px] text-outline hover:text-primary">terminal</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-xs">Metal-accelerated mobile LLM benchmarks</p>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-medium text-on-surface">
+<span>EdgeRunners</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant text-[10px] font-semibold flex items-center justify-center">RA</span>
+<span>Rachel Adams + 2</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Local / Edge LLM
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="inline-flex items-center gap-1.5 text-primary font-label-md text-label-md font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Submitted
+                  </span>
+<span class="font-mono-code text-[11px] text-outline">sha256:d489bf</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">security</span>
+                  eBPF Cleared
+                </span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Completed (5/5)</span>
+</div>
+<span class="font-mono-code text-[11px] text-primary">Avg 88.6 pts</span>
+</div>
+</td>
+<td class="px-4 py-3.5 font-mono-code text-[11px] text-on-surface-variant whitespace-nowrap">
+                Nov 12, 22:50 UTC
+              </td>
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<button class="w-7 h-7 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- MAIN VIEW 2: GRID VIEW (Hidden by default, toggleable via harness or view switcher) -->
+<div class="hidden grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg" id="view-container-grid">
+<!-- Card 1 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-md transition-all cursor-pointer flex flex-col justify-between gap-space-md" onclick="openDrawer('AgentBench Zero')">
+<div class="space-y-3">
+<div class="flex items-start justify-between gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Autonomous Code
+            </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-mono-code text-[11px]">sha256:8b4e</span>
+</div>
+<div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Dark developer terminal IDE workspace showing multiple automated code refactoring windows in python and C++, with sleek cyan and cobalt syntax highlighting representing autonomous AI code generation tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJztwsTcq6yOaMAFY7GeYpYwQCZJuI2t8MI9SlQW3J5smbAzF-Y8Qhn-hhEKdV1snF6qa0jAE4UEH2sZIS0-VFYFQMLEwBUCJN9QBQ4vFw83TOFAkbjRvrTe9DY1q06MOKswrVYqgCL9Z1QzRxhYHRuOhqgy8AsHKS_SFZvNozLREDarGjldtoz5bE48l2VYSyKYWeESn08GbHORGkyh3UMifVMCkFGSBsmh-KEQoG6HIbd6SJ-KLlRw">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md font-mono-code text-[11px] text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">play_circle</span>
+<span>2m 45s Demo</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">AgentBench Zero</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Autonomous multi-file refactoring sandbox for LLM agent loops.</p>
+</div>
+</div>
+<div class="pt-space-md bg-surface-container-low/40 rounded-xl p-space-sm space-y-2">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Neural Vanguard (3)</span>
+<span class="font-semibold text-primary">Score: 94.2/100</span>
+</div>
+<div class="flex items-center justify-between font-mono-code text-[11px]">
+<span class="text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">verified</span> Verified OCI</span>
+<span class="text-on-surface-variant">5/5 Ballots Complete</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-md transition-all cursor-pointer flex flex-col justify-between gap-space-md" onclick="openDrawer('OmniSynth RAG')">
+<div class="space-y-3">
+<div class="flex items-start justify-between gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Multi-Tool &amp; RAG
+            </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-mono-code text-[11px]">sha256:3f1a</span>
+</div>
+<div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="High tech 3D visualization of dense vector embeddings and hierarchical neural search graphs illuminated by soft blue ambient lighting inside a macOS styled analytics console." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZEDQK3vZ4uEyDtT-1aAPsjq_Ia4ZfqDp1-mtOfmBiLKx7gE8rY3CaaqDUmCYR6ldxmIAezR16rqDkPkbGkDTShVpQOQ994FE1AiK1s8XUvIo9pUlaPrQVHofq8t5VCIt4zwqsZmmXhccvs1oSeu06pckx9QflH_4AXezrp2qZ0lryOrbxWkWTNMv5wFejG5FLStdTFbOxQ0Q9wh96SniRIpjze0xeIQjryMNRJ8qJAk2d2VDb3iLxcA">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md font-mono-code text-[11px] text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">play_circle</span>
+<span>3m 12s Demo</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">OmniSynth RAG</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Deterministic hybrid vector retriever combining sparse and dense indexing.</p>
+</div>
+</div>
+<div class="pt-space-md bg-surface-container-low/40 rounded-xl p-space-sm space-y-2">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>DeepLogic (4)</span>
+<span class="font-semibold text-tertiary">In Progress (4/5)</span>
+</div>
+<div class="flex items-center justify-between font-mono-code text-[11px]">
+<span class="text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">security</span> eBPF Cleared</span>
+<span class="text-on-surface-variant">80% Ballots Cast</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-md transition-all cursor-pointer flex flex-col justify-between gap-space-md" onclick="openDrawer('NanoEdge LLM')">
+<div class="space-y-3">
+<div class="flex items-start justify-between gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+              Local / Edge LLM
+            </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-mono-code text-[11px]">sha256:a19c</span>
+</div>
+<div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Embedded computing hardware workbench showcasing Raspberry Pi microcontrollers and tensor processing units running real time local quantized language model inference metrics on small digital OLED displays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt7kI3hK0h99YEiJWXu46J-dgGQqU9Y5hhHjQeXTnsrZalKkLbJITDoVpBdT4ZPetqDeTN8rBUZKCemwV97kJQbhDgAD1FhBE_AL0D6gE79wNBLeTmsfKyImC0dV73H-zI8srdcIQ5EsvLFlcIYKh4YyLxIctBSF0omlfCtF9ec1RXtigBAlLtACn-SVZAwMRlsMatpi7B2mYcRz9EE6IXbEmKujhxsq4qX-9prunMtYPTABqU83zyqA">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md font-mono-code text-[11px] text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">play_circle</span>
+<span>1m 50s Demo</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">NanoEdge LLM</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sub-100ms quantized inference on low-power ARM edge chips.</p>
+</div>
+</div>
+<div class="pt-space-md bg-surface-container-low/40 rounded-xl p-space-sm space-y-2">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>MicroCore Labs (1)</span>
+<span class="font-semibold text-primary">Score: 91.0/100</span>
+</div>
+<div class="flex items-center justify-between font-mono-code text-[11px]">
+<span class="text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">verified</span> Verified OCI</span>
+<span class="text-on-surface-variant">5/5 Ballots Complete</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN VIEW 3: EMPTY STATE / NO RESULTS (Toggleable via harness) -->
+<div class="hidden p-space-xl rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)] text-center flex flex-col items-center justify-center gap-space-md min-h-[380px]" id="view-empty">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[28px]">folder_off</span>
+</div>
+<div class="max-w-sm space-y-1">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">No Submissions Found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">There are no submission records matching the selected track and eligibility filters.</p>
+</div>
+<button class="px-4 py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium transition-colors" onclick="resetFilters()">
+        Clear All Filters
+      </button>
+</div>
+<!-- MAIN VIEW 4: SKELETON LOADING STATE (Toggleable via harness) -->
+<div class="hidden p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)] space-y-4" id="view-loading">
+<div class="h-8 bg-surface-container-high rounded-lg w-1/3 animate-pulse"></div>
+<div class="space-y-3">
+<div class="h-12 bg-surface-container-low rounded-xl w-full animate-pulse"></div>
+<div class="h-12 bg-surface-container-low rounded-xl w-full animate-pulse"></div>
+<div class="h-12 bg-surface-container-low rounded-xl w-full animate-pulse"></div>
+<div class="h-12 bg-surface-container-low rounded-xl w-full animate-pulse"></div>
+</div>
+</div>
+<!-- Pagination Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pt-space-xs font-label-sm text-label-sm text-on-surface-variant" id="pagination-strip">
+<div class="flex items-center gap-3">
+<span>Rows per page:</span>
+<select class="h-7 px-2 rounded-lg bg-surface-container-lowest text-on-surface border-0 shadow-sm focus:outline-none">
+<option>8</option>
+<option>16</option>
+<option>32</option>
+<option>All</option>
+</select>
+<span>Showing 1 – 8 of 34 submissions</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center shadow-sm disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-semibold flex items-center justify-center shadow-sm">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface flex items-center justify-center shadow-sm">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface flex items-center justify-center shadow-sm">3</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface flex items-center justify-center shadow-sm">4</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- STICKY BULK ACTIONS BAR (Shows when rows are selected) -->
+<div class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-3 rounded-2xl bg-inverse-surface/95 text-inverse-on-surface backdrop-blur-xl shadow-[0_12px_36px_rgba(0,0,0,0.25)] flex items-center gap-4 transition-all animate-bounce-short" id="bulk-bar">
+<div class="flex items-center gap-2 border-r border-outline/30 pr-4">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span class="font-label-md text-label-md font-semibold text-white" id="bulk-count-label">2 Submissions Selected</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-white font-label-sm text-label-sm font-medium flex items-center gap-1.5 transition-all" onclick="bulkVerify()">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">verified</span>
+<span>Mark Eligible (✓)</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-white font-label-sm text-label-sm font-medium flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px] text-error-container">block</span>
+<span>Mark Ineligible (⊘)</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-white font-label-sm text-label-sm font-medium flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]">meeting_room</span>
+<span>Assign Chamber</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-white font-label-sm text-label-sm font-medium flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]">archive</span>
+<span>Export Dossiers (ZIP)</span>
+</button>
+</div>
+<button class="w-6 h-6 rounded-full hover:bg-surface-container-lowest/20 text-outline-variant hover:text-white flex items-center justify-center transition-all ml-1" onclick="clearSelection()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- SUBMISSION DETAIL SLIDE-OVER DRAWER (Right Inspector Canvas) -->
+<div class="hidden fixed inset-0 bg-inverse-surface/30 backdrop-blur-sm z-50 transition-opacity" id="drawer-backdrop" onclick="closeDrawer()"></div>
+<aside class="fixed right-0 top-0 bottom-0 w-full sm:w-[560px] bg-surface-container-lowest shadow-[-8px_0_32px_rgba(0,0,0,0.12)] z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-hidden" id="submission-drawer">
+<!-- Drawer Header -->
+<div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-lowest border-b-0 shadow-sm shrink-0">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<div class="min-w-0">
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate" id="drawer-title">Submission Dossier — AgentBench Zero</h2>
+<span class="font-mono-code text-[11px] text-on-surface-variant">Team: Neural Vanguard · Track: Autonomous Code</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<a class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" href="#" target="_blank" title="Open Public Submission Page">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" onclick="closeDrawer()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Drawer Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-space-lg space-y-space-lg">
+<!-- Media Demo Thumbnail Preview -->
+<div class="space-y-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+<span>Pitch Video &amp; Sandbox Telemetry</span>
+<span class="font-mono-code text-[11px] text-primary">HD 1080p · Verified Host</span>
+</div>
+<div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container-highest group">
+<img class="w-full h-full object-cover" data-alt="High quality studio screen capture of an autonomous software engineering agent refactoring React and Rust microservices inside a multi-window terminal dashboard with real-time test passing logs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzmT1ew0L9QH6NxF_j-5nfuZkkvwgHVbDrSretCmoGmmjJ4V29tkhqK0RPRNwYq2lF0WmG9opl7ORhX6RQKxLxb4On8lWQ_vzV0CfhrNfYYbSVTk7QVqz5hLeaZWzp-IYchCLdBEb6nnNr-3FVLa57poh6Cw7AP8ehScJOCthJnfF34Nk15gMD-1NWIUQdMCzvI93MuG01ys8qNoNTtiP5m5-EVtjAv0R2S0Nr_e0KvDc79CRPVwf5rg">
+<div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center group-hover:bg-inverse-surface/30 transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest/90 text-primary flex items-center justify-center shadow-lg backdrop-blur-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2.5 right-2.5 px-2 py-1 rounded bg-inverse-surface/80 text-white font-mono-code text-[11px]">
+            03:44 / 05:00 max
+          </div>
+</div>
+</div>
+<!-- Repo & Container Digest Box -->
+<div class="p-space-md rounded-xl bg-surface-container-low/70 space-y-2.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Frozen Artifact Registries</span>
+<span class="inline-flex items-center gap-1 text-primary font-mono-code text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Repo Locked
+          </span>
+</div>
+<div class="space-y-1.5 font-mono-code text-mono-code">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="text-on-surface-variant truncate">github.com/neural-vanguard/agentbench-zero</span>
+<span class="material-symbols-outlined text-[15px] text-outline cursor-pointer hover:text-on-surface">content_copy</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="text-primary truncate">ghcr.io/agents-cup/agentbench-zero@sha256:8b4ef2c04...</span>
+<span class="material-symbols-outlined text-[15px] text-outline cursor-pointer hover:text-on-surface">content_copy</span>
+</div>
+</div>
+</div>
+<!-- Tech Stack & Architecture Chips -->
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Verified Architecture Stack</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-mono-code text-[11px]">Python 3.12</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-mono-code text-[11px]">PyTorch 2.4</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-mono-code text-[11px]">Docker OCI</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-mono-code text-[11px]">vLLM Server</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-mono-code text-[11px]">gVisor Sandbox</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-mono-code text-[11px]">eBPF Monitor</span>
+</div>
+</div>
+<!-- Organizer-Only Administrative Inspection Panel -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04),0_4px_16px_rgba(0,0,0,0.03)] space-y-space-md">
+<div class="flex items-center justify-between border-b-0">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">admin_panel_settings</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Organizer Triage Verdict</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-semibold">Staff Only</span>
+</div>
+<!-- Eligibility verdict selector -->
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm font-medium text-on-surface-variant">Eligibility Status Certification</label>
+<select class="w-full h-9 px-3 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none">
+<option selected="">✓ Verified OCI Compliant (gVisor Cleared)</option>
+<option>✓ eBPF Sandboxed Only</option>
+<option>⏳ Pending Security Re-audit</option>
+<option>⏳ Waiver Signature Missing</option>
+<option>⊘ Disqualified (COI or Pre-built Violation)</option>
+</select>
+</div>
+<!-- Attestation check -->
+<label class="flex items-start gap-2.5 cursor-pointer">
+<input checked="" class="w-4 h-4 mt-0.5 rounded text-primary focus:ring-0 accent-primary" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface leading-tight">
+            I confirm all member IP assignment forms are signed and automated container isolation tests passed without privilege escalation.
+          </span>
+</label>
+<!-- Admin notes -->
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm font-medium text-on-surface-variant">Triage Auditor Notes</label>
+<textarea class="w-full p-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none" rows="2">Container freeze confirmed on Nov 12 19:42 UTC. All 42 unit tests passed in headless gVisor cluster. Ready for jury chamber distribution.</textarea>
+</div>
+</div>
+<!-- Judging Progress Breakdown (Jurors & Ballots) -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04),0_4px_16px_rgba(0,0,0,0.03)] space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Juror Ballots (5/5)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Consensus variance: ±1.8% (Stable)</p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md font-bold text-primary">94.2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant"> / 100</span>
+</div>
+</div>
+<div class="space-y-2 divide-y-0">
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low/60 font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed text-[11px] font-semibold flex items-center justify-center">ER</span>
+<span class="font-medium text-on-surface">Dr. Aris Thorne (Chamber A)</span>
+</div>
+<div class="flex items-center gap-2 font-mono-code font-semibold text-primary">
+<span>98 / 100</span>
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low/60 font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[11px] font-semibold flex items-center justify-center">MV</span>
+<span class="font-medium text-on-surface">Marcus Vance (Safety Lead)</span>
+</div>
+<div class="flex items-center gap-2 font-mono-code font-semibold text-primary">
+<span>92 / 100</span>
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low/60 font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[11px] font-semibold flex items-center justify-center">DK</span>
+<span class="font-medium text-on-surface">David K. (Benchmark Jury)</span>
+</div>
+<div class="flex items-center gap-2 font-mono-code font-semibold text-primary">
+<span>95 / 100</span>
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low/60 font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface text-[11px] font-semibold flex items-center justify-center">SL</span>
+<span class="font-medium text-on-surface">Sarah Lin (Autonomous Tracks)</span>
+</div>
+<div class="flex items-center gap-2 font-mono-code font-semibold text-primary">
+<span>94 / 100</span>
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low/60 font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface text-[11px] font-semibold flex items-center justify-center">TB</span>
+<span class="font-medium text-on-surface">Tomás Blanco (Open Source)</span>
+</div>
+<div class="flex items-center gap-2 font-mono-code font-semibold text-primary">
+<span>92 / 100</span>
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Audit & Telemetry Log -->
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Audit &amp; Telemetry Log</span>
+<div class="p-space-md rounded-xl bg-surface-container-low/60 font-mono-code text-[11px] space-y-1.5 text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>2025-11-12 19:42:01 UTC</span>
+<span class="text-primary">OCI digest sha256:8b4e registered</span>
+</div>
+<div class="flex items-center justify-between">
+<span>2025-11-13 04:10:22 UTC</span>
+<span>gVisor sandboxed sandbox run OK (42 tests passed)</span>
+</div>
+<div class="flex items-center justify-between">
+<span>2025-11-15 09:00:00 UTC</span>
+<span class="text-on-surface font-medium">Jury Chamber assignments distributed</span>
+</div>
+<div class="flex items-center justify-between">
+<span>2025-11-15 14:28:11 UTC</span>
+<span class="text-primary">Final ballot cast by Tomás Blanco</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-space-lg bg-surface-container-low/90 backdrop-blur-md flex items-center justify-between gap-space-md shrink-0">
+<button class="px-3.5 py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium transition-colors">
+        Override Freeze
+      </button>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium transition-colors">
+          Flag Divergence
+        </button>
+<button class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all" onclick="saveDossierVerdict()">
+          Save Verdict
+        </button>
+</div>
+</div>
+</aside>
+</div>
+<script>
+  // State simulation engine
+  function setState(state) {
+    // Reset all highlights on simulator buttons
+    const btnIds = ['sim-btn-table', 'sim-btn-grid', 'sim-btn-drawer', 'sim-btn-selected', 'sim-btn-missing', 'sim-btn-empty', 'sim-btn-loading'];
+    btnIds.forEach(id => {
+      const el = document.getElementById(id);
+      if(el) {
+        el.className = "px-2.5 py-1 rounded bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all";
+      }
+    });
+
+    const activeBtn = document.getElementById(`sim-btn-${state}`);
+    if (activeBtn) {
+      activeBtn.className = "px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-semibold shadow-sm transition-all hover:bg-surface-container-high";
+    }
+
+    // Reset views
+    document.getElementById('view-container-table').classList.remove('hidden');
+    document.getElementById('view-container-grid').classList.add('hidden');
+    document.getElementById('view-empty').classList.add('hidden');
+    document.getElementById('view-loading').classList.add('hidden');
+    document.getElementById('pagination-strip').classList.remove('hidden');
+
+    if (state === 'table') {
+      setViewMode('table');
+      clearSelection();
+      closeDrawer();
+      resetFilters();
+    } else if (state === 'grid') {
+      setViewMode('grid');
+      closeDrawer();
+    } else if (state === 'drawer') {
+      setViewMode('table');
+      openDrawer('AgentBench Zero');
+    } else if (state === 'selected') {
+      setViewMode('table');
+      const checkboxes = document.querySelectorAll('.row-checkbox');
+      if (checkboxes.length >= 2) {
+        checkboxes[0].checked = true;
+        checkboxes[1].checked = true;
+      }
+      updateSelectedCount();
+    } else if (state === 'missing') {
+      setViewMode('table');
+      document.getElementById('filter-status').value = 'not-started';
+      applyFilters();
+    } else if (state === 'empty') {
+      document.getElementById('view-container-table').classList.add('hidden');
+      document.getElementById('view-container-grid').classList.add('hidden');
+      document.getElementById('view-empty').classList.remove('hidden');
+      document.getElementById('pagination-strip').classList.add('hidden');
+      document.getElementById('results-count-label').innerText = 'Showing 0 submissions';
+    } else if (state === 'loading') {
+      document.getElementById('view-container-table').classList.add('hidden');
+      document.getElementById('view-container-grid').classList.add('hidden');
+      document.getElementById('view-loading').classList.remove('hidden');
+      document.getElementById('pagination-strip').classList.add('hidden');
+    }
+  }
+
+  function setViewMode(mode) {
+    const tableBtn = document.getElementById('view-table-btn');
+    const gridBtn = document.getElementById('view-grid-btn');
+    const tableView = document.getElementById('view-container-table');
+    const gridView = document.getElementById('view-container-grid');
+
+    if (mode === 'table') {
+      tableBtn.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium shadow-sm transition-all";
+      gridBtn.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all";
+      tableView.classList.remove('hidden');
+      gridView.classList.add('hidden');
+    } else {
+      gridBtn.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium shadow-sm transition-all";
+      tableBtn.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all";
+      tableView.classList.add('hidden');
+      gridView.classList.remove('hidden');
+    }
+  }
+
+  // Row selection handler
+  function toggleSelectAll(master) {
+    const checkboxes = document.querySelectorAll('.row-checkbox');
+    checkboxes.forEach(cb => cb.checked = master.checked);
+    updateSelectedCount();
+  }
+
+  function updateSelectedCount() {
+    const checked = document.querySelectorAll('.row-checkbox:checked');
+    const bulkBar = document.getElementById('bulk-bar');
+    const label = document.getElementById('bulk-count-label');
+
+    if (checked.length > 0) {
+      bulkBar.classList.remove('hidden');
+      label.innerText = `${checked.length} Submission${checked.length > 1 ? 's' : ''} Selected`;
+    } else {
+      bulkBar.classList.add('hidden');
+      const masterCb = document.getElementById('master-checkbox');
+      if (masterCb) masterCb.checked = false;
+    }
+  }
+
+  function clearSelection() {
+    const checkboxes = document.querySelectorAll('.row-checkbox');
+    checkboxes.forEach(cb => cb.checked = false);
+    const masterCb = document.getElementById('master-checkbox');
+    if (masterCb) masterCb.checked = false;
+    updateSelectedCount();
+  }
+
+  function bulkVerify() {
+    alert('Marked selected submissions as verified and eligible for grading.');
+    clearSelection();
+  }
+
+  // Drawer handlers
+  function openDrawer(title) {
+    document.getElementById('drawer-title').innerText = `Submission Dossier — ${title}`;
+    const drawer = document.getElementById('submission-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    backdrop.classList.remove('hidden');
+    drawer.classList.remove('translate-x-full');
+  }
+
+  function closeDrawer() {
+    const drawer = document.getElementById('submission-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    drawer.classList.add('translate-x-full');
+    setTimeout(() => {
+      backdrop.classList.add('hidden');
+    }, 250);
+  }
+
+  function handleRowClick(event, title) {
+    // If user clicked inside action buttons or checkbox, ignore opening drawer
+    if (event.target.tagName.toLowerCase() === 'input' || event.target.closest('button')) {
+      return;
+    }
+    openDrawer(title);
+  }
+
+  function saveDossierVerdict() {
+    alert('Organizer verdict and attestation saved to the audit ledger.');
+    closeDrawer();
+  }
+
+  // Search & Filtering
+  function handleSearch(term) {
+    const rows = document.querySelectorAll('.submission-row');
+    let visibleCount = 0;
+    const lower = term.toLowerCase().trim();
+
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      if (!lower || text.includes(lower)) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    document.getElementById('results-count-label').innerText = `Showing ${visibleCount} of 34 submissions`;
+  }
+
+  function applyFilters() {
+    const statusVal = document.getElementById('filter-status').value;
+    const rows = document.querySelectorAll('.submission-row');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      let match = true;
+
+      if (statusVal === 'not-started' && !text.includes('not started')) {
+        match = false;
+      } else if (statusVal === 'draft' && !text.includes('draft')) {
+        match = false;
+      } else if (statusVal === 'submitted' && !text.includes('submitted')) {
+        match = false;
+      }
+
+      if (match) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    document.getElementById('results-count-label').innerText = `Showing ${visibleCount} of 34 submissions`;
+  }
+
+  function resetFilters() {
+    document.getElementById('submission-search').value = '';
+    document.getElementById('filter-track').value = 'all';
+    document.getElementById('filter-status').value = 'all';
+    document.getElementById('filter-eligibility').value = 'all';
+    document.getElementById('filter-judging').value = 'all';
+    const rows = document.querySelectorAll('.submission-row');
+    rows.forEach(row => row.style.display = '');
+    document.getElementById('results-count-label').innerText = 'Showing 1 – 8 of 34 submissions';
+    document.getElementById('view-empty').classList.add('hidden');
+    document.getElementById('view-container-table').classList.remove('hidden');
+    document.getElementById('pagination-strip').classList.remove('hidden');
+  }
+
+  // Keyboard shortcut support (⌘K to focus search, Esc to dismiss drawer / bulk selection)
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      const s = document.getElementById('submission-search');
+      if (s) s.focus();
+    }
+    if (e.key === 'Escape') {
+      closeDrawer();
+      clearSelection();
+    }
+  });
+</script></main></div></body></html>

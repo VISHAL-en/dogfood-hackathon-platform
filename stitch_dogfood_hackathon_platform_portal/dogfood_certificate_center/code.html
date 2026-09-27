@@ -1,0 +1,1848 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed-variant": "#003ea8",
+          "primary": "#0059b5",
+          "on-surface-variant": "#414753",
+          "background": "#faf8fe",
+          "on-primary": "#ffffff",
+          "tertiary": "#4a47d2",
+          "secondary-fixed-dim": "#b4c5ff",
+          "primary-fixed": "#d7e2ff",
+          "outline": "#717785",
+          "tertiary-container": "#6462ec",
+          "on-secondary-fixed": "#00174b",
+          "surface-container-low": "#f4f3f8",
+          "on-secondary": "#ffffff",
+          "on-tertiary-fixed-variant": "#332dbc",
+          "error-container": "#ffdad6",
+          "tertiary-fixed": "#e2dfff",
+          "primary-container": "#0071e3",
+          "surface-bright": "#faf8fe",
+          "on-primary-fixed-variant": "#00458f",
+          "on-surface": "#1a1b1f",
+          "on-tertiary": "#ffffff",
+          "surface-variant": "#e3e2e7",
+          "on-tertiary-container": "#fefaff",
+          "on-tertiary-fixed": "#0c006b",
+          "on-primary-container": "#fcfbff",
+          "primary-fixed-dim": "#abc7ff",
+          "surface": "#faf8fe",
+          "error": "#ba1a1a",
+          "on-error-container": "#93000a",
+          "surface-container": "#efedf3",
+          "on-secondary-container": "#fefcff",
+          "on-background": "#1a1b1f",
+          "surface-container-high": "#e9e7ed",
+          "outline-variant": "#c1c6d6",
+          "surface-dim": "#dbd9df",
+          "surface-container-highest": "#e3e2e7",
+          "secondary": "#0051d5",
+          "inverse-primary": "#abc7ff",
+          "on-error": "#ffffff",
+          "secondary-fixed": "#dbe1ff",
+          "inverse-on-surface": "#f1f0f6",
+          "inverse-surface": "#2f3034",
+          "surface-tint": "#005cbb",
+          "secondary-container": "#316bf3",
+          "on-primary-fixed": "#001b3f",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-fixed-dim": "#c2c1ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-desktop": "3rem",
+          "space-md": "0.75rem",
+          "space-sm": "0.5rem",
+          "gutter": "1rem",
+          "space-xl": "2rem",
+          "margin": "1rem",
+          "gutter-desktop": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.25rem",
+          "margin-tablet": "2rem"
+        },
+        "fontFamily": {
+          "display-lg": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "display-lg-mobile": [
+            "Inter"
+          ],
+          "mono-code": [
+            "JetBrains Mono"
+          ]
+        },
+        "fontSize": {
+          "display-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "13px",
+            {
+              "lineHeight": "19px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            }
+          ],
+          "mono-code": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg min-w-max"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #0071e3
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X4ylxw5ERlYb512JjvDIPTD2ef9pKs3vB1qAPF9OQC2kRN02l8HZ1lFuAwdrS5I1R_l7NAdmf9Xj7Rt9IQR5WGv-uzV5pcX-bGBcgHZ1VTFxEL5d0Rji9xjPno2x3Bz3_5XBOTb2Cah3KFL6lNNiq8WXKoN_R8zVBsfFkgQhnyMvNjEAH1A8aNLVUiLmqMnMerdWephJdgyW6pjFW_JpuI6U0VvU-gtOY4UKq3PFgLSnGG4pki-LSj7J1k"><div class="flex flex-col leading-none"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Dogfood</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wider uppercase">ORGANIZER SUITE</span></div></div><div class="h-6 w-px bg-surface-container-high"></div><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-primary">trophy</span><span class="font-label-md text-label-md font-medium text-on-surface">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></button></div><div class="flex-1 max-w-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-outline pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-14 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search submissions, judges, rubrics..." type="text"><kbd class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono-code text-[10px] font-medium tracking-tight">⌘K</kbd></div></div><div class="flex items-center gap-space-md min-w-max"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span><span class="font-mono-code text-[11px] text-on-surface-variant">us-east-cluster · OK · 99.98%</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col leading-tight"><span class="font-label-md text-label-md font-medium text-on-surface">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant">Lead Organizer</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between"><div class="flex-1 overflow-y-auto px-space-md py-space-lg"><div class="mb-space-lg"><div class="px-space-sm mb-space-xs font-label-sm text-label-sm text-outline font-semibold tracking-wider uppercase">EVENT CORE</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">grid_view</span>Overview</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="events" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">calendar_month</span>Events</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="participants" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">group</span>Participants</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="teams" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">hub</span>Teams</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="submissions" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">layers</span>Submissions</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="eligibility" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">verified</span>Eligibility</a></nav></div><div class="mb-space-lg"><div class="px-space-sm mb-space-xs font-label-sm text-label-sm text-outline font-semibold tracking-wider uppercase">EVALUATION MATRIX</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="judges" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">gavel</span>Judges</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="judging" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">rate_review</span>Judging</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="normalization" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">tune</span>Normalization</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="results" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">analytics</span>Results<span class="ml-auto w-1.5 h-1.5 rounded-full bg-on-primary-container"></span></a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="certificates" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">workspace_premium</span>Certificates</a></nav></div><div><div class="px-space-sm mb-space-xs font-label-sm text-label-sm text-outline font-semibold tracking-wider uppercase">OPERATIONS</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="archive" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">inventory_2</span>Archive</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">settings</span>Settings</a></nav></div></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container-low"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#10b981]"></span><span class="font-mono-code text-[11px] font-medium text-on-surface">Cluster OK 99.98%</span></div><span class="font-mono-code text-[10px] text-outline">v2.4-prod</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[11px]"><span>Docs &amp; API</span><a class="text-primary hover:text-primary-container flex items-center gap-0.5 transition-colors" href="#"><span>Inspect</span><span class="material-symbols-outlined text-[12px]">arrow_forward</span></a></div></div></aside><div class="pl-64"><main class="w-full pt-16 min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Toolbar (Organizer Suite Dev Bar) -->
+<div class="w-full bg-surface-container-high/80 backdrop-blur-md px-gutter-desktop py-space-xs flex flex-wrap items-center justify-between gap-space-sm shadow-sm sticky top-16 z-30">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1 font-mono-code text-[11px] font-semibold text-primary uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">tune</span> State Simulator
+      </span>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1 overflow-x-auto py-0.5" id="state-selector-group">
+<button class="state-pill px-2.5 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-primary text-on-primary shadow-sm" data-state="default" onclick="setSimState('default')">
+          Default (66.2%)
+        </button>
+<button class="state-pill px-2.5 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container hover:text-on-surface" data-state="all-pending" onclick="setSimState('all-pending')">
+          0% Pending
+        </button>
+<button class="state-pill px-2.5 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container hover:text-on-surface" data-state="all-complete" onclick="setSimState('all-complete')">
+          100% Issued
+        </button>
+<button class="state-pill px-2.5 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container hover:text-on-surface" data-state="batch-progress" onclick="setSimState('batch-progress')">
+          Batching Queue
+        </button>
+<button class="state-pill px-2.5 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container hover:text-on-surface" data-state="template-alert" onclick="setSimState('template-alert')">
+          Missing Signature Warning
+        </button>
+<button class="state-pill px-2.5 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container hover:text-on-surface" onclick="toggleTemplateEditor(true)">
+          Open Template Editor
+        </button>
+</div>
+</div>
+<div class="hidden lg:flex items-center gap-space-xs font-mono-code text-[11px] text-on-surface-variant">
+<span>Ed25519 Certifier:</span>
+<span class="text-primary font-medium">secp256k1/ed25519-active</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span>
+</div>
+</div>
+<!-- Batch Progress Bar Container (Hidden by default, shown during generation) -->
+<div class="hidden w-full bg-surface-container-lowest px-gutter-desktop py-space-sm shadow-md transition-all" id="batch-progress-banner">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary animate-spin">
+<span class="material-symbols-outlined text-[18px]">progress_activity</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Asynchronous PDF Batch Engine Running</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/15 text-primary font-mono-code text-[11px] font-semibold">Job #DGF-8831</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rendering PDF/A-3 documents with embedded cryptographic signatures &amp; verifiable QR payloads.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md w-full md:w-80">
+<div class="flex-1">
+<div class="flex justify-between font-mono-code text-[11px] text-on-surface-variant mb-1">
+<span>Rendered <strong class="text-on-surface" id="progress-rendered-count">31</strong> / 48</span>
+<span class="font-semibold text-primary" id="progress-percent">64%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-300" id="batch-progress-fill" style="width: 64%;"></div>
+</div>
+</div>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="abortBatchGeneration()">
+          Cancel
+        </button>
+</div>
+</div>
+</div>
+<!-- Incomplete Template Banner Alert (Controlled via state simulator) -->
+<div class="hidden w-full bg-error-container/40 px-gutter-desktop py-space-sm shadow-sm transition-all" id="incomplete-template-alert">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-error-container">Action Required for Jury Dispatch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-2">"Distinguished Jury Attestation" is missing the secondary signature cryptographic seal asset from Dr. Aris Thorne.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container transition-colors" onclick="toggleTemplateEditor(true)">
+          Upload Signature Asset
+        </button>
+</div>
+</div>
+</div>
+<!-- Main Content Space -->
+<div class="w-full px-gutter-desktop py-space-lg max-w-7xl mx-auto space-y-space-xl">
+<!-- Page Header & Operational Summary -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-mono-code text-[11px] font-semibold tracking-wide uppercase">Audit Validated</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SHA-256 Ledger Locked</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Certificates &amp; Credential Center</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          AI Agents World Cup 2025 • Post-event credential issuance, tamper-proof PDF generation, and tokenized recipient dispatch with zero-knowledge attestation verification.
+        </p>
+</div>
+<!-- Header Operational Actions -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium shadow-sm hover:bg-surface-container-low transition-all active:scale-[0.985]" onclick="exportManifest()">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">download</span>
+          Export Manifest (.CSV)
+        </button>
+<div class="relative inline-block text-left" id="template-editor-dropdown">
+<button class="inline-flex items-center gap-space-xs px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium shadow-sm hover:bg-surface-container-low transition-all active:scale-[0.985]" onclick="toggleEditorDropdown()">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">design_services</span>
+            Template Editor
+            <span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-64 rounded-xl bg-surface-container-lowest shadow-xl p-1.5 z-50 transition-all" id="editor-menu">
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center justify-between" onclick="openSpecificTemplate('participation')">
+<span>Participation Certificate</span>
+<span class="font-mono-code text-[10px] text-outline">v2.1</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center justify-between" onclick="openSpecificTemplate('winner')">
+<span>Podium Winner Certificate</span>
+<span class="font-mono-code text-[10px] text-outline">v1.8</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center justify-between" onclick="openSpecificTemplate('track')">
+<span>Track Distinction Award</span>
+<span class="font-mono-code text-[10px] text-outline">v2.0</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container font-label-md text-label-md text-error flex items-center justify-between" onclick="openSpecificTemplate('jury')">
+<span>Jury Attestation (Incomplete)</span>
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+</button>
+</div>
+</div>
+<button class="inline-flex items-center gap-space-xs px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium shadow-sm hover:bg-primary/95 transition-all active:scale-[0.985]" id="primary-generate-btn" onclick="startBatchGeneration()">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Generate All Pending (<span id="pending-counter-btn">48</span>)</span>
+</button>
+</div>
+</div>
+<!-- Summary KPI Stat Strip (Cupertino Frosted Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Configured Types</span>
+<div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface" id="stat-configured-types">4 Templates</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+<span>Ed25519 Cryptographic Signatures</span>
+</div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Eligible Recipients</span>
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface" id="stat-total-recipients">142 Recipients</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant mt-1">
+<span class="font-medium text-on-surface">34 Verified Teams</span>
+<span>• 18 Special Jury</span>
+</div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Successfully Issued</span>
+<div class="w-8 h-8 rounded-lg bg-[#10b981]/15 flex items-center justify-center text-[#059669]">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface flex items-baseline gap-2">
+<span id="stat-issued-count">94 Generated</span>
+<span class="font-label-sm text-label-sm text-[#059669] font-medium" id="stat-issued-percent">66.2%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container mt-2 overflow-hidden">
+<div class="h-full bg-[#10b981] rounded-full transition-all duration-500" id="issued-progress-bar" style="width: 66.2%"></div>
+</div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all hover:shadow-md" id="pending-stat-card">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Pending Generation</span>
+<div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-600">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-amber-600 flex items-center gap-2" id="stat-pending-count">
+<span>48 Pending</span>
+<span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Ready for instant background render
+          </div>
+</div>
+</div>
+</div>
+<!-- Certificate Types Gallery Section -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Configured Certificate Templates</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tailored layout profiles, custom token embeddings, and high-resolution export presets.</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code">4 Templates Configured</span>
+</div>
+<!-- 4 Certificate Template Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Official Participation -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col justify-between transition-all hover:shadow-md group">
+<div class="space-y-space-md">
+<!-- Mini Certificate Preview -->
+<div class="relative w-full aspect-[4/3] rounded-lg bg-surface-container p-3 flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/5 pointer-events-none"></div>
+<!-- Mini Header -->
+<div class="flex items-center justify-between">
+<span class="font-mono-code text-[9px] uppercase tracking-wider text-primary font-bold">Dogfood • Verified</span>
+<span class="material-symbols-outlined text-[14px] text-amber-500">workspace_premium</span>
+</div>
+<!-- Center Placeholder Text -->
+<div class="text-center py-1">
+<div class="font-label-sm text-[10px] font-bold text-on-surface leading-tight uppercase tracking-wider">Certificate of Participation</div>
+<div class="font-mono-code text-[8px] text-outline mt-0.5">{{participant_name}}</div>
+<div class="w-16 h-0.5 bg-primary/30 mx-auto mt-1 rounded-full"></div>
+</div>
+<!-- Mini Footer / QR Attestation -->
+<div class="flex items-end justify-between pt-1">
+<div class="space-y-0.5">
+<div class="w-8 h-1 bg-outline-variant/60 rounded"></div>
+<div class="w-12 h-1 bg-outline-variant/40 rounded"></div>
+</div>
+<div class="w-4 h-4 rounded bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-surface-variant">qr_code_2</span>
+</div>
+</div>
+</div>
+<!-- Card Body & Metadata -->
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Official Participation</h3>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  66% Issued
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">General completion credential awarded to all verified project submissions.</p>
+<div class="mt-space-sm space-y-1 font-mono-code text-[11px] text-on-surface-variant bg-surface-container-low p-2 rounded-lg">
+<div class="flex justify-between">
+<span>Recipients:</span>
+<span class="font-medium text-on-surface">142 Eligible (48 Pending)</span>
+</div>
+<div class="flex justify-between">
+<span>Format:</span>
+<span class="font-medium text-on-surface">PDF/A-3 + Ed25519</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Actions -->
+<div class="pt-space-md flex items-center gap-space-xs">
+<button class="flex-1 py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm text-center font-medium transition-colors" onclick="openSpecificTemplate('participation')">
+              Edit Template
+            </button>
+<button class="py-1.5 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors" onclick="previewCertificateModal('Official Participation Certificate', 'Sarah Lindqvist', 'Autonomous Code Review Swarm', 'General Track', '#DOGF-PART-8891')" title="Quick Preview">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Podium Winner Certificate -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col justify-between transition-all hover:shadow-md group">
+<div class="space-y-space-md">
+<!-- Mini Certificate Preview (Gold trimmed laurel styling) -->
+<div class="relative w-full aspect-[4/3] rounded-lg bg-amber-500/5 p-3 flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-amber-500/10 pointer-events-none"></div>
+<!-- Mini Header -->
+<div class="flex items-center justify-between">
+<span class="font-mono-code text-[9px] uppercase tracking-wider text-amber-700 font-bold">1st / 2nd / 3rd Grand</span>
+<span class="material-symbols-outlined text-[16px] text-amber-600">military_tech</span>
+</div>
+<!-- Center Placeholder Text -->
+<div class="text-center py-1">
+<div class="font-label-sm text-[10px] font-bold text-amber-900 leading-tight uppercase tracking-wider">Podium Winner Honors</div>
+<div class="font-mono-code text-[8px] text-amber-700 mt-0.5">Laurel Wreath Gold Edition</div>
+<div class="w-16 h-0.5 bg-amber-500/40 mx-auto mt-1 rounded-full"></div>
+</div>
+<!-- Mini Footer -->
+<div class="flex items-end justify-between pt-1">
+<div class="space-y-0.5">
+<div class="w-10 h-1 bg-amber-400/40 rounded"></div>
+<div class="w-6 h-1 bg-amber-400/30 rounded"></div>
+</div>
+<div class="w-4 h-4 rounded bg-amber-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-amber-700">stars</span>
+</div>
+</div>
+</div>
+<!-- Card Body & Metadata -->
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Podium Winner</h3>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#10b981]/15 text-[#059669] font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span>
+                  100% Issued
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Conferred upon 1st, 2nd, and 3rd place teams with audited jury calibrations.</p>
+<div class="mt-space-sm space-y-1 font-mono-code text-[11px] text-on-surface-variant bg-surface-container-low p-2 rounded-lg">
+<div class="flex justify-between">
+<span>Recipients:</span>
+<span class="font-medium text-on-surface">12 Finalists (0 Pending)</span>
+</div>
+<div class="flex justify-between">
+<span>Distinction:</span>
+<span class="font-medium text-on-surface">Bounty &amp; Calibrated Score</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Actions -->
+<div class="pt-space-md flex items-center gap-space-xs">
+<button class="flex-1 py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm text-center font-medium transition-colors" onclick="openSpecificTemplate('winner')">
+              Edit Template
+            </button>
+<button class="py-1.5 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors" onclick="previewCertificateModal('Podium Winner Certificate', 'Dr. Aris Thorne', 'AgentTrace Enterprise Pro', 'Grand Champion (1st Place)', '#DOGF-GOLD-0001')" title="Quick Preview">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Special Track Distinction -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col justify-between transition-all hover:shadow-md group">
+<div class="space-y-space-md">
+<!-- Mini Certificate Preview -->
+<div class="relative w-full aspect-[4/3] rounded-lg bg-secondary/5 p-3 flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary/10 pointer-events-none"></div>
+<!-- Mini Header -->
+<div class="flex items-center justify-between">
+<span class="font-mono-code text-[9px] uppercase tracking-wider text-secondary font-bold">Domain Excellence</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+</div>
+<!-- Center Placeholder Text -->
+<div class="text-center py-1">
+<div class="font-label-sm text-[10px] font-bold text-on-surface leading-tight uppercase tracking-wider">Track Champion Award</div>
+<div class="font-mono-code text-[8px] text-secondary mt-0.5">Autonomous Agents / Security</div>
+<div class="w-16 h-0.5 bg-secondary/40 mx-auto mt-1 rounded-full"></div>
+</div>
+<!-- Mini Footer -->
+<div class="flex items-end justify-between pt-1">
+<div class="space-y-0.5">
+<div class="w-8 h-1 bg-secondary-fixed-dim rounded"></div>
+<div class="w-10 h-1 bg-secondary-fixed rounded"></div>
+</div>
+<div class="w-4 h-4 rounded bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-secondary-fixed">token</span>
+</div>
+</div>
+</div>
+<!-- Card Body & Metadata -->
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Track Distinction</h3>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#10b981]/15 text-[#059669] font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span>
+                  100% Issued
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Specialized thematic achievement for top ranking teams in specific challenge tracks.</p>
+<div class="mt-space-sm space-y-1 font-mono-code text-[11px] text-on-surface-variant bg-surface-container-low p-2 rounded-lg">
+<div class="flex justify-between">
+<span>Recipients:</span>
+<span class="font-medium text-on-surface">16 Track Winners</span>
+</div>
+<div class="flex justify-between">
+<span>Specialization:</span>
+<span class="font-medium text-on-surface">Autonomous, Security, RAG</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Actions -->
+<div class="pt-space-md flex items-center gap-space-xs">
+<button class="flex-1 py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm text-center font-medium transition-colors" onclick="openSpecificTemplate('track')">
+              Edit Template
+            </button>
+<button class="py-1.5 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors" onclick="previewCertificateModal('Track Distinction Certificate', 'Alex Chen', 'KernelSec Agent Guard', 'Autonomous Agents Champion', '#DOGF-TRK-7712')" title="Quick Preview">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Distinguished Jury Attestation -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col justify-between transition-all hover:shadow-md group">
+<div class="space-y-space-md">
+<!-- Mini Certificate Preview -->
+<div class="relative w-full aspect-[4/3] rounded-lg bg-surface-container-high/60 p-3 flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-outline-variant/20 pointer-events-none"></div>
+<!-- Mini Header -->
+<div class="flex items-center justify-between">
+<span class="font-mono-code text-[9px] uppercase tracking-wider text-outline font-bold">Judicial Panel</span>
+<span class="material-symbols-outlined text-[16px] text-outline">gavel</span>
+</div>
+<!-- Center Placeholder Text -->
+<div class="text-center py-1">
+<div class="font-label-sm text-[10px] font-bold text-on-surface leading-tight uppercase tracking-wider">Jury Attestation</div>
+<div class="font-mono-code text-[8px] text-outline mt-0.5">Peer Reviewer &amp; Grand Juror</div>
+<div class="w-16 h-0.5 bg-outline/40 mx-auto mt-1 rounded-full"></div>
+</div>
+<!-- Mini Footer -->
+<div class="flex items-end justify-between pt-1">
+<div class="space-y-0.5">
+<div class="w-8 h-1 bg-outline-variant rounded"></div>
+<div class="w-12 h-1 bg-outline-variant rounded"></div>
+</div>
+<div class="w-4 h-4 rounded bg-error-container flex items-center justify-center text-error" title="Missing Signature">
+<span class="material-symbols-outlined text-[10px]">edit_off</span>
+</div>
+</div>
+</div>
+<!-- Card Body & Metadata -->
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Jury Attestation</h3>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-700 font-label-sm text-[11px] font-semibold" id="jury-template-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Draft (Needs Assets)
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Official certificate of service delivered to hackathon evaluators and domain experts.</p>
+<div class="mt-space-sm space-y-1 font-mono-code text-[11px] text-on-surface-variant bg-surface-container-low p-2 rounded-lg">
+<div class="flex justify-between">
+<span>Recipients:</span>
+<span class="font-medium text-on-surface">18 Jurors &amp; Chairs</span>
+</div>
+<div class="flex justify-between text-error font-medium">
+<span>Warning:</span>
+<span>Missing Seal Asset</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Actions -->
+<div class="pt-space-md flex items-center gap-space-xs">
+<button class="flex-1 py-1.5 px-2 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-sm text-label-sm text-center font-medium transition-colors" onclick="openSpecificTemplate('jury')">
+              Configure Template →
+            </button>
+<button class="py-1.5 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors" onclick="previewCertificateModal('Distinguished Jury Attestation', 'Dr. Aris Thorne', 'Independent Evaluation Matrix', 'Lead Juror', '#DOGF-JURY-0012')" title="Quick Preview">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bulk Generation Controls & Filtering Toolbar -->
+<div class="space-y-space-sm">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<!-- Search & Filter Controls Group -->
+<div class="flex flex-wrap items-center gap-space-xs flex-1">
+<!-- Search Box -->
+<div class="relative min-w-[260px] flex-1 max-w-sm">
+<span class="material-symbols-outlined absolute left-3 top-2 text-[18px] text-outline pointer-events-none">search</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="recipient-search-input" onkeyup="filterRecipients()" placeholder="Search recipient, team, or serial..." type="text">
+</div>
+<!-- Certificate Type Dropdown Filter -->
+<div class="relative">
+<select class="h-9 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-container" id="filter-cert-type" onchange="filterRecipients()">
+<option value="all">All Certificate Types (4)</option>
+<option value="Participation">Participation</option>
+<option value="Winner">Winner (Grand / Finalist)</option>
+<option value="Track Champion">Track Champion</option>
+<option value="Jury Attestation">Jury Attestation</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Status Dropdown Filter -->
+<div class="relative">
+<select class="h-9 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-container" id="filter-status" onchange="filterRecipients()">
+<option value="all">All Statuses (Pending, Generated, Downloaded)</option>
+<option value="Pending">Pending (48)</option>
+<option value="Generated">Generated (62)</option>
+<option value="Downloaded">Downloaded (32)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Track Filter -->
+<div class="relative">
+<select class="h-9 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-container" id="filter-track" onchange="filterRecipients()">
+<option value="all">All Tracks (Global)</option>
+<option value="Autonomous Agents">Autonomous Agents</option>
+<option value="Security &amp; Guardrails">Security &amp; Guardrails</option>
+<option value="RAG Architecture">RAG Architecture</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Global Batch Actions Group -->
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 h-9 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium shadow-sm transition-colors" onclick="downloadAllZip()">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">folder_zip</span>
+<span class="hidden sm:inline">Download Issued</span> (.ZIP, 142MB)
+          </button>
+<button class="inline-flex items-center gap-1.5 h-9 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium shadow-sm transition-colors" onclick="batchResendEmails()">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">send</span>
+<span class="hidden sm:inline">Batch Resend Claims</span>
+</button>
+</div>
+</div>
+<!-- Active Selection Floating Bar (Appears when >= 1 checkbox checked) -->
+<div class="hidden w-full bg-surface-container-lowest p-2.5 rounded-xl shadow-md flex items-center justify-between gap-space-md animate-in fade-in slide-in-from-top-1 duration-200" id="selection-bar">
+<div class="flex items-center gap-space-sm pl-2">
+<span class="w-6 h-6 rounded-md bg-primary-container text-on-primary-container flex items-center justify-center font-mono-code text-[11px] font-bold" id="selected-count-badge">3</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">recipients selected</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Batch operations apply to highlighted recipients</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-medium shadow-sm hover:bg-primary/95 transition-all" onclick="generateSelectedOnly()">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span id="generate-selected-label">Generate 3 Certificates</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors" onclick="downloadSelectedOnly()">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download PDFs</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" onclick="clearSelection()">
+            Clear Selection
+          </button>
+</div>
+</div>
+</div>
+<!-- Recipients Table (Shared Table Component with High Density) -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="recipients-table">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider select-none">
+<th class="py-3 px-4 w-12 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" id="select-all-checkbox" onchange="toggleSelectAll(this.checked)" type="checkbox">
+</th>
+<th class="py-3 px-4">Recipient Name &amp; Identity</th>
+<th class="py-3 px-4">Project &amp; Track</th>
+<th class="py-3 px-4">Certificate Type</th>
+<th class="py-3 px-4">Status</th>
+<th class="py-3 px-4">Issued Timestamp</th>
+<th class="py-3 px-4">Attestation Hash</th>
+<th class="py-3 px-4 text-right pr-6">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm text-on-surface" id="recipient-table-body">
+<!-- Row 1: Aris Thorne (Winner 1st Place) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group recipient-row" data-name="Aris Thorne" data-status="Downloaded" data-team="TraceProof Labs" data-track="Autonomous Agents" data-type="Winner">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" onchange="updateSelectionState()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-[12px]">AT</div>
+<div>
+<div class="font-headline-sm text-[14px] text-on-surface font-semibold flex items-center gap-1.5">
+                      Dr. Aris Thorne
+                      <span class="material-symbols-outlined text-[14px] text-amber-500" title="1st Place Champion">emoji_events</span>
+</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span>aris.thorne@traceproof.io</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-medium text-on-surface">TraceProof Labs</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface hover:text-primary transition-colors cursor-pointer">TraceProof Autonomous Auditor</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded-full bg-secondary/10 text-secondary font-mono-code text-[10px]">Autonomous Agents</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-800 font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px] text-amber-600">stars</span>
+                  Winner (1st Place)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Downloaded
+                </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-on-surface-variant">
+                Oct 25, 2025 · 08:30 UTC
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1 font-mono-code text-[11px] text-primary hover:underline cursor-pointer" onclick="copyHash('#CERT-99C8-01')" title="Copy verified hash">
+<span>#CERT-99C8-01</span>
+<span class="material-symbols-outlined text-[14px] text-[#10b981]">verified</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="downloadSinglePdf('#CERT-99C8-01')" title="Download PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="openRowOverflowMenu(this)" title="More options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Sarah Lindqvist (Winner 1st Place) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group recipient-row" data-name="Sarah Lindqvist" data-status="Generated" data-team="TraceProof Labs" data-track="Autonomous Agents" data-type="Winner">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" onchange="updateSelectionState()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold text-[12px]">SL</div>
+<div>
+<div class="font-headline-sm text-[14px] text-on-surface font-semibold flex items-center gap-1.5">
+                      Sarah Lindqvist
+                    </div>
+<div class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span>sarah.l@traceproof.io</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-medium text-on-surface">TraceProof Labs</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface hover:text-primary transition-colors cursor-pointer">TraceProof Autonomous Auditor</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded-full bg-secondary/10 text-secondary font-mono-code text-[10px]">Autonomous Agents</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-800 font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px] text-amber-600">stars</span>
+                  Winner (1st Place)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#10b981]/15 text-[#059669] font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span>
+                  Generated
+                </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-on-surface-variant">
+                Oct 25, 2025 · 08:31 UTC
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1 font-mono-code text-[11px] text-primary hover:underline cursor-pointer" onclick="copyHash('#CERT-99C8-02')">
+<span>#CERT-99C8-02</span>
+<span class="material-symbols-outlined text-[14px] text-[#10b981]">verified</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="downloadSinglePdf('#CERT-99C8-02')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="openRowOverflowMenu(this)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Mateo Rossi (Winner 1st Place) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group recipient-row" data-name="Mateo Rossi" data-status="Generated" data-team="TraceProof Labs" data-track="Autonomous Agents" data-type="Winner">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" onchange="updateSelectionState()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[12px]">MR</div>
+<div>
+<div class="font-headline-sm text-[14px] text-on-surface font-semibold">Mateo Rossi</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span>mateo.r@traceproof.io</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-medium text-on-surface">TraceProof Labs</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">TraceProof Autonomous Auditor</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded-full bg-secondary/10 text-secondary font-mono-code text-[10px]">Autonomous Agents</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-800 font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px] text-amber-600">stars</span>
+                  Winner (1st Place)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#10b981]/15 text-[#059669] font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span>
+                  Generated
+                </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-on-surface-variant">
+                Oct 25, 2025 · 08:31 UTC
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1 font-mono-code text-[11px] text-primary hover:underline cursor-pointer" onclick="copyHash('#CERT-99C8-03')">
+<span>#CERT-99C8-03</span>
+<span class="material-symbols-outlined text-[14px] text-[#10b981]">verified</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="downloadSinglePdf('#CERT-99C8-03')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="openRowOverflowMenu(this)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Elena Rostova (Winner 2nd Place) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group recipient-row" data-name="Elena Rostova" data-status="Downloaded" data-team="SynthLabs" data-track="RAG Architecture" data-type="Winner">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" onchange="updateSelectionState()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-[12px]">ER</div>
+<div>
+<div class="font-headline-sm text-[14px] text-on-surface font-semibold">Elena Rostova</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span>elena.rostova@synthlabs.ai</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-medium text-on-surface">SynthLabs</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">NeuralContext RAG Engine</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded-full bg-tertiary/10 text-tertiary font-mono-code text-[10px]">RAG Architecture</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-200 text-on-surface font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px] text-slate-500">workspace_premium</span>
+                  Winner (2nd Place)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Downloaded
+                </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-on-surface-variant">
+                Oct 25, 2025 · 09:12 UTC
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1 font-mono-code text-[11px] text-primary hover:underline cursor-pointer" onclick="copyHash('#CERT-99C8-04')">
+<span>#CERT-99C8-04</span>
+<span class="material-symbols-outlined text-[14px] text-[#10b981]">verified</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="downloadSinglePdf('#CERT-99C8-04')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="openRowOverflowMenu(this)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Marcus Vance (Winner 3rd Place) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group recipient-row" data-name="Marcus Vance" data-status="Generated" data-team="SecurerRuntime" data-track="Security &amp; Guardrails" data-type="Winner">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" onchange="updateSelectionState()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-amber-700/10 text-amber-800 flex items-center justify-center font-bold text-[12px]">MV</div>
+<div>
+<div class="font-headline-sm text-[14px] text-on-surface font-semibold">Marcus Vance</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span>m.vance@securerruntime.net</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-medium text-on-surface">SecurerRuntime</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">Wasm Agent Sandbox</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded-full bg-error/10 text-error font-mono-code text-[10px]">Security &amp; Guardrails</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-800/10 text-amber-900 font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px] text-amber-700">military_tech</span>
+                  Winner (3rd Place)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#10b981]/15 text-[#059669] font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span>
+                  Generated
+                </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-on-surface-variant">
+                Oct 25, 2025 · 09:15 UTC
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1 font-mono-code text-[11px] text-primary hover:underline cursor-pointer" onclick="copyHash('#CERT-99C8-05')">
+<span>#CERT-99C8-05</span>
+<span class="material-symbols-outlined text-[14px] text-[#10b981]">verified</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="downloadSinglePdf('#CERT-99C8-05')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="openRowOverflowMenu(this)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Alex Chen (Track Champion) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group recipient-row" data-name="Alex Chen" data-status="Pending" data-team="KernelSec" data-track="Autonomous Agents" data-type="Track Champion">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" onchange="updateSelectionState()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold text-[12px]">AC</div>
+<div>
+<div class="font-headline-sm text-[14px] text-on-surface font-semibold">Alex Chen</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span>alex.chen@kernelsec.org</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-medium text-on-surface">KernelSec</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">KernelSec Guard Dog</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded-full bg-secondary/10 text-secondary font-mono-code text-[10px]">Autonomous Agents</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]">military_tech</span>
+                  Track Champion
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-700 font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Pending
+                </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-on-surface-variant">
+                —
+              </td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-outline">
+                Unassigned (Ready)
+              </td>
+<td class="py-3.5 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-primary/10 hover:bg-primary/20 text-primary font-label-sm text-[11px] font-medium transition-colors" onclick="generateRowPdf(this, '#CERT-7712-06')">
+                    Generate
+                  </button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="openRowOverflowMenu(this)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Maya Lin (Participation - Pending) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group recipient-row" data-name="Maya Lin" data-status="Pending" data-team="DeepMemory" data-track="RAG Architecture" data-type="Participation">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" onchange="updateSelectionState()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[12px]">ML</div>
+<div>
+<div class="font-headline-sm text-[14px] text-on-surface font-semibold">Maya Lin</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span>maya.lin@deepmemory.dev</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-medium text-on-surface">DeepMemory</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">Temporal Memory Vectors</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded-full bg-tertiary/10 text-tertiary font-mono-code text-[10px]">RAG Architecture</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px] font-medium">
+                  Participation
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-700 font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Pending
+                </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-on-surface-variant">
+                —
+              </td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-outline">
+                Unassigned (Ready)
+              </td>
+<td class="py-3.5 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-primary/10 hover:bg-primary/20 text-primary font-label-sm text-[11px] font-medium transition-colors" onclick="generateRowPdf(this, '#CERT-7712-07')">
+                    Generate
+                  </button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="openRowOverflowMenu(this)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Liam Gallagher (Participation - Pending) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group recipient-row" data-name="Liam Gallagher" data-status="Pending" data-team="AutoKernel" data-track="Security &amp; Guardrails" data-type="Participation">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" onchange="updateSelectionState()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[12px]">LG</div>
+<div>
+<div class="font-headline-sm text-[14px] text-on-surface font-semibold">Liam Gallagher</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span>lgallagher@autokernel.cc</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-medium text-on-surface">AutoKernel</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">eBPF Agent Firewall</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded-full bg-error/10 text-error font-mono-code text-[10px]">Security &amp; Guardrails</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px] font-medium">
+                  Participation
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-700 font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Pending
+                </span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-on-surface-variant">
+                —
+              </td>
+<td class="py-3.5 px-4 font-mono-code text-[11px] text-outline">
+                Unassigned (Ready)
+              </td>
+<td class="py-3.5 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-primary/10 hover:bg-primary/20 text-primary font-label-sm text-[11px] font-medium transition-colors" onclick="generateRowPdf(this, '#CERT-7712-08')">
+                    Generate
+                  </button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="openRowOverflowMenu(this)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer with Pagination Controls -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs font-mono-code text-[11px]">
+<span>Displaying</span>
+<span class="font-medium text-on-surface" id="visible-row-count">8</span>
+<span>of 142 total recipients</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm disabled:opacity-50" disabled="">Previous</button>
+<button class="px-2.5 py-1 rounded-md bg-primary text-on-primary font-medium shadow-sm">1</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm">2</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm">18</button>
+<button class="px-3 py-1 rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm">Next</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Slideout / Drawer: Lightweight Template Editor -->
+<div class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-all duration-300" id="template-editor-drawer">
+<!-- Backdrop overlay -->
+<div class="absolute inset-0 bg-inverse-surface/20 backdrop-blur-xs opacity-0 transition-opacity duration-300" id="drawer-backdrop" onclick="toggleTemplateEditor(false)"></div>
+<!-- Sliding Panel -->
+<div class="absolute inset-y-0 right-0 max-w-2xl w-full bg-surface-container-lowest shadow-2xl flex flex-col pointer-events-auto transform translate-x-full transition-transform duration-300" id="drawer-panel">
+<!-- Drawer Header -->
+<div class="px-space-lg py-space-md bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="drawer-template-title">Official Participation Certificate (v2.1)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-mono-code">ID: TPL-PARTICIPATION-2025 • PostScript/PDF/A-3</p>
+</div>
+</div>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" onclick="toggleTemplateEditor(false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Content (Scrollable) -->
+<div class="flex-1 overflow-y-auto p-space-lg space-y-space-lg">
+<!-- Interactive Token Pill Bar -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Available Dynamic Tokens</label>
+<span class="font-body-sm text-[11px] text-outline">Click token to copy or inject</span>
+</div>
+<div class="flex flex-wrap gap-1.5 p-space-sm rounded-xl bg-surface-container-low">
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-mono-code text-[11px] hover:bg-primary hover:text-on-primary shadow-xs transition-colors" onclick="insertToken('{{participant_name}}')">
+              {{participant_name}}
+            </button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-mono-code text-[11px] hover:bg-primary hover:text-on-primary shadow-xs transition-colors" onclick="insertToken('{{team_name}}')">
+              {{team_name}}
+            </button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-mono-code text-[11px] hover:bg-primary hover:text-on-primary shadow-xs transition-colors" onclick="insertToken('{{project_title}}')">
+              {{project_title}}
+            </button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-mono-code text-[11px] hover:bg-primary hover:text-on-primary shadow-xs transition-colors" onclick="insertToken('{{track_name}}')">
+              {{track_name}}
+            </button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-mono-code text-[11px] hover:bg-primary hover:text-on-primary shadow-xs transition-colors" onclick="insertToken('{{placement}}')">
+              {{placement}}
+            </button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-mono-code text-[11px] hover:bg-primary hover:text-on-primary shadow-xs transition-colors" onclick="insertToken('{{score}}')">
+              {{score}}
+            </button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-mono-code text-[11px] hover:bg-primary hover:text-on-primary shadow-xs transition-colors" onclick="insertToken('{{attestation_hash}}')">
+              {{attestation_hash}}
+            </button>
+</div>
+</div>
+<!-- Field: Certificate Header Title -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Header Display String</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all" id="tpl-header-input" type="text" value="Certificate of Achievement &amp; Engineering Excellence">
+</div>
+<!-- Field: Body Copy with Tokens -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Certificate Body Text (Markdown Supported)</label>
+<span class="font-mono-code text-[11px] text-outline">Length: 184 chars</span>
+</div>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all" id="tpl-body-textarea" rows="4">This certifies that {{participant_name}} of team {{team_name}} actively designed, verified, and submitted a qualified project in the {{event_name}} on {{completion_date}}. Calibrated rank: {{final_rank}}.</textarea>
+</div>
+<!-- Authorized Signers Configuration -->
+<div class="space-y-space-sm">
+<label class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Authorized Issuer Signatures &amp; Seals</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Signer 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[11px]">SJ</div>
+<div>
+<div class="font-headline-sm text-[13px] text-on-surface">Sarah Jenkins</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant">Lead Organizer</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#10b981] text-[18px]" title="Key Pair Verified">check_circle</span>
+</div>
+<!-- Signer 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between" id="signer-dr-thorne">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-[11px]">AT</div>
+<div>
+<div class="font-headline-sm text-[13px] text-on-surface">Dr. Aris Thorne</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant">Jury Chair</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#10b981] text-[18px]" id="signer-thorne-icon">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Security & Attestation Toggles -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm">
+<div class="flex items-start gap-space-sm">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" id="check-qr-seal" type="checkbox">
+<div>
+<label class="font-label-md text-label-md font-semibold text-on-surface cursor-pointer" for="check-qr-seal">
+                Embed Ed25519 Cryptographic Attestation QR Code on Reverse
+              </label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Enables instant zero-knowledge offline verification via public Dogfood ledger gateway.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" id="check-pdf-a" type="checkbox">
+<div>
+<label class="font-label-md text-label-md font-semibold text-on-surface cursor-pointer" for="check-pdf-a">
+                Strict ISO 19005-3 (PDF/A-3) Long-Term Archival Compliance
+              </label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Embeds original JSON manifest directly in document XML tree for university registrar compatibility.</p>
+</div>
+</div>
+</div>
+<!-- Live Layout Simulator Viewport -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Live Vector Preview (A4 Canvas 300 DPI)</label>
+<span class="font-mono-code text-[11px] text-primary">Previewing with sample payload</span>
+</div>
+<div class="w-full aspect-[16/10] bg-surface-container-lowest rounded-xl shadow-inner p-6 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute inset-0 bg-radial from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<!-- Certificate Frame Inner -->
+<div class="w-full h-full p-4 flex flex-col justify-between text-center relative z-10">
+<div class="flex justify-between items-center text-left">
+<div class="font-mono-code text-[10px] text-primary font-bold">DOGFOOD • AI AGENTS WORLD CUP</div>
+<div class="font-mono-code text-[10px] text-outline">CERT-ID: #SAMPLE-2025-DEV</div>
+</div>
+<div class="my-auto space-y-1">
+<h4 class="font-headline-md text-[18px] text-on-surface tracking-tight" id="preview-header-text">Certificate of Achievement &amp; Engineering Excellence</h4>
+<p class="font-body-sm text-[11px] text-on-surface-variant max-w-md mx-auto" id="preview-body-text">
+                  This certifies that <strong class="text-on-surface">Sarah Lindqvist</strong> of team <strong class="text-on-surface">TraceProof Labs</strong> actively designed, verified, and submitted a qualified project.
+                </p>
+</div>
+<div class="flex justify-between items-end text-left pt-2">
+<div class="text-[10px] font-mono-code text-on-surface-variant">
+<div>ISSUER: SARAH JENKINS (ORGANIZER)</div>
+<div class="text-[8px] text-outline">ED25519-KEY: 9f8a...4b12</div>
+</div>
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-[20px] text-on-surface">qr_code_2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Footer Action Bar -->
+<div class="p-space-lg bg-surface-container-lowest flex items-center justify-between shadow-lg">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors" onclick="sendTestPdf()">
+          Send Test PDF to Sarah
+        </button>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" onclick="toggleTemplateEditor(false)">
+            Cancel
+          </button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium shadow-sm hover:bg-primary/95 transition-all" onclick="saveTemplateChanges()">
+            Save Changes
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Certificate Preview Modal (Lightbox) -->
+<div class="fixed inset-0 z-50 overflow-hidden hidden items-center justify-center p-4" id="preview-modal">
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm" onclick="closePreviewModal()"></div>
+<div class="relative w-full max-w-3xl bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden z-10 flex flex-col max-h-[90vh]">
+<!-- Header -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface" id="modal-cert-title">Certificate Preview</span>
+</div>
+<button class="p-1 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container" onclick="closePreviewModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- High Fidelity Visual Mockup Certificate Canvas -->
+<div class="p-space-xl overflow-y-auto bg-surface-container/40 flex items-center justify-center">
+<div class="w-full aspect-[1.414/1] bg-surface-container-lowest p-8 rounded-xl shadow-lg relative flex flex-col justify-between text-center overflow-hidden">
+<!-- Background watermark emblem -->
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[220px]">shield_with_heart</span>
+</div>
+<!-- Certificate Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">terminal</span>
+<span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Dogfood Native Attestation</span>
+</div>
+<span class="font-mono-code text-[11px] text-outline font-semibold" id="modal-cert-hash">#CERT-99C8-01</span>
+</div>
+<!-- Body Hero -->
+<div class="space-y-space-md my-auto py-6">
+<div class="font-mono-code text-[11px] uppercase tracking-widest text-primary font-bold">This is proudly presented to</div>
+<h2 class="font-display-lg text-display-lg text-on-surface tracking-tight" id="modal-recipient-name">Dr. Aris Thorne</h2>
+<div class="w-32 h-0.5 bg-primary/40 mx-auto rounded-full"></div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto" id="modal-recipient-desc">
+              For exceptional innovation and architectural mastery in project <strong class="text-on-surface" id="modal-project-name">TraceProof Autonomous Auditor</strong> during the AI Agents World Cup 2025.
+            </p>
+</div>
+<!-- Footer Signatures & QR Seal -->
+<div class="flex items-end justify-between pt-6">
+<div class="text-left space-y-1">
+<div class="font-serif italic text-[16px] text-on-surface">Sarah Jenkins</div>
+<div class="w-28 h-px bg-outline-variant"></div>
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Sarah Jenkins • Lead Organizer</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-14 h-14 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-600 mb-1">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<span class="font-mono-code text-[9px] text-outline">SECURE ZERO-KNOWLEDGE SEAL</span>
+</div>
+<div class="text-right space-y-1">
+<div class="font-serif italic text-[16px] text-on-surface">Dr. Aris Thorne</div>
+<div class="w-28 h-px bg-outline-variant ml-auto"></div>
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Dr. Aris Thorne • Jury Chair</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<span class="font-mono-code text-[11px] text-on-surface-variant">Validated: Ed25519-Signed SHA256 Manifest Attached</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" onclick="closePreviewModal()">
+            Close
+          </button>
+<button class="px-4 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium shadow-sm hover:bg-primary/95 transition-all" onclick="downloadActiveModalPdf()">
+            Download Single PDF
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Component -->
+<div class="fixed bottom-6 right-6 z-50 hidden bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-space-sm font-label-md text-label-md animate-in fade-in slide-in-from-bottom-2 duration-200" id="system-toast">
+<span class="material-symbols-outlined text-[#10b981] text-[20px]" id="toast-icon">check_circle</span>
+<span id="toast-message">Action executed successfully.</span>
+</div>
+<!-- Interactive JavaScript Logic -->
+<script>
+    // State Simulator Management
+    function setSimState(state) {
+      const pills = document.querySelectorAll('#state-selector-group .state-pill');
+      pills.forEach(p => {
+        if(p.getAttribute('data-state') === state) {
+          p.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+          p.classList.add('bg-primary', 'text-on-primary');
+        } else {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        }
+      });
+
+      const progBanner = document.getElementById('batch-progress-banner');
+      const alertBanner = document.getElementById('incomplete-template-alert');
+      const issuedStat = document.getElementById('stat-issued-count');
+      const percentStat = document.getElementById('stat-issued-percent');
+      const pendingStat = document.getElementById('stat-pending-count');
+      const progressBar = document.getElementById('issued-progress-bar');
+      const primaryBtn = document.getElementById('primary-generate-btn');
+      const pendingBtnCounter = document.getElementById('pending-counter-btn');
+
+      progBanner.classList.add('hidden');
+      alertBanner.classList.add('hidden');
+
+      if (state === 'default') {
+        issuedStat.innerText = '94 Generated';
+        percentStat.innerText = '66.2%';
+        pendingStat.innerHTML = '<span>48 Pending</span><span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>';
+        progressBar.style.width = '66.2%';
+        pendingBtnCounter.innerText = '48';
+        primaryBtn.classList.remove('opacity-50', 'pointer-events-none');
+        resetTableStatuses('mixed');
+        showToast('Restored standard default state (66.2% issued)');
+      } 
+      else if (state === 'all-pending') {
+        issuedStat.innerText = '0 Generated';
+        percentStat.innerText = '0.0%';
+        pendingStat.innerHTML = '<span>142 Pending</span><span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>';
+        progressBar.style.width = '0%';
+        pendingBtnCounter.innerText = '142';
+        primaryBtn.classList.remove('opacity-50', 'pointer-events-none');
+        resetTableStatuses('pending');
+        showToast('State set to 0% Generated (All 142 Pending)');
+      } 
+      else if (state === 'all-complete') {
+        issuedStat.innerText = '142 Generated';
+        percentStat.innerText = '100%';
+        pendingStat.innerHTML = '<span class="text-[#059669]">0 Pending</span>';
+        progressBar.style.width = '100%';
+        pendingBtnCounter.innerText = '0';
+        primaryBtn.classList.add('opacity-50', 'pointer-events-none');
+        resetTableStatuses('completed');
+        showToast('All 142 credentials fully issued and attested!');
+      } 
+      else if (state === 'batch-progress') {
+        progBanner.classList.remove('hidden');
+        simulateBatchRun();
+        showToast('Asynchronous batch job started');
+      } 
+      else if (state === 'template-alert') {
+        alertBanner.classList.remove('hidden');
+        showToast('Triggered signature missing warning alert', 'warning');
+      }
+    }
+
+    function resetTableStatuses(mode) {
+      const rows = document.querySelectorAll('.recipient-row');
+      rows.forEach((row, i) => {
+        const statusCell = row.querySelector('.status-cell');
+        const hashDiv = row.children[6];
+        const actionCell = row.children[7];
+        
+        if (mode === 'pending') {
+          statusCell.className = 'status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-700 font-label-sm text-[11px] font-medium';
+          statusCell.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>Pending';
+          hashDiv.innerHTML = '<span class="font-mono-code text-[11px] text-outline">Unassigned (Ready)</span>';
+          actionCell.innerHTML = `
+            <div class="flex items-center justify-end gap-1">
+              <button onclick="generateRowPdf(this, '#CERT-7712-${i+1}')" class="px-2.5 py-1 rounded bg-primary/10 hover:bg-primary/20 text-primary font-label-sm text-[11px] font-medium transition-colors">
+                Generate
+              </button>
+              <button onclick="openRowOverflowMenu(this)" class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+                <span class="material-symbols-outlined text-[18px]">more_vert</span>
+              </button>
+            </div>
+          `;
+          row.setAttribute('data-status', 'Pending');
+        } else if (mode === 'completed') {
+          statusCell.className = 'status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#10b981]/15 text-[#059669] font-label-sm text-[11px] font-medium';
+          statusCell.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span>Generated';
+          hashDiv.innerHTML = `<div class="flex items-center gap-1 font-mono-code text-[11px] text-primary hover:underline cursor-pointer" onclick="copyHash('#CERT-99C8-0${i+1}')"><span>#CERT-99C8-0${i+1}</span><span class="material-symbols-outlined text-[14px] text-[#10b981]">verified</span></div>`;
+          actionCell.innerHTML = `
+            <div class="flex items-center justify-end gap-1">
+              <button onclick="downloadSinglePdf('#CERT-99C8-0${i+1}')" class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Download PDF">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+              </button>
+              <button onclick="openRowOverflowMenu(this)" class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+                <span class="material-symbols-outlined text-[18px]">more_vert</span>
+              </button>
+            </div>
+          `;
+          row.setAttribute('data-status', 'Generated');
+        }
+      });
+    }
+
+    // Template Editor Drawer Interactions
+    function toggleTemplateEditor(open) {
+      const drawer = document.getElementById('template-editor-drawer');
+      const backdrop = document.getElementById('drawer-backdrop');
+      const panel = document.getElementById('drawer-panel');
+
+      if (open) {
+        drawer.classList.remove('pointer-events-none');
+        backdrop.classList.remove('opacity-0');
+        backdrop.classList.add('opacity-100');
+        panel.classList.remove('translate-x-full');
+      } else {
+        backdrop.classList.remove('opacity-100');
+        backdrop.classList.add('opacity-0');
+        panel.classList.add('translate-x-full');
+        setTimeout(() => {
+          drawer.classList.add('pointer-events-none');
+        }, 300);
+      }
+    }
+
+    function openSpecificTemplate(type) {
+      toggleEditorDropdown(false);
+      const titleElem = document.getElementById('drawer-template-title');
+      const headerInput = document.getElementById('tpl-header-input');
+      const bodyTextarea = document.getElementById('tpl-body-textarea');
+
+      if (type === 'participation') {
+        titleElem.innerText = 'Official Participation Certificate (v2.1)';
+        headerInput.value = 'Certificate of Achievement & Engineering Excellence';
+        bodyTextarea.value = 'This certifies that {{participant_name}} of team {{team_name}} actively designed, verified, and submitted a qualified project in the {{event_name}} on {{completion_date}}. Calibrated rank: {{final_rank}}.';
+      } else if (type === 'winner') {
+        titleElem.innerText = 'Podium Winner Honors (Grand & Finalist)';
+        headerInput.value = 'Grand Champion & Laureate of AI Agents 2025';
+        bodyTextarea.value = 'In recognition of superlative technical accomplishment, {{participant_name}} of team {{team_name}} secured {{placement}} with a calibrated jury score of {{score}}.';
+      } else if (type === 'track') {
+        titleElem.innerText = 'Special Track Distinction Award (v2.0)';
+        headerInput.value = 'Special Track Domain Leadership Award';
+        bodyTextarea.value = 'Presented to {{participant_name}} (Team {{team_name}}) for defining excellence in the specialized track: {{track_name}} with attestation {{attestation_hash}}.';
+      } else if (type === 'jury') {
+        titleElem.innerText = 'Distinguished Jury Attestation (Incomplete)';
+        headerInput.value = 'Attestation of Judicial Evaluation & Governance';
+        bodyTextarea.value = 'This attestation affirms that {{participant_name}} served as Official Hackathon Juror for AI Agents World Cup 2025.';
+      }
+      toggleTemplateEditor(true);
+    }
+
+    function insertToken(token) {
+      const textarea = document.getElementById('tpl-body-textarea');
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const text = textarea.value;
+      textarea.value = text.substring(0, start) + token + text.substring(end);
+      textarea.focus();
+      textarea.setSelectionRange(start + token.length, start + token.length);
+      showToast(`Inserted token ${token}`);
+    }
+
+    function saveTemplateChanges() {
+      toggleTemplateEditor(false);
+      showToast('Template configuration & Ed25519 payload saved successfully!');
+    }
+
+    function sendTestPdf() {
+      showToast('Test sample PDF rendered and dispatched to sarah@dogfood.internal');
+    }
+
+    // Dropdown Editor Menu
+    function toggleEditorDropdown(forceClose) {
+      const menu = document.getElementById('editor-menu');
+      if (forceClose === false || !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+      } else {
+        menu.classList.remove('hidden');
+      }
+    }
+
+    // Modal Preview Lightbox
+    function previewCertificateModal(typeTitle, recipient, project, distinction, hash) {
+      document.getElementById('modal-cert-title').innerText = typeTitle;
+      document.getElementById('modal-recipient-name').innerText = recipient;
+      document.getElementById('modal-project-name').innerText = project;
+      document.getElementById('modal-cert-hash').innerText = hash;
+      const modal = document.getElementById('preview-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closePreviewModal() {
+      const modal = document.getElementById('preview-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function downloadActiveModalPdf() {
+      closePreviewModal();
+      showToast('Compiling high-resolution PDF/A-3 download bundle...');
+    }
+
+    // Checkbox Selection Logic
+    function toggleSelectAll(checked) {
+      const checkboxes = document.querySelectorAll('.row-checkbox');
+      checkboxes.forEach(cb => cb.checked = checked);
+      updateSelectionState();
+    }
+
+    function updateSelectionState() {
+      const checkboxes = document.querySelectorAll('.row-checkbox:checked');
+      const count = checkboxes.length;
+      const bar = document.getElementById('selection-bar');
+      const badge = document.getElementById('selected-count-badge');
+      const label = document.getElementById('generate-selected-label');
+
+      if (count > 0) {
+        bar.classList.remove('hidden');
+        badge.innerText = count;
+        label.innerText = `Generate ${count} Certificate${count > 1 ? 's' : ''}`;
+      } else {
+        bar.classList.add('hidden');
+        document.getElementById('select-all-checkbox').checked = false;
+      }
+    }
+
+    function clearSelection() {
+      document.querySelectorAll('.row-checkbox').forEach(cb => cb.checked = false);
+      document.getElementById('select-all-checkbox').checked = false;
+      updateSelectionState();
+    }
+
+    function generateSelectedOnly() {
+      const count = document.querySelectorAll('.row-checkbox:checked').length;
+      clearSelection();
+      showToast(`Dispatched background generation for ${count} selected records`);
+    }
+
+    function downloadSelectedOnly() {
+      const count = document.querySelectorAll('.row-checkbox:checked').length;
+      showToast(`Packaging ${count} certificates into secure archive...`);
+    }
+
+    // Single Record Generation
+    function generateRowPdf(btn, hash) {
+      const row = btn.closest('tr');
+      btn.disabled = true;
+      btn.innerText = 'Rendering...';
+      setTimeout(() => {
+        const statusCell = row.querySelector('.status-cell');
+        statusCell.className = 'status-cell inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#10b981]/15 text-[#059669] font-label-sm text-[11px] font-medium';
+        statusCell.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span>Generated';
+        
+        row.children[5].innerText = 'Just now';
+        row.children[6].innerHTML = `<div class="flex items-center gap-1 font-mono-code text-[11px] text-primary hover:underline cursor-pointer" onclick="copyHash('${hash}')"><span>${hash}</span><span class="material-symbols-outlined text-[14px] text-[#10b981]">verified</span></div>`;
+        row.children[7].innerHTML = `
+          <div class="flex items-center justify-end gap-1">
+            <button onclick="downloadSinglePdf('${hash}')" class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Download PDF">
+              <span class="material-symbols-outlined text-[18px]">download</span>
+            </button>
+            <button onclick="openRowOverflowMenu(this)" class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[18px]">more_vert</span>
+            </button>
+          </div>
+        `;
+        row.setAttribute('data-status', 'Generated');
+        showToast(`Document ${hash} generated and digitally signed`);
+      }, 700);
+    }
+
+    function downloadSinglePdf(hash) {
+      showToast(`Initiating download: ${hash}.pdf`);
+    }
+
+    // Batch Generation Simulation
+    function startBatchGeneration() {
+      setSimState('batch-progress');
+    }
+
+    function simulateBatchRun() {
+      let count = 0;
+      const total = 48;
+      const countEl = document.getElementById('progress-rendered-count');
+      const percentEl = document.getElementById('progress-percent');
+      const fillEl = document.getElementById('batch-progress-fill');
+
+      const interval = setInterval(() => {
+        count += 6;
+        if (count >= total) {
+          count = total;
+          clearInterval(interval);
+          setTimeout(() => {
+            setSimState('all-complete');
+          }, 600);
+        }
+        const pct = Math.round((count / total) * 100);
+        countEl.innerText = count;
+        percentEl.innerText = pct + '%';
+        fillEl.style.width = pct + '%';
+      }, 250);
+    }
+
+    function abortBatchGeneration() {
+      document.getElementById('batch-progress-banner').classList.add('hidden');
+      showToast('Batch queue safely canceled by user', 'warning');
+    }
+
+    // Filter and Search Table Logic
+    function filterRecipients() {
+      const searchVal = document.getElementById('recipient-search-input').value.toLowerCase();
+      const typeVal = document.getElementById('filter-cert-type').value;
+      const statusVal = document.getElementById('filter-status').value;
+      const trackVal = document.getElementById('filter-track').value;
+
+      const rows = document.querySelectorAll('.recipient-row');
+      let visible = 0;
+
+      rows.forEach(row => {
+        const name = row.getAttribute('data-name').toLowerCase();
+        const team = row.getAttribute('data-team').toLowerCase();
+        const type = row.getAttribute('data-type');
+        const status = row.getAttribute('data-status');
+        const track = row.getAttribute('data-track');
+
+        const matchSearch = !searchVal || name.includes(searchVal) || team.includes(searchVal);
+        const matchType = (typeVal === 'all') || type.includes(typeVal);
+        const matchStatus = (statusVal === 'all') || (status === statusVal);
+        const matchTrack = (trackVal === 'all') || (track === trackVal);
+
+        if (matchSearch && matchType && matchStatus && matchTrack) {
+          row.classList.remove('hidden');
+          visible++;
+        } else {
+          row.classList.add('hidden');
+        }
+      });
+
+      document.getElementById('visible-row-count').innerText = visible;
+    }
+
+    // Utilities
+    function copyHash(hash) {
+      navigator.clipboard?.writeText(hash);
+      showToast(`Copied verified attestation ${hash}`);
+    }
+
+    function exportManifest() {
+      showToast('Exporting cryptographic manifest .CSV (142 rows)');
+    }
+
+    function downloadAllZip() {
+      showToast('Preparing ZIP archive: ai-agents-2025-certificates.zip (142MB)');
+    }
+
+    function batchResendEmails() {
+      showToast('Dispatched verification email re-invites to 48 recipients');
+    }
+
+    function openRowOverflowMenu(btn) {
+      showToast('Row options: Preview, Re-sign, Verify Hash, Revoke');
+    }
+
+    function showToast(msg, type = 'success') {
+      const toast = document.getElementById('system-toast');
+      const icon = document.getElementById('toast-icon');
+      const text = document.getElementById('toast-message');
+
+      text.innerText = msg;
+      if (type === 'warning') {
+        icon.innerText = 'warning';
+        icon.className = 'material-symbols-outlined text-amber-500 text-[20px]';
+      } else {
+        icon.innerText = 'check_circle';
+        icon.className = 'material-symbols-outlined text-[#10b981] text-[20px]';
+      }
+
+      toast.classList.remove('hidden');
+      clearTimeout(window.__toastTimeout);
+      window.__toastTimeout = setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3200);
+    }
+
+    // Close menus on outside click
+    document.addEventListener('click', (e) => {
+      const menu = document.getElementById('editor-menu');
+      const dropdown = document.getElementById('template-editor-dropdown');
+      if (menu && !menu.classList.contains('hidden') && !dropdown.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
+</div></main></div></body></html>

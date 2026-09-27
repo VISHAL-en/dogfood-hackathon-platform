@@ -1,0 +1,1001 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed-dim":"#c2c1ff","outline":"#717785","secondary-fixed-dim":"#b4c5ff","secondary-container":"#316bf3","on-surface":"#1a1b1f","surface-tint":"#005cbb","on-tertiary-fixed":"#0c006b","surface-container-high":"#e9e7ed","on-error-container":"#93000a","error-container":"#ffdad6","surface-container-highest":"#e3e2e7","primary-container":"#0071e3","on-secondary":"#ffffff","surface":"#faf8fe","outline-variant":"#c1c6d6","tertiary":"#4a47d2","error":"#ba1a1a","on-error":"#ffffff","on-secondary-fixed":"#00174b","primary-fixed-dim":"#abc7ff","on-tertiary":"#ffffff","background":"#faf8fe","surface-dim":"#dbd9df","tertiary-fixed":"#e2dfff","inverse-surface":"#2f3034","on-primary":"#ffffff","on-background":"#1a1b1f","on-primary-fixed":"#001b3f","surface-variant":"#e3e2e7","inverse-primary":"#abc7ff","surface-container":"#efedf3","inverse-on-surface":"#f1f0f6","primary-fixed":"#d7e2ff","on-tertiary-fixed-variant":"#332dbc","on-primary-container":"#fcfbff","surface-container-low":"#f4f3f8","on-secondary-fixed-variant":"#003ea8","secondary":"#0051d5","surface-bright":"#faf8fe","tertiary-container":"#6462ec","on-tertiary-container":"#fefaff","on-primary-fixed-variant":"#00458f","surface-container-lowest":"#ffffff","on-secondary-container":"#fefcff","primary":"#0059b5","secondary-fixed":"#dbe1ff","on-surface-variant":"#414753"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-sm":"0.5rem","space-md":"0.75rem","margin-desktop":"3rem","space-lg":"1.25rem","space-xs":"0.25rem",margin:"1rem",gutter:"1rem","space-xl":"2rem","margin-tablet":"2rem","gutter-desktop":"1.5rem"},fontFamily:{"headline-md":["Inter"],"mono-code":["JetBrains Mono"],"body-md":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"],"display-lg-mobile":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"]},fontSize:{"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"mono-code":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"body-md":["13px",{lineHeight:"19px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.01em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.005em",fontWeight:"400"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"600"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 overflow-hidden"><div class="h-14 px-space-md flex items-center gap-space-sm bg-surface-container-lowest/80 backdrop-blur-md"><img alt="Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XFolziqjX2O3dIfh14x-0pksaympgFfP4_AHvWofl_NJ4aWB-bcIhJV87ZncKEY3qGSKoZ-lgovdenQDBhHa-EXUB0-p-vq5fwNG3WrVxSM4gg2JeG2n711UpoLXyVmrmxsNoTWjRpbhXhXfI7h7KpEoEFCJ97iiGNlaWheup3EvMx6RKOhEPMUQJNbzMqyvXDuYqJoBlviuPHWYJstuz94qCkbiefh8sCaRkklhnTmlJ_q80ber93ukl8"><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight truncate">Dogfood</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-medium">Organizer Suite</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-sm space-y-0.5"><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_1px_2px_rgba(0,113,227,0.2)] rounded-lg"><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="overview" href="#">Overview</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="events" href="#">Events</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="participants" href="#">Participants</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="teams" href="#">Teams</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="submissions" href="#">Submissions</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="eligibility" href="#">Eligibility</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="judges" href="#">Judges</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="judging" href="#">Judging</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="normalization" href="#">Normalization</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="results" href="#">Results</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="certificates" href="#">Certificates</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="dogfood-event-archive" href="#">Archive</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="dogfood-event-settings" href="#">Settings</a><a class="flex items-center px-space-md py-1.5 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors font-label-md text-label-md" data-path="dogfood-user-profile" href="#">User Profile</a></nav></div></div><div class="p-space-sm bg-surface-container-low/60"><div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)] flex flex-col gap-1"><div class="flex items-center justify-between font-mono-code text-mono-code"><span class="flex items-center gap-1.5 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>Cluster OK</span><span class="font-medium text-on-surface">99.98%</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-0.5"><span>Docs &amp; API</span><span class="font-mono-code text-mono-code text-outline">v2.4-prod</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><button class="h-8 px-space-sm py-1 bg-surface-container-low hover:bg-surface-container-high text-on-surface rounded-lg transition-colors flex items-center gap-1.5 font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] text-primary">token</span><span class="font-semibold">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></button><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low font-mono-code text-mono-code text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>us-east-cluster</span><span>•</span><span class="text-primary font-medium">OK</span><span>•</span><span>99.98%</span></div></div><div class="flex items-center gap-space-md"><div class="relative w-64"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">search</span><input class="w-full h-8 pl-8 pr-8 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] transition-all" placeholder="Search telemetry, teams..." type="text"><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono-code text-[10px] text-on-surface-variant bg-surface-container-highest px-1 py-0.5 rounded leading-none">⌘K</span></div><div class="flex items-center gap-1.5"><button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors relative"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-primary-container"></span></button><nav class="flex items-center gap-space-sm pl-2" data-active-classes="ring-2 ring-primary-container rounded-lg"><a class="flex items-center gap-space-sm p-1 rounded-lg hover:bg-surface-container-high transition-colors group" data-path="dogfood-user-profile" href="#"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight group-hover:text-primary transition-colors">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Lead Organizer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_1px_2px_rgba(0,89,181,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></nav></div></div></header><main class="relative pt-14 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Simulation & State Toggle Controller Bar (Cupertino macOS Toolstrip) -->
+<div class="w-full bg-surface-container-lowest shadow-sm px-space-lg py-2.5 flex items-center justify-between gap-space-md overflow-x-auto">
+<div class="flex items-center gap-2 text-on-surface-variant flex-shrink-0 font-mono-code text-mono-code">
+<span class="material-symbols-outlined text-[16px] text-primary">tune</span>
+<span class="font-medium tracking-tight">Interactive Preview:</span>
+</div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-primary-container text-on-primary-container shadow-sm font-medium" id="sim-btn-profile" onclick="switchTab('profile')">
+        Profile Info (Default)
+      </button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium" id="sim-btn-security" onclick="switchTab('security')">
+        Account Security
+      </button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium" id="sim-btn-notifications" onclick="switchTab('notifications')">
+        Notification Matrix
+      </button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium" id="sim-btn-connections" onclick="switchTab('connections')">
+        Connected Accounts
+      </button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium" id="sim-btn-privacy" onclick="switchTab('privacy')">
+        Privacy &amp; Danger Zone
+      </button>
+<div class="h-3 w-px bg-surface-container-highest mx-1"></div>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-surface-container-low hover:bg-surface-container-high text-primary font-medium flex items-center gap-1" onclick="triggerFlashToast()">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        Save Success Flash
+      </button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-medium" id="sim-btn-verify" onclick="toggleVerifyState()">
+        Toggle Verify State
+      </button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-surface-container-low hover:bg-surface-container-high text-error font-medium" id="sim-btn-err" onclick="toggleInlineError()">
+        Validation Error
+      </button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-error-container text-on-error-container hover:opacity-90 font-medium" onclick="openDeleteModal()">
+        Delete Modal
+      </button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-medium" id="sim-btn-skeleton" onclick="toggleSkeleton()">
+        Skeleton Loader
+      </button>
+</div>
+</div>
+<!-- Main Body Content Canvas -->
+<div class="px-4 md:px-8 py-6 max-w-7xl w-full mx-auto space-y-6">
+<!-- Global Toast Alert Banner (Hidden by default, triggered via Simulation or Save action) -->
+<div class="hidden transition-all duration-300 transform rounded-xl bg-surface-container-lowest p-3.5 shadow-md flex items-center justify-between" id="save-toast">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Changes Committed</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Profile credentials signed and synced to local cryptovault with hash <span class="font-mono-code text-[11px] bg-surface-container-high px-1 py-0.5 rounded">0x3b92..d1e9</span>.</p>
+</div>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container-high" onclick="dismissToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Page Header & Cupertino Identity Pod -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-6 relative overflow-hidden">
+<!-- Ambient decorative gradient wash -->
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-gradient-to-br from-primary-fixed/30 to-tertiary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+<!-- Identity Pod: Avatar + Metadata Details -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+<!-- Avatar with Hover Edit Overlay -->
+<div class="relative group cursor-pointer">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-high overflow-hidden shadow-inner flex items-center justify-center text-primary font-headline-lg font-bold">
+<img class="w-full h-full object-cover" data-alt="Professional studio headshot of Sarah Jenkins, technology researcher, soft lighting, slate blue palette, clean background, photorealistic portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbWh8-zIOgyQUgFvRRhvyKPLjLvW0FJrLVD2vj3LniO2HDCgUQFhMWttEpg0uQKI5eOqagCnizf67q9190IbllaTsLlyhCi-_EdKPfnqjurz3JX6SyRM2906E8PV9EBmGAeZ7QFUToeme6VAMNnMewjfFJcKCa6x3r5xHgcseanF7lkz1DmOPozldhJmv2nnaqrUg_fr6phDkJcB-w60N6oD2hM9eRkB2YTjiX-igRAti9cOX7hjaE9w">
+</div>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[13px]">photo_camera</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex items-center gap-2.5 flex-wrap">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight font-semibold">Sarah Jenkins</h1>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" title="Tier-3 Identity Attestation Complete">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                KYC Verified
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                Lead Organizer • Multi-Role
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span>Manage your personal credentials, cryptographic identities, multi-factor keys, and notification channels.</span>
+</p>
+<div class="flex items-center gap-3 pt-1 flex-wrap font-mono-code text-mono-code">
+<button class="group inline-flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="copyDid()" title="Click to copy DID">
+<span class="material-symbols-outlined text-[14px] text-primary">key</span>
+<span id="did-text">did:dogfood:ed25519:8f9a..c412</span>
+<span class="material-symbols-outlined text-[13px] opacity-60 group-hover:opacity-100">content_copy</span>
+</button>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Node Synced
+              </span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant">Member since Oct 2024</span>
+</div>
+</div>
+</div>
+<!-- Quick Top Actions -->
+<div class="flex items-center gap-2.5 self-end lg:self-center">
+<a class="px-3.5 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5 shadow-sm" href="#">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+            View Public Dossier
+          </a>
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-all flex items-center gap-1.5 shadow-sm" onclick="triggerFlashToast()">
+<span class="material-symbols-outlined text-[16px]">save</span>
+            Save All Changes
+          </button>
+</div>
+</div>
+</div>
+<!-- Verification Pending Warning Ribbon (Toggled interactively) -->
+<div class="hidden rounded-xl bg-secondary-fixed text-on-secondary-fixed p-3.5 shadow-sm flex items-center justify-between" id="verify-pending-ribbon">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">mark_email_unread</span>
+<div class="font-body-md text-body-md">
+<span class="font-semibold">Email Verification Pending:</span> We sent a confirmation cryptographic token to <span class="font-mono-code font-medium">sarah.j@traceproof.io</span>.
+        </div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 rounded-lg bg-surface-container-lowest text-secondary font-label-sm text-label-sm hover:bg-surface-bright transition-colors shadow-sm font-semibold">Resend Verification Link</button>
+<button class="p-1 rounded-md text-on-secondary-fixed hover:bg-secondary-fixed-dim/40" onclick="toggleVerifyState()"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+</div>
+<!-- Inline Validation Error Banner (Toggled interactively) -->
+<div class="hidden rounded-xl bg-error-container text-on-error-container p-3.5 shadow-sm flex items-center justify-between" id="inline-error-banner">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-error text-[20px]">error</span>
+<div class="font-body-md text-body-md">
+<span class="font-semibold">Validation Error:</span> Password confirmation does not match the new password requirements. Please correct before submitting.
+        </div>
+</div>
+<button class="p-1 rounded-md text-on-error-container hover:opacity-80" onclick="toggleInlineError()"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<!-- Two-Column Desktop Workstation Layout (Matching Event Settings) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT SIDEBAR NAV PANEL (~260px desktop width equivalent) -->
+<div class="lg:col-span-3 space-y-4">
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-3 space-y-1">
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-sm font-semibold text-left" id="nav-item-profile" onclick="switchTab('profile')">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px]">person</span>
+              Profile Information
+            </span>
+<span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-mono-code bg-surface-container-lowest/30 text-on-primary-container">Default</span>
+</button>
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-left" id="nav-item-security" onclick="switchTab('security')">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px]">security</span>
+              Account Security
+            </span>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-mono-code bg-primary-fixed text-on-primary-fixed font-semibold">2FA ON</span>
+</button>
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-left" id="nav-item-notifications" onclick="switchTab('notifications')">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+              Notification Matrix
+            </span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</button>
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-left" id="nav-item-connections" onclick="switchTab('connections')">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+              Connected Accounts
+            </span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-mono-code bg-surface-container-high text-on-surface-variant">4 Active</span>
+</button>
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-left" id="nav-item-privacy" onclick="switchTab('privacy')">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+              Privacy &amp; Data
+            </span>
+</button>
+<div class="pt-2 pb-1">
+<div class="h-px bg-surface-container-high w-full"></div>
+</div>
+<button class="w-full flex items-center gap-2.5 px-3.5 py-2 rounded-xl font-label-md text-label-md text-error hover:bg-error-container/40 transition-colors text-left" onclick="openDeleteModal()">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+            Deactivate or Delete...
+          </button>
+</div>
+<!-- Telemetry & Storage Vault Info Card -->
+<div class="bg-surface-container-low rounded-2xl p-4 shadow-sm space-y-3">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-headline-sm text-headline-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">database</span>
+              Identity Vault
+            </span>
+<span class="font-mono-code text-[11px] text-primary bg-primary-fixed px-1.5 py-0.5 rounded">AES-256-GCM</span>
+</div>
+<div class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span>Encrypted Storage</span>
+<span class="font-mono-code text-on-surface font-medium">12.4 KB</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 24%"></div>
+</div>
+<div class="flex justify-between pt-1">
+<span>Cloud Attestation</span>
+<span class="font-mono-code text-on-surface">us-east-cluster</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant pt-1 leading-relaxed">
+            Zero-knowledge attestation allows proof of hackathon scores without exposing underlying cryptographic seed phrases.
+          </p>
+</div>
+</div>
+<!-- RIGHT MAIN SETTINGS PANEL CONTENT -->
+<div class="lg:col-span-9 space-y-6">
+<!-- SKELETON LOADER STATE (Initially hidden) -->
+<div class="hidden bg-surface-container-lowest rounded-2xl p-8 shadow-sm space-y-6 animate-pulse" id="skeleton-container">
+<div class="flex items-center gap-4">
+<div class="w-18 h-18 rounded-2xl bg-surface-container-high"></div>
+<div class="space-y-2 flex-1">
+<div class="h-6 bg-surface-container-high rounded w-1/3"></div>
+<div class="h-4 bg-surface-container-high rounded w-1/2"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="h-10 bg-surface-container-high rounded"></div>
+<div class="h-10 bg-surface-container-high rounded"></div>
+<div class="h-10 bg-surface-container-high rounded"></div>
+<div class="h-10 bg-surface-container-high rounded"></div>
+</div>
+<div class="h-28 bg-surface-container-high rounded"></div>
+</div>
+<!-- PANEL A: PROFILE INFORMATION -->
+<div class="tab-panel bg-surface-container-lowest rounded-2xl shadow-sm p-6 sm:p-8 space-y-8" id="panel-profile">
+<div class="flex items-center justify-between pb-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Profile Information</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Control how your identity is presented across jury panels, leaderboards, and team rosters.</p>
+</div>
+<span class="font-mono-code text-mono-code px-2.5 py-1 rounded bg-surface-container text-on-surface-variant">SEC-LEVEL: PUBLIC</span>
+</div>
+<!-- Avatar Uploader Row -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-4">
+<div class="w-18 h-18 rounded-2xl bg-surface-container-highest overflow-hidden shadow-inner flex items-center justify-center relative">
+<img class="w-full h-full object-cover" data-alt="High resolution crisp portrait photo of Sarah Jenkins for developer badge preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPcf-3fJB_7VtVtEC_uM0Hb6R31QFogMg_DutklT7cJ5UCa28DeO8vyBW1Q0sUYe-lZxvBUxuKE64ut2qUdZWQm7VmLagI1_RuW8DMIP8A-KY7QPnVZ_kF3YJ8cOretSGMjjZlgFdUpfZO-PVXZYsxrFrKg9jyUjpiyBl2InMHrTNRf_5FUMXIVib58m8g1CiD0XDUlExLTvCiTAMGLq5Tcf0EI7Xp3a1RSY7GKY1olneUiOPOGhJXXA">
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Avatar Display Image</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">PNG, JPG or SVG up to 5MB. Recommended 400×400px.</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-colors shadow-sm flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[16px]">upload</span>
+                Upload New Avatar
+              </button>
+<button class="px-3 py-2 rounded-xl text-error hover:bg-error-container/40 font-label-md text-label-md transition-colors">
+                Remove
+              </button>
+</div>
+</div>
+<!-- Form Fields Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Full Name -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between">
+<span>Legal / Attested Name</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">From KYC Credential</span>
+</label>
+<input class="w-full h-10 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" type="text" value="Sarah Jenkins">
+</div>
+<!-- Display Handle -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between">
+<span>Preferred Display Handle</span>
+<span class="font-mono-code text-[11px] text-primary">dogfood.io/u/sarah_jenkins</span>
+</label>
+<div class="relative">
+<span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant font-mono-code text-mono-code">@</span>
+<input class="w-full h-10 pl-8 pr-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" type="text" value="sarah_jenkins">
+</div>
+</div>
+<!-- Primary Email -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between">
+<span>Primary Email Address</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-medium" id="field-email-badge">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Verified
+                </span>
+</label>
+<input class="w-full h-10 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" type="email" value="sarah.j@traceproof.io">
+</div>
+<!-- Affiliation / Org -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium">Affiliation / Organization</label>
+<input class="w-full h-10 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" type="text" value="TraceProof Labs / Open Jury Foundation">
+</div>
+<!-- Public Bio (Spans 2 columns) -->
+<div class="space-y-1.5 md:col-span-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium">Public Bio</label>
+<span class="font-mono-code text-[11px] text-on-surface-variant">142 / 240 chars</span>
+</div>
+<textarea class="w-full p-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner leading-relaxed resize-none" rows="3">Distributed systems researcher &amp; hackathon organizer. Passionate about verifiable computation, zero-knowledge proofs, and developer tooling.</textarea>
+</div>
+<!-- Timezone & Locale -->
+<div class="space-y-1.5 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-medium">Timezone &amp; Interface Locale</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="relative">
+<select class="w-full h-10 px-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all appearance-none cursor-pointer">
+<option selected="">UTC-7 (America/Los_Angeles - PDT)</option>
+<option>UTC-5 (America/New_York - EDT)</option>
+<option>UTC+0 (Europe/London - GMT)</option>
+<option>UTC+1 (Europe/Berlin - CET)</option>
+<option>UTC+8 (Asia/Singapore - SGT)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+<div class="relative">
+<select class="w-full h-10 px-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all appearance-none cursor-pointer">
+<option selected="">English (United States) [en-US]</option>
+<option>English (United Kingdom) [en-GB]</option>
+<option>Deutsch (Germany) [de-DE]</option>
+<option>Japanese [ja-JP]</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Deck -->
+<div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2 text-primary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px]">cloud_done</span>
+<span>All identity mutations are verified by consensus validator node.</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors" type="button">
+                Revert Changes
+              </button>
+<button class="px-5 py-2 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm font-semibold flex items-center gap-1.5" onclick="triggerFlashToast()" type="button">
+<span class="material-symbols-outlined text-[16px]">done</span>
+                Save Profile Changes
+              </button>
+</div>
+</div>
+</div>
+<!-- PANEL B: ACCOUNT SECURITY -->
+<div class="tab-panel hidden bg-surface-container-lowest rounded-2xl shadow-sm p-6 sm:p-8 space-y-8" id="panel-security">
+<div class="flex items-center justify-between pb-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Account Security &amp; Credentials</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Manage master passwords, biometric hardware tokens, and active CLI sessions.</p>
+</div>
+<span class="font-mono-code text-mono-code px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-semibold">2FA ENFORCED</span>
+</div>
+<!-- Change Password Block -->
+<div class="space-y-4 p-5 rounded-2xl bg-surface-container-low">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">key</span>
+              Update Master Password
+            </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Current Password</label>
+<input class="w-full h-10 px-3.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none shadow-sm" type="password" value="••••••••••••••••">
+</div>
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">New Master Password</label>
+<input class="w-full h-10 px-3.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none shadow-sm" type="password" value="Str0ng!Tr4cePassed">
+</div>
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Confirm New Password</label>
+<input class="w-full h-10 px-3.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none shadow-sm" type="password" value="Str0ng!Tr4cePassed">
+</div>
+</div>
+<!-- Password Strength Bar & Requirements Checklist -->
+<div class="pt-2 space-y-2">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Password Entropy:</span>
+<span class="text-primary font-semibold">Strong (108 bits)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden flex gap-1">
+<div class="h-full bg-primary flex-1 rounded-full"></div>
+<div class="h-full bg-primary flex-1 rounded-full"></div>
+<div class="h-full bg-primary flex-1 rounded-full"></div>
+<div class="h-full bg-surface-container-highest flex-1 rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 font-mono-code text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[13px]">check</span> 8+ Characters
+                </span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[13px]">check</span> Uppercase &amp; Lower
+                </span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[13px]">check</span> Digits included
+                </span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[13px]">check</span> Cryptographic symbol
+                </span>
+</div>
+</div>
+<div class="flex justify-end pt-2">
+<button class="px-4 py-2 rounded-xl bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors font-medium" onclick="triggerFlashToast()">
+                Update Master Password
+              </button>
+</div>
+</div>
+<!-- Two-Factor Authentication (2FA) Module -->
+<div class="p-5 rounded-2xl bg-surface-container-low space-y-4">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+                  Two-Factor Authentication (TOTP / FIDO2)
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Enabled via Hardware Security Key (YubiKey 5C) &amp; 1Password Authenticator.</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Active &amp; Guarded</span>
+</div>
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<button class="px-3.5 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-colors shadow-sm font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">qr_code</span>
+                Reconfigure 2FA Key
+              </button>
+<button class="px-3.5 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-colors shadow-sm font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">download</span>
+                Download Recovery Codes (8 remaining)
+              </button>
+</div>
+</div>
+<!-- Active Sessions Workspace -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Active Sessions &amp; Node Agents</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Devices and CLI daemons currently authorized to sign transactions on your behalf.</p>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm transition-colors font-medium">
+                Sign Out All Other Sessions
+              </button>
+</div>
+<!-- Session Rows -->
+<div class="space-y-2">
+<!-- Session 1: Current -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">laptop_mac</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">MacBook Pro 16″ (Chrome 128)</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] font-semibold">Current Session</span>
+</div>
+<p class="font-mono-code text-[11px] text-on-surface-variant">San Francisco, CA, USA • IP: 198.51.100.24 • TLS 1.3 Ed25519 Signed</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+<!-- Session 2: CLI Daemon -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dogfood CLI v2.4.0 (Daemon node-01)</span>
+<p class="font-mono-code text-[11px] text-on-surface-variant">us-east-cluster (AWS ECS) • Last active 14m ago • Token: <span class="bg-surface-container-highest px-1 rounded">df_live_89fa..</span></p>
+</div>
+</div>
+<button class="px-3 py-1 rounded-lg text-error hover:bg-error-container/40 font-label-sm text-label-sm transition-colors font-medium">Revoke</button>
+</div>
+<!-- Session 3: iPhone -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">iPhone 16 Pro (Safari Mobile)</span>
+<p class="font-mono-code text-[11px] text-on-surface-variant">San Francisco, CA, USA • Last active 2h ago</p>
+</div>
+</div>
+<button class="px-3 py-1 rounded-lg text-error hover:bg-error-container/40 font-label-sm text-label-sm transition-colors font-medium">Revoke</button>
+</div>
+</div>
+</div>
+</div>
+<!-- PANEL C: NOTIFICATION MATRIX -->
+<div class="tab-panel hidden bg-surface-container-lowest rounded-2xl shadow-sm p-6 sm:p-8 space-y-8" id="panel-notifications">
+<div class="flex items-center justify-between pb-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Notification Matrix</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Define multi-channel dispatch rules for hackathon timelines, jury ballots, and repository webhooks.</p>
+</div>
+<button class="px-3.5 py-1.5 rounded-xl bg-primary text-on-primary text-label-sm font-label-sm font-semibold" onclick="triggerFlashToast()">Save Preferences</button>
+</div>
+<!-- Notification Table Header -->
+<div class="rounded-2xl bg-surface-container-low p-1 overflow-hidden">
+<div class="grid grid-cols-12 px-4 py-2.5 font-label-sm text-label-sm text-on-surface-variant font-medium">
+<div class="col-span-8 sm:col-span-8">NOTIFICATION EVENT</div>
+<div class="col-span-2 sm:col-span-2 text-center">EMAIL DIGEST</div>
+<div class="col-span-2 sm:col-span-2 text-center">IN-APP PUSH</div>
+</div>
+<!-- Group 1: Competitions & Deadlines -->
+<div class="bg-surface-container-lowest rounded-xl p-4 space-y-4 mb-1">
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">event_available</span>
+                Competitions &amp; Hackathon Deadlines
+              </div>
+<!-- Row 1 -->
+<div class="grid grid-cols-12 items-center text-body-sm font-body-sm pt-1">
+<div class="col-span-8 sm:col-span-8 pr-2">
+<div class="font-medium text-on-surface">Submission Deadline Reminders</div>
+<div class="text-on-surface-variant text-[11px]">T-24h, T-2h, and final freeze countdown alerts</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 items-center text-body-sm font-body-sm pt-2">
+<div class="col-span-8 sm:col-span-8 pr-2">
+<div class="font-medium text-on-surface">Track Announcements &amp; Clarifications</div>
+<div class="text-on-surface-variant text-[11px]">Broadcast messages posted by sponsor leads</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+</div>
+</div>
+<!-- Group 2: Judging & Scoring Activity -->
+<div class="bg-surface-container-lowest rounded-xl p-4 space-y-4 mb-1">
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-tertiary">gavel</span>
+                Judging &amp; Scoring Matrix
+              </div>
+<!-- Row 1 -->
+<div class="grid grid-cols-12 items-center text-body-sm font-body-sm pt-1">
+<div class="col-span-8 sm:col-span-8 pr-2">
+<div class="font-medium text-on-surface">Ballot Assignments &amp; Quorum Requests</div>
+<div class="text-on-surface-variant text-[11px]">Urgent notifications when new projects enter your evaluation pool</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 items-center text-body-sm font-body-sm pt-2">
+<div class="col-span-8 sm:col-span-8 pr-2">
+<div class="font-medium text-on-surface">Normalization &amp; Score Deviation Flags</div>
+<div class="text-on-surface-variant text-[11px]">Outlier detection alerts during Z-score calculation cycles</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+</div>
+</div>
+<!-- Group 3: Team & Project Mentions -->
+<div class="bg-surface-container-lowest rounded-xl p-4 space-y-4 mb-1">
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">groups</span>
+                Team &amp; Builder Collaborations
+              </div>
+<!-- Row 1 -->
+<div class="grid grid-cols-12 items-center text-body-sm font-body-sm pt-1">
+<div class="col-span-8 sm:col-span-8 pr-2">
+<div class="font-medium text-on-surface">Team Invitations &amp; Join Approvals</div>
+<div class="text-on-surface-variant text-[11px]">Instant alerts when builders request to merge squads</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 items-center text-body-sm font-body-sm pt-2">
+<div class="col-span-8 sm:col-span-8 pr-2">
+<div class="font-medium text-on-surface">GitHub Webhook Deployments</div>
+<div class="text-on-surface-variant text-[11px]">Automated build passes and benchmark score summaries</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+</div>
+</div>
+<!-- Group 4: Certificates & Payouts -->
+<div class="bg-surface-container-lowest rounded-xl p-4 space-y-4">
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">workspace_premium</span>
+                Certificates, Podium &amp; Grants
+              </div>
+<div class="grid grid-cols-12 items-center text-body-sm font-body-sm pt-1">
+<div class="col-span-8 sm:col-span-8 pr-2">
+<div class="font-medium text-on-surface">Ledger Attestation &amp; Cryptographic Issuance</div>
+<div class="text-on-surface-variant text-[11px]">When verified SVG certificates or prize bounties settle on-chain</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+<div class="col-span-2 flex justify-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- PANEL D: CONNECTED ACCOUNTS & CRYPTOGRAPHIC KEYS -->
+<div class="tab-panel hidden bg-surface-container-lowest rounded-2xl shadow-sm p-6 sm:p-8 space-y-8" id="panel-connections">
+<div class="flex items-center justify-between pb-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Connected Accounts &amp; Cryptographic Keys</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Authorize third-party identity providers, code hosts, and public key signing chains.</p>
+</div>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface text-label-sm font-label-sm font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">add_link</span>
+              Link New Provider
+            </button>
+</div>
+<!-- Connection Cards Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- GitHub Card -->
+<div class="p-5 rounded-2xl bg-surface-container-low space-y-4 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">GitHub Organization</h4>
+<p class="font-mono-code text-[11px] text-on-surface-variant">@sarah-traceproof</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-semibold">Linked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Syncs submission commits, automated PR reviews, and organization affiliations for multi-agent tracks.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="text-primary hover:underline font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync</span> Force Sync Repos
+                </button>
+<button class="text-error hover:underline font-label-sm text-label-sm font-medium">Unlink</button>
+</div>
+</div>
+<!-- Ledger / Web3 Wallet -->
+<div class="p-5 rounded-2xl bg-surface-container-low space-y-4 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">EVM Root Identity</h4>
+<p class="font-mono-code text-[11px] text-on-surface-variant">0x71C8..Fb42</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-semibold">ECDSA Root</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Used for on-chain jury voting signature verification, prize dispersion escrows, and soulbound badge mints.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-mono-code text-[11px] text-on-surface-variant">Network: Ethereum Mainnet</span>
+<button class="text-error hover:underline font-label-sm text-label-sm font-medium">Disconnect</button>
+</div>
+</div>
+<!-- Google Workspace -->
+<div class="p-5 rounded-2xl bg-surface-container-low space-y-4 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Google Workspace</h4>
+<p class="font-mono-code text-[11px] text-on-surface-variant">sarah.j@traceproof.io</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-semibold">SSO Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Enables instant single sign-on across the Dogfood Organizer Cluster without manual password entry.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-mono-code text-[11px] text-on-surface-variant">OAuth 2.0 PKCE</span>
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium">Re-authorize</button>
+</div>
+</div>
+<!-- SSH & GPG Committer Key -->
+<div class="p-5 rounded-2xl bg-surface-container-low space-y-4 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">vpn_key</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Ed25519 Signing Key</h4>
+<p class="font-mono-code text-[11px] text-on-surface-variant">SHA256:d8Qz..92Lp</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px] font-semibold">CLI Token</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verifies automated container submissions dispatched via the Dogfood CLI pipeline.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="text-primary hover:underline font-label-sm text-label-sm font-medium">Add Public Key</button>
+<button class="text-error hover:underline font-label-sm text-label-sm font-medium">Revoke</button>
+</div>
+</div>
+</div>
+</div>
+<!-- PANEL E: PRIVACY & DANGER ZONE -->
+<div class="tab-panel hidden bg-surface-container-lowest rounded-2xl shadow-sm p-6 sm:p-8 space-y-8" id="panel-privacy">
+<div class="flex items-center justify-between pb-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Privacy, Data Portability &amp; Danger Zone</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Control public visibility, export cryptographic archives, or execute permanent account erasure.</p>
+</div>
+<span class="font-mono-code text-mono-code px-2.5 py-1 rounded bg-error-container text-on-error-container font-semibold">CRITICAL ZONE</span>
+</div>
+<!-- Public Builder Dossier Setting -->
+<div class="p-5 rounded-2xl bg-surface-container-low flex items-start justify-between gap-6">
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">public</span>
+                Public Builder Dossier &amp; Podium Searchability
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+                Allow participants, jury members, and enterprise recruiters to discover your past hackathon submissions, verified podium finishes, and zero-knowledge attestation certificates.
+              </p>
+</div>
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-0 cursor-pointer accent-primary mt-1" type="checkbox">
+</div>
+<!-- Data Portability / Export Block -->
+<div class="p-5 rounded-2xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">archive</span>
+                Request Machine-Readable Archive
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Generates a signed <span class="font-mono-code">.zip</span> archive containing JSON-formatted submission metadata, evaluation rubrics, and raw immutable telemetry hashes.
+              </p>
+</div>
+<button class="px-4 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-colors shadow-sm font-semibold flex-shrink-0 flex items-center gap-1.5" onclick="triggerFlashToast()">
+<span class="material-symbols-outlined text-[16px]">download</span>
+              Export Archive (.ZIP)
+            </button>
+</div>
+<!-- Danger Zone Card (Red Border Soft Wash) -->
+<div class="p-6 rounded-2xl bg-error-container/20 space-y-4">
+<div class="flex items-center gap-3 text-error">
+<span class="material-symbols-outlined text-[24px]">skull</span>
+<h3 class="font-headline-lg text-headline-lg font-bold">Danger Zone: Permanent Account Deletion</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Permanently erase your personal account credentials, API keys, and notification channels. Cryptographic ledger commitments, completed jury scoring blocks, and immutable prize hashes will remain committed to consensus state with personal identifiers permanently stripped.
+            </p>
+<div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<span class="font-mono-code text-[11px] text-error font-medium">IRREVERSIBLE ACTION • CANNOT BE UNDONE</span>
+<button class="px-5 py-2.5 rounded-xl bg-error text-on-error hover:bg-opacity-90 font-label-md text-label-md font-semibold transition-transform transform active:scale-95 shadow-sm flex items-center gap-1.5" onclick="openDeleteModal()">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+                Delete Account &amp; Anonymize Data...
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- DELETE ACCOUNT CONFIRMATION MODAL (Level 3 Cupertino Sheet) -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4" id="delete-modal">
+<!-- Backdrop -->
+<div class="fixed inset-0 bg-inverse-surface/60 backdrop-blur-sm transition-opacity" onclick="closeDeleteModal()"></div>
+<!-- Modal Box -->
+<div class="relative w-full max-w-lg bg-surface-container-lowest rounded-3xl shadow-xl overflow-hidden p-6 sm:p-7 space-y-5 animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-2xl bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" onclick="closeDeleteModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Delete Account Permanently</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          You are about to irreversibly purge all personal data, API tokens, and role assignments associated with <span class="font-mono-code font-semibold text-on-surface">sarah.j@traceproof.io</span>.
+        </p>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low space-y-2">
+<p class="font-label-sm text-label-sm text-on-surface-variant">To confirm this destructive action, please type <span class="font-mono-code font-bold text-error select-all">DELETE sarah.j@traceproof.io</span> below:</p>
+<input class="w-full h-10 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-mono-code text-mono-code focus:outline-none shadow-inner" id="delete-confirm-input" oninput="checkDeleteMatch()" placeholder="DELETE sarah.j@traceproof.io" type="text">
+</div>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-4 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md font-medium transition-colors" onclick="closeDeleteModal()">
+          Cancel
+        </button>
+<button class="px-5 py-2.5 rounded-xl bg-error text-on-error opacity-40 cursor-not-allowed font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center gap-1.5" disabled="" id="modal-delete-btn" onclick="executeAccountPurge()">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+          Confirm Irreversible Deletion
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tab Switching Logic
+  function switchTab(tabId) {
+    const panels = document.querySelectorAll('.tab-panel');
+    panels.forEach(p => p.classList.add('hidden'));
+
+    const activePanel = document.getElementById('panel-' + tabId);
+    if (activePanel) {
+      activePanel.classList.remove('hidden');
+    }
+
+    // Update Left Sidebar styling
+    const navItems = ['profile', 'security', 'notifications', 'connections', 'privacy'];
+    navItems.forEach(item => {
+      const el = document.getElementById('nav-item-' + item);
+      if (el) {
+        if (item === tabId) {
+          el.className = 'w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-sm font-semibold text-left';
+        } else {
+          el.className = 'w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-left';
+        }
+      }
+
+      // Update Simulation Top Bar pills
+      const simBtn = document.getElementById('sim-btn-' + item);
+      if (simBtn) {
+        if (item === tabId) {
+          simBtn.className = 'px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-primary-container text-on-primary-container shadow-sm font-medium';
+        } else {
+          simBtn.className = 'px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium';
+        }
+      }
+    });
+
+    // Disable skeleton if switching tabs
+    const skeleton = document.getElementById('skeleton-container');
+    if (skeleton && !skeleton.classList.contains('hidden')) {
+      skeleton.classList.add('hidden');
+    }
+  }
+
+  // Toast Trigger
+  function triggerFlashToast() {
+    const toast = document.getElementById('save-toast');
+    if (toast) {
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 50);
+      setTimeout(() => {
+        dismissToast();
+      }, 5000);
+    }
+  }
+
+  function dismissToast() {
+    const toast = document.getElementById('save-toast');
+    if (toast) toast.classList.add('hidden');
+  }
+
+  // Toggle Email Verification State
+  let verifyPending = false;
+  function toggleVerifyState() {
+    verifyPending = !verifyPending;
+    const ribbon = document.getElementById('verify-pending-ribbon');
+    const emailBadge = document.getElementById('field-email-badge');
+    const simBtn = document.getElementById('sim-btn-verify');
+
+    if (verifyPending) {
+      ribbon.classList.remove('hidden');
+      emailBadge.innerHTML = '<span class="material-symbols-outlined text-[13px] text-error">hourglass_empty</span> <span class="text-error font-medium">Pending Verification</span>';
+      simBtn.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+    } else {
+      ribbon.classList.add('hidden');
+      emailBadge.innerHTML = '<span class="material-symbols-outlined text-[13px]">check_circle</span> Verified';
+      simBtn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+    }
+  }
+
+  // Toggle Inline Error Banner
+  let inlineError = false;
+  function toggleInlineError() {
+    inlineError = !inlineError;
+    const banner = document.getElementById('inline-error-banner');
+    const simBtn = document.getElementById('sim-btn-err');
+
+    if (inlineError) {
+      banner.classList.remove('hidden');
+      simBtn.classList.add('bg-error-container');
+    } else {
+      banner.classList.add('hidden');
+      simBtn.classList.remove('bg-error-container');
+    }
+  }
+
+  // Skeleton Loader Preview
+  let isSkeleton = false;
+  function toggleSkeleton() {
+    isSkeleton = !isSkeleton;
+    const skeleton = document.getElementById('skeleton-container');
+    const panels = document.querySelectorAll('.tab-panel');
+    const simBtn = document.getElementById('sim-btn-skeleton');
+
+    if (isSkeleton) {
+      panels.forEach(p => p.classList.add('hidden'));
+      skeleton.classList.remove('hidden');
+      simBtn.classList.add('bg-primary-container', 'text-on-primary-container');
+    } else {
+      skeleton.classList.add('hidden');
+      switchTab('profile');
+      simBtn.classList.remove('bg-primary-container', 'text-on-primary-container');
+    }
+  }
+
+  // Delete Modal Controller
+  function openDeleteModal() {
+    const modal = document.getElementById('delete-modal');
+    const input = document.getElementById('delete-confirm-input');
+    const btn = document.getElementById('modal-delete-btn');
+    if (modal) {
+      modal.classList.remove('hidden');
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+      if (btn) {
+        btn.setAttribute('disabled', 'true');
+        btn.classList.add('opacity-40', 'cursor-not-allowed');
+      }
+    }
+  }
+
+  function closeDeleteModal() {
+    const modal = document.getElementById('delete-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function checkDeleteMatch() {
+    const input = document.getElementById('delete-confirm-input');
+    const btn = document.getElementById('modal-delete-btn');
+    const target = 'DELETE sarah.j@traceproof.io';
+    if (input.value.trim() === target) {
+      btn.removeAttribute('disabled');
+      btn.classList.remove('opacity-40', 'cursor-not-allowed');
+    } else {
+      btn.setAttribute('disabled', 'true');
+      btn.classList.add('opacity-40', 'cursor-not-allowed');
+    }
+  }
+
+  function executeAccountPurge() {
+    alert('Account anonymization and credential revocation request dispatched to consensus node.');
+    closeDeleteModal();
+  }
+
+  // Clipboard Copy DID
+  function copyDid() {
+    const text = 'did:dogfood:ed25519:8f9a3c22b109e4d588acb204e12c412';
+    navigator.clipboard.writeText(text).then(() => {
+      const el = document.getElementById('did-text');
+      const original = el.innerText;
+      el.innerText = 'Copied to Clipboard!';
+      setTimeout(() => {
+        el.innerText = original;
+      }, 1800);
+    });
+  }
+</script></main></div></body></html>

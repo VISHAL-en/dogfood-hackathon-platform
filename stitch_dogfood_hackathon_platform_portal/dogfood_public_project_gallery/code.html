@@ -1,0 +1,793 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#0059b5","on-surface-variant":"#414753","on-background":"#1a1b1f","on-primary":"#ffffff","outline-variant":"#c1c6d6","inverse-surface":"#2f3034","outline":"#717785","surface-container-low":"#f4f3f8","on-secondary-fixed-variant":"#003ea8","tertiary-fixed-dim":"#c2c1ff","error":"#ba1a1a","secondary":"#0051d5","surface-variant":"#e3e2e7","background":"#faf8fe","on-tertiary-fixed-variant":"#332dbc","inverse-on-surface":"#f1f0f6","surface-tint":"#005cbb","on-error-container":"#93000a","primary-fixed":"#d7e2ff","on-secondary-fixed":"#00174b","on-surface":"#1a1b1f","on-tertiary-container":"#fefaff","on-tertiary":"#ffffff","surface-container":"#efedf3","primary-container":"#0071e3","surface-dim":"#dbd9df","error-container":"#ffdad6","secondary-fixed-dim":"#b4c5ff","on-secondary":"#ffffff","on-error":"#ffffff","on-tertiary-fixed":"#0c006b","on-secondary-container":"#fefcff","surface-bright":"#faf8fe","surface":"#faf8fe","surface-container-highest":"#e3e2e7","secondary-fixed":"#dbe1ff","on-primary-container":"#fcfbff","inverse-primary":"#abc7ff","primary-fixed-dim":"#abc7ff","tertiary":"#4a47d2","surface-container-high":"#e9e7ed","on-primary-fixed":"#001b3f","tertiary-container":"#6462ec","surface-container-lowest":"#ffffff","tertiary-fixed":"#e2dfff","secondary-container":"#316bf3","on-primary-fixed-variant":"#00458f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.25rem","space-xs":"0.25rem","gutter":"1rem","margin-tablet":"2rem","space-xl":"2rem","space-md":"0.75rem","space-sm":"0.5rem","margin-desktop":"3rem","margin":"1rem","gutter-desktop":"1.5rem"},fontFamily:{"body-md":["Inter"],"display-lg-mobile":["Inter"],"body-sm":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"],"label-md":["Inter"],"mono-code":["JetBrains Mono"],"headline-sm":["Inter"]},fontSize:{"body-md":["13px",{"lineHeight":"19px","letterSpacing":"0em","fontWeight":"400"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"-0.005em","fontWeight":"500"}],"mono-code":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between py-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-y-4 px-3"><div class="flex items-center gap-x-2.5 px-3 py-2"><img alt="Dogfood Hackathon Platform Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XFolziqjX2O3dIfh14x-0pksaympgFfP4_AHvWofl_NJ4aWB-bcIhJV87ZncKEY3qGSKoZ-lgovdenQDBhHa-EXUB0-p-vq5fwNG3WrVxSM4gg2JeG2n711UpoLXyVmrmxsNoTWjRpbhXhXfI7h7KpEoEFCJ97iiGNlaWheup3EvMx6RKOhEPMUQJNbzMqyvXDuYqJoBlviuPHWYJstuz94qCkbiefh8sCaRkklhnTmlJ_q80ber93ukl8"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-tight">Dogfood</span><span class="font-mono-code text-[10px] text-on-surface-variant uppercase tracking-wider">Eval Platform</span></div></div><nav class="flex flex-col gap-y-1 mt-2" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg shadow-[0_1px_2px_rgba(0,113,227,0.15)]"><a class="flex items-center gap-x-3 px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="events" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span>Events</a><a class="flex items-center gap-x-3 px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="my-submission" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span>Submissions</a><a aria-current="page" class="flex items-center justify-between px-3 py-2 transition-all duration-150 bg-primary-container text-on-primary-container font-medium rounded-lg shadow-[0_1px_2px_rgba(0,113,227,0.15)]" data-path="project-gallery" href="#"><div class="flex items-center gap-x-3"><span class="material-symbols-outlined text-[20px]">grid_view</span>Project Gallery</div><span class="px-1.5 py-0.5 rounded-full bg-primary/10 text-primary font-mono-code text-[10px]">LIVE</span></a><a class="flex items-center gap-x-3 px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="judging-rubrics" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span>Judging &amp; Rubrics</a><a class="flex items-center gap-x-3 px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="teams-matchmaking" href="#"><span class="material-symbols-outlined text-[20px]">group</span>Teams &amp; Matchmaking</a><a class="flex items-center gap-x-3 px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="team-creation" href="#"><span class="material-symbols-outlined text-[20px]">group_add</span>Team Creation</a><div class="my-2 mx-2 h-[1px] bg-outline-variant/30"></div><a class="flex items-center gap-x-3 px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="analytics-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span>Analytics &amp; Telemetry</a><a class="flex items-center gap-x-3 px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="platform-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span>Platform Settings</a></nav></div><div class="px-3 flex flex-col gap-y-2"><div class="bg-surface-container-lowest/80 rounded-xl p-3 shadow-[0_1px_3px_rgba(0,0,0,0.03)] flex flex-col gap-y-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Infrastructure</span><span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span></div><div class="flex items-center justify-between font-mono-code text-[11px]"><span class="text-on-surface">us-east-cluster</span><span class="text-primary font-medium">OK</span></div></div><div class="flex items-center justify-between px-2 pt-1"><a class="flex items-center gap-x-1.5 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="documentation" href="#"><span class="material-symbols-outlined text-[16px]">menu_book</span>Docs &amp; API</a><span class="font-mono-code text-[10px] text-outline">v2.4-prod</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-x-6"><div class="flex items-center gap-x-2 bg-surface-container px-3 py-1.5 rounded-lg w-72 cursor-pointer hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">search</span><span class="text-on-surface-variant font-body-sm text-body-sm flex-1">Search submissions, teams...</span><kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-mono-code text-[10px] text-on-surface-variant shadow-[0_1px_1px_rgba(0,0,0,0.08)]">⌘K</kbd></div><div class="hidden lg:flex items-center gap-x-2 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-mono-code text-body-sm"><span class="h-2 w-2 rounded-full bg-primary ring-2 ring-primary/20"></span><span>Cluster OK • 99.98%</span></div></div><div class="flex items-center gap-x-4"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 h-2 w-2 rounded-full bg-primary"></span></button><div class="h-4 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-x-3 cursor-pointer group"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-snug group-hover:text-primary transition-colors">Jury Lead</div><div class="font-mono-code text-[11px] text-on-surface-variant leading-none">jury-042</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative w-full pt-16 bg-surface px-8 min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Top Interactive State Simulator Bar -->
+<div class="sticky top-16 z-30 -mx-8 px-8 py-2.5 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm mb-6 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-mono-code text-[11px] font-medium tracking-wider uppercase text-on-surface">⚡ GALLERY VIEWPORT SIMULATOR</span>
+<span class="text-[11px] font-mono-code text-on-surface-variant hidden md:inline">• Preview dynamic platform modes</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 p-1 bg-surface-container rounded-lg" id="simulator-controls">
+<button class="px-2.5 py-1 text-label-sm font-label-md rounded-md bg-surface-container-lowest text-primary shadow-xs font-semibold transition-all" data-state-btn="default" onclick="setGalleryState('default')" type="button">
+        Default Grid
+      </button>
+<button class="px-2.5 py-1 text-label-sm font-label-md rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-state-btn="public" onclick="setGalleryState('public')" type="button">
+        Public Visitor Mode
+      </button>
+<button class="px-2.5 py-1 text-label-sm font-label-md rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-state-btn="pre_results" onclick="setGalleryState('pre_results')" type="button">
+        Pre-Results / Neutral Order
+      </button>
+<button class="px-2.5 py-1 text-label-sm font-label-md rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-state-btn="empty" onclick="setGalleryState('empty')" type="button">
+        Empty / No Matches
+      </button>
+<button class="px-2.5 py-1 text-label-sm font-label-md rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-state-btn="restricted" onclick="setGalleryState('restricted')" type="button">
+        Restricted / Unreleased
+      </button>
+<button class="px-2.5 py-1 text-label-sm font-label-md rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-state-btn="skeletons" onclick="setGalleryState('skeletons')" type="button">
+        Loading Skeletons
+      </button>
+</div>
+</div>
+<!-- Breadcrumbs & Context Header Bar -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Events</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">AI Agents World Cup 2025</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-medium">Project Gallery</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high/80 text-on-surface text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">emoji_events</span>
+<span>AI Agents World Cup 2025</span>
+<span class="h-1 w-1 rounded-full bg-outline"></span>
+<span class="font-mono-code text-on-surface-variant">42 Submissions Active</span>
+</div>
+</div>
+<!-- Public Visitor Mode Banner (Initially hidden) -->
+<div class="hidden mb-6 p-4 rounded-xl bg-gradient-to-r from-primary-fixed to-secondary-fixed text-on-secondary-fixed shadow-sm" id="public-visitor-banner">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-semibold">You are viewing the Public Guest Gallery</div>
+<div class="font-body-sm text-body-sm text-on-secondary-fixed-variant">Log in to cast community votes, fork telemetry bundles, or access raw judge scorecards.</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-xs hover:bg-surface-container-low transition-colors" type="button">
+          Explore All Events
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-xs hover:bg-primary-container transition-colors" type="button">
+          Sign In / Register
+        </button>
+</div>
+</div>
+</div>
+<!-- Pre-Results Alert Notice (Initially hidden) -->
+<div class="hidden mb-6 p-3.5 rounded-xl bg-secondary-fixed/50 text-on-secondary-fixed-variant flex items-center gap-3" id="pre-results-notice">
+<span class="material-symbols-outlined text-[20px] text-primary">hourglass_top</span>
+<div class="flex-1 font-body-sm text-body-sm">
+<strong class="font-semibold text-on-surface">Jury Deliberations Underway:</strong> Submissions are presented in randomized neutral order. Final award placements and rankings will be officially certified on Nov 20, 2025.
+    </div>
+<span class="font-mono-code text-[11px] bg-surface-container-lowest/80 px-2 py-0.5 rounded text-on-surface-variant">Neutral Seed: #4802-x8</span>
+</div>
+<!-- Page Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-6">
+<div class="max-w-2xl">
+<h1 class="font-headline-lg text-headline-lg tracking-tight text-on-surface font-semibold">Project Gallery</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Explore verified technical submissions, evaluation benchmarks, and open-source models across Dogfood tournaments.
+      </p>
+</div>
+<!-- Prominent Search Bar with Shortcuts -->
+<div class="flex items-center gap-3 w-full lg:w-96">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span>
+<input class="w-full h-10 pl-10 pr-12 rounded-xl bg-surface-container-lowest text-on-surface text-body-sm font-body-sm shadow-xs placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20" id="project-search-input" placeholder="Search projects, teams, or model weights..." type="text">
+<kbd class="absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px] shadow-xs">⌘K</kbd>
+</div>
+<button class="p-2.5 rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-xs transition-colors" title="Export Gallery Metadata" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Filter & Sort Control Row -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-6 p-2 rounded-xl bg-surface-container-lowest shadow-xs">
+<!-- Filter Dropdown Trigger Chips -->
+<div class="flex flex-wrap items-center gap-2">
+<!-- Event Filter -->
+<div class="relative group">
+<button class="h-8 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="text-on-surface-variant">Event:</span>
+<span class="font-medium text-primary">AI Agents 2025</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+</div>
+<!-- Track Filter -->
+<div class="relative group">
+<button class="h-8 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="text-on-surface-variant">Track:</span>
+<span class="font-medium">All Tracks</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+</div>
+<!-- Tech Filter -->
+<div class="relative group">
+<button class="h-8 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="text-on-surface-variant">Technologies</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+</div>
+<!-- Active Filter Pill Tags -->
+<div class="h-4 w-[1px] bg-outline-variant/50 mx-1 hidden sm:block"></div>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span>Track: All Tracks</span>
+<span class="material-symbols-outlined text-[13px] cursor-pointer hover:opacity-75">close</span>
+</span>
+<button class="text-label-sm font-label-sm text-primary hover:underline ml-1" onclick="setGalleryState('default')" type="button">
+          Reset all
+        </button>
+</div>
+</div>
+<!-- Right Sort & Layout Controls -->
+<div class="flex items-center gap-3 ml-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden md:inline">Showing 42 verified projects</span>
+<!-- Sort Dropdown -->
+<button class="h-8 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="text-on-surface-variant">Sort:</span>
+<span class="font-medium" id="current-sort-label">Newest First</span>
+<span class="material-symbols-outlined text-[16px] text-outline">unfold_more</span>
+</button>
+<!-- View Switcher -->
+<div class="flex items-center bg-surface-container rounded-lg p-0.5">
+<button class="p-1 rounded bg-surface-container-lowest text-primary shadow-xs" title="Grid View" type="button">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface transition-colors" title="List View" type="button">
+<span class="material-symbols-outlined text-[18px]">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- State Container: Default & Populated Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="gallery-grid">
+<!-- CARD 1: AgentBench Zero (Winner in default state) -->
+<div class="project-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer group flex flex-col justify-between">
+<div class="relative aspect-video w-full bg-gradient-to-br from-surface-container-high via-surface-container to-surface-variant flex items-center justify-center p-4 overflow-hidden">
+<!-- SVG Technical Wireframe / Architecture Thumbnail -->
+<svg class="w-full h-full text-primary/40 group-hover:scale-105 transition-transform duration-300" fill="none" viewBox="0 0 240 135">
+<rect fill="currentColor" fill-opacity="0.12" height="40" rx="6" stroke="currentColor" stroke-width="1.5" width="80" x="20" y="25"></rect>
+<text fill="currentColor" font-family="monospace" font-size="9" text-anchor="middle" x="60" y="49">vLLM::CORE</text>
+<rect fill="currentColor" fill-opacity="0.12" height="40" rx="6" stroke="currentColor" stroke-width="1.5" width="80" x="140" y="25"></rect>
+<text fill="currentColor" font-family="monospace" font-size="9" text-anchor="middle" x="180" y="49">SWE_HARNESS</text>
+<path d="M100 45 L140 45" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<circle cx="120" cy="45" fill="currentColor" r="3"></circle>
+<rect fill="currentColor" fill-opacity="0.2" height="35" rx="6" stroke="currentColor" stroke-width="1.5" width="80" x="80" y="85"></rect>
+<text fill="currentColor" font-family="monospace" font-size="8" text-anchor="middle" x="120" y="106">gVisor Sandboxed</text>
+<path d="M60 65 L60 102 L80 102" stroke="currentColor" stroke-width="1.5"></path>
+<path d="M180 65 L180 102 L160 102" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+<!-- Floating Badges -->
+<div class="winner-badge absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-amber-500/15 backdrop-blur-md text-amber-800 text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-amber-600">military_tech</span>
+<span class="font-medium">1st Place • Code Track</span>
+</div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-mono-code text-[10px] flex items-center gap-1 shadow-xs">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+<span>gVisor Verified</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span class="text-primary font-medium">AI Agents 2025</span>
+<span>•</span>
+<span>Autonomous Code Synthesis</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+          AgentBench Zero
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+          Autonomous dual-agent SWE harness with deterministic sandboxing and zero-hallucination verification loops.
+        </p>
+<div class="mt-3 flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary/20 text-primary flex items-center justify-center text-[10px] font-bold">NV</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">by Neural Vanguard (Alex C., +2)</span>
+</div>
+<div class="mt-3 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">Python 3.12</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">vLLM</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">gVisor</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-mono-code text-[10px] text-on-surface-variant">+3</span>
+</div>
+</div>
+<div class="px-4 py-2.5 bg-surface-container-low/70 flex items-center justify-between font-mono-code text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-on-surface font-medium">⚡ 38.4s</span>
+<span>•</span>
+<span class="text-primary font-medium">84.2% solve</span>
+</div>
+<div class="flex items-center gap-1 text-primary group-hover:translate-x-0.5 transition-transform">
+<span>Dossier</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: SynapseRAG v2 -->
+<div class="project-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer group flex flex-col justify-between">
+<div class="relative aspect-video w-full bg-gradient-to-br from-tertiary-fixed/40 via-surface-container to-surface-variant flex items-center justify-center p-4 overflow-hidden">
+<svg class="w-full h-full text-tertiary/40 group-hover:scale-105 transition-transform duration-300" fill="none" viewBox="0 0 240 135">
+<circle cx="120" cy="67" fill="currentColor" fill-opacity="0.1" r="28" stroke="currentColor" stroke-width="1.5"></circle>
+<circle cx="120" cy="67" fill="currentColor" r="6"></circle>
+<circle cx="50" cy="40" fill="currentColor" fill-opacity="0.2" r="14"></circle>
+<circle cx="190" cy="40" fill="currentColor" fill-opacity="0.2" r="14"></circle>
+<circle cx="50" cy="95" fill="currentColor" fill-opacity="0.2" r="14"></circle>
+<circle cx="190" cy="95" fill="currentColor" fill-opacity="0.2" r="14"></circle>
+<path d="M64 40 L95 55 M145 55 L176 40 M64 95 L95 80 M145 80 L176 95" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1.5"></path>
+</svg>
+<div class="winner-badge absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">star</span>
+<span class="font-medium">Top Benchmarks</span>
+</div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant font-mono-code text-[10px] flex items-center gap-1 shadow-xs">
+<span>✓ OCI Image</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span class="text-primary font-medium">AI Agents 2025</span>
+<span>•</span>
+<span>Multi-Tool Orchestration</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+          SynapseRAG v2
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+          High-throughput graph indexing engine with context-aware speculative retrieval for long documents.
+        </p>
+<div class="mt-3 flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center text-[10px] font-bold">VD</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">by VectorDynamics (Elena Rostova)</span>
+</div>
+<div class="mt-3 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">Rust</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">LanceDB</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">LangGraph</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-mono-code text-[10px] text-on-surface-variant">+2</span>
+</div>
+</div>
+<div class="px-4 py-2.5 bg-surface-container-low/70 flex items-center justify-between font-mono-code text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-on-surface font-medium">⭐ 148 forks</span>
+<span>•</span>
+<span>4.2ms P99</span>
+</div>
+<div class="flex items-center gap-1 text-primary group-hover:translate-x-0.5 transition-transform">
+<span>Dossier</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: KubeGuard Agent -->
+<div class="project-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer group flex flex-col justify-between">
+<div class="relative aspect-video w-full bg-gradient-to-br from-surface-container via-surface-container-high to-surface-variant flex items-center justify-center p-4 overflow-hidden">
+<svg class="w-full h-full text-secondary/40 group-hover:scale-105 transition-transform duration-300" fill="none" viewBox="0 0 240 135">
+<path d="M120 20 L180 50 L180 95 L120 120 L60 95 L60 50 Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="1.5"></path>
+<path d="M120 40 L160 60 L160 90 L120 105 L80 90 L80 60 Z" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1"></path>
+<circle cx="120" cy="72" fill="currentColor" r="8"></circle>
+</svg>
+<div class="winner-badge absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">verified_user</span>
+<span class="font-medium">Safety Award</span>
+</div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-mono-code text-[10px] shadow-xs">
+          ✓ eBPF Sandboxed
+        </div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span class="text-primary font-medium">AI Agents 2025</span>
+<span>•</span>
+<span>Deterministic Safety</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+          KubeGuard Agent
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+          Runtime syscall interception layer blocking unauthorized LLM tooling actions and credential scraping.
+        </p>
+<div class="mt-3 flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center text-[10px] font-bold">SR</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">by SecureRuntime (Liam Vance, +1)</span>
+</div>
+<div class="mt-3 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">Go 1.23</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">Cilium eBPF</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">K8s</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-mono-code text-[10px] text-on-surface-variant">+1</span>
+</div>
+</div>
+<div class="px-4 py-2.5 bg-surface-container-low/70 flex items-center justify-between font-mono-code text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-on-surface font-medium">0 Escape CVEs</span>
+<span>•</span>
+<span>100% Policy Pass</span>
+</div>
+<div class="flex items-center gap-1 text-primary group-hover:translate-x-0.5 transition-transform">
+<span>Dossier</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- CARD 4: NanoEdge-Coder -->
+<div class="project-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer group flex flex-col justify-between">
+<div class="relative aspect-video w-full bg-gradient-to-br from-primary-fixed/20 via-surface-container to-surface-container-high flex items-center justify-center p-4 overflow-hidden">
+<svg class="w-full h-full text-on-surface-variant/40 group-hover:scale-105 transition-transform duration-300" fill="none" viewBox="0 0 240 135">
+<rect height="75" rx="4" stroke="currentColor" stroke-width="1.5" width="140" x="50" y="30"></rect>
+<line stroke="currentColor" stroke-width="1" x1="50" x2="190" y1="48" y2="48"></line>
+<circle cx="62" cy="39" fill="currentColor" r="2.5"></circle>
+<circle cx="72" cy="39" fill="currentColor" r="2.5"></circle>
+<circle cx="82" cy="39" fill="currentColor" r="2.5"></circle>
+<rect fill="currentColor" height="3" width="50" x="65" y="60"></rect>
+<rect fill="currentColor" fill-opacity="0.6" height="3" width="80" x="65" y="70"></rect>
+<rect fill="currentColor" fill-opacity="0.4" height="3" width="60" x="65" y="80"></rect>
+<rect fill="currentColor" fill-opacity="0.2" height="22" rx="2" width="22" x="155" y="60"></rect>
+</svg>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant font-mono-code text-[10px] shadow-xs">
+          ✓ Apple Silicon Metal
+        </div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span class="text-primary font-medium">AI Agents 2025</span>
+<span>•</span>
+<span>Local / Edge LLM</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+          NanoEdge-Coder
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+          3-bit quantization matrix executing continuous offline code repairs inside consumer RAM envelopes.
+        </p>
+<div class="mt-3 flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-variant text-on-surface flex items-center justify-center text-[10px] font-bold">MC</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">by MicroCore Labs (Kenji Sato)</span>
+</div>
+<div class="mt-3 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">llama.cpp</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">GGUF</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">C++20</span>
+</div>
+</div>
+<div class="px-4 py-2.5 bg-surface-container-low/70 flex items-center justify-between font-mono-code text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-on-surface font-medium">1.8GB VRAM</span>
+<span>•</span>
+<span>64 tok/s</span>
+</div>
+<div class="flex items-center gap-1 text-primary group-hover:translate-x-0.5 transition-transform">
+<span>Dossier</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- CARD 5: OmniSynthesize -->
+<div class="project-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer group flex flex-col justify-between">
+<div class="relative aspect-video w-full bg-gradient-to-br from-surface-container-high via-surface-container to-surface-variant flex items-center justify-center p-4 overflow-hidden">
+<svg class="w-full h-full text-primary/30 group-hover:scale-105 transition-transform duration-300" fill="none" viewBox="0 0 240 135">
+<rect fill="currentColor" fill-opacity="0.1" height="75" rx="4" width="60" x="30" y="30"></rect>
+<rect fill="currentColor" fill-opacity="0.1" height="75" rx="4" width="60" x="150" y="30"></rect>
+<path d="M90 67 L150 67" stroke="currentColor" stroke-width="2"></path>
+<polygon fill="currentColor" points="145,62 155,67 145,72"></polygon>
+<circle cx="120" cy="67" fill="currentColor" fill-opacity="0.3" r="10"></circle>
+</svg>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-mono-code text-[10px] shadow-xs">
+          ✓ Verified Harness
+        </div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span class="text-primary font-medium">AI Agents 2025</span>
+<span>•</span>
+<span>Autonomous Code Synthesis</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+          OmniSynthesize
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+          Multi-pass semantic compiler converting plain design mockups directly into certified web application modules.
+        </p>
+<div class="mt-3 flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary/20 text-primary flex items-center justify-center text-[10px] font-bold">DL</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">by DeepLogic (Priya Patel, +3)</span>
+</div>
+<div class="mt-3 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">TypeScript</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">Claude 3.5</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">AST Parser</span>
+</div>
+</div>
+<div class="px-4 py-2.5 bg-surface-container-low/70 flex items-center justify-between font-mono-code text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-on-surface font-medium">92.4% test coverage</span>
+</div>
+<div class="flex items-center gap-1 text-primary group-hover:translate-x-0.5 transition-transform">
+<span>Dossier</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- CARD 6: TraceProof Validator -->
+<div class="project-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer group flex flex-col justify-between">
+<div class="relative aspect-video w-full bg-gradient-to-br from-surface-container via-surface-container-high to-surface-variant flex items-center justify-center p-4 overflow-hidden">
+<svg class="w-full h-full text-secondary/35 group-hover:scale-105 transition-transform duration-300" fill="none" viewBox="0 0 240 135">
+<path d="M40 70 L80 100 L140 35 L200 80" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<circle cx="40" cy="70" fill="currentColor" r="4"></circle>
+<circle cx="80" cy="100" fill="currentColor" r="4"></circle>
+<circle cx="140" cy="35" fill="currentColor" r="4"></circle>
+<circle cx="200" cy="80" fill="currentColor" r="4"></circle>
+</svg>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant font-mono-code text-[10px] shadow-xs">
+          ✓ Formal ZK-Proof
+        </div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span class="text-primary font-medium">AI Agents 2025</span>
+<span>•</span>
+<span>Deterministic Safety</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+          TraceProof Validator
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+          Mathematical non-repudiation cryptographic signatures for multi-agent autonomous decision trails.
+        </p>
+<div class="mt-3 flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-variant text-on-surface flex items-center justify-center text-[10px] font-bold">ZT</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">by ZeroTrust AI (Marcus Thorne)</span>
+</div>
+<div class="mt-3 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">Rust</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">Halo2</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">OpenTelemetry</span>
+</div>
+</div>
+<div class="px-4 py-2.5 bg-surface-container-low/70 flex items-center justify-between font-mono-code text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-on-surface font-medium">Deterministic</span>
+<span>•</span>
+<span>&lt;12ms verification</span>
+</div>
+<div class="flex items-center gap-1 text-primary group-hover:translate-x-0.5 transition-transform">
+<span>Dossier</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- CARD 7: GraphAgent Flow -->
+<div class="project-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer group flex flex-col justify-between">
+<div class="relative aspect-video w-full bg-gradient-to-br from-surface-container via-surface-container-low to-tertiary-fixed-dim/20 flex items-center justify-center p-4 overflow-hidden">
+<svg class="w-full h-full text-tertiary-container/35 group-hover:scale-105 transition-transform duration-300" fill="none" viewBox="0 0 240 135">
+<rect height="30" rx="3" stroke="currentColor" stroke-width="1.5" width="45" x="40" y="30"></rect>
+<rect height="30" rx="3" stroke="currentColor" stroke-width="1.5" width="45" x="110" y="55"></rect>
+<rect height="30" rx="3" stroke="currentColor" stroke-width="1.5" width="45" x="180" y="30"></rect>
+<path d="M85 45 L110 70 M155 70 L180 45" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant font-mono-code text-[10px] shadow-xs">
+          ✓ LangGraph Spec
+        </div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span class="text-primary font-medium">AI Agents 2025</span>
+<span>•</span>
+<span>Multi-Tool Orchestration</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+          GraphAgent Flow
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+          Stateful cyclic computational workflows enabling dynamic fallback across 18 third-party APIs simultaneously.
+        </p>
+<div class="mt-3 flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center text-[10px] font-bold">SM</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">by Semantic Mesh (Sarah Connor)</span>
+</div>
+<div class="mt-3 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">Python</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">LangChain</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">Redis</span>
+</div>
+</div>
+<div class="px-4 py-2.5 bg-surface-container-low/70 flex items-center justify-between font-mono-code text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-on-surface font-medium">18 API connectors</span>
+</div>
+<div class="flex items-center gap-1 text-primary group-hover:translate-x-0.5 transition-transform">
+<span>Dossier</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- CARD 8: TinyReason-3B -->
+<div class="project-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer group flex flex-col justify-between">
+<div class="relative aspect-video w-full bg-gradient-to-br from-surface-container via-surface-container-high to-surface-variant flex items-center justify-center p-4 overflow-hidden">
+<svg class="w-full h-full text-on-surface-variant/35 group-hover:scale-105 transition-transform duration-300" fill="none" viewBox="0 0 240 135">
+<circle cx="120" cy="67" r="38" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></circle>
+<rect fill="currentColor" fill-opacity="0.15" height="40" rx="6" width="44" x="98" y="47"></rect>
+<text fill="currentColor" font-family="monospace" font-size="10" text-anchor="middle" x="120" y="71">3.2B</text>
+</svg>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-mono-code text-[10px] shadow-xs">
+          ✓ Onnx Runtime
+        </div>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span class="text-primary font-medium">AI Agents 2025</span>
+<span>•</span>
+<span>Local / Edge LLM</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+          TinyReason-3B
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+          Distilled deep-reasoning chain-of-thought architecture fine-tuned specifically for single-board compute devices.
+        </p>
+<div class="mt-3 flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-variant text-on-surface flex items-center justify-center text-[10px] font-bold">QM</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">by Quantized Mind (J. Kim, +2)</span>
+</div>
+<div class="mt-3 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">PyTorch</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">ONNX</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface">CUDA</span>
+</div>
+</div>
+<div class="px-4 py-2.5 bg-surface-container-low/70 flex items-center justify-between font-mono-code text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-on-surface font-medium">4.2W power draw</span>
+</div>
+<div class="flex items-center gap-1 text-primary group-hover:translate-x-0.5 transition-transform">
+<span>Dossier</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- State View: Loading Skeletons (Initially hidden) -->
+<div class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="loading-skeletons">
+<!-- Skeleton card repeat x4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs flex flex-col justify-between animate-pulse">
+<div class="aspect-video w-full bg-surface-container"></div>
+<div class="p-4 flex flex-col gap-3">
+<div class="h-3 w-1/3 bg-surface-container rounded"></div>
+<div class="h-5 w-3/4 bg-surface-container rounded"></div>
+<div class="h-3.5 w-full bg-surface-container rounded"></div>
+<div class="h-3.5 w-4/5 bg-surface-container rounded"></div>
+<div class="flex gap-2 mt-2">
+<div class="h-5 w-14 bg-surface-container rounded"></div>
+<div class="h-5 w-14 bg-surface-container rounded"></div>
+<div class="h-5 w-10 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="px-4 py-3 bg-surface-container-low flex justify-between">
+<div class="h-3 w-20 bg-surface-container rounded"></div>
+<div class="h-3 w-12 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs flex flex-col justify-between animate-pulse">
+<div class="aspect-video w-full bg-surface-container"></div>
+<div class="p-4 flex flex-col gap-3">
+<div class="h-3 w-1/3 bg-surface-container rounded"></div>
+<div class="h-5 w-3/4 bg-surface-container rounded"></div>
+<div class="h-3.5 w-full bg-surface-container rounded"></div>
+<div class="h-3.5 w-4/5 bg-surface-container rounded"></div>
+<div class="flex gap-2 mt-2">
+<div class="h-5 w-14 bg-surface-container rounded"></div>
+<div class="h-5 w-14 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="px-4 py-3 bg-surface-container-low flex justify-between">
+<div class="h-3 w-20 bg-surface-container rounded"></div>
+<div class="h-3 w-12 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs flex flex-col justify-between animate-pulse">
+<div class="aspect-video w-full bg-surface-container"></div>
+<div class="p-4 flex flex-col gap-3">
+<div class="h-3 w-1/3 bg-surface-container rounded"></div>
+<div class="h-5 w-3/4 bg-surface-container rounded"></div>
+<div class="h-3.5 w-full bg-surface-container rounded"></div>
+<div class="h-3.5 w-4/5 bg-surface-container rounded"></div>
+<div class="flex gap-2 mt-2">
+<div class="h-5 w-14 bg-surface-container rounded"></div>
+<div class="h-5 w-14 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="px-4 py-3 bg-surface-container-low flex justify-between">
+<div class="h-3 w-20 bg-surface-container rounded"></div>
+<div class="h-3 w-12 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-xs flex flex-col justify-between animate-pulse">
+<div class="aspect-video w-full bg-surface-container"></div>
+<div class="p-4 flex flex-col gap-3">
+<div class="h-3 w-1/3 bg-surface-container rounded"></div>
+<div class="h-5 w-3/4 bg-surface-container rounded"></div>
+<div class="h-3.5 w-full bg-surface-container rounded"></div>
+<div class="h-3.5 w-4/5 bg-surface-container rounded"></div>
+<div class="flex gap-2 mt-2">
+<div class="h-5 w-14 bg-surface-container rounded"></div>
+<div class="h-5 w-14 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="px-4 py-3 bg-surface-container-low flex justify-between">
+<div class="h-3 w-20 bg-surface-container rounded"></div>
+<div class="h-3 w-12 bg-surface-container rounded"></div>
+</div>
+</div>
+</div>
+<!-- State View: Empty / No Matches (Initially hidden) -->
+<div class="hidden py-16 px-6 bg-surface-container-lowest rounded-2xl shadow-xs text-center flex flex-col items-center justify-center max-w-xl mx-auto my-4 w-full" id="empty-state">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-outline mb-4">
+<span class="material-symbols-outlined text-[28px]">search_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">No projects match your filter query</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1.5 mb-6">
+      Try loosening your track requirements, clearing selected technology stacks, or searching by a broader keyword.
+    </p>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-xs hover:bg-primary-container transition-colors inline-flex items-center gap-2" onclick="setGalleryState('default')" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+      Clear Filters &amp; Restore View
+    </button>
+</div>
+<!-- State View: Restricted / Unreleased Blind Review (Initially hidden) -->
+<div class="hidden py-16 px-6 bg-surface-container-lowest rounded-2xl shadow-xs text-center flex flex-col items-center justify-center max-w-xl mx-auto my-4 w-full" id="restricted-state">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[28px]">lock</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface font-mono-code text-[11px] mb-3">
+<span class="h-2 w-2 rounded-full bg-amber-500 animate-pulse"></span>
+      BLIND PEER REVIEW ACTIVE
+    </div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Project Gallery Restricted</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1.5 mb-6">
+      The project gallery for this event will be unlocked on <strong>Nov 20, 2025 at 16:00 UTC</strong> once the double-blind jury evaluation phase closes.
+    </p>
+<div class="p-3.5 rounded-xl bg-surface-container-low max-w-sm w-full text-left font-mono-code text-[11px] text-on-surface-variant mb-6">
+<div class="flex justify-between py-0.5">
+<span>Submissions Sealed:</span>
+<span class="text-on-surface font-medium">42 packages</span>
+</div>
+<div class="flex justify-between py-0.5">
+<span>Anonymization Hash:</span>
+<span class="text-on-surface font-medium">sha256:d8a0f...</span>
+</div>
+<div class="flex justify-between py-0.5">
+<span>Unlock Countdown:</span>
+<span class="text-primary font-medium">18h 42m remaining</span>
+</div>
+</div>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="setGalleryState('default')" type="button">
+      Return to Published State
+    </button>
+</div>
+<!-- Pagination / Load More Footer (Visible in Default/Pre-Results modes) -->
+<div class="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-surface-container-high/60" id="gallery-pagination">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+      Showing <span class="font-medium text-on-surface">1</span> – <span class="font-medium text-on-surface">8</span> of <span class="font-medium text-on-surface">42</span> projects
+    </div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md opacity-50 cursor-not-allowed" type="button">
+        Previous
+      </button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium shadow-xs" type="button">
+        1
+      </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+        2
+      </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+        3
+      </button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+        6
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+        Next →
+      </button>
+</div>
+</div>
+</div>
+<!-- Inline JavaScript for High-Fidelity Simulator Transitions -->
+<script>
+  function setGalleryState(state) {
+    const grid = document.getElementById('gallery-grid');
+    const skeletons = document.getElementById('loading-skeletons');
+    const emptyState = document.getElementById('empty-state');
+    const restrictedState = document.getElementById('restricted-state');
+    const pagination = document.getElementById('gallery-pagination');
+    const publicBanner = document.getElementById('public-visitor-banner');
+    const preResultsNotice = document.getElementById('pre-results-notice');
+    const sortLabel = document.getElementById('current-sort-label');
+    const winnerBadges = document.querySelectorAll('.winner-badge');
+    const sidebar = document.querySelector('aside');
+    const shellMainWrapper = document.querySelector('.pl-64');
+    const shellHeader = document.querySelector('header');
+
+    // Update Simulator button active styles
+    document.querySelectorAll('#simulator-controls button').forEach(btn => {
+      btn.className = "px-2.5 py-1 text-label-sm font-label-md rounded-md text-on-surface-variant hover:text-on-surface transition-all";
+    });
+    const activeBtn = document.querySelector(`[data-state-btn="${state}"]`);
+    if (activeBtn) {
+      activeBtn.className = "px-2.5 py-1 text-label-sm font-label-md rounded-md bg-surface-container-lowest text-primary shadow-xs font-semibold transition-all";
+    }
+
+    // Reset default display components
+    grid.classList.add('hidden');
+    skeletons.classList.add('hidden');
+    emptyState.classList.add('hidden');
+    restrictedState.classList.add('hidden');
+    publicBanner.classList.add('hidden');
+    preResultsNotice.classList.add('hidden');
+    pagination.classList.remove('hidden');
+
+    // Restore winner badges by default
+    winnerBadges.forEach(b => b.classList.remove('hidden'));
+
+    // Reset shell mutations if returning from public mode
+    if (state !== 'public') {
+      if (sidebar) sidebar.style.display = '';
+      if (shellMainWrapper) shellMainWrapper.style.paddingLeft = '';
+      if (shellHeader) shellHeader.style.left = '';
+    }
+
+    if (state === 'default') {
+      grid.classList.remove('hidden');
+      if (sortLabel) sortLabel.textContent = 'Newest First';
+    } 
+    else if (state === 'public') {
+      grid.classList.remove('hidden');
+      publicBanner.classList.remove('hidden');
+      // Hide left sidebar for public guest visitor experience
+      if (sidebar) sidebar.style.display = 'none';
+      if (shellMainWrapper) shellMainWrapper.style.paddingLeft = '0';
+      if (shellHeader) shellHeader.style.left = '0';
+    } 
+    else if (state === 'pre_results') {
+      grid.classList.remove('hidden');
+      preResultsNotice.classList.remove('hidden');
+      // Hide winner badges in pre-results state
+      winnerBadges.forEach(b => b.classList.add('hidden'));
+      if (sortLabel) sortLabel.textContent = 'Random Neutral';
+    } 
+    else if (state === 'empty') {
+      emptyState.classList.remove('hidden');
+      pagination.classList.add('hidden');
+    } 
+    else if (state === 'restricted') {
+      restrictedState.classList.remove('hidden');
+      pagination.classList.add('hidden');
+    } 
+    else if (state === 'skeletons') {
+      skeletons.classList.remove('hidden');
+    }
+  }
+
+  // Keyboard shortcut listener for CMD+K or / search focus
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k' || e.key === '/') {
+      const searchInput = document.getElementById('project-search-input');
+      if (searchInput && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    }
+  });
+</script></main></div></body></html>

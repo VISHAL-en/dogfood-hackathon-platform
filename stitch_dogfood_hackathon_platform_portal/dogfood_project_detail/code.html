@@ -1,0 +1,785 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#faf8fe","inverse-surface":"#2f3034","surface-dim":"#dbd9df","surface-variant":"#e3e2e7","on-secondary":"#ffffff","on-secondary-fixed-variant":"#003ea8","secondary-fixed":"#dbe1ff","secondary":"#0051d5","outline":"#717785","on-surface":"#1a1b1f","on-tertiary-fixed":"#0c006b","primary-fixed":"#d7e2ff","primary-container":"#0071e3","on-surface-variant":"#414753","inverse-on-surface":"#f1f0f6","surface-container-lowest":"#ffffff","error":"#ba1a1a","tertiary":"#4a47d2","secondary-container":"#316bf3","on-tertiary-fixed-variant":"#332dbc","primary":"#0059b5","on-primary":"#ffffff","tertiary-container":"#6462ec","inverse-primary":"#abc7ff","tertiary-fixed-dim":"#c2c1ff","on-primary-fixed-variant":"#00458f","error-container":"#ffdad6","surface":"#faf8fe","outline-variant":"#c1c6d6","surface-container-low":"#f4f3f8","on-primary-container":"#fcfbff","surface-container-highest":"#e3e2e7","on-error-container":"#93000a","on-error":"#ffffff","on-tertiary":"#ffffff","secondary-fixed-dim":"#b4c5ff","on-secondary-fixed":"#00174b","surface-container-high":"#e9e7ed","on-tertiary-container":"#fefaff","surface-container":"#efedf3","on-secondary-container":"#fefcff","tertiary-fixed":"#e2dfff","primary-fixed-dim":"#abc7ff","on-background":"#1a1b1f","surface-bright":"#faf8fe","surface-tint":"#005cbb","on-primary-fixed":"#001b3f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter-desktop":"1.5rem","space-xs":"0.25rem","space-xl":"2rem","margin":"1rem","space-md":"0.75rem","space-sm":"0.5rem","space-lg":"1.25rem","gutter":"1rem","margin-tablet":"2rem","margin-desktop":"3rem"},fontFamily:{"mono-code":["JetBrains Mono"],"display-lg":["Inter"],"label-md":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Inter"],"body-sm":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"]},fontSize:{"mono-code":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"-0.005em","fontWeight":"500"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"19px","letterSpacing":"0em","fontWeight":"400"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between py-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-y-4 px-3"><div class="flex items-center gap-x-2.5 px-3 py-2"><img alt="Dogfood Hackathon Platform Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XFolziqjX2O3dIfh14x-0pksaympgFfP4_AHvWofl_NJ4aWB-bcIhJV87ZncKEY3qGSKoZ-lgovdenQDBhHa-EXUB0-p-vq5fwNG3WrVxSM4gg2JeG2n711UpoLXyVmrmxsNoTWjRpbhXhXfI7h7KpEoEFCJ97iiGNlaWheup3EvMx6RKOhEPMUQJNbzMqyvXDuYqJoBlviuPHWYJstuz94qCkbiefh8sCaRkklhnTmlJ_q80ber93ukl8"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-tight">Dogfood</span><span class="font-mono-code text-[10px] text-on-surface-variant uppercase tracking-wider">Eval Platform</span></div></div><nav class="flex flex-col gap-y-1 mt-2" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg shadow-[0_1px_2px_rgba(0,113,227,0.15)]"><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="events" href="#">Events</a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="my-submission" href="#">Submissions</a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="project-gallery" href="#"><span>Project Gallery</span><span class="px-1.5 py-0.5 rounded-full bg-primary/10 text-primary font-mono-code text-[10px]">LIVE</span></a><a aria-current="page" class="flex items-center justify-between px-3 py-2 transition-all duration-150 pl-6 bg-primary-container text-on-primary-container font-medium rounded-lg shadow-[0_1px_2px_rgba(0,113,227,0.15)]" data-path="project-detail" href="#"><span>Project Detail</span><span class="font-mono-code text-[10px] text-on-surface-variant">#042</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="judging-rubrics" href="#">Judging &amp; Rubrics</a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="teams-matchmaking" href="#">Teams &amp; Matchmaking</a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="team-creation" href="#">Team Creation</a><div class="my-2 mx-2 h-[1px] bg-outline-variant/30"></div><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="analytics-telemetry" href="#">Analytics &amp; Telemetry</a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="platform-settings" href="#">Platform Settings</a></nav></div><div class="px-3 flex flex-col gap-y-2"><div class="bg-surface-container-lowest/80 rounded-xl p-3 shadow-[0_1px_3px_rgba(0,0,0,0.03)] flex flex-col gap-y-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Infrastructure</span><span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span></div><div class="flex items-center justify-between font-mono-code text-[11px]"><span class="text-on-surface">us-east-cluster</span><span class="text-primary font-medium">OK</span></div></div><div class="flex items-center justify-between px-2 pt-1"><a class="text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="documentation" href="#">Docs &amp; API</a><span class="font-mono-code text-[10px] text-outline">v2.4-prod</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-x-6"><div class="flex items-center gap-x-2 bg-surface-container px-3 py-1.5 rounded-lg w-72 cursor-pointer hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">search</span><span class="text-on-surface-variant font-body-sm text-body-sm flex-1">Search submissions, teams...</span><kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-mono-code text-[10px] text-on-surface-variant shadow-[0_1px_1px_rgba(0,0,0,0.08)]">⌘K</kbd></div><div class="hidden lg:flex items-center gap-x-2 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-mono-code text-body-sm"><span class="h-2 w-2 rounded-full bg-primary ring-2 ring-primary/20"></span><span>Cluster OK • 99.98%</span></div></div><div class="flex items-center gap-x-4"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 h-2 w-2 rounded-full bg-primary"></span></button><div class="h-4 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-x-3 cursor-pointer group"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-snug group-hover:text-primary transition-colors">Jury Lead</div><div class="font-mono-code text-[11px] text-on-surface-variant leading-none">jury-042</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative w-full pt-16 bg-surface px-8 min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Viewport & State Simulator Strip -->
+<div class="sticky top-16 z-30 -mx-8 px-8 py-2.5 bg-surface-container-low/95 backdrop-blur-md shadow-sm transition-all duration-200">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs">
+<div class="flex items-center gap-2">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-mono-code text-mono-code text-on-surface font-medium">Dogfood State Simulator:</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm hidden md:inline">Inspect presentation variations &amp; edge cases</span>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto py-0.5">
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-primary-container text-on-primary-container shadow-sm" id="btn-state-default" onclick="setSimState('default')">
+          Default (Winner &amp; Media)
+        </button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" id="btn-state-no-media" onclick="setSimState('no-media')">
+          No-Media Placeholder
+        </button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" id="btn-state-pre-results" onclick="setSimState('pre-results')">
+          Pre-Results Mode
+        </button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" id="btn-state-community-disabled" onclick="setSimState('community-disabled')">
+          Community Disabled
+        </button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" id="btn-state-loading" onclick="setSimState('loading')">
+          Loading Skeleton
+        </button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" id="btn-state-embargoed" onclick="setSimState('embargoed')">
+          Restricted / Embargoed
+        </button>
+</div>
+</div>
+</div>
+<!-- Embargo Banner (Hidden by default) -->
+<div class="hidden my-4 p-4 rounded-xl bg-surface-container-high text-on-surface shadow-sm" id="embargo-banner">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">lock</span>
+<div class="flex-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Jury Embargo Active</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">This submission is under live evaluation. Benchmark logs and public discussion remain sealed until Nov 19, 2025 at 00:00 UTC.</p>
+</div>
+<span class="px-2.5 py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed-variant font-mono-code text-[11px]">JURY_TOKEN_VALID</span>
+</div>
+</div>
+<!-- Skeleton Container (Hidden by default) -->
+<div class="hidden max-w-7xl mx-auto w-full py-6 flex-col gap-6 animate-pulse" id="skeleton-view">
+<div class="h-6 w-72 bg-surface-container-highest rounded-md"></div>
+<div class="h-16 w-3/4 bg-surface-container-highest rounded-lg"></div>
+<div class="h-96 w-full bg-surface-container-highest rounded-2xl"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<div class="h-40 bg-surface-container-highest rounded-xl"></div>
+<div class="h-48 bg-surface-container-highest rounded-xl"></div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-4">
+<div class="h-44 bg-surface-container-highest rounded-xl"></div>
+<div class="h-40 bg-surface-container-highest rounded-xl"></div>
+</div>
+</div>
+</div>
+<!-- Main Detail Content Stream -->
+<div class="max-w-7xl mx-auto w-full py-6 flex flex-col gap-8" id="content-view">
+<!-- Breadcrumb -->
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant flex-wrap">
+<a class="hover:text-primary transition-colors" href="#">Events</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">AI Agents World Cup 2025</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Project Gallery</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-medium">AgentBench Zero</span>
+<span class="ml-2 font-mono-code text-[10px] px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">ID: PRJ-0428</span>
+</div>
+<!-- Project Header -->
+<div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm">
+<div class="flex flex-col gap-3 max-w-3xl">
+<!-- Placement & Badges Strip -->
+<div class="flex flex-wrap items-center gap-2" id="header-placement-badge">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md font-semibold shadow-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">trophy</span>
+<span>1st Place Winner • Autonomous Code Synthesis</span>
+</span>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-mono-code text-mono-code font-medium">
+            $15,000 Grand Prize
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+            Verified Reproducible
+          </span>
+</div>
+<!-- Title -->
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-none">
+          AgentBench Zero
+        </h1>
+<!-- Tagline -->
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Autonomous dual-agent SWE harness with deterministic sandboxing and zero hallucination guardrails.
+        </p>
+<!-- Subordinate Meta Line -->
+<div class="flex flex-wrap items-center gap-y-1 gap-x-2 font-body-sm text-body-sm text-outline pt-1">
+<span>by <strong class="text-on-surface font-medium">Neural Vanguard</strong></span>
+<span>•</span>
+<span>AI Agents World Cup 2025</span>
+<span>•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-code text-[11px] text-on-surface-variant">Track: Autonomous Code Synthesis</span>
+<span>•</span>
+<span>Published Nov 18, 2025</span>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex flex-wrap sm:flex-nowrap lg:flex-col items-stretch sm:items-center lg:items-end gap-2.5 shrink-0">
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest active:scale-95 text-on-surface font-label-md text-label-md shadow-xs transition-all" id="upvote-btn" onclick="toggleUpvote()">
+<span class="material-symbols-outlined text-[18px] text-primary" id="upvote-icon">arrow_upward</span>
+<span id="upvote-label">Upvoted</span>
+<span class="ml-0.5 font-mono-code px-1.5 py-0.2 rounded-md bg-surface-container-lowest text-primary font-semibold" id="upvote-counter">143</span>
+</button>
+<button class="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors shadow-xs" onclick="downloadDossierMock()" title="Download Juror Dossier">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<a class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md shadow-xs transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">code</span>
+<span>View Repository</span>
+<span class="font-mono-code text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-outline">8b4ef21</span>
+</a>
+<a class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-primary-container hover:bg-primary active:scale-98 text-on-primary font-label-md text-label-md shadow-sm transition-all" href="#">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Live Demo</span>
+<span class="font-mono-code text-[10px] px-1.5 py-0.5 rounded bg-primary text-on-primary">42ms RTT</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Primary Media Showcase Gallery -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-4" id="media-showcase-container">
+<!-- Media Header Bar -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">view_carousel</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="media-caption-title">
+            System Architecture &amp; Sandbox Pipeline (vLLM Core + gVisor Rootless Container Isolation)
+          </h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono-code text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">1920 × 1080 PNG</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Fullscreen Preview">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Main Showcase Frame -->
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-surface-container-high shadow-inner" id="main-preview-frame">
+<img class="w-full h-full object-cover select-none" data-alt="A clean, high-resolution technical diagram of AgentBench Zero multi-agent architecture. Detailed flowcharts display vLLM inference engine, dual strategic planner agents, gVisor microVM sandbox boundaries, and deterministic memory bus with soft blue and deep slate accents on pure white canvas." id="active-media-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOBeSVrOnNmi1mHImEjdh-0F5IPAr8uNfZc_zxvWQ4RZ4isDuSVLMHtGL1Sh_COWzbTz9fBs8suB0eaQuLGOu9xKkNVo1lLcLa8uW87IGlgGobIpDuiG4tRTAkMXgQIMTEzMQrrtweE2xzNjZOnPuJ92sdFA4LnS_3tLmhUsrBs2wciSWIM5mrXV4d5arGys5BOFU4mJkYAIOYjrwc039cNHL9oWPWn-cnFAzazCz1qMMhjyr349bzpA">
+<!-- Live Topology Overlay Pill -->
+<div class="absolute bottom-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface/90 backdrop-blur-md shadow-md text-xs font-mono-code text-on-surface">
+<span class="h-2 w-2 rounded-full bg-primary animate-ping"></span>
+<span>Container Isolation: gVisor RunSC 2.0 (Zero System Root Leaks)</span>
+</div>
+</div>
+<!-- Alternative No-Media Placeholder (Toggled via JS) -->
+<div class="hidden relative w-full aspect-video rounded-xl bg-surface-container-low p-8 flex-col items-center justify-center text-center gap-4" id="no-media-frame">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[32px]">image_not_supported</span>
+</div>
+<div class="flex flex-col gap-1 max-w-md">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">No Media Exhibits Uploaded</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            The team Neural Vanguard opted for headless reproduction mode. Review technical schematics directly in the verified Git repository and benchmark reports below.
+          </p>
+</div>
+<div class="flex items-center gap-2 font-mono-code text-mono-code px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-xs">
+<span class="text-primary">$</span> git clone https://github.com/neural-vanguard/agentbench-zero
+        </div>
+</div>
+<!-- Media Thumbnail Strip -->
+<div class="grid grid-cols-3 gap-3 pt-2" id="media-thumbnails">
+<button class="flex items-center gap-3 p-2 rounded-xl bg-surface-container transition-all text-left ring-2 ring-primary" id="thumb-0" onclick="selectSlide(0)">
+<div class="w-16 h-10 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Technical schematic thumbnail showing architecture topology and container isolation pipeline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqEPoJG6A24JBynUIWsTvmB68iPkHSQx4b6rZG2VYVx9cwBeYkFfzREUtwK2otp5FwcnazDIzln4GKrZbYxZx-XfNklqd4ZG7-QCydCcW4s0AC-NHA_jaKOjY0U3QFuvlTcMUEt7IrjxI7i1T6W3ZMRQ8s8KNNbGkf8rYuxjtjlGMjEcPnAz16v3SpK7kaiTjiE-A_BAy1L-baaRdM9mWNnSCzp3gnWTpUy0jfFJvBo6g4jHZ6uJtHsw">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">01 Architecture Topology</span>
+<span class="font-mono-code text-[10px] text-on-surface-variant truncate">gVisor Sandbox Boundary</span>
+</div>
+</button>
+<button class="flex items-center gap-3 p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all text-left" id="thumb-1" onclick="selectSlide(1)">
+<div class="w-16 h-10 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Screenshot of terminal matrix showing SWE-bench live execution with passing test suites" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3JtWHnDcfZG9s-A4t9xrknX0-eOTOa2bxHP1AE_q7qZtu96FBqpQy4-XseRDKFqSGq_vGg_-HvheDRvGGwzGPO6HWN6zqIEJ7pc3R7wwRuOkwM6utzWDG81Huf0uWPdDM4jO6w2FC9aSCPT0IbFo3iS9cpHBhpjS84FGrsL04UdG4RRlgWK7YIaDlCbYsVib8Kl7ha0kzhNAmR1Pwvz6mY066B95fDrf4C6QgS0cYZsb20rsP3CyQuA">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">02 SWE-Bench Execution Matrix</span>
+<span class="font-mono-code text-[10px] text-on-surface-variant truncate">500 Task Parallel Cluster</span>
+</div>
+</button>
+<button class="flex items-center gap-3 p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all text-left" id="thumb-2" onclick="selectSlide(2)">
+<div class="w-16 h-10 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Dual agent communication loop sequence graph showing step-by-step reflection verification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFp-55fMDTSOEst3yJPmJKhQaRZTV4JcmVyFL4KV9YfOAVNQQ2WfdIOla3-BJJFpkl8ICY797in3PEOaQgzkaEzT7kdIa_Hd5AaI9RT7gLOD1Dl6jIT4RwmqB8Va_J_7xBdJk8x7Rr1For_ZQ1IQLOCUe59zHM_JFGOqZmLLYJqjm3hA3MpPFADNDuVi22WEMm43w88CURZ7HuxzzViEEmrbMxqlXqvCAAWWDKnBdvLCjKbTAyf0cN2Q">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">03 Multi-turn Agent Loop</span>
+<span class="font-mono-code text-[10px] text-on-surface-variant truncate">Synthesizer &amp; Reflection</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Two-Column Main Content Body -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column (~68% = 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- About This Project -->
+<section class="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between pb-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">About This Project</h2>
+<span class="font-mono-code text-[11px] text-on-surface-variant px-2 py-0.5 rounded bg-surface-container">EVAL-STATUS: VERIFIED</span>
+</div>
+<!-- Problem & Architectural Write-up -->
+<div class="flex flex-col gap-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>
+              Contemporary software engineering LLM pipelines fail catastrophically in multi-file repository refactorings due to unchecked context dilution and unconstrained side-effect execution. <strong class="text-on-surface font-medium">AgentBench Zero</strong> restructures automated bug localization and patch derivation through a bifurcated dual-agent runtime:
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-2">
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<span>Strategic Planner</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Decompiles repository AST graphs into dependency sub-trees, isolating candidate files without mutating workspace state. Employs speculative path pruning.
+                </p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-secondary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span>Execution Synthesizer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Executes inside isolated gVisor microVMs with deterministic memory bounds. Synthesizes Unified Diffs, runs integration test harnesses, and validates rollback checkpoints.
+                </p>
+</div>
+</div>
+<p>
+              By decoupling tree-search reasoning from patch generation, AgentBench Zero prevents infinite recursive hallucination loops and delivers deterministic reproduciblity for high-assurance enterprise codebases.
+            </p>
+</div>
+<!-- Benchmark Highlight Metrics Grid -->
+<div class="pt-2 flex flex-col gap-3">
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">
+              Empirical Performance Highlights
+            </span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px]">
+<span>SWE-BENCH LITE</span>
+<span class="text-primary font-bold">+12.4%</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">84.2%</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Resolved 252/300 verified benchmark tasks</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px]">
+<span>MEDIAN LATENCY</span>
+<span class="text-secondary font-bold">4.2x Faster</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">38.4s</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">From issue ingestion to passing unified diff</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px]">
+<span>ISOLATION RIGOR</span>
+<span class="text-on-surface-variant font-medium">TIER 0</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">0 Escapes</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">10,000 synthetic malicious attack vectors tested</span>
+</div>
+</div>
+</div>
+<!-- Inline Technical Sparkline / Visual Element -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Multi-Turn Convergence Trajectory (50 Epoch Sample)</span>
+<span class="font-mono-code text-[11px] text-primary">Mean Loss: 0.0418</span>
+</div>
+<div class="w-full h-16 flex items-end">
+<svg class="w-full h-12 text-primary" fill="none" preserveAspectRatio="none" viewBox="0 0 500 60">
+<path d="M0,55 Q50,48 100,32 T200,28 T300,14 T400,10 T500,4" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M0,55 Q50,48 100,32 T200,28 T300,14 T400,10 T500,4 L500,60 L0,60 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+<div class="flex justify-between font-mono-code text-[10px] text-outline">
+<span>Task Ingestion (t=0)</span>
+<span>Context AST Isolation (t=12s)</span>
+<span>Passing Micro-Patch (t=38.4s)</span>
+</div>
+</div>
+</section>
+<!-- Technologies & Frameworks Section -->
+<section class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Technologies &amp; Frameworks</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-secondary"></span>Python 3.12
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-primary"></span>PyTorch 2.3
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>vLLM High-Throughput Engine
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-primary"></span>gVisor MicroVM Sandbox
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md">
+              FastAPI Async Core
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md">
+              Docker OCI Runtime
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-mono-code text-[12px]">
+              SWE-Bench Verified
+            </span>
+</div>
+</section>
+<!-- Evaluation Benchmarks & Reproducibility Section -->
+<section class="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">science</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Juror Reproduction &amp; CLI Harness</h3>
+</div>
+<span class="font-mono-code text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">OCI-COMPLIANT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Run the full evaluation matrix inside your local rootless gVisor sandbox. The harness downloads cached golden issue datasets and executes the dual-agent cycle deterministically.
+          </p>
+<div class="relative bg-surface-container p-4 rounded-xl flex items-center justify-between gap-4 font-mono-code text-mono-code text-on-surface overflow-x-auto">
+<div class="truncate">
+<span class="text-outline select-none">$ </span>docker run --runtime=runsc -v /tmp/bench:/bench ghcr.io/neural-vanguard/agentbench:eval-v2.4
+            </div>
+<button class="shrink-0 flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface text-on-surface text-xs font-label-sm text-label-sm shadow-xs transition-colors" onclick="copySnippet(this)">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+</section>
+<!-- Community Discussion Section -->
+<section class="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm flex flex-col gap-6" id="community-section">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface">forum</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Community Discussions (18)</h3>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline">Subscribe to Thread</button>
+</div>
+<!-- Leave a Note Input -->
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+<div class="flex-1 flex flex-col gap-2">
+<textarea class="w-full p-3 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container focus:ring-1 focus:ring-primary transition-all resize-none" placeholder="Ask the Neural Vanguard team about latency, gVisor syscall shims, or model weights..." rows="2"></textarea>
+<div class="flex justify-end">
+<button class="px-4 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm shadow-xs hover:bg-primary transition-colors">
+                  Post Comment
+                </button>
+</div>
+</div>
+</div>
+<!-- Comment Stream -->
+<div class="flex flex-col gap-4 divide-y divide-outline-variant/20 pt-2">
+<div class="flex flex-col gap-2 pt-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed flex items-center justify-center font-mono-code text-[10px] text-on-secondary-fixed">ER</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Elena Rostova</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-mono-code text-[10px]">Staff Eng @ Datastream</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">4 hours ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                The AST dependency sub-tree pruning step is brilliant. We reproduced this locally on 40 Django issues and saw memory usage drop by ~60% compared to vanilla SWE-Agent. Did you run into any kernel panics with the gVisor runsc runtime when spawning multithreaded test suites?
+              </p>
+<div class="flex items-center gap-4 text-outline font-label-sm text-label-sm">
+<button class="hover:text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">thumb_up</span> 14
+                </button>
+<button class="hover:text-primary">Reply</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center font-mono-code text-[10px] text-on-tertiary-fixed">MT</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Marcus Tian</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-mono-code text-[10px]">Author</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">2 hours ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                @Elena Thanks! We patched the epoll syscall shims inside gVisor to prevent the thread deadlock issue during pytest parallelization. The fix is pushed under commit <span class="font-mono-code text-[11px] text-primary">8b4ef21</span> in the repo.
+              </p>
+<div class="flex items-center gap-4 text-outline font-label-sm text-label-sm">
+<button class="hover:text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">thumb_up</span> 8
+                </button>
+<button class="hover:text-primary">Reply</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column (~32% = 4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Official Placement & Awards Card -->
+<div class="bg-gradient-to-br from-secondary-fixed/30 via-surface-container-lowest to-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-4" id="results-card">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-secondary">Official Placement</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="font-headline-md text-headline-md text-on-surface">1st Place Overall</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Autonomous Code Synthesis Track</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container flex flex-col gap-1">
+<span class="font-mono-code text-[11px] text-on-surface-variant">PRIZE ALLOCATION</span>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">$15,000 USD Grant</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+ $25,000 Tier-1 GPU Inference Credits</span>
+</div>
+<!-- Composite Rubric Score breakdown -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Jury Composite Score</span>
+<span class="font-mono-code text-mono-code font-bold text-on-surface">98.4 / 100</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 98.4%"></div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2 font-body-sm text-body-sm text-on-surface-variant">
+<div>• Innovation: <strong class="text-on-surface font-mono-code">20/20</strong></div>
+<div>• Rigor &amp; Sandbox: <strong class="text-on-surface font-mono-code">20/20</strong></div>
+<div>• Solve Accuracy: <strong class="text-on-surface font-mono-code">19.5/20</strong></div>
+<div>• Reproduction: <strong class="text-on-surface font-mono-code">19.9/20</strong></div>
+</div>
+</div>
+</div>
+<!-- Submitting Team Card -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface">group</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Submitting Team</h3>
+</div>
+<span class="font-mono-code text-[11px] text-outline">3 Members</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Neural Vanguard</div>
+<!-- Roster List -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of Alex Chen, male software architect with glasses in modern studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw1KIkTekANMAUYF8ItVWOd8pJQ_2lOd_E1EJ5CmUjj8DMTrKWJ2Jo_EYSVoK1ltoYCB42CFAU5gYlCCi9TFssdo3yFlEHcDMoQsgoEswRZWcuRGq5GYonLOAARV5kpEP4UzPyJX8JtvZRXXRj6EFDCZabFtVH91iHIm6jab9wH-vAPdMJSQn_hZLeW6Id2ZO5WguguoCliDmP4rj8buuprEQH5yLo7z3GlQGmKRX_rKIfRb8S1FpcKg">
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Alex Chen</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Team Lead • LLM Systems Architect</span>
+</div>
+<a class="text-outline hover:text-on-surface transition-colors" href="#" title="GitHub">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of Sarah Lin, female systems engineer smiling in tech workspace with warm natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAihVMBIUaYiWNUvgI_pgQ-K2XHDJxW7CEVWhsDb48cVQ1n3Sk0Z5pAxSljhOhv-ZIXtY4a8dRbaADIvIkje8pq9c98LioDyKV_8wzO0XKJht7eljMB0vh6l-v3AB2liVncMXozhwZHP-UbfQOifDLxLOoIcmOdwq6JxqMQyebceAj6bYZGQwNsWL__pSL0LMTP22ISnjjQR4q7UoKeW-8wBHPwrJ3zfbs9wi_3chTmGit1VsqAAAZyDQ">
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Sarah Lin</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Kernel &amp; Sandbox Infrastructure</span>
+</div>
+<a class="text-outline hover:text-on-surface transition-colors" href="#" title="GitHub">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of Marcus Tian, male researcher in casual black sweater with modern minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEwkeaRKTg1odEvwF-tw5cjDJg2WuJR6YvY3kZOf_qqAdRM2csSWUv3n73syOVdA4JBPoZFWZFZ4ojhqSh1UrK5eWfWdm8uBlFlo-L-PZ1Jibu3eemzshBpQSwbWMF6zSB1m2HVowep4H5LvVvn6TVbd4d3pOYrOiTQytjI3NYMztD5RUxDziza64UuHBn_q-xIZPeHO2_dvd_kIP0vmneZ4TA1ALsx0-xEnJrpk1FAecion0DPqGyqQ">
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Marcus Tian</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Evaluation &amp; Benchmarks</span>
+</div>
+<a class="text-outline hover:text-on-surface transition-colors" href="#" title="GitHub">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+</div>
+</div>
+<div class="pt-2">
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline" href="#">
+<span>Explore Team Showcase</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Event Context Card -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface">event</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Event Context</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-code text-[10px]">CONCLUDED</span>
+</div>
+<div class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+<div>
+<span class="text-outline block">Event</span>
+<span class="text-on-surface font-medium">AI Agents World Cup 2025</span>
+</div>
+<div>
+<span class="text-outline block">Track</span>
+<span class="text-on-surface font-medium">Autonomous Code Synthesis</span>
+</div>
+<div>
+<span class="text-outline block">Organizer</span>
+<span class="text-on-surface font-medium">Dogfood Official Foundation</span>
+</div>
+<div>
+<span class="text-outline block">Dates</span>
+<span class="text-on-surface font-medium">Oct 15 – Nov 18, 2025</span>
+</div>
+</div>
+<div class="pt-2">
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline" href="#">
+<span>View Event Details &amp; Leaderboards</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: More Projects from this Track -->
+<section class="mt-4 flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">More Projects in Autonomous Code Synthesis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Top ranked peers from the AI Agents World Cup 2025 evaluation cluster</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:underline self-start sm:self-auto" href="#">
+<span>View all 42 projects in Gallery</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Horizontal row of 3 related project cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Related Card 1: OmniSynthesize -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative aspect-video w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300" data-alt="Technical interface preview of OmniSynthesize showing multi-file dependency trees and TypeScript compiler diagnostics on sleek modern monitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvr6-WQYTqitxggp0Rnl_0qwwCPv26MoZBTMDFkn1pjK_qAd8FXz_ueizEzH_LVKHv5aj7kRplA5ybPo7R3anu8zn3rlBY4FOiGH1SvAwUOTnu7chAy_ic-D1tiOFeQJjBEpVOvhI-Pw6nDkxi3r7QanyeYy1v9EWAvBgxo4T4AQAt0L67NdRzxrEPY3TcvGzD3FiAXLuTGliWVRindnP9z92loV0Inw5O5c17_oWSFuASmbhchk-AZQ">
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md font-mono-code text-[10px] text-on-surface shadow-xs">
+              2nd Place Winner
+            </div>
+</div>
+<div class="p-5 flex flex-col gap-3 flex-1 justify-between">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-mono-code text-[11px] text-outline">DeepLogic</span>
+<span class="font-mono-code text-[11px] text-primary">92.4% Coverage</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">OmniSynthesize</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Type-directed patch refinement using Claude 3.5 Sonnet and verified compile-time invariants.
+              </p>
+</div>
+<div class="flex items-center gap-1.5 flex-wrap pt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px]">TypeScript</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px]">Claude 3.5</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px]">AST Engine</span>
+</div>
+</div>
+</div>
+<!-- Related Card 2: NanoEdge-Coder -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative aspect-video w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300" data-alt="Compact embedded hardware device running NanoEdge-Coder with terminal performance telemetry and minimal RAM consumption display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuBDOB32_CjV68ZGmoKuIQ5MrTiRWEZd7CxZjxATNioc2VUq88P4SpETmVZxZLLCaE_AgDO340Ii4JE1ADi9UlVhAQerb9DRxroYzXULgvS9FJtwUAdLGCXib22C4BwuYynD-CyGmGmQ-aOaRwB3lhsLyjf8iqpmfBSIaqQYLTAD9MQecTGQ9cuBRh91IvyQ8f9pXjE19DyNidPAiOUsUsFiNKTg6XWNt62bhctCXuF3KQrr6ZsItPaQ">
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md font-mono-code text-[10px] text-on-surface shadow-xs">
+              Honorable Mention
+            </div>
+</div>
+<div class="p-5 flex flex-col gap-3 flex-1 justify-between">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-mono-code text-[11px] text-outline">MicroCore Labs</span>
+<span class="font-mono-code text-[11px] text-primary">1.8GB VRAM</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">NanoEdge-Coder</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Edge-deployable 4-bit quantized code generation engine operating in sub-2GB memory constraints.
+              </p>
+</div>
+<div class="flex items-center gap-1.5 flex-wrap pt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px]">llama.cpp</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px]">GGUF</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px]">C++20</span>
+</div>
+</div>
+</div>
+<!-- Related Card 3: TraceProof Validator -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative aspect-video w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300" data-alt="Zero-knowledge cryptographic verification dashboard of TraceProof showing halo2 execution traces and cryptographic proofs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbro65xfMPJnsiW6aftd2scK6J7a8VMZsQxJuw3CKYTf-3jXKc9-_TztFdbz1FNRMyKSx2rGnlIDMUKCHFsklg_yS92qM8JdxaJxU2iPs2q84P9eXRae4efLF0XzU_jPQVf_DEtn1j_Ro-KEYYnkey95IiWdGeYLYgcllpSVn6yo2OCXSatYovEn6vSSEsJIA8n8VkK4U0buPa1ypeByIEAFgg0xGEZUPd9Rl2M9dG7AIRDUCGQnjMpA">
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md font-mono-code text-[10px] text-on-surface shadow-xs">
+              Security Pioneer
+            </div>
+</div>
+<div class="p-5 flex flex-col gap-3 flex-1 justify-between">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-mono-code text-[11px] text-outline">ZeroTrust AI</span>
+<span class="font-mono-code text-[11px] text-primary">ZK Verified</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">TraceProof Validator</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Zero-knowledge execution attestation ensuring no prompt tampering during autonomous patch merges.
+              </p>
+</div>
+<div class="flex items-center gap-1.5 flex-wrap pt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px]">Rust</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px]">Halo2</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px]">OpenTelemetry</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Slide Carousel State
+  const slides = [
+    {
+      title: "System Architecture & Sandbox Pipeline (vLLM Core + gVisor Rootless Container Isolation)",
+      alt: "A clean, high-resolution technical diagram of AgentBench Zero multi-agent architecture. Detailed flowcharts display vLLM inference engine, dual strategic planner agents, gVisor microVM sandbox boundaries, and deterministic memory bus with soft blue and deep slate accents on pure white canvas."
+    },
+    {
+      title: "SWE-Bench Live Execution Terminal Matrix (500 Parallel Test Workers)",
+      alt: "Clean command line matrix displaying 500 parallel SWE-bench tasks resolving simultaneously with green status badges and real-time execution telemetry on pure white background."
+    },
+    {
+      title: "Multi-Turn Dual-Agent Reflection & Patch Synthesis Loop",
+      alt: "Refined flowchart detailing communication loop between Strategic Planner AST decomposition and Execution Synthesizer patch verifier in Cupertino design aesthetic."
+    }
+  ];
+
+  function selectSlide(index) {
+    const mainImg = document.getElementById('active-media-image');
+    const titleEl = document.getElementById('media-caption-title');
+    
+    if (mainImg && slides[index]) {
+      mainImg.setAttribute('data-alt', slides[index].alt);
+      // Trigger subtle fade transition
+      mainImg.classList.add('opacity-50');
+      setTimeout(() => {
+        mainImg.classList.remove('opacity-50');
+      }, 150);
+    }
+    if (titleEl && slides[index]) {
+      titleEl.innerText = slides[index].title;
+    }
+
+    [0, 1, 2].forEach(i => {
+      const btn = document.getElementById('thumb-' + i);
+      if (btn) {
+        if (i === index) {
+          btn.className = "flex items-center gap-3 p-2 rounded-xl bg-surface-container transition-all text-left ring-2 ring-primary";
+        } else {
+          btn.className = "flex items-center gap-3 p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all text-left";
+        }
+      }
+    });
+  }
+
+  // Upvote Button Interaction
+  let upvoted = true;
+  let upvoteCount = 143;
+  function toggleUpvote() {
+    upvoted = !upvoted;
+    upvoteCount += upvoted ? 1 : -1;
+    const btn = document.getElementById('upvote-btn');
+    const label = document.getElementById('upvote-label');
+    const counter = document.getElementById('upvote-counter');
+    const icon = document.getElementById('upvote-icon');
+    
+    if (counter) counter.innerText = upvoteCount;
+    if (label) label.innerText = upvoted ? 'Upvoted' : 'Upvote';
+    if (icon) {
+      icon.style.fontVariationSettings = upvoted ? "'FILL' 1" : "'FILL' 0";
+    }
+    if (btn) {
+      if (upvoted) {
+        btn.classList.add('bg-surface-container-high');
+      } else {
+        btn.classList.remove('bg-surface-container-high');
+      }
+    }
+  }
+
+  // Copy Snippet micro-interaction
+  function copySnippet(button) {
+    const originalText = button.innerHTML;
+    navigator.clipboard?.writeText('docker run --runtime=runsc -v /tmp/bench:/bench ghcr.io/neural-vanguard/agentbench:eval-v2.4');
+    button.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary">check</span><span>Copied</span>';
+    setTimeout(() => {
+      button.innerHTML = originalText;
+    }, 2000);
+  }
+
+  function downloadDossierMock() {
+    alert("Downloading verified juror dossier bundle: agentbench_zero_eval_dossier_v2.4.zip (4.8MB)");
+  }
+
+  // State Simulator Logic
+  const allStates = ['default', 'no-media', 'pre-results', 'community-disabled', 'loading', 'embargoed'];
+  
+  function setSimState(activeState) {
+    // 1. Update Buttons
+    allStates.forEach(s => {
+      const btn = document.getElementById('btn-state-' + s);
+      if (btn) {
+        if (s === activeState) {
+          btn.className = "px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-primary-container text-on-primary-container shadow-sm";
+        } else {
+          btn.className = "px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high";
+        }
+      }
+    });
+
+    // 2. Elements targeted
+    const contentView = document.getElementById('content-view');
+    const skeletonView = document.getElementById('skeleton-view');
+    const embargoBanner = document.getElementById('embargo-banner');
+    
+    const previewFrame = document.getElementById('main-preview-frame');
+    const noMediaFrame = document.getElementById('no-media-frame');
+    const mediaThumbs = document.getElementById('media-thumbnails');
+    
+    const headerPlacement = document.getElementById('header-placement-badge');
+    const resultsCard = document.getElementById('results-card');
+    const communitySection = document.getElementById('community-section');
+
+    // Reset base views
+    contentView.classList.remove('hidden');
+    skeletonView.classList.add('hidden');
+    skeletonView.classList.remove('flex');
+    embargoBanner.classList.add('hidden');
+
+    previewFrame.classList.remove('hidden');
+    noMediaFrame.classList.add('hidden');
+    noMediaFrame.classList.remove('flex');
+    mediaThumbs.classList.remove('hidden');
+
+    headerPlacement.classList.remove('hidden');
+    resultsCard.classList.remove('hidden');
+    communitySection.classList.remove('hidden');
+
+    // Apply specific state
+    if (activeState === 'loading') {
+      contentView.classList.add('hidden');
+      skeletonView.classList.remove('hidden');
+      skeletonView.classList.add('flex');
+    } else if (activeState === 'no-media') {
+      previewFrame.classList.add('hidden');
+      noMediaFrame.classList.remove('hidden');
+      noMediaFrame.classList.add('flex');
+      mediaThumbs.classList.add('hidden');
+    } else if (activeState === 'pre-results') {
+      headerPlacement.classList.add('hidden');
+      resultsCard.classList.add('hidden');
+    } else if (activeState === 'community-disabled') {
+      communitySection.classList.add('hidden');
+    } else if (activeState === 'embargoed') {
+      embargoBanner.classList.remove('hidden');
+      communitySection.classList.add('hidden');
+    }
+  }
+</script></main></div></body></html>

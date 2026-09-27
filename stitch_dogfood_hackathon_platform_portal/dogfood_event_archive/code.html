@@ -1,0 +1,1057 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed-variant": "#003ea8",
+          "primary": "#0059b5",
+          "on-surface-variant": "#414753",
+          "background": "#faf8fe",
+          "on-primary": "#ffffff",
+          "tertiary": "#4a47d2",
+          "secondary-fixed-dim": "#b4c5ff",
+          "primary-fixed": "#d7e2ff",
+          "outline": "#717785",
+          "tertiary-container": "#6462ec",
+          "on-secondary-fixed": "#00174b",
+          "surface-container-low": "#f4f3f8",
+          "on-secondary": "#ffffff",
+          "on-tertiary-fixed-variant": "#332dbc",
+          "error-container": "#ffdad6",
+          "tertiary-fixed": "#e2dfff",
+          "primary-container": "#0071e3",
+          "surface-bright": "#faf8fe",
+          "on-primary-fixed-variant": "#00458f",
+          "on-surface": "#1a1b1f",
+          "on-tertiary": "#ffffff",
+          "surface-variant": "#e3e2e7",
+          "on-tertiary-container": "#fefaff",
+          "on-tertiary-fixed": "#0c006b",
+          "on-primary-container": "#fcfbff",
+          "primary-fixed-dim": "#abc7ff",
+          "surface": "#faf8fe",
+          "error": "#ba1a1a",
+          "on-error-container": "#93000a",
+          "surface-container": "#efedf3",
+          "on-secondary-container": "#fefcff",
+          "on-background": "#1a1b1f",
+          "surface-container-high": "#e9e7ed",
+          "outline-variant": "#c1c6d6",
+          "surface-dim": "#dbd9df",
+          "surface-container-highest": "#e3e2e7",
+          "secondary": "#0051d5",
+          "inverse-primary": "#abc7ff",
+          "on-error": "#ffffff",
+          "secondary-fixed": "#dbe1ff",
+          "inverse-on-surface": "#f1f0f6",
+          "inverse-surface": "#2f3034",
+          "surface-tint": "#005cbb",
+          "secondary-container": "#316bf3",
+          "on-primary-fixed": "#001b3f",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-fixed-dim": "#c2c1ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-desktop": "3rem",
+          "space-md": "0.75rem",
+          "space-sm": "0.5rem",
+          "gutter": "1rem",
+          "space-xl": "2rem",
+          "margin": "1rem",
+          "gutter-desktop": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.25rem",
+          "margin-tablet": "2rem"
+        },
+        "fontFamily": {
+          "display-lg": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "display-lg-mobile": [
+            "Inter"
+          ],
+          "mono-code": [
+            "JetBrains Mono"
+          ]
+        },
+        "fontSize": {
+          "display-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "13px",
+            {
+              "lineHeight": "19px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            }
+          ],
+          "mono-code": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg min-w-max"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #0071e3
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X4ylxw5ERlYb512JjvDIPTD2ef9pKs3vB1qAPF9OQC2kRN02l8HZ1lFuAwdrS5I1R_l7NAdmf9Xj7Rt9IQR5WGv-uzV5pcX-bGBcgHZ1VTFxEL5d0Rji9xjPno2x3Bz3_5XBOTb2Cah3KFL6lNNiq8WXKoN_R8zVBsfFkgQhnyMvNjEAH1A8aNLVUiLmqMnMerdWephJdgyW6pjFW_JpuI6U0VvU-gtOY4UKq3PFgLSnGG4pki-LSj7J1k"><div class="flex flex-col leading-none"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Dogfood</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wider uppercase">ORGANIZER SUITE</span></div></div><div class="h-6 w-px bg-surface-container-high"></div><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-primary">trophy</span><span class="font-label-md text-label-md font-medium text-on-surface">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></button></div><div class="flex-1 max-w-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-outline pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-14 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search submissions, judges, rubrics..." type="text"><kbd class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono-code text-[10px] font-medium tracking-tight">⌘K</kbd></div></div><div class="flex items-center gap-space-md min-w-max"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span><span class="font-mono-code text-[11px] text-on-surface-variant">us-east-cluster · OK · 99.98%</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col leading-tight"><span class="font-label-md text-label-md font-medium text-on-surface">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant">Lead Organizer</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between"><div class="flex-1 overflow-y-auto px-space-md py-space-lg"><div class="mb-space-lg"><div class="px-space-sm mb-space-xs font-label-sm text-label-sm text-outline font-semibold tracking-wider uppercase">EVENT CORE</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">grid_view</span>Overview</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="events" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">calendar_month</span>Events</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="participants" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">group</span>Participants</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="teams" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">hub</span>Teams</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="submissions" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">layers</span>Submissions</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="eligibility" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">verified</span>Eligibility</a></nav></div><div class="mb-space-lg"><div class="px-space-sm mb-space-xs font-label-sm text-label-sm text-outline font-semibold tracking-wider uppercase">EVALUATION MATRIX</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="judges" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">gavel</span>Judges</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="judging" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">rate_review</span>Judging</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="normalization" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">tune</span>Normalization</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="results" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">analytics</span>Results<span class="ml-auto w-1.5 h-1.5 rounded-full bg-on-primary-container"></span></a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="certificates" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">workspace_premium</span>Certificates</a></nav></div><div><div class="px-space-sm mb-space-xs font-label-sm text-label-sm text-outline font-semibold tracking-wider uppercase">OPERATIONS</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="archive" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">inventory_2</span>Archive</a><a class="flex items-center px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">settings</span>Settings</a></nav></div></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container-low"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#10b981]"></span><span class="font-mono-code text-[11px] font-medium text-on-surface">Cluster OK 99.98%</span></div><span class="font-mono-code text-[10px] text-outline">v2.4-prod</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[11px]"><span>Docs &amp; API</span><a class="text-primary hover:text-primary-container flex items-center gap-0.5 transition-colors" href="#"><span>Inspect</span><span class="material-symbols-outlined text-[12px]">arrow_forward</span></a></div></div></aside><div class="pl-64"><main class="w-full pt-16 min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Toolbar (Fixed Top Indicator) -->
+<div class="w-full bg-surface-container-high px-gutter-desktop py-space-xs shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">science</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Interactive Archive Simulator</span>
+<span class="text-outline">·</span>
+<span class="text-on-surface-variant font-mono-code text-[11px]">Dogfood State Engine</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5" id="simulator-controls">
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm font-medium transition-all bg-primary-container text-on-primary-container shadow-sm" data-state="populated" onclick="setArchiveView('populated')" type="button">
+          Populated Grid (18 Events)
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="grouped" onclick="setArchiveView('grouped')" type="button">
+          Group by Year (2025/2024/2023)
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="filtered" onclick="setArchiveView('filtered')" type="button">
+          Filtered (2025 Only)
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="empty" onclick="setArchiveView('empty')" type="button">
+          Empty Archive State
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="no-results" onclick="setArchiveView('no-results')" type="button">
+          No Search Results
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="loading" onclick="setArchiveView('loading')" type="button">
+          Loading Skeletons
+        </button>
+</div>
+</div>
+</div>
+<!-- Main Archival Workspace Canvas -->
+<div class="w-full px-gutter-desktop py-space-xl space-y-space-xl">
+<!-- Archival Header & Provenance Banner -->
+<section class="space-y-space-md">
+<!-- Breadcrumb row -->
+<nav class="flex items-center gap-space-xs text-label-sm font-label-sm text-outline">
+<span>Operations</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Event Archive</span>
+<span class="ml-2 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[10px]">immutable ledger v4.8</span>
+</nav>
+<!-- Title + Action Ribbon -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm">
+<h1 class="text-headline-lg font-headline-lg text-on-surface tracking-tight">Event Archive</h1>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">lock</span>
+<span>Cryptographic Registry</span>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Historical record of 18 completed hackathons, cryptographic attestations, and validated participant showcases. All final scores, project artifacts, and payout certificates are cryptographically pinned.
+          </p>
+</div>
+<!-- Header Actions -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm transition-all text-label-md font-label-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">file_download</span>
+<span>Export Manifest (.CSV)</span>
+</button>
+<a class="flex items-center gap-space-xs px-3.5 py-2 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container hover:text-primary-container shadow-sm transition-all text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Platform Ledger Proof</span>
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+</div>
+<!-- Quick Metrics Strip / Archival Stats -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-xs">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Archived Events</span>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">18</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">100% consensus validated</span>
+</div>
+<span class="p-2 rounded-lg bg-surface-container-low text-primary material-symbols-outlined text-[22px]">archive</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Builders</span>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">3,840</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Across 89 global regions</span>
+</div>
+<span class="p-2 rounded-lg bg-surface-container-low text-secondary material-symbols-outlined text-[22px]">groups</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Finalist Projects</span>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">912</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Permanently preserved repos</span>
+</div>
+<span class="p-2 rounded-lg bg-surface-container-low text-tertiary material-symbols-outlined text-[22px]">deployed_code</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Conferred Bounties</span>
+<div class="font-headline-lg text-headline-lg text-primary tracking-tight">$640,000</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Verified on-chain payouts</span>
+</div>
+<span class="p-2 rounded-lg bg-surface-container-low text-primary material-symbols-outlined text-[22px]">payments</span>
+</div>
+</div>
+</section>
+<!-- Filter & Query Control Toolbar -->
+<section class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Live search box -->
+<div class="relative flex-1 max-w-lg">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">search</span>
+<input class="w-full h-10 pl-10 pr-14 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="archive-search-input" onkeyup="handleSearch(this.value)" placeholder="Search past events by name, theme, or host..." type="text">
+<kbd class="absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono-code text-[10px]">⌘F</kbd>
+</div>
+<!-- Filter Dropdown Selectors -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Year Selector -->
+<div class="relative">
+<select class="appearance-none h-10 pl-3.5 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-container" id="year-filter" onchange="filterEventsByYear(this.value)">
+<option value="all">All Years (18)</option>
+<option value="2025">2025 Cohorts (8)</option>
+<option value="2024">2024 Cohorts (6)</option>
+<option value="2023">2023 Cohorts (4)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Domain Track Filter -->
+<div class="relative">
+<select class="appearance-none h-10 pl-3.5 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-container" id="domain-filter">
+<option value="all">All Domains</option>
+<option value="ai">AI &amp; Autonomous Agents</option>
+<option value="zk">Zero Knowledge &amp; Cryptography</option>
+<option value="infra">Infrastructure &amp; Kernels</option>
+<option value="web3">Consensus Protocols</option>
+<option value="climate">Climate &amp; Open Data</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Sort Filter -->
+<div class="relative">
+<select class="appearance-none h-10 pl-3.5 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-container" id="sort-filter">
+<option value="newest">Sort by: Date (Newest first)</option>
+<option value="oldest">Sort by: Date (Oldest first)</option>
+<option value="builders">Sort by: Most Participants</option>
+<option value="purse">Sort by: Highest Prize Purse</option>
+<option value="projects">Sort by: Most Finalist Projects</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">swap_vert</span>
+</div>
+</div>
+</div>
+<!-- Active Tag Badges & View Switcher -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="text-outline text-label-sm font-label-sm uppercase tracking-wide">Active Scope:</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm" id="scope-pill">
+<span>All Epochs (18 Hackathons)</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>Verified Payout Ledger</span>
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>
+</span>
+<button class="text-primary hover:text-primary-container text-label-sm font-label-sm ml-1 transition-colors" onclick="resetFilters()" type="button">
+            Reset
+          </button>
+</div>
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-outline">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Archive nodes synchronized (Block #19,402,112)</span>
+</div>
+</div>
+</section>
+<!-- CONTENT DISPLAY ZONE (Switched by simulator state) -->
+<div class="space-y-space-xl" id="archive-display-zone">
+<!-- 2025 TIMELINE SECTION -->
+<section class="space-y-space-md" id="section-2025">
+<!-- Section Sticky Header -->
+<div class="sticky top-16 z-30 py-2.5 bg-background/95 backdrop-blur flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<h2 class="text-headline-md font-headline-md text-on-surface tracking-tight">2025 Cohorts</h2>
+<div class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+              8 Completed Events
+            </div>
+</div>
+<div class="flex items-center gap-space-md text-body-sm font-body-sm text-on-surface-variant">
+<span>1,840 Builders</span>
+<span class="text-outline">·</span>
+<span class="text-primary font-semibold">$315,000 Awarded</span>
+<span class="text-outline">·</span>
+<span class="text-outline font-mono-code text-[11px]">Consensus SHA: 0x8f22..a1</span>
+</div>
+</div>
+<!-- 3-Column Desktop Grid for 2025 -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg">
+<!-- Card 1: AI Agents World Cup 2025 (Hero Archive Card) -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all group overflow-hidden">
+<div>
+<!-- Visual Card Header Thumbnail -->
+<div class="relative h-44 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Futuristic laboratory with sleek translucent glass monitors displaying neural network graphs, ambient cyan and soft blue architectural lighting, clean minimal aesthetic representing AI Agents World Cup hackathon event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8CJhb5GMW8XhAgY8aSIZqKZcsZfmpF-hooVrGrgQ_KXYB3ImZpc01C-RK_vkg6m8pFdgAQyyqnHvMb-hYqh6iK_U4IhWO6RACSzqEfD2ajA5oWLqazVdowWRaiCN2eTMrZFumXdQNlxLMFfEYQYXHOfPcfJEeglS0QLv1qNWYTkp3TtXJp-Se4edDv55oOuC2RRaUdRsBunocGXjG-WKMEgfcrLHR-faYpYEU4GVIrt3tgDg30X2LOg">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-outline">lock</span>
+                    Archived
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">
+                    Flagship
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-surface-bright">
+<span class="font-mono-code text-[11px]">Oct 20–24, 2025</span>
+<span class="font-label-sm text-label-sm">San Francisco / Hybrid</span>
+</div>
+</div>
+<!-- Card Body Content -->
+<div class="p-space-lg space-y-space-md">
+<div class="space-y-1">
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    AI Agents World Cup 2025
+                  </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                    Global championship for autonomous LLM agents, verifiable sandboxing architectures, and multi-agent coordination proofs.
+                  </p>
+</div>
+<!-- Historical Stat Metric Well -->
+<div class="grid grid-cols-3 gap-2 p-2.5 rounded-lg bg-surface-container-low text-center">
+<div>
+<div class="font-label-sm text-label-sm text-outline">Builders</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">142</div>
+<div class="font-mono-code text-[10px] text-outline">34 Teams</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Finalists</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">34</div>
+<div class="font-mono-code text-[10px] text-outline">100% evaluated</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Purse</div>
+<div class="font-headline-sm text-headline-sm text-primary">$75K</div>
+<div class="font-mono-code text-[10px] text-outline">Conferred</div>
+</div>
+</div>
+<!-- Winner Callout Box -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">trophy</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-outline">1st Place Champion</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">AgentBench Zero (TraceProof)</div>
+</div>
+</div>
+<!-- Certificate Verification Indicator -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>94 Certificates Issued</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">hash: #ai-09f1</span>
+</div>
+</div>
+</div>
+<!-- Footer Action Row -->
+<div class="p-space-lg pt-0 flex items-center justify-between gap-space-sm">
+<a class="flex-1 py-2 px-3 rounded-lg bg-primary-container text-on-primary-container text-center font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm" href="#">
+                View Archive Dossier →
+              </a>
+<a class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors" href="#" title="Public Results">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</article>
+<!-- Card 2: ZeroKnowledge Odyssey 2025 -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all group overflow-hidden">
+<div>
+<!-- Visual Card Header Thumbnail -->
+<div class="relative h-44 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Abstract geometric polygons in deep obsidian black and glowing cobalt neon filaments representing zero knowledge cryptographic mathematical proofs and cryptographic protocols." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuMS18Zz6Jv_3f3E_aZR11443YZKDx7h2b3_cXdpu4N1AfdMS6TBJGcDosdMNQhd2kZa0OxxumR8HzCABqW8nrc_RBzFwa_5PXOt33lc2KqaKrKd0qV7v8HZb1GvxBMzgFHGo3xr70Q_4UUMYqsQEXYrWIHXUrIu-GeH-ebpoHKOrGNm2-UWBHAWfdqaxq5MqzQMedMYQTYN5GFJggD1GOmgLN1ydA-kRw9kcCTa6WqjpZBSfNDTx3Hw">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-outline">lock</span>
+                    Archived
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+                    ZK Cryptography
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-surface-bright">
+<span class="font-mono-code text-[11px]">Aug 12–16, 2025</span>
+<span class="font-label-sm text-label-sm">Berlin / Virtual</span>
+</div>
+</div>
+<!-- Card Body Content -->
+<div class="p-space-lg space-y-space-md">
+<div class="space-y-1">
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    ZeroKnowledge Odyssey 2025
+                  </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                    Proving cryptographic integrity, recursive SNARK scaling benchmarks, and confidential computing pipelines.
+                  </p>
+</div>
+<!-- Historical Stat Metric Well -->
+<div class="grid grid-cols-3 gap-2 p-2.5 rounded-lg bg-surface-container-low text-center">
+<div>
+<div class="font-label-sm text-label-sm text-outline">Builders</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">210</div>
+<div class="font-mono-code text-[10px] text-outline">48 Teams</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Finalists</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">48</div>
+<div class="font-mono-code text-[10px] text-outline">12 Attested</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Purse</div>
+<div class="font-headline-sm text-headline-sm text-primary">$90K</div>
+<div class="font-mono-code text-[10px] text-outline">Conferred</div>
+</div>
+</div>
+<!-- Winner Callout Box -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">trophy</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-outline">1st Place Champion</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">HyperPlonk Accelerate</div>
+</div>
+</div>
+<!-- Certificate Verification Indicator -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>118 Certificates Issued</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Ledger #zk-88f1</span>
+</div>
+</div>
+</div>
+<!-- Footer Action Row -->
+<div class="p-space-lg pt-0 flex items-center justify-between gap-space-sm">
+<a class="flex-1 py-2 px-3 rounded-lg bg-primary-container text-on-primary-container text-center font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm" href="#">
+                View Archive Dossier →
+              </a>
+<a class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors" href="#" title="Public Results">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</article>
+<!-- Card 3: Autonomous Infrastructure Summit 2025 -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all group overflow-hidden">
+<div>
+<!-- Visual Card Header Thumbnail -->
+<div class="relative h-44 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High-density data center racks with blue optical fiber routing cables, pristine server blades, and clean ambient light reflecting off stainless steel panels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgb7QNYOKIcMHAQHFNj25Kb-oU7jbEcKGoLwsz1LHkBOfv1iQhI5a1pNHsCHwIpdBkXmY0W_7R0H3Zy8SaopPr0X1YuWc3_vB_TCbC19Mm-6oSdlMYILViezqaCzuIbgbGGUBQ55uzqpVDN8wctK54Rw0ft_tsMGMi6cWzDLj6E8HvkIhh_VCou0DpdqAtEnCneouxDEpDfWBU3crc1Lj6rVw_UKBusMlFv00yCSqk1HtZ0BC_SRS36Q">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-outline">lock</span>
+                    Archived
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+                    Infrastructure
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-surface-bright">
+<span class="font-mono-code text-[11px]">May 4–8, 2025</span>
+<span class="font-label-sm text-label-sm">Austin / On-Site</span>
+</div>
+</div>
+<!-- Card Body Content -->
+<div class="p-space-lg space-y-space-md">
+<div class="space-y-1">
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    Autonomous Infrastructure 2025
+                  </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                    Decentralized consensus runtimes, memory pools, and low-latency RPC fabrics engineered for distributed compute clusters.
+                  </p>
+</div>
+<!-- Historical Stat Metric Well -->
+<div class="grid grid-cols-3 gap-2 p-2.5 rounded-lg bg-surface-container-low text-center">
+<div>
+<div class="font-label-sm text-label-sm text-outline">Builders</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">185</div>
+<div class="font-mono-code text-[10px] text-outline">39 Teams</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Finalists</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">39</div>
+<div class="font-mono-code text-[10px] text-outline">8 Grants</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Purse</div>
+<div class="font-headline-sm text-headline-sm text-primary">$60K</div>
+<div class="font-mono-code text-[10px] text-outline">Conferred</div>
+</div>
+</div>
+<!-- Winner Callout Box -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">trophy</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-outline">1st Place Champion</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">MeshKernel Rust Runtimes</div>
+</div>
+</div>
+<!-- Certificate Verification Indicator -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>86 Certificates Issued</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">hash: #inf-44c2</span>
+</div>
+</div>
+</div>
+<!-- Footer Action Row -->
+<div class="p-space-lg pt-0 flex items-center justify-between gap-space-sm">
+<a class="flex-1 py-2 px-3 rounded-lg bg-primary-container text-on-primary-container text-center font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm" href="#">
+                View Archive Dossier →
+              </a>
+<a class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors" href="#" title="Public Results">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- 2024 TIMELINE SECTION -->
+<section class="space-y-space-md" id="section-2024">
+<!-- Section Sticky Header -->
+<div class="sticky top-16 z-30 py-2.5 bg-background/95 backdrop-blur flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<h2 class="text-headline-md font-headline-md text-on-surface tracking-tight">2024 Cohorts</h2>
+<div class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+              6 Completed Events
+            </div>
+</div>
+<div class="flex items-center gap-space-md text-body-sm font-body-sm text-on-surface-variant">
+<span>1,280 Builders</span>
+<span class="text-outline">·</span>
+<span class="text-primary font-semibold">$210,000 Awarded</span>
+<span class="text-outline">·</span>
+<span class="text-outline font-mono-code text-[11px]">Consensus SHA: 0x3d41..b9</span>
+</div>
+</div>
+<!-- 3-Column Desktop Grid for 2024 -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg">
+<!-- Card 4: Global Decentralized AI Hack 2024 -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all group overflow-hidden">
+<div>
+<div class="relative h-44 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern collaborative workspace with multi-monitor developer setups running terminal windows, code editors with glowing syntax, and hackathon banners in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD-U0HOP3TqOc2eRzDOeJe5t0hSLJoI2LdtR6n1SYa_Vdx1tyO1dWoPTxxwtpJ2xTkjTG40uIMecVMeysOApnVFeg7e3XNGHl5jp9acS7xn3AuGXMOiE72hGXM7ID9v4hWfzZaemoc0Y6CvGJt4Pg9exrhNFNwvrenu3bRlDHeRjCTneemIHBJdnNuSTC7Mo4qK04ZaXNf3O9MqWzddmgdKxhn0DqxLQluYtbrdxey8EUtyQFbJiPPKw">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-outline">lock</span>
+                    Archived
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+                    Decentralized AI
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-surface-bright">
+<span class="font-mono-code text-[11px]">Nov 15–19, 2024</span>
+<span class="font-label-sm text-label-sm">Singapore</span>
+</div>
+</div>
+<div class="p-space-lg space-y-space-md">
+<div class="space-y-1">
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    Global Decentralized AI Hack 2024
+                  </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                    Federated learning architectures, on-device model quantization, and permissionless validation nodes.
+                  </p>
+</div>
+<div class="grid grid-cols-3 gap-2 p-2.5 rounded-lg bg-surface-container-low text-center">
+<div>
+<div class="font-label-sm text-label-sm text-outline">Builders</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">310</div>
+<div class="font-mono-code text-[10px] text-outline">72 Teams</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Finalists</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">72</div>
+<div class="font-mono-code text-[10px] text-outline">18 Deployed</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Purse</div>
+<div class="font-headline-sm text-headline-sm text-primary">$85K</div>
+<div class="font-mono-code text-[10px] text-outline">Disbursed</div>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">trophy</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-outline">1st Place Champion</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">TensorMesh Distributed</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>174 Certificates Issued</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Ledger #ai-77aa</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg pt-0 flex items-center justify-between gap-space-sm">
+<a class="flex-1 py-2 px-3 rounded-lg bg-primary-container text-on-primary-container text-center font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm" href="#">
+                View Archive Dossier →
+              </a>
+<a class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors" href="#" title="Public Results">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</article>
+<!-- Card 5: Cryptographic Systems Invitational 2024 -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all group overflow-hidden">
+<div>
+<div class="relative h-44 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist cryptographic safe vault render with glowing blue cipher matrix lines, refined stainless steel texture, and clean typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpiW913Nu4GhHG2zcmnaZBB0yWM9IW9SGHXcbVgP7KFecTwfyorb685g3tAkU_Vrj6a0x_bTR0RqZw2gyVc5MfxRrkUTI6iRoMR64zijYWXywXaITMvwpubWoXdMaRLWTTxogTCjFqrl3T2SMjIQ9Zujx44fConIntJaJtFwHZ2ZIeADZ6MJYvVNfDutWOSK3UuIHE2UrDAZ9_Xm0n3lWpOnwGVfvooY2T855CWzP222kWdVEhO0Nuxw">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-outline">lock</span>
+                    Archived
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+                    Crypto Systems
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-surface-bright">
+<span class="font-mono-code text-[11px]">Jul 22–26, 2024</span>
+<span class="font-label-sm text-label-sm">Zurich / In-Person</span>
+</div>
+</div>
+<div class="p-space-lg space-y-space-md">
+<div class="space-y-1">
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    Cryptographic Systems 2024
+                  </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                    Multi-party computation networks, lattice-based signature circuits, and zero-leakage threshold key managers.
+                  </p>
+</div>
+<div class="grid grid-cols-3 gap-2 p-2.5 rounded-lg bg-surface-container-low text-center">
+<div>
+<div class="font-label-sm text-label-sm text-outline">Builders</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">160</div>
+<div class="font-mono-code text-[10px] text-outline">31 Teams</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Finalists</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">31</div>
+<div class="font-mono-code text-[10px] text-outline">Audited</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Purse</div>
+<div class="font-headline-sm text-headline-sm text-primary">$50K</div>
+<div class="font-mono-code text-[10px] text-outline">Disbursed</div>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">trophy</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-outline">1st Place Champion</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">DarkPool zkAMM Protocol</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>91 Certificates Issued</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Ledger #zk-31ee</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg pt-0 flex items-center justify-between gap-space-sm">
+<a class="flex-1 py-2 px-3 rounded-lg bg-primary-container text-on-primary-container text-center font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm" href="#">
+                View Archive Dossier →
+              </a>
+<a class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors" href="#" title="Public Results">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</article>
+<!-- Card 6: Open Kernel Sprint 2024 -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all group overflow-hidden">
+<div>
+<div class="relative h-44 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Technical visualization of operating system microkernel diagrams with clean glowing telemetry pathways, dark gray background with blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOSu1uvcEKbm9gOgUTdsGfTEqC4ILH0uame64ACp-wfK6JP7UqRw3uLlV13F-h7lMxv0dbraVzYLnnhGQ-22clGDvCaV9npJ228TISBDDs_CvwtJnXQXI0_L9lcnJ1gnvrBZSXIxum-yIZ7ab8KKFmxLYIzLQ6bDw4StMnsDLvv1EsCClk0hgsakt6s_wdJviom6SgdU_mq5s0HOAenL0xX4XCueGpmeJvMHaktkN-Yt_QIbEICAqCAA">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-outline">lock</span>
+                    Archived
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+                    Kernel &amp; OS
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-surface-bright">
+<span class="font-mono-code text-[11px]">Feb 10–14, 2024</span>
+<span class="font-label-sm text-label-sm">Tokyo / Hybrid</span>
+</div>
+</div>
+<div class="p-space-lg space-y-space-md">
+<div class="space-y-1">
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    Open Kernel Sprint 2024
+                  </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                    Linux eBPF telemetry hooks, lightweight virtualization sandboxes, and low-latency bare-metal orchestration engines.
+                  </p>
+</div>
+<div class="grid grid-cols-3 gap-2 p-2.5 rounded-lg bg-surface-container-low text-center">
+<div>
+<div class="font-label-sm text-label-sm text-outline">Builders</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">190</div>
+<div class="font-mono-code text-[10px] text-outline">42 Teams</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Finalists</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">42</div>
+<div class="font-mono-code text-[10px] text-outline">Merged Core</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Purse</div>
+<div class="font-headline-sm text-headline-sm text-primary">$45K</div>
+<div class="font-mono-code text-[10px] text-outline">Disbursed</div>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">trophy</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-outline">1st Place Champion</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface truncate">eBPF Sentinel Engine</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>102 Certificates Issued</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Ledger #kr-901b</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg pt-0 flex items-center justify-between gap-space-sm">
+<a class="flex-1 py-2 px-3 rounded-lg bg-primary-container text-on-primary-container text-center font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm" href="#">
+                View Archive Dossier →
+              </a>
+<a class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors" href="#" title="Public Results">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+</div>
+<!-- SIMULATED STATE: EMPTY ARCHIVE STATE (Hidden by default) -->
+<div class="hidden py-space-xl text-center" id="state-empty">
+<div class="max-w-md mx-auto p-space-xl rounded-2xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="w-16 h-16 mx-auto rounded-2xl bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[36px]">inventory_2</span>
+</div>
+<div class="space-y-space-xs">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">No Archived Events Yet</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+            Completed hackathons will automatically transition to this archive once jury judging, normalized consensus, and cryptographic certificates are finalized.
+          </p>
+</div>
+<div class="pt-space-xs flex justify-center">
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-all" onclick="setArchiveView('populated')" type="button">
+            Return to Populated View
+          </button>
+</div>
+</div>
+</div>
+<!-- SIMULATED STATE: NO SEARCH RESULTS (Hidden by default) -->
+<div class="hidden py-space-xl text-center" id="state-no-results">
+<div class="max-w-md mx-auto p-space-xl rounded-2xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="w-16 h-16 mx-auto rounded-2xl bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[36px]">search_off</span>
+</div>
+<div class="space-y-space-xs">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">No Matching Archives Found</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+            We couldn't find any historical events matching your filter parameters. Try clearing your search query or expanding the cohort year.
+          </p>
+</div>
+<div class="pt-space-xs flex justify-center">
+<button class="px-4 py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container transition-all" onclick="resetFilters(); setArchiveView('populated');" type="button">
+            Reset Filters &amp; Query
+          </button>
+</div>
+</div>
+</div>
+<!-- SIMULATED STATE: LOADING SKELETONS (Hidden by default) -->
+<div class="hidden space-y-space-xl" id="state-loading">
+<div class="space-y-space-md">
+<div class="h-8 w-48 rounded bg-surface-container-high animate-pulse"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg">
+<div class="rounded-xl bg-surface-container-lowest p-space-lg space-y-space-md shadow-sm">
+<div class="h-44 w-full rounded-lg bg-surface-container animate-pulse"></div>
+<div class="h-6 w-3/4 rounded bg-surface-container animate-pulse"></div>
+<div class="h-4 w-full rounded bg-surface-container animate-pulse"></div>
+<div class="h-16 w-full rounded bg-surface-container animate-pulse"></div>
+<div class="h-10 w-full rounded bg-surface-container animate-pulse"></div>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-space-lg space-y-space-md shadow-sm">
+<div class="h-44 w-full rounded-lg bg-surface-container animate-pulse"></div>
+<div class="h-6 w-3/4 rounded bg-surface-container animate-pulse"></div>
+<div class="h-4 w-full rounded bg-surface-container animate-pulse"></div>
+<div class="h-16 w-full rounded bg-surface-container animate-pulse"></div>
+<div class="h-10 w-full rounded bg-surface-container animate-pulse"></div>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-space-lg space-y-space-md shadow-sm">
+<div class="h-44 w-full rounded-lg bg-surface-container animate-pulse"></div>
+<div class="h-6 w-3/4 rounded bg-surface-container animate-pulse"></div>
+<div class="h-4 w-full rounded bg-surface-container animate-pulse"></div>
+<div class="h-16 w-full rounded bg-surface-container animate-pulse"></div>
+<div class="h-10 w-full rounded bg-surface-container animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Archival Attestation & Verifier Bottom Ribbon -->
+<section class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface">Permanent Ledger Preservation</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+            All 18 archived hackathons are committed to Merkle consensus state tree. Cryptographic hash roots can be validated through the Dogfood CLI.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-mono-code text-[11px] text-outline px-3 py-1.5 rounded-lg bg-surface-container-lowest">SHA256: 0x98bb7...e14</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface text-label-sm font-label-sm font-medium transition-colors" type="button">
+          Verify Proof
+        </button>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Interactive Simulator View State Switcher
+  function setArchiveView(state) {
+    const displayZone = document.getElementById('archive-display-zone');
+    const stateEmpty = document.getElementById('state-empty');
+    const stateNoResults = document.getElementById('state-no-results');
+    const stateLoading = document.getElementById('state-loading');
+    const sec2025 = document.getElementById('section-2025');
+    const sec2024 = document.getElementById('section-2024');
+    const scopePill = document.getElementById('scope-pill');
+    const yearFilter = document.getElementById('year-filter');
+
+    // Update active simulator button styling
+    document.querySelectorAll('.sim-btn').forEach(btn => {
+      if (btn.getAttribute('data-state') === state) {
+        btn.className = 'sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm font-medium transition-all bg-primary-container text-on-primary-container shadow-sm';
+      } else {
+        btn.className = 'sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container';
+      }
+    });
+
+    // Reset views
+    displayZone.classList.remove('hidden');
+    stateEmpty.classList.add('hidden');
+    stateNoResults.classList.add('hidden');
+    stateLoading.classList.add('hidden');
+    sec2025.classList.remove('hidden');
+    sec2024.classList.remove('hidden');
+
+    if (state === 'populated') {
+      scopePill.innerHTML = '<span>All Epochs (18 Hackathons)</span>';
+      yearFilter.value = 'all';
+    } else if (state === 'grouped') {
+      scopePill.innerHTML = '<span>Chronological Timeline Grouping</span>';
+      yearFilter.value = 'all';
+    } else if (state === 'filtered') {
+      sec2024.classList.add('hidden');
+      scopePill.innerHTML = '<span>Filtered: 2025 Cohorts (8 Events)</span>';
+      yearFilter.value = '2025';
+    } else if (state === 'empty') {
+      displayZone.classList.add('hidden');
+      stateEmpty.classList.remove('hidden');
+      scopePill.innerHTML = '<span>Archive: Null State</span>';
+    } else if (state === 'no-results') {
+      displayZone.classList.add('hidden');
+      stateNoResults.classList.remove('hidden');
+      scopePill.innerHTML = '<span>Query: No Matches</span>';
+    } else if (state === 'loading') {
+      displayZone.classList.add('hidden');
+      stateLoading.classList.remove('hidden');
+      scopePill.innerHTML = '<span>Synchronizing Blocks...</span>';
+    }
+  }
+
+  // Handle Search Input Interaction
+  function handleSearch(val) {
+    if (val.trim().toLowerCase() === 'none' || val.trim().toLowerCase() === 'xyz') {
+      setArchiveView('no-results');
+    } else if (val.trim().length > 0) {
+      document.getElementById('scope-pill').innerHTML = '<span>Matching: "' + val + '"</span>';
+    } else {
+      setArchiveView('populated');
+    }
+  }
+
+  // Filter by Year dropdown
+  function filterEventsByYear(year) {
+    if (year === '2025') {
+      setArchiveView('filtered');
+    } else if (year === 'all') {
+      setArchiveView('populated');
+    } else {
+      document.getElementById('scope-pill').innerHTML = '<span>Cohort Year: ' + year + '</span>';
+    }
+  }
+
+  // Reset Filters helper
+  function resetFilters() {
+    const input = document.getElementById('archive-search-input');
+    if (input) input.value = '';
+    const year = document.getElementById('year-filter');
+    if (year) year.value = 'all';
+    const domain = document.getElementById('domain-filter');
+    if (domain) domain.value = 'all';
+    setArchiveView('populated');
+  }
+</script></main></div></body></html>

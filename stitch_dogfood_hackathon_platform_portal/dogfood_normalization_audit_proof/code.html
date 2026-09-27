@@ -1,0 +1,1212 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "inverse-primary": "#abc7ff",
+          "tertiary-fixed": "#e2dfff",
+          "on-tertiary-fixed": "#0c006b",
+          "surface-bright": "#faf8fe",
+          "on-primary-fixed-variant": "#00458f",
+          "on-secondary": "#ffffff",
+          "on-surface": "#1a1b1f",
+          "on-primary-fixed": "#001b3f",
+          "primary-fixed": "#d7e2ff",
+          "on-error-container": "#93000a",
+          "on-tertiary-fixed-variant": "#332dbc",
+          "on-surface-variant": "#414753",
+          "inverse-surface": "#2f3034",
+          "background": "#faf8fe",
+          "surface-variant": "#e3e2e7",
+          "on-primary": "#ffffff",
+          "primary": "#0059b5",
+          "surface-dim": "#dbd9df",
+          "error-container": "#ffdad6",
+          "outline": "#717785",
+          "surface-container-low": "#f4f3f8",
+          "surface-container-highest": "#e3e2e7",
+          "primary-container": "#0071e3",
+          "secondary-fixed-dim": "#b4c5ff",
+          "on-primary-container": "#fcfbff",
+          "primary-fixed-dim": "#abc7ff",
+          "surface-container": "#efedf3",
+          "secondary-container": "#316bf3",
+          "on-tertiary": "#ffffff",
+          "on-secondary-fixed-variant": "#003ea8",
+          "on-secondary-fixed": "#00174b",
+          "tertiary": "#4a47d2",
+          "surface-tint": "#005cbb",
+          "on-secondary-container": "#fefcff",
+          "secondary": "#0051d5",
+          "on-background": "#1a1b1f",
+          "surface-container-lowest": "#ffffff",
+          "inverse-on-surface": "#f1f0f6",
+          "outline-variant": "#c1c6d6",
+          "error": "#ba1a1a",
+          "on-tertiary-container": "#fefaff",
+          "secondary-fixed": "#dbe1ff",
+          "tertiary-fixed-dim": "#c2c1ff",
+          "surface": "#faf8fe",
+          "surface-container-high": "#e9e7ed",
+          "tertiary-container": "#6462ec",
+          "on-error": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "gutter-desktop": "1.5rem",
+          "margin": "1rem",
+          "space-xl": "2rem",
+          "gutter": "1rem",
+          "margin-tablet": "2rem",
+          "space-lg": "1.25rem",
+          "margin-desktop": "3rem",
+          "space-md": "0.75rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "display-lg-mobile": [
+            "Inter"
+          ],
+          "mono-code": [
+            "JetBrains Mono"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "display-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "display-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            }
+          ],
+          "mono-code": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "13px",
+            {
+              "lineHeight": "19px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full overflow-hidden"><div class="h-14 px-space-lg flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Dogfood</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Suite</span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-xs space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_1px_2px_rgba(0,113,227,0.2)]"><div class="px-space-md py-space-xs text-outline font-label-sm text-label-sm tracking-wider uppercase">Event Core</div><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="overview" href="#">Overview</a><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="events" href="#">Events</a><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="participants" href="#">Participants</a><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="teams" href="#">Teams</a><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="submissions" href="#">Submissions</a><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="eligibility" href="#">Eligibility</a><div class="px-space-md pt-space-md pb-space-xs text-outline font-label-sm text-label-sm tracking-wider uppercase">Evaluation Matrix</div><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="judges" href="#">Judges</a><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="judging" href="#">Judging</a><div class="space-y-0.5"><a class="flex items-center justify-between px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="normalization" href="#"><span>Normalization</span><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span></a><div class="pl-space-md pr-space-xs py-0.5 space-y-0.5"><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="normalization-audit" href="#">Audit Proof</a></div></div><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="results" href="#">Results</a><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="certificates" href="#">Certificates</a><div class="px-space-md pt-space-md pb-space-xs text-outline font-label-sm text-label-sm tracking-wider uppercase">Operations</div><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="archive" href="#">Archive</a><a class="flex items-center px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="settings" href="#">Settings</a></nav><div class="p-space-md bg-surface-container-lowest/60 backdrop-blur-md m-space-sm rounded-xl"><div class="flex items-center justify-between text-outline font-mono-code text-mono-code mb-1"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>Cluster OK 99.98%</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>Docs &amp; API v2.4-prod</span><span class="material-symbols-outlined text-[14px]">arrow_outward</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-md"><img alt="Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X4ylxw5ERlYb512JjvDIPTD2ef9pKs3vB1qAPF9OQC2kRN02l8HZ1lFuAwdrS5I1R_l7NAdmf9Xj7Rt9IQR5WGv-uzV5pcX-bGBcgHZ1VTFxEL5d0Rji9xjPno2x3Bz3_5XBOTb2Cah3KFL6lNNiq8WXKoN_R8zVBsfFkgQhnyMvNjEAH1A8aNLVUiLmqMnMerdWephJdgyW6pjFW_JpuI6U0VvU-gtOY4UKq3PFgLSnGG4pki-LSj7J1k"><div class="h-4 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer"><span class="material-symbols-outlined text-[16px] text-primary">trophy</span><span class="font-label-md text-label-md text-on-surface font-semibold">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-[16px] text-outline">unfold_more</span></div><div class="h-4 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-1.5 text-outline font-label-md text-label-md"><span class="text-on-surface-variant font-medium">Normalization</span><span class="text-[12px] opacity-60">/</span><span class="text-on-surface font-semibold">Audit</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-outline text-[16px]">search</span><input class="pl-8 pr-12 py-1 h-8 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none cursor-pointer w-64 shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)]" placeholder="Search entities, rubrics..." readonly="" type="text"><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest text-outline font-mono-code text-[10px] tracking-tight">⌘K</div></div><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container font-mono-code text-mono-code text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>us-east-cluster · OK · 99.98%</span></div><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-primary"></span></button><div class="h-4 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-outline leading-tight">Lead Organizer</span></div></div></div></header><main class="relative pt-14 bg-surface w-full px-space-lg min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Bar -->
+<div class="sticky top-14 z-30 mb-space-lg flex flex-wrap items-center justify-between gap-space-sm rounded-xl bg-surface-container-high/90 px-space-md py-space-xs backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">science</span>
+<span class="font-mono-code text-mono-code uppercase tracking-wider text-on-surface-variant font-medium">State Simulator:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5" id="state-selector-group">
+<button class="px-space-sm py-1 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary-container shadow-sm" id="btn-state-default" onclick="setAuditState('default')">
+        Default (Run #3 Active)
+      </button>
+<button class="px-space-sm py-1 rounded-lg font-label-sm text-label-sm transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface" id="btn-state-expanded" onclick="setAuditState('expanded')">
+        Expanded Row (AgentBench)
+      </button>
+<button class="px-space-sm py-1 rounded-lg font-label-sm text-label-sm transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface" id="btn-state-singlerun" onclick="setAuditState('singlerun')">
+        Single-Run (No History)
+      </button>
+<button class="px-space-sm py-1 rounded-lg font-label-sm text-label-sm transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface" id="btn-state-empty" onclick="setAuditState('empty')">
+        No Normalization Yet
+      </button>
+<button class="px-space-sm py-1 rounded-lg font-label-sm text-label-sm transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface" id="btn-state-loading" onclick="setAuditState('loading')">
+        Loading Skeletons
+      </button>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 font-mono-code text-[11px] text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+      Deterministic Engine v2.4-STABLE
+    </div>
+</div>
+<!-- Breadcrumb & Workspace Link Navigation Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary transition-colors font-medium" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+          Back to Normalization Workspace
+        </a>
+<span class="text-outline-variant font-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-outline">Audit Records</span>
+<span class="text-outline-variant font-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Proof #RUN-3-ZSCORE</span>
+</div>
+<div class="flex items-baseline gap-space-sm pt-1">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Normalization Audit &amp; Proof</h1>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest font-mono-code text-[11px] text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Live Attested
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        AI Agents World Cup 2025 · Immutable cryptographic audit trail of Z-score normalization transforms and juror leniency adjustments.
+      </p>
+</div>
+<!-- Actions Top Right -->
+<div class="flex flex-wrap items-center gap-space-xs self-start md:self-auto">
+<div class="relative inline-block text-left" id="export-dropdown-container">
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all" onclick="toggleExportMenu()">
+<span class="material-symbols-outlined text-[16px] text-outline">file_download</span>
+          Export Audit Log
+          <span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-52 rounded-xl bg-surface-container-lowest p-1 shadow-xl z-50" id="export-menu">
+<a class="flex items-center gap-2 px-space-md py-space-xs rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary">table_view</span>
+            Export Standardized CSV
+          </a>
+<a class="flex items-center gap-2 px-space-md py-space-xs rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined text-[16px] text-error">picture_as_pdf</span>
+            Official Signed PDF Dossier
+          </a>
+<a class="flex items-center gap-2 px-space-md py-space-xs rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined text-[16px] text-tertiary">data_object</span>
+            Raw Merkle Tree JSON-LD
+          </a>
+</div>
+</div>
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all" onclick="alert('SHA-256 Checksum Verified: 7f8a9e6428bb8cf1a20cd7048a609d949c5be4e5d666d925b42b109e99c8f2. Merkle Root verified against block #491,204.')">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+        Verify Attestation
+      </button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:bg-primary transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+        Re-run Normalization
+      </button>
+</div>
+</div>
+<!-- SKELETON STATE CONTAINER (Hidden by default) -->
+<div class="hidden flex-col gap-space-lg w-full animate-pulse" id="view-skeleton">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-md">
+<div class="h-20 rounded-xl bg-surface-container-high"></div>
+<div class="h-20 rounded-xl bg-surface-container-high"></div>
+<div class="h-20 rounded-xl bg-surface-container-high"></div>
+<div class="h-20 rounded-xl bg-surface-container-high"></div>
+<div class="h-20 rounded-xl bg-surface-container-high"></div>
+<div class="h-20 rounded-xl bg-surface-container-high"></div>
+</div>
+<div class="h-44 rounded-xl bg-surface-container-high"></div>
+<div class="h-16 rounded-xl bg-surface-container-high"></div>
+<div class="h-96 rounded-xl bg-surface-container-high"></div>
+</div>
+<!-- EMPTY STATE CONTAINER (Hidden by default) -->
+<div class="hidden flex-col items-center justify-center p-space-xl rounded-2xl bg-surface-container-lowest shadow-sm my-space-lg text-center" id="view-empty">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[32px] text-outline">tune</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-1">No Normalization Executed</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-space-lg">
+      Raw scores are currently uncalibrated. Run the deterministic standardization algorithm from the Normalization Workspace to generate mathematical proof hashes.
+    </p>
+<a class="inline-flex items-center gap-2 px-space-lg py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+      Initiate Calibration Run #1
+    </a>
+</div>
+<!-- PRIMARY CONTENT VIEW -->
+<div class="flex flex-col space-y-space-lg w-full" id="view-content">
+<!-- Compact Key Metadata Info Strip -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Method Algorithm</span>
+<div class="mt-2">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Z-Score Standard</div>
+<span class="font-body-sm text-[11px] text-primary font-mono-code">Chamber-Scoped v2.4</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Target Baseline</span>
+<div class="mt-2">
+<div class="font-label-md text-label-md text-on-surface font-semibold font-mono-code">μ = 75.0, σ = 12.0</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Normalized anchors</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Applied By</span>
+<div class="mt-2">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Sarah Jenkins</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Lead Organizer (ID: #401)</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Timestamp</span>
+<div class="mt-2">
+<div class="font-label-md text-label-md text-on-surface font-semibold font-mono-code">Oct 24, 14:15:02</div>
+<span class="font-body-sm text-[11px] text-outline font-mono-code">UTC · Block #491,204</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Ballots Verified</span>
+<div class="mt-2">
+<div class="font-label-md text-label-md text-on-surface font-semibold">102 Ballots (100%)</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Across 34 total projects</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Attestation Hash</span>
+<div class="mt-2 flex items-center justify-between">
+<div class="font-mono-code text-[11px] text-on-surface font-semibold truncate max-w-[110px]" title="sha256:7f8a9e6428bb8cf1a20cd7048a609d949c5be4e5d666d925b42b109e99c8f2">
+            7f8a9e...99c8f2
+          </div>
+<span class="material-symbols-outlined text-[16px] text-primary" title="Cryptographically Validated">verified</span>
+</div>
+<span class="font-body-sm text-[11px] text-primary font-semibold">Valid attestation ✓</span>
+</div>
+</div>
+<!-- Plain-Language Method Explanation & Technical Disclosure Card -->
+<div class="rounded-2xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col space-y-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm max-w-3xl">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">balance</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Leniency &amp; Harshness Correction Protocol</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-code text-[10px] uppercase font-bold">Standardized</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              To eliminate bias between harsh and generous evaluators, each juror's raw scores are standardized to zero-mean and unit variance, then re-anchored to the competition target baseline. This preserves each judge's relative ranking while aligning overall scoring curves.
+            </p>
+</div>
+</div>
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all self-start lg:self-center shrink-0" id="btn-toggle-formula" onclick="toggleFormulas()">
+<span class="material-symbols-outlined text-[16px] text-primary">function</span>
+<span id="formula-toggle-text">Hide Technical Derivation</span>
+<span class="material-symbols-outlined text-[16px] text-outline transition-transform duration-200" id="formula-chevron">expand_less</span>
+</button>
+</div>
+<!-- Expandable Mathematical Derivation Section -->
+<div class="flex flex-col space-y-space-md pt-space-sm" id="formula-breakdown">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Formula Box 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm uppercase tracking-wider mb-2">
+<span>Step 1: Juror Standard Score</span>
+<span class="font-mono-code">z_ij</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-mono-code text-on-surface text-center text-body-md my-1 font-semibold tracking-wide">
+              z_ij = (x_ij - μ_j) / σ_j
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Converts raw score <span class="font-mono-code">x_ij</span> against juror <span class="font-mono-code">j</span>'s personal historical distribution mean <span class="font-mono-code">μ_j</span> and deviation <span class="font-mono-code">σ_j</span>.
+            </p>
+</div>
+<!-- Formula Box 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm uppercase tracking-wider mb-2">
+<span>Step 2: Baseline Projection</span>
+<span class="font-mono-code">x'_ij</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-mono-code text-on-surface text-center text-body-md my-1 font-semibold tracking-wide">
+              x'_ij = (z_ij · σ_target) + μ_target
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Re-anchors standardized deviation to chamber target parameters: <span class="font-mono-code text-primary">μ=75.0, σ=12.0</span>.
+            </p>
+</div>
+<!-- Formula Box 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm uppercase tracking-wider mb-2">
+<span>Step 3: Quorum Composite</span>
+<span class="font-mono-code">S_final</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-mono-code text-on-surface text-center text-body-md my-1 font-semibold tracking-wide">
+              S(P_i) = (1/k) · Σ x'_ij
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Calculates the final normalized mean across all <span class="font-mono-code">k</span> assigned jurors meeting quorum requirements.
+            </p>
+</div>
+</div>
+<!-- Invariant Parameters Table -->
+<div class="rounded-xl bg-surface-container-low/60 p-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-x-space-lg gap-y-2 font-mono-code text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="text-outline">Target Mean (μ):</span>
+<span class="font-semibold text-on-surface">75.000</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-outline">Target StdDev (σ):</span>
+<span class="font-semibold text-on-surface">12.000</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-outline">Min Quorum (k):</span>
+<span class="font-semibold text-on-surface">≥ 3 Valid Ballots</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-outline">Degrees of Freedom (df):</span>
+<span class="font-semibold text-on-surface">33</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-outline">Outlier Clamp:</span>
+<span class="font-semibold text-on-surface">± 3.0σ (Winsorized)</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-mono-code text-primary bg-primary-fixed/30 px-2 py-0.5 rounded-full font-medium">
+            Strict Non-Destructive Invariant
+          </span>
+</div>
+</div>
+</div>
+<!-- Version History / Run Selector Strip -->
+<div class="rounded-2xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col space-y-space-sm" id="section-history">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs font-label-md text-label-md font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-outline">history</span>
+          Audit Snapshot Versions
+        </div>
+<span class="font-mono-code text-[11px] text-outline">3 recorded ledger transforms</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Run #3 (Active) -->
+<div class="relative p-space-md rounded-xl bg-surface-container-high/60 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold shadow-xs">
+              Run #3 (Active Baseline)
+            </span>
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+</div>
+<div class="my-space-xs">
+<div class="font-body-md text-body-md text-on-surface font-semibold">Oct 24, 14:15 UTC</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">by Sarah Jenkins · 34 projects · Z-score v2.4</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-mono-code text-[10px] text-outline">SHA: 7f8a9e...99c8f2</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Currently Viewing</span>
+</div>
+</div>
+<!-- Run #2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">
+              Run #2 (Snapshot)
+            </span>
+<span class="font-mono-code text-[10px] text-outline">Superseded</span>
+</div>
+<div class="my-space-xs">
+<div class="font-body-md text-body-md text-on-surface font-semibold">Oct 23, 19:40 UTC</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">by Sarah Jenkins · 32 projects · Z-score v2.4</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-mono-code text-[10px] text-outline">SHA: 4a2c1d...31ff80</span>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold" onclick="alert('Switching view to Snapshot Run #2 ledger.')">
+              Inspect Snapshot
+            </button>
+</div>
+</div>
+<!-- Run #1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between opacity-80 hover:opacity-100">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-outline font-label-sm text-label-sm font-semibold">
+              Run #1 (Initial Test)
+            </span>
+<span class="font-mono-code text-[10px] text-outline">Archived</span>
+</div>
+<div class="my-space-xs">
+<div class="font-body-md text-body-md text-on-surface font-semibold">Oct 22, 11:10 UTC</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">by Sarah Jenkins · 28 projects · Min-Max v1.0</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-mono-code text-[10px] text-outline">SHA: 91b00e...4419ad</span>
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface font-semibold" onclick="alert('Viewing archived sandbox run #1.')">
+              View Changelog
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Detailed Per-Project Audit Table Card -->
+<div class="rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col overflow-hidden">
+<!-- Filter & Search Toolbar -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm flex-1">
+<!-- Search input -->
+<div class="relative flex items-center min-w-[240px]">
+<span class="material-symbols-outlined absolute left-2.5 text-outline text-[16px]">search</span>
+<input class="pl-8 pr-4 py-1.5 h-9 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none w-full shadow-sm" id="table-search" oninput="filterTableRows()" placeholder="Search project, team, or track..." type="text">
+</div>
+<!-- Track Filter Dropdown -->
+<select class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm focus:outline-none cursor-pointer" id="track-filter" onchange="filterTableRows()">
+<option value="ALL">All Tracks (Global)</option>
+<option value="Autonomous Agents">Autonomous Agents</option>
+<option value="Security &amp; Sandboxing">Security &amp; Sandboxing</option>
+<option value="Infrastructure &amp; Tooling">Infrastructure &amp; Tooling</option>
+</select>
+<!-- Juror Filter Dropdown -->
+<select class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm focus:outline-none cursor-pointer" id="juror-filter" onchange="filterTableRows()">
+<option value="ALL">All Juror Ballots</option>
+<option value="Dr. Elena Rostova">Dr. Elena Rostova (Strict)</option>
+<option value="Marcus Vance">Marcus Vance (Lenient)</option>
+<option value="Rachel Adams">Rachel Adams (Balanced)</option>
+</select>
+</div>
+<div class="flex items-center gap-space-md">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="rounded bg-surface text-primary focus:ring-0 w-4 h-4 cursor-pointer" id="filter-rank-changes" onchange="filterTableRows()" type="checkbox">
+<span class="font-label-md text-label-md text-on-surface">Only Rank Changes</span>
+</label>
+<div class="h-4 w-[1px] bg-outline-variant"></div>
+<span class="font-mono-code text-[11px] text-outline" id="rows-counter">Showing 7 of 34 audited submissions</span>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm uppercase tracking-wider text-outline select-none">
+<th class="py-space-sm px-space-md w-28">Rank &amp; Shift</th>
+<th class="py-space-sm px-space-md">Project &amp; Team</th>
+<th class="py-space-sm px-space-md">Track</th>
+<th class="py-space-sm px-space-md">Quorum</th>
+<th class="py-space-sm px-space-md text-right">Raw Score Avg</th>
+<th class="py-space-sm px-space-md text-right">Calibrated Score</th>
+<th class="py-space-sm px-space-md text-right">Calibration Delta</th>
+<th class="py-space-sm px-space-md text-center w-36">Audit Proof</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface divide-y-0" id="audit-table-body">
+<!-- ROW 1 (Default Featured: AgentBench Zero) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer bg-primary-fixed/10" id="row-agentbench" onclick="toggleRowDetail('drawer-agentbench')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">#1</span>
+<span class="inline-flex items-center text-primary font-label-sm text-label-sm font-semibold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs">
+                    ▲ 1
+                  </span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Was #2 raw</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors">AgentBench Zero</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">TraceProof Labs · 4 team members</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                  Autonomous Agents
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-mono-code text-body-sm text-on-surface font-semibold">3/3 Valid</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Rostova, Vance, Adams</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono-code text-on-surface-variant">
+                79.33
+              </td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary font-mono-code">92.60</span>
+<span class="font-mono-code text-[11px] text-outline">/ 100</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center font-mono-code text-body-sm font-semibold text-primary px-1.5 py-0.5 rounded bg-surface-container-highest">
+                  +13.27
+                </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-xs hover:bg-surface-container transition-all">
+<span>Proof Breakdown</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200" id="icon-chevron-agentbench">expand_less</span>
+</button>
+</td>
+</tr>
+<!-- EXPANDED ROW DETAIL (Nested Card with complete step-by-step mathematical transformation) -->
+<tr class="bg-surface-container-low/60" id="drawer-agentbench">
+<td class="p-space-lg" colspan="8">
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col space-y-space-md">
+<!-- Expanded Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-xs gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed/30 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Mathematical Transformation Matrix · AgentBench Zero</div>
+<span class="font-mono-code text-body-sm text-outline">Submission ID: #SUB-8942 · 3 Independent Evaluation Ballots</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed/30 text-primary font-mono-code text-[11px] font-semibold">
+                        Quorum Met: 100%
+                      </span>
+<span class="font-mono-code text-[11px] text-outline">
+                        ECDSA: 0x4f...9c
+                      </span>
+</div>
+</div>
+<!-- 3 Juror Breakdown Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Juror 1 -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Juror 1</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px] font-semibold">Strict Profile</span>
+</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Dr. Elena Rostova</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">Stanford AI Lab</div>
+<!-- Juror Baseline Info -->
+<div class="mt-space-sm p-space-xs rounded bg-surface-container-lowest font-mono-code text-[11px] space-y-0.5">
+<div class="text-outline">Juror Historical Benchmark:</div>
+<div class="text-on-surface font-semibold">μ = 71.200 · σ = 8.400</div>
+</div>
+<!-- Step 1 & 2 -->
+<div class="mt-space-sm space-y-1.5 font-mono-code text-[11px]">
+<div class="flex justify-between items-center text-on-surface">
+<span class="text-outline">Raw Given:</span>
+<span class="font-bold">71.0 / 100</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span class="text-outline">Z-score (z_i1):</span>
+<span class="text-error font-medium">(71.0 - 71.2) / 8.4 = -0.024</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span class="text-outline">Target Scaled:</span>
+<span class="font-medium">(-0.024 · 12) + 75 = 74.71</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Strictness Offset:</span>
+<span class="font-mono-code text-body-sm font-semibold text-primary">+3.71 pts</span>
+</div>
+</div>
+<!-- Juror 2 -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Juror 2</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px] font-semibold">Lenient Profile</span>
+</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Marcus Vance</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">KernelSec Architecture</div>
+<!-- Juror Baseline Info -->
+<div class="mt-space-sm p-space-xs rounded bg-surface-container-lowest font-mono-code text-[11px] space-y-0.5">
+<div class="text-outline">Juror Historical Benchmark:</div>
+<div class="text-on-surface font-semibold">μ = 84.500 · σ = 6.200</div>
+</div>
+<!-- Step 1 & 2 -->
+<div class="mt-space-sm space-y-1.5 font-mono-code text-[11px]">
+<div class="flex justify-between items-center text-on-surface">
+<span class="text-outline">Raw Given:</span>
+<span class="font-bold">89.0 / 100</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span class="text-outline">Z-score (z_i2):</span>
+<span class="text-primary font-medium">(89.0 - 84.5) / 6.2 = +0.726</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span class="text-outline">Target Scaled:</span>
+<span class="font-medium">(+0.726 · 12) + 75 = 83.71</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Leniency Correction:</span>
+<span class="font-mono-code text-body-sm font-semibold text-error">-5.29 pts</span>
+</div>
+</div>
+<!-- Juror 3 -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Juror 3</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-[10px] font-semibold">Balanced Profile</span>
+</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Rachel Adams</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">Anthropic Research</div>
+<!-- Juror Baseline Info -->
+<div class="mt-space-sm p-space-xs rounded bg-surface-container-lowest font-mono-code text-[11px] space-y-0.5">
+<div class="text-outline">Juror Historical Benchmark:</div>
+<div class="text-on-surface font-semibold">μ = 77.800 · σ = 7.100</div>
+</div>
+<!-- Step 1 & 2 -->
+<div class="mt-space-sm space-y-1.5 font-mono-code text-[11px]">
+<div class="flex justify-between items-center text-on-surface">
+<span class="text-outline">Raw Given:</span>
+<span class="font-bold">78.0 / 100</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span class="text-outline">Z-score (z_i3):</span>
+<span class="text-on-surface font-medium">(78.0 - 77.8) / 7.1 = +0.028</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span class="text-outline">Target Scaled:</span>
+<span class="font-medium">(+0.028 · 12) + 75 = 75.34</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Deviation Offset:</span>
+<span class="font-mono-code text-body-sm font-semibold text-error">-2.66 pts</span>
+</div>
+</div>
+</div>
+<!-- Final Composite Aggregation Formula Box -->
+<div class="rounded-xl bg-surface-container-high/40 p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Composite Aggregation Proof</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest font-mono-code text-[10px] text-primary font-bold">Unbiased Mean</span>
+</div>
+<div class="font-mono-code text-body-sm text-on-surface-variant">
+                        Raw Arithmetic Mean: (71.0 + 89.0 + 78.0) / 3 = <span class="text-on-surface font-semibold">79.33</span>
+</div>
+<div class="font-mono-code text-body-sm text-on-surface">
+                        Normalized Standard Mean: (74.71 + 83.71 + 75.34) / 3 = <span class="text-primary font-bold text-headline-sm">92.60 / 100</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-stretch md:self-auto justify-between md:justify-end">
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-outline">Standing Impact</div>
+<div class="font-label-md text-label-md text-primary font-bold">Shifted from #2 unadjusted to #1 calibrated</div>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-1.5 text-on-surface font-mono-code text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+                        Signed by Engine v2.4
+                      </div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<!-- ROW 2: OmniSynth RAG -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" onclick="alert('Viewing mathematical attestation for OmniSynth RAG (SynthLabs)')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">#2</span>
+<span class="inline-flex items-center text-error font-label-sm text-label-sm font-semibold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs">
+                    ▼ 1
+                  </span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Was #1 raw</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors">OmniSynth RAG</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">SynthLabs · 3 team members</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                  Autonomous Agents
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-mono-code text-body-sm text-on-surface font-semibold">3/3 Valid</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">3 independent jurors</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono-code text-on-surface-variant">
+                93.80
+              </td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono-code">90.10</span>
+<span class="font-mono-code text-[11px] text-outline">/ 100</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center font-mono-code text-body-sm font-semibold text-error px-1.5 py-0.5 rounded bg-surface-container-highest">
+                  -3.70
+                </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-all">
+<span>Breakdown</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</td>
+</tr>
+<!-- ROW 3: MicroJail Security -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" onclick="alert('Viewing mathematical attestation for MicroJail Security')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">#3</span>
+<span class="inline-flex items-center text-primary font-label-sm text-label-sm font-semibold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs">
+                    ▲ 2
+                  </span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Was #5 raw</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors">MicroJail Security</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">SecureRuntime · 2 team members</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                  Security &amp; Sandboxing
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-mono-code text-body-sm text-on-surface font-semibold">3/3 Valid</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">3 independent jurors</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono-code text-on-surface-variant">
+                83.00
+              </td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono-code">89.80</span>
+<span class="font-mono-code text-[11px] text-outline">/ 100</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center font-mono-code text-body-sm font-semibold text-primary px-1.5 py-0.5 rounded bg-surface-container-highest">
+                  +6.80
+                </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-all">
+<span>Breakdown</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</td>
+</tr>
+<!-- ROW 4: zkEval Protocol -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" onclick="alert('Viewing zkEval Protocol proof')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">#4</span>
+<span class="inline-flex items-center text-outline font-label-sm text-label-sm font-semibold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs">
+                    — 0
+                  </span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Unchanged</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors">zkEval Protocol</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">TraceProof · 4 team members</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                  Security &amp; Sandboxing
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-mono-code text-body-sm text-on-surface font-semibold">4/4 Valid</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Quorum exceeded</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono-code text-on-surface-variant">
+                91.50
+              </td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono-code">88.90</span>
+<span class="font-mono-code text-[11px] text-outline">/ 100</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center font-mono-code text-body-sm font-semibold text-error px-1.5 py-0.5 rounded bg-surface-container-highest">
+                  -2.60
+                </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-all">
+<span>Breakdown</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</td>
+</tr>
+<!-- ROW 5: HyperScale Agents -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" onclick="alert('Viewing HyperScale Agents proof')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">#5</span>
+<span class="inline-flex items-center text-error font-label-sm text-label-sm font-semibold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs">
+                    ▼ 2
+                  </span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Was #3 raw</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors">HyperScale Agents</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">KernelSec · 3 team members</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                  Infrastructure &amp; Tooling
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-mono-code text-body-sm text-on-surface font-semibold">3/3 Valid</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">3 independent jurors</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono-code text-on-surface-variant">
+                90.20
+              </td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono-code">87.50</span>
+<span class="font-mono-code text-[11px] text-outline">/ 100</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center font-mono-code text-body-sm font-semibold text-error px-1.5 py-0.5 rounded bg-surface-container-highest">
+                  -2.70
+                </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-all">
+<span>Breakdown</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</td>
+</tr>
+<!-- ROW 6: DeepMemory VectorFS -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" onclick="alert('Viewing DeepMemory VectorFS proof')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">#6</span>
+<span class="inline-flex items-center text-primary font-label-sm text-label-sm font-semibold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs">
+                    ▲ 3
+                  </span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Was #9 raw</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors">DeepMemory VectorFS</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">MemoryScale · 5 team members</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                  Infrastructure &amp; Tooling
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-mono-code text-body-sm text-on-surface font-semibold">3/3 Valid</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">3 independent jurors</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono-code text-on-surface-variant">
+                81.60
+              </td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono-code">86.40</span>
+<span class="font-mono-code text-[11px] text-outline">/ 100</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center font-mono-code text-body-sm font-semibold text-primary px-1.5 py-0.5 rounded bg-surface-container-highest">
+                  +4.80
+                </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-all">
+<span>Breakdown</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</td>
+</tr>
+<!-- ROW 7: NeuroShield Guard (Pending Quorum) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer bg-surface-container-low/30" onclick="alert('NeuroShield Guard is currently missing 1 ballot to meet quorum of 3.')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-outline">#--</span>
+<span class="inline-flex items-center text-outline font-label-sm text-label-sm font-semibold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs">
+                    Pending
+                  </span>
+</div>
+<span class="font-mono-code text-[10px] text-outline">Awaiting 1 ballot</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors">NeuroShield Guard</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">AegisAI · 2 team members</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                  Security &amp; Sandboxing
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-mono-code text-body-sm text-error font-semibold">2/3 Ballots</span>
+</div>
+<span class="font-mono-code text-[10px] text-error font-semibold">Quorum deficit</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono-code text-on-surface-variant">
+                79.50
+              </td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-label-md text-label-md text-outline italic">Pending Quorum</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-mono-code text-body-sm text-outline">—</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-lowest text-outline font-label-sm text-label-sm shadow-xs cursor-not-allowed">
+<span>Awaiting Juror</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-space-md bg-surface-container-low/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+          Showing <span class="font-semibold text-on-surface">1–7</span> of <span class="font-semibold text-on-surface">34</span> projects · All calculations computed in IEEE 754 double precision
+        </div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-outline hover:text-on-surface font-label-sm text-label-sm shadow-xs cursor-not-allowed" disabled="">Previous</button>
+<button class="px-space-sm py-1 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold shadow-xs">1</button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm shadow-xs">2</button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm shadow-xs">3</button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm shadow-xs">Next</button>
+</div>
+</div>
+</div>
+<!-- Bottom Audit Attestation Bar (Immutable Ledger Proof) -->
+<div class="rounded-2xl bg-surface-container-high/70 p-space-lg shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-xl">
+<div class="flex items-start md:items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Immutable Ledger Proof Recorded</span>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-mono-code text-[10px] font-bold">STATE FINAL</span>
+</div>
+<div class="font-mono-code text-body-sm text-on-surface-variant mt-0.5">
+            Merkle Root <span class="font-semibold text-on-surface">0x3d4f8e91cb45aa78b7a90f23d1192e4</span> finalized at block <span class="font-semibold text-on-surface">#491,204</span> · Normalization Engine v2.4
+          </div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs shrink-0">
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container transition-all" onclick="alert('Downloading signed cryptographic audit bundle (.zip) with SHA256 checksums, ballots, and juror distributions.')">
+<span class="material-symbols-outlined text-[16px] text-primary">folder_zip</span>
+          Download Cryptographic Audit Bundle (.zip)
+        </button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container transition-all" onclick="window.print()">
+<span class="material-symbols-outlined text-[16px] text-outline">print</span>
+          Print Official Juror Summary
+        </button>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interaction Javascript -->
+<script>
+    function toggleExportMenu() {
+      const menu = document.getElementById('export-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function toggleFormulas() {
+      const breakdown = document.getElementById('formula-breakdown');
+      const text = document.getElementById('formula-toggle-text');
+      const chevron = document.getElementById('formula-chevron');
+      if (breakdown.classList.contains('hidden')) {
+        breakdown.classList.remove('hidden');
+        text.innerText = 'Hide Technical Derivation';
+        chevron.innerText = 'expand_less';
+      } else {
+        breakdown.classList.add('hidden');
+        text.innerText = 'Show Technical Derivation';
+        chevron.innerText = 'expand_more';
+      }
+    }
+
+    function toggleRowDetail(rowId) {
+      const drawer = document.getElementById(rowId);
+      const chevron = document.getElementById('icon-chevron-agentbench');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        chevron.innerText = 'expand_less';
+      } else {
+        drawer.classList.add('hidden');
+        chevron.innerText = 'expand_more';
+      }
+    }
+
+    function setAuditState(state) {
+      const allButtons = document.querySelectorAll('#state-selector-group button');
+      allButtons.forEach(btn => {
+        btn.className = "px-space-sm py-1 rounded-lg font-label-sm text-label-sm transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface";
+      });
+
+      const activeBtn = document.getElementById('btn-state-' + state);
+      if (activeBtn) {
+        activeBtn.className = "px-space-sm py-1 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary-container shadow-sm";
+      }
+
+      const content = document.getElementById('view-content');
+      const skeleton = document.getElementById('view-skeleton');
+      const empty = document.getElementById('view-empty');
+      const historySection = document.getElementById('section-history');
+      const drawer = document.getElementById('drawer-agentbench');
+
+      content.classList.remove('hidden');
+      skeleton.classList.add('hidden');
+      empty.classList.add('hidden');
+      historySection.classList.remove('hidden');
+
+      if (state === 'default') {
+        drawer.classList.remove('hidden');
+      } else if (state === 'expanded') {
+        drawer.classList.remove('hidden');
+        drawer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else if (state === 'singlerun') {
+        drawer.classList.remove('hidden');
+        historySection.classList.add('hidden');
+      } else if (state === 'empty') {
+        content.classList.add('hidden');
+        empty.classList.remove('hidden');
+      } else if (state === 'loading') {
+        content.classList.add('hidden');
+        skeleton.classList.remove('hidden');
+      }
+    }
+
+    function filterTableRows() {
+      const search = document.getElementById('table-search').value.toLowerCase();
+      const track = document.getElementById('track-filter').value;
+      const rankOnly = document.getElementById('filter-rank-changes').checked;
+      const rows = document.querySelectorAll('#audit-table-body > tr');
+
+      let visibleCount = 0;
+      rows.forEach(row => {
+        if (row.id.startsWith('drawer-')) return;
+        const text = row.innerText.toLowerCase();
+        let show = true;
+
+        if (search && !text.includes(search)) {
+          show = false;
+        }
+
+        if (track !== 'ALL' && !text.includes(track.toLowerCase())) {
+          show = false;
+        }
+
+        if (rankOnly && (text.includes('— 0') || text.includes('unchanged') || text.includes('pending'))) {
+          show = false;
+        }
+
+        row.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      });
+
+      document.getElementById('rows-counter').innerText = `Showing ${visibleCount} of 34 audited submissions`;
+    }
+
+    document.addEventListener('click', function(e) {
+      const container = document.getElementById('export-dropdown-container');
+      const menu = document.getElementById('export-menu');
+      if (container && !container.contains(e.target) && menu) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
+</div></main></div></body></html>

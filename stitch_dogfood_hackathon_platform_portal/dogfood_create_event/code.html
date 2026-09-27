@@ -1,0 +1,1069 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface-variant":"#414753","on-tertiary-fixed":"#0c006b","on-secondary-fixed":"#00174b","outline":"#717785","tertiary-container":"#6462ec","on-primary":"#ffffff","surface-container":"#efedf3","secondary":"#0051d5","tertiary-fixed-dim":"#c2c1ff","on-primary-fixed-variant":"#00458f","surface-container-highest":"#e3e2e7","on-tertiary":"#ffffff","surface-bright":"#faf8fe","secondary-fixed":"#dbe1ff","on-secondary":"#ffffff","inverse-primary":"#abc7ff","inverse-surface":"#2f3034","on-background":"#1a1b1f","primary-fixed-dim":"#abc7ff","surface-container-low":"#f4f3f8","on-primary-container":"#fcfbff","primary-container":"#0071e3","primary":"#0059b5","surface-variant":"#e3e2e7","primary-fixed":"#d7e2ff","on-error":"#ffffff","on-tertiary-container":"#fefaff","error-container":"#ffdad6","on-primary-fixed":"#001b3f","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#332dbc","background":"#faf8fe","surface-tint":"#005cbb","on-secondary-fixed-variant":"#003ea8","surface-container-high":"#e9e7ed","inverse-on-surface":"#f1f0f6","secondary-fixed-dim":"#b4c5ff","error":"#ba1a1a","surface-dim":"#dbd9df","tertiary":"#4a47d2","on-secondary-container":"#fefcff","tertiary-fixed":"#e2dfff","secondary-container":"#316bf3","on-error-container":"#93000a","surface":"#faf8fe","on-surface":"#1a1b1f","outline-variant":"#c1c6d6"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"0.75rem","space-sm":"0.5rem","space-lg":"1.25rem","space-xs":"0.25rem","gutter":"1rem","margin-tablet":"2rem","margin":"1rem","margin-desktop":"3rem","gutter-desktop":"1.5rem","space-xl":"2rem"},fontFamily:{"headline-lg":["Inter"],"headline-sm":["Inter"],"display-lg-mobile":["Inter"],"body-md":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"label-sm":["Inter"],"mono-code":["JetBrains Mono"]},fontSize:{"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"19px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"-0.005em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.01em","fontWeight":"500"}],"mono-code":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col min-h-0"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm shadow-sm"><span class="material-symbols-outlined text-[18px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-tight">Dogfood</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Eval Platform</span></div></div><div class="overflow-y-auto px-space-sm py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm"><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="overview" href="#">Overview</a><div class="flex flex-col gap-space-xs"><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="events" href="#">Events</a><div class="pl-space-md flex flex-col gap-space-xs"><a aria-current="page" class="px-space-md py-space-xs rounded-lg transition-all bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm" data-path="create-event" href="#">Create Event</a></div></div><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="participants" href="#">Participants</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="teams" href="#">Teams</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="submissions" href="#">Submissions</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="eligibility" href="#">Eligibility</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="judges" href="#">Judges</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="judging" href="#">Judging</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="normalization" href="#">Normalization</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="results" href="#">Results</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="certificates" href="#">Certificates</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="archive" href="#">Archive</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="settings" href="#">Settings</a></nav></div></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm">Cluster OK</span></div><span class="font-mono-code text-mono-code text-on-surface-variant">99.98%</span></div><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Docs &amp; API</span><span class="font-mono-code text-mono-code">v2.4-prod</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-all shadow-[0_1px_3px_rgba(0,0,0,0.03)]" type="button"><span class="material-symbols-outlined text-primary text-[18px]">layers</span><span class="font-label-md text-label-md font-semibold">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-mono-code text-mono-code text-on-surface">Cluster OK • 99.98%</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><div class="flex items-center gap-space-sm w-72 h-8.5 px-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_2px_rgba(0,0,0,0.02)] text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">search</span><input class="w-full bg-transparent border-none text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none" placeholder="Search submissions, teams, judges..." type="text"><kbd class="font-mono-code text-mono-code px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant text-[10px]">⌘K</kbd></div></div><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Lead Organizer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full px-gutter-desktop bg-surface min-h-screen"><div class="flex flex-col w-full pb-32">
+<!-- Understated Breadcrumb -->
+<div class="flex items-center gap-space-xs py-space-sm">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">event_note</span>
+      Events
+    </a>
+<span class="font-label-sm text-label-sm text-outline-variant">/</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Create New Event</span>
+</div>
+<!-- Header & Metadata Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pt-space-xs pb-space-lg">
+<div class="flex flex-col">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Create New Event</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+        Configure hackathon specifications, operational timelines, evaluation tracks, and verification rules.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span id="autosave-label">Autosaved 1m ago</span>
+</div>
+<div class="px-space-md py-1.5 rounded-full bg-primary-container text-on-primary-container text-label-sm font-label-sm font-medium shadow-sm" id="step-counter-pill">
+        Step 1 of 7
+      </div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high text-label-md font-label-md font-medium shadow-sm transition-all flex items-center gap-1" onclick="triggerDraftToast()" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+        Save Draft
+      </button>
+</div>
+</div>
+<!-- Interactive Simulator Toolbar (Quick Step Switcher & States) -->
+<div class="p-space-sm mb-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs pb-1">
+<span class="font-mono-code text-mono-code uppercase tracking-wider text-on-surface-variant text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">developer_mode</span>
+        Step Simulator
+      </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[11px]">Click to jump directly between flow states</span>
+</div>
+<div class="flex flex-wrap gap-1.5 items-center">
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-lowest text-primary shadow-xs hover:bg-surface-container transition-all" data-sim="1" onclick="goToStep(1)" type="button">1: Basic</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-sim="2" onclick="goToStep(2)" type="button">2: Dates</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-sim="3" onclick="goToStep(3)" type="button">3: Tracks</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-sim="4" onclick="goToStep(4)" type="button">4: Prizes</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-sim="5" onclick="goToStep(5)" type="button">5: Team Rules</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-sim="6" onclick="goToStep(6)" type="button">6: Eligibility</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-sim="7" onclick="goToStep(7)" type="button">7: Review</button>
+<div class="h-4 w-px bg-outline-variant/40 mx-1"></div>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-error-container text-on-error-container hover:opacity-90 transition-all flex items-center gap-1" onclick="toggleValidationError()" type="button">
+<span class="material-symbols-outlined text-[13px]">report</span>
+        Validation Error State
+      </button>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-primary-fixed text-on-primary-fixed hover:opacity-90 transition-all flex items-center gap-1" onclick="showSuccessState()" type="button">
+<span class="material-symbols-outlined text-[13px]">task_alt</span>
+        Success Screen
+      </button>
+</div>
+</div>
+<!-- Multi-Step Horizontal Stepper -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-lg">
+<div class="grid grid-cols-2 md:grid-cols-7 gap-space-xs relative">
+<!-- Step 1 -->
+<button class="stepper-tab group flex flex-col items-center text-center p-space-xs rounded-lg transition-all" data-step="1" onclick="goToStep(1)" type="button">
+<div class="stepper-indicator w-8 h-8 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center font-bold shadow-sm transition-transform group-hover:scale-105">
+          1
+        </div>
+<span class="stepper-label mt-1.5 font-label-sm text-label-sm text-primary font-semibold">Basic Info</span>
+</button>
+<!-- Step 2 -->
+<button class="stepper-tab group flex flex-col items-center text-center p-space-xs rounded-lg transition-all" data-step="2" onclick="goToStep(2)" type="button">
+<div class="stepper-indicator w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center justify-center font-medium shadow-xs transition-transform group-hover:scale-105">
+          2
+        </div>
+<span class="stepper-label mt-1.5 font-label-sm text-label-sm text-on-surface-variant font-medium">Dates</span>
+</button>
+<!-- Step 3 -->
+<button class="stepper-tab group flex flex-col items-center text-center p-space-xs rounded-lg transition-all" data-step="3" onclick="goToStep(3)" type="button">
+<div class="stepper-indicator w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center justify-center font-medium shadow-xs transition-transform group-hover:scale-105">
+          3
+        </div>
+<span class="stepper-label mt-1.5 font-label-sm text-label-sm text-on-surface-variant font-medium">Tracks</span>
+</button>
+<!-- Step 4 -->
+<button class="stepper-tab group flex flex-col items-center text-center p-space-xs rounded-lg transition-all" data-step="4" onclick="goToStep(4)" type="button">
+<div class="stepper-indicator w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center justify-center font-medium shadow-xs transition-transform group-hover:scale-105">
+          4
+        </div>
+<span class="stepper-label mt-1.5 font-label-sm text-label-sm text-on-surface-variant font-medium">Prizes</span>
+</button>
+<!-- Step 5 -->
+<button class="stepper-tab group flex flex-col items-center text-center p-space-xs rounded-lg transition-all" data-step="5" onclick="goToStep(5)" type="button">
+<div class="stepper-indicator w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center justify-center font-medium shadow-xs transition-transform group-hover:scale-105">
+          5
+        </div>
+<span class="stepper-label mt-1.5 font-label-sm text-label-sm text-on-surface-variant font-medium">Team Rules</span>
+</button>
+<!-- Step 6 -->
+<button class="stepper-tab group flex flex-col items-center text-center p-space-xs rounded-lg transition-all" data-step="6" onclick="goToStep(6)" type="button">
+<div class="stepper-indicator w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center justify-center font-medium shadow-xs transition-transform group-hover:scale-105">
+          6
+        </div>
+<span class="stepper-label mt-1.5 font-label-sm text-label-sm text-on-surface-variant font-medium">Eligibility</span>
+</button>
+<!-- Step 7 -->
+<button class="stepper-tab group flex flex-col items-center text-center p-space-xs rounded-lg transition-all" data-step="7" onclick="goToStep(7)" type="button">
+<div class="stepper-indicator w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center justify-center font-medium shadow-xs transition-transform group-hover:scale-105">
+          7
+        </div>
+<span class="stepper-label mt-1.5 font-label-sm text-label-sm text-on-surface-variant font-medium">Review</span>
+</button>
+</div>
+</div>
+<!-- Toast Notification (Draft Saved) -->
+<div class="hidden fixed top-20 right-8 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-xl shadow-xl flex items-center gap-space-sm transition-all transform duration-300" id="draft-toast">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed-dim">check_circle</span>
+<span class="font-body-sm text-body-sm">Draft saved successfully. You can safely exit and resume anytime.</span>
+</div>
+<!-- STEP 1: BASIC INFO -->
+<div class="step-view flex flex-col gap-space-lg" id="step-container-1">
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Event Identity &amp; Specification</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Core metadata surfaced on the participant landing page and evaluation registry.</p>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-code text-mono-code text-[11px]">SPEC-STAGE-01</span>
+</div>
+<!-- Event Name & Slug -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+            Event Title <span class="text-error font-body-sm">*</span>
+</label>
+<input class="h-10 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-xs transition-all" id="input-event-name" oninput="updateSlug(this.value)" placeholder="e.g. AI Agents World Cup 2026" type="text" value="AI Agents World Cup 2026">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Clear, definitive public title for this hackathon edition.</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+            Canonical URL Slug
+          </label>
+<div class="h-10 px-space-md rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant font-mono-code text-mono-code">
+<span class="text-on-surface" id="slug-preview">dogfood.eval/events/ai-agents-2026</span>
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" onclick="navigator.clipboard?.writeText('https://dogfood.eval/events/ai-agents-2026')" title="Copy URL" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Immutable namespace endpoint for participant CLI verification.</span>
+</div>
+</div>
+<!-- Tagline -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+          Tagline &amp; Executive Teaser
+        </label>
+<input class="h-10 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-xs transition-all" placeholder="Brief 1-line hook describing the competitive objective" type="text" value="Benchmark autonomous agents against live multi-file repository benchmarks with continuous sandbox telemetry.">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Displays in event cards, RSS streams, and social metadata tags.</span>
+</div>
+<!-- Description with Markdown Toolbar -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+            Comprehensive Event Description
+          </label>
+<div class="flex items-center gap-space-xs bg-surface-container-low rounded-lg p-0.5">
+<button class="px-space-sm py-0.5 rounded text-label-sm font-label-sm bg-surface-container-lowest text-on-surface shadow-xs font-semibold" type="button">Write</button>
+<button class="px-space-sm py-0.5 rounded text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface" type="button">Preview</button>
+</div>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-1 bg-surface-container rounded-t-lg text-on-surface-variant">
+<button class="p-1 rounded hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">format_bold</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">format_italic</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">code</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">link</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">format_list_bulleted</span></button>
+<span class="h-4 w-px bg-outline-variant/40 mx-1"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[11px]">Markdown Supported</span>
+</div>
+<textarea class="p-space-md rounded-b-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-xs resize-none transition-all" rows="5">Welcome to the AI Agents World Cup 2026. Teams will build, deploy, and benchmark sovereign agentic workflows capable of solving complex multi-stage tasks without human-in-the-loop intervention. 
+
+Submissions will be automatically evaluated inside deterministic Firecracker microVMs against a suite of 120 hidden verification suites spanning code synthesis, data analysis, and multi-tool planning.</textarea>
+</div>
+<!-- Cover Image Drag and Drop Zone -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+          Cover Banner &amp; Visual Asset
+        </label>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col md:flex-row items-center gap-space-lg">
+<div class="w-full md:w-48 h-28 rounded-lg overflow-hidden relative shadow-sm shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="High tech minimalist hacker tournament banner with subtle blue geometric data meshes, glowing node connections, light clean background, cinematic lighting, and modern Cupertino style typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ3-mQnaTeWIkRYL_EhB1CVutNpgtZYHr_q3ac_RxjuJRGppFhUz-zrkNE92ogk5pe3aHMJBiFz0zTj9VvZZHRXJvuG6kcdh1yWG9xX2wi8epRoZygzTQUOWXkDls4i5L8oKraiZHB6CpENkHL3aq7mSKBdeg3tNKb_dirRXANiNs9m6InJSp6ucT_eO4zhYV9T0p9za9ppz53IciuOpsgJ8Lm54pwr23ZaHCOsWU6cJmdlX0zQgQStw">
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center backdrop-blur-[1px]">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 font-mono-code text-mono-code text-[10px] text-on-surface">1920 × 1080</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_upload</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Drop event banner image here</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recommended 1920x1080 resolution. PNG, JPG, or WebP up to 10MB.</p>
+<div class="mt-2 flex items-center gap-space-sm">
+<button class="px-space-md py-1 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container text-label-sm font-label-sm shadow-xs transition-colors" type="button">
+                Browse Files
+              </button>
+<button class="px-space-sm py-1 rounded-lg text-error hover:bg-error-container/30 text-label-sm font-label-sm transition-colors" type="button">
+                Remove Asset
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Format / Event Type -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+          Tournament Format
+        </label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<label class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all">
+<input checked="" class="mt-1 text-primary focus:ring-0" name="event-format" type="radio">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">public</span>
+                Virtual / Global
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Distributed participation worldwide with cloud microVM evaluation.</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all">
+<input class="mt-1 text-primary focus:ring-0" name="event-format" type="radio">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">location_on</span>
+                In-Person Venue
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Physical on-site competition with local network judging terminals.</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all">
+<input class="mt-1 text-primary focus:ring-0" name="event-format" type="radio">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">hub</span>
+                Hybrid Cohort
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Unified online rubric paired with synchronized physical demo day.</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 2: DATES & OPERATIONAL TIMELINE -->
+<div class="step-view hidden flex flex-col gap-space-lg" id="step-container-2">
+<!-- Validation Warning Example (Toggled by simulator or default demo) -->
+<div class="hidden p-space-md rounded-xl bg-error-container text-on-error-container flex items-start gap-space-sm shadow-sm transition-all" id="date-validation-warning">
+<span class="material-symbols-outlined text-[20px] text-error shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold">Chronological Sequencing Alert</span>
+<span class="font-body-sm text-body-sm">Submission Freeze Deadline must precede Judging Commencement by at least 2 hours to allow automated OCI image distribution and sandbox test harness ingestion.</span>
+</div>
+</div>
+<!-- Regular Informational Notice -->
+<div class="p-space-md rounded-xl bg-surface-container-high text-on-surface-variant flex items-center gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">schedule</span>
+<p class="font-body-sm text-body-sm">
+<strong class="font-semibold text-on-surface">Timeline Policy:</strong> Hard Lock locks all participant codebases. Submissions cannot be modified during the judging and normalized scoring windows.
+      </p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-sm gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Operational Milestones &amp; Hard Locks</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configures autonomous state transitions across the tournament lifecycle.</p>
+</div>
+</div>
+<!-- Timezone Selector Dropdown -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">language</span>
+<select class="bg-transparent font-label-sm text-label-sm text-on-surface font-medium focus:outline-none cursor-pointer">
+<option selected="">UTC (Coordinated Universal Time) — Recommended</option>
+<option>America/Los_Angeles (PST/PDT)</option>
+<option>America/New_York (EST/EDT)</option>
+<option>Europe/London (GMT/BST)</option>
+<option>Asia/Tokyo (JST)</option>
+</select>
+</div>
+</div>
+<!-- 2-Column Milestone Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Milestone 1 & 2: Registration -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Registration Window
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Phase 01</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Registration Starts</label>
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" type="datetime-local" value="2026-03-01T00:00">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Registration Deadline</label>
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" type="datetime-local" value="2026-03-20T23:59">
+</div>
+</div>
+<!-- Milestone 3 & 4: Submissions -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              Hacking &amp; Submission Window
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Phase 02</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Hacking Starts (Window Opens)</label>
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" type="datetime-local" value="2026-03-21T09:00">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between">
+              Submission Hard Lock
+              <span class="text-error font-mono-code text-[11px]">IMMUTABLE FREEZE</span>
+</label>
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" id="input-sub-lock" type="datetime-local" value="2026-03-23T18:00">
+</div>
+</div>
+<!-- Milestone 5 & 6: Judging Window -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              Judging Chamber Window
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Phase 03</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Automated &amp; Jury Evaluation Opens</label>
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" id="input-judge-open" type="datetime-local" value="2026-03-23T21:00">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Judging Window Concludes</label>
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" type="datetime-local" value="2026-03-25T12:00">
+</div>
+</div>
+<!-- Milestone 7 & 8: Deliberation & Results -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+              Normalization &amp; Awards
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Phase 04</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Score Normalization &amp; Jury Lock</label>
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" type="datetime-local" value="2026-03-25T14:00">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Public Gallery &amp; Winners Broadcast</label>
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" type="datetime-local" value="2026-03-26T16:00">
+</div>
+</div>
+</div>
+<!-- Chronological Visual Bar (Data-dense timeline) -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Visual Sequencing Projection</span>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary" style="width: 25%" title="Registration (20 days)"></div>
+<div class="h-full bg-primary" style="width: 35%" title="Hacking (2.5 days)"></div>
+<div class="h-full bg-tertiary" style="width: 25%" title="Judging (1.5 days)"></div>
+<div class="h-full bg-secondary-container" style="width: 15%" title="Deliberation &amp; Results (1 day)"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px]">
+<span>Mar 01 (Launch)</span>
+<span>Mar 20 (Reg Close)</span>
+<span>Mar 23 (Freeze)</span>
+<span>Mar 25 (Deliberation)</span>
+<span>Mar 26 (Winners)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 3: TRACKS -->
+<div class="step-view hidden flex flex-col gap-space-lg" id="step-container-3">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Evaluation Tracks &amp; Arenas</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Each track features distinct rubric score weights and isolated leaderboard rankings.</p>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-medium hover:opacity-95 shadow-sm flex items-center gap-1 transition-all" onclick="showAddTrackCard()" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+        Add Track
+      </button>
+</div>
+<!-- Existing Track Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Track 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-mono-code text-mono-code text-[10px]">TRACK-01</span>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Autonomous Code Synthesis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">SWE-bench style autonomous patch generation, multi-file code editing, and test harness execution.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prize Allocation</span>
+<span class="font-label-md text-label-md text-primary font-bold">$15,000 pool</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rubric Criteria</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">4 Criteria</span>
+</div>
+</div>
+</div>
+<!-- Track 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-code text-mono-code text-[10px]">TRACK-02</span>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Multi-Tool Orchestration &amp; RAG</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Agentic tool use, vector database retrieval latency, deterministic reasoning chains, and API efficiency.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prize Allocation</span>
+<span class="font-label-md text-label-md text-primary font-bold">$10,000 pool</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rubric Criteria</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">5 Criteria</span>
+</div>
+</div>
+</div>
+<!-- Track 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-mono-code text-mono-code text-[10px]">TRACK-03</span>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Deterministic Safety &amp; Sandboxing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rootless container isolation, prompt injection resistance, formal policy guardrails, and deterministic audits.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prize Allocation</span>
+<span class="font-label-md text-label-md text-primary font-bold">$13,000 pool</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rubric Criteria</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">3 Criteria</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Add Track Form (Collapsible/Dynamic) -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md" id="add-track-form">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">add_circle</span>
+          Configure New Evaluation Track
+        </span>
+<button class="text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm" onclick="document.getElementById('add-track-form').classList.toggle('hidden')" type="button">
+          Dismiss
+        </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Track Name</label>
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="e.g. Real-Time Voice Agents" type="text">
+</div>
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Evaluation Scope / Short Description</label>
+<input class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="Target tasks, benchmark suites, and specialized runtime requirements" type="text">
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-highest text-on-surface text-label-sm font-label-sm" type="button">Cancel</button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary text-label-sm font-label-sm font-medium" type="button">Save Track</button>
+</div>
+</div>
+</div>
+<!-- STEP 4: PRIZES -->
+<div class="step-view hidden flex flex-col gap-space-lg" id="step-container-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Prize Distribution &amp; Grants</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Define cash purses, cloud credits, and accelerator access linked to specific tracks.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="px-space-md py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold shadow-xs">
+          $38,000 Total Cash &amp; Credits
+        </div>
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-medium shadow-sm hover:opacity-95 flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+          Add Prize
+        </button>
+</div>
+</div>
+<!-- Repeatable Prize Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Grand Prize Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-mono-code text-mono-code text-[10px] font-bold">GRAND CHAMPION</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Grand Championship Award</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Awarded to highest normalized composite score across all competitive tracks.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-display-lg text-headline-lg text-primary font-bold leading-none">$15,000 USD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+ $25,000 Compute Credits</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant mt-1">Track: Overall Champion</span>
+</div>
+</div>
+<!-- Autonomous Code Winner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-mono-code text-[10px]">TRACK WINNER</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Track 1: Best Code Synthesis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Highest SWE-bench test resolution rate with under 15k output tokens.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-display-lg text-headline-lg text-on-surface font-bold leading-none">$5,000 USD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+ Priority Accelerator Interview</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant mt-1">Track: Autonomous Code Synthesis</span>
+</div>
+</div>
+<!-- Best Safety Winner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-mono-code text-[10px]">SPECIAL CATEGORY</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Best Safety Architecture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero privilege escapes during red-team penetration verification harness.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-display-lg text-headline-lg text-on-surface font-bold leading-none">$3,000 USD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+ Security Audit Sponsorship</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant mt-1">Track: Deterministic Safety &amp; Sandboxing</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 5: TEAM RULES -->
+<div class="step-view hidden flex flex-col gap-space-lg" id="step-container-5">
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Team Rules &amp; Roster Constraints</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Control cohort sizing, roster freeze triggers, and multi-track submission eligibility.</p>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-code text-mono-code text-[11px]">RULESET-05</span>
+</div>
+<!-- Sizing Constraints Inputs -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Minimum Team Size</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Permit 1 for solo participants</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest rounded-lg p-1">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button">-</button>
+<input class="w-10 text-center font-label-md text-label-md text-on-surface bg-transparent focus:outline-none font-bold" max="10" min="1" type="number" value="1">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button">+</button>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Maximum Team Size</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cap to avoid disproportionate roasters</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest rounded-lg p-1">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button">-</button>
+<input class="w-10 text-center font-label-md text-label-md text-on-surface bg-transparent focus:outline-none font-bold" max="20" min="1" type="number" value="5">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button">+</button>
+</div>
+</div>
+</div>
+<!-- Cupertino Native Toggles List -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col pr-space-md">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Allow solo participation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Permits individuals to register and submit without forming a multi-member roster.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col pr-space-md">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Allow team formation after registration deadline</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Participants can recruit and merge teams up until the submission freeze window.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 3 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col pr-space-md">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Require team lock before submission review</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Freezes team roster upon final project submission to prevent post-deadline roster additions.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 4 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col pr-space-md">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Cross-track team participation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">When toggled OFF, a registered team may submit exactly one primary project to one track.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 6: ELIGIBILITY & COMPLIANCE -->
+<div class="step-view hidden flex flex-col gap-space-lg" id="step-container-6">
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Eligibility Charter &amp; Automated Verifications</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mandate legal stipulations, OSI software licenses, and automated cryptographic compliance.</p>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-code text-mono-code text-[11px]">COMPLY-06</span>
+</div>
+<!-- Eligibility Charter Textarea -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+          Eligibility Terms Charter
+        </label>
+<textarea class="p-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-xs resize-none transition-all" rows="4">Open to sovereign builders worldwide aged 18+. All submitted source code must be licensed under permissive OSI-approved licenses (Apache 2.0 or MIT) or explicit proprietary evaluation licenses granted to the judging jury. Team members must not be under trade sanctions administered by OFAC.</textarea>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Displayed as a required acceptance checkbox during participant onboarding.</span>
+</div>
+<!-- Structured Verification Toggles -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col pr-space-md">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+              Automated OCI Container Build Verification
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Triggers headless rootless container builds on pull request submission to verify reproducible dependencies.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col pr-space-md">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">school</span>
+              Require Student / Academic Status Verification
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validates .edu email identity tokens via institutional SheerID authentication.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col pr-space-md">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">fence</span>
+              Enforce Regional / Geofence Restrictions
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Restricts registry and submission endpoints by IP geofencing protocols.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col pr-space-md">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">key</span>
+              Cryptographic Submission Attestation (GPG / Digest Signature)
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enforces signed Git commit digests with verified hardware keys or SSH signatures before ingestion.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 7: REVIEW & PUBLICATION DOSSIER -->
+<div class="step-view hidden flex flex-col gap-space-lg" id="step-container-7">
+<!-- Pre-Flight Checklist Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Pre-Flight Validation Succeeded</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">All 6 core specifications pass Dogfood evaluation schema standards. Ready for immediate deployment.</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-mono-code text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          SCHEMA: v2.4 COMPLIANT
+        </span>
+</div>
+</div>
+<!-- 6 Summary Section Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Section 1: Basic Info -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code uppercase">Section 01</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="goToStep(1)" type="button">Edit Basic Info</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Basic Info &amp; Identity</h3>
+<div class="mt-2 flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
+<div><strong class="text-on-surface">Name:</strong> AI Agents World Cup 2026</div>
+<div><strong class="text-on-surface">Endpoint:</strong> <code class="font-mono-code text-primary">/events/ai-agents-2026</code></div>
+<div><strong class="text-on-surface">Format:</strong> Virtual / Global (Firecracker microVM)</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Dates -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code uppercase">Section 02</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="goToStep(2)" type="button">Edit Dates</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Operational Timelines</h3>
+<div class="mt-2 flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
+<div><strong class="text-on-surface">Registration:</strong> Mar 01 – Mar 20, 2026</div>
+<div><strong class="text-on-surface">Hard Lock Freeze:</strong> Mar 23, 2026 (18:00 UTC)</div>
+<div><strong class="text-on-surface">Results Announcement:</strong> Mar 26, 2026 (16:00 UTC)</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Tracks -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code uppercase">Section 03</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="goToStep(3)" type="button">Edit Tracks</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Evaluation Tracks (3 Active)</h3>
+<div class="mt-2 flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
+<div>• Autonomous Code Synthesis (4 Rubric Criteria)</div>
+<div>• Multi-Tool Orchestration &amp; RAG (5 Rubric Criteria)</div>
+<div>• Deterministic Safety &amp; Sandboxing (3 Rubric Criteria)</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Prizes -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code uppercase">Section 04</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="goToStep(4)" type="button">Edit Prizes</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Prize Purse ($38,000)</h3>
+<div class="mt-2 flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
+<div>• Grand Champion: $15,000 + $25,000 Credits</div>
+<div>• Autonomous Code Winner: $5,000 Grant</div>
+<div>• Safety Architecture Special: $3,000 Grant</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Team Rules -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code uppercase">Section 05</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="goToStep(5)" type="button">Edit Rules</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Team Rules &amp; Roster</h3>
+<div class="mt-2 flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
+<div><strong class="text-on-surface">Size:</strong> 1 to 5 members per team</div>
+<div><strong class="text-on-surface">Solo Submissions:</strong> Permitted</div>
+<div><strong class="text-on-surface">Roster Lock:</strong> Enforced at final submission</div>
+</div>
+</div>
+</div>
+<!-- Section 6: Eligibility -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code uppercase">Section 06</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="goToStep(6)" type="button">Edit Eligibility</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Compliance &amp; Attestation</h3>
+<div class="mt-2 flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
+<div>• Automated OCI Container Test Build: <span class="text-primary font-semibold">Required</span></div>
+<div>• Permissive Open Source / Evaluation License: <span class="text-primary font-semibold">Active</span></div>
+<div>• Cryptographic GPG Attestation: <span class="text-primary font-semibold">Enforced</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SUCCESS CONFIRMATION MODAL / FULL CARD -->
+<div class="hidden flex flex-col items-center justify-center p-space-xl bg-surface-container-lowest rounded-2xl shadow-xl my-space-lg text-center max-w-2xl mx-auto" id="success-screen-container">
+<div class="w-16 h-16 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[32px]">task_alt</span>
+</div>
+<span class="font-mono-code text-mono-code text-primary uppercase tracking-wider text-[11px] mb-1">EVENT DEPLOYED • LIVE RUNTIME</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">AI Agents World Cup 2026 Created</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mt-space-xs mb-space-lg">
+      Event ID <code class="font-mono-code text-primary font-semibold">ev_8f293b01a</code> has been successfully provisioned. Registration portals and deterministic runner clusters are listening.
+    </p>
+<div class="flex flex-wrap gap-space-sm justify-center">
+<button class="px-space-lg py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface text-label-md font-label-md font-medium transition-all" onclick="goToStep(1)" type="button">
+        Back to Configuration
+      </button>
+<button class="px-space-lg py-2 rounded-xl bg-primary text-on-primary text-label-md font-label-md font-semibold hover:opacity-95 shadow-md flex items-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">dashboard</span>
+        Go to Event Dashboard
+      </button>
+<button class="px-space-lg py-2 rounded-xl bg-secondary text-on-secondary text-label-md font-label-md font-medium hover:opacity-95 shadow-md flex items-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+        Configure Judge Chambers
+      </button>
+</div>
+</div>
+<!-- Bottom Sticky Navigation Bar -->
+<div class="fixed bottom-0 left-64 right-0 h-18 py-space-sm px-gutter-desktop bg-surface/90 backdrop-blur-xl border-t border-outline-variant/30 z-40 flex items-center justify-between shadow-lg">
+<!-- Back Button -->
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high text-label-md font-label-md font-medium shadow-xs transition-all flex items-center gap-1 disabled:opacity-40 disabled:cursor-not-allowed" id="btn-back" onclick="navigateStep(-1)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+      Back
+    </button>
+<!-- Center Status Indicator -->
+<div class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">cloud_done</span>
+<span>Autosaved draft • All required specifications validated</span>
+</div>
+<!-- Right Controls -->
+<div class="flex items-center gap-space-sm">
+<button class="hidden md:inline-flex px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container text-label-md font-label-md transition-colors" onclick="triggerDraftToast()" type="button">
+        Save &amp; Exit
+      </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary-container text-on-primary-container hover:opacity-95 text-label-md font-label-md font-semibold shadow-sm transition-all flex items-center gap-1" id="btn-next" onclick="navigateStep(1)" type="button">
+<span id="btn-next-text">Next: Dates</span>
+<span class="material-symbols-outlined text-[18px]" id="btn-next-icon">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  let currentStep = 1;
+  const totalSteps = 7;
+
+  const stepLabels = [
+    "Dates",
+    "Tracks",
+    "Prizes",
+    "Team Rules",
+    "Eligibility",
+    "Review",
+    "Deploy Event 🚀"
+  ];
+
+  function goToStep(stepNumber) {
+    if (stepNumber < 1 || stepNumber > totalSteps) return;
+    
+    // Hide Success Screen if open
+    document.getElementById('success-screen-container').classList.add('hidden');
+
+    currentStep = stepNumber;
+
+    // Toggle container views
+    for (let i = 1; i <= totalSteps; i++) {
+      const container = document.getElementById(`step-container-${i}`);
+      if (container) {
+        if (i === currentStep) {
+          container.classList.remove('hidden');
+        } else {
+          container.classList.add('hidden');
+        }
+      }
+    }
+
+    // Update Stepper Navigation visuals
+    document.querySelectorAll('.stepper-tab').forEach((tab) => {
+      const s = parseInt(tab.getAttribute('data-step'), 10);
+      const indicator = tab.querySelector('.stepper-indicator');
+      const label = tab.querySelector('.stepper-label');
+
+      if (s === currentStep) {
+        indicator.className = "stepper-indicator w-8 h-8 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center font-bold shadow-sm transition-transform group-hover:scale-105";
+        indicator.innerHTML = s;
+        label.className = "stepper-label mt-1.5 font-label-sm text-label-sm text-primary font-semibold";
+      } else if (s < currentStep) {
+        indicator.className = "stepper-indicator w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md flex items-center justify-center font-bold shadow-xs transition-transform group-hover:scale-105";
+        indicator.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span>';
+        label.className = "stepper-label mt-1.5 font-label-sm text-label-sm text-on-surface font-medium";
+      } else {
+        indicator.className = "stepper-indicator w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center justify-center font-medium shadow-xs transition-transform group-hover:scale-105";
+        indicator.innerHTML = s;
+        label.className = "stepper-label mt-1.5 font-label-sm text-label-sm text-on-surface-variant font-medium";
+      }
+    });
+
+    // Update Simulator toolbar active styles
+    document.querySelectorAll('.sim-btn').forEach((btn) => {
+      const simVal = parseInt(btn.getAttribute('data-sim'), 10);
+      if (simVal === currentStep) {
+        btn.className = "sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-lowest text-primary shadow-xs font-semibold";
+      } else {
+        btn.className = "sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container";
+      }
+    });
+
+    // Update Step counter pill
+    const pill = document.getElementById('step-counter-pill');
+    if (pill) pill.innerText = `Step ${currentStep} of ${totalSteps}`;
+
+    // Update Back & Next Buttons
+    const backBtn = document.getElementById('btn-back');
+    const nextBtnText = document.getElementById('btn-next-text');
+    const nextBtnIcon = document.getElementById('btn-next-icon');
+    const nextBtn = document.getElementById('btn-next');
+
+    if (currentStep === 1) {
+      backBtn.disabled = true;
+    } else {
+      backBtn.disabled = false;
+    }
+
+    if (currentStep === totalSteps) {
+      nextBtnText.innerText = "Deploy Event 🚀";
+      nextBtnIcon.className = "hidden";
+      nextBtn.className = "px-space-lg py-2 rounded-lg bg-primary text-on-primary hover:opacity-95 text-label-md font-label-md font-semibold shadow-md transition-all flex items-center gap-1";
+    } else {
+      nextBtnText.innerText = `Next: ${stepLabels[currentStep - 1]}`;
+      nextBtnIcon.className = "material-symbols-outlined text-[18px]";
+      nextBtn.className = "px-space-lg py-2 rounded-lg bg-primary-container text-on-primary-container hover:opacity-95 text-label-md font-label-md font-semibold shadow-sm transition-all flex items-center gap-1";
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function navigateStep(direction) {
+    if (currentStep === totalSteps && direction === 1) {
+      showSuccessState();
+      return;
+    }
+    goToStep(currentStep + direction);
+  }
+
+  function updateSlug(name) {
+    const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    const preview = document.getElementById('slug-preview');
+    if (preview) {
+      preview.innerText = `dogfood.eval/events/${slug || 'new-event'}`;
+    }
+  }
+
+  function triggerDraftToast() {
+    const toast = document.getElementById('draft-toast');
+    if (toast) {
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+    const autoLabel = document.getElementById('autosave-label');
+    if (autoLabel) {
+      autoLabel.innerText = "Just saved";
+      setTimeout(() => {
+        autoLabel.innerText = "Autosaved 1m ago";
+      }, 3500);
+    }
+  }
+
+  function toggleValidationError() {
+    goToStep(2);
+    const banner = document.getElementById('date-validation-warning');
+    const lockInput = document.getElementById('input-sub-lock');
+    if (banner) {
+      banner.classList.toggle('hidden');
+    }
+    if (lockInput) {
+      lockInput.classList.toggle('bg-error-container');
+    }
+  }
+
+  function showSuccessState() {
+    // Hide all steps
+    for (let i = 1; i <= totalSteps; i++) {
+      const container = document.getElementById(`step-container-${i}`);
+      if (container) container.classList.add('hidden');
+    }
+    const successScreen = document.getElementById('success-screen-container');
+    if (successScreen) {
+      successScreen.classList.remove('hidden');
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showAddTrackCard() {
+    const form = document.getElementById('add-track-form');
+    if (form) {
+      form.classList.remove('hidden');
+      form.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script></main></div></body></html>

@@ -1,0 +1,665 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#f4f3f8","secondary-container":"#316bf3","outline-variant":"#c1c6d6","on-primary-fixed":"#001b3f","on-tertiary-container":"#fefaff","on-tertiary-fixed-variant":"#332dbc","on-tertiary-fixed":"#0c006b","tertiary-container":"#6462ec","secondary-fixed":"#dbe1ff","primary-fixed":"#d7e2ff","primary":"#0059b5","surface-bright":"#faf8fe","on-tertiary":"#ffffff","primary-container":"#0071e3","secondary":"#0051d5","surface":"#faf8fe","inverse-surface":"#2f3034","tertiary":"#4a47d2","on-secondary":"#ffffff","on-primary-fixed-variant":"#00458f","surface-dim":"#dbd9df","on-primary-container":"#fcfbff","surface-tint":"#005cbb","on-surface":"#1a1b1f","surface-container-lowest":"#ffffff","error":"#ba1a1a","surface-container":"#efedf3","on-surface-variant":"#414753","on-primary":"#ffffff","on-secondary-fixed-variant":"#003ea8","on-secondary-fixed":"#00174b","on-error-container":"#93000a","error-container":"#ffdad6","primary-fixed-dim":"#abc7ff","on-error":"#ffffff","outline":"#717785","inverse-primary":"#abc7ff","on-background":"#1a1b1f","surface-container-highest":"#e3e2e7","tertiary-fixed-dim":"#c2c1ff","background":"#faf8fe","secondary-fixed-dim":"#b4c5ff","tertiary-fixed":"#e2dfff","on-secondary-container":"#fefcff","surface-variant":"#e3e2e7","inverse-on-surface":"#f1f0f6","surface-container-high":"#e9e7ed"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-lg":"1.25rem","gutter-desktop":"1.5rem","space-xs":"0.25rem","space-md":"0.75rem","space-sm":"0.5rem","margin-desktop":"3rem","margin-tablet":"2rem",gutter:"1rem","space-xl":"2rem",margin:"1rem"},fontFamily:{"headline-lg":["Inter"],"mono-code":["JetBrains Mono"],"headline-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"display-lg-mobile":["Inter"],"display-lg":["Inter"],"headline-md":["Inter"]},fontSize:{"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"mono-code":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"500"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.01em",fontWeight:"500"}],"body-md":["13px",{lineHeight:"19px",letterSpacing:"0em",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.005em",fontWeight:"400"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50"><div class="h-14 w-full px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md min-w-[240px]"><img alt="Brand logo. - Primary color: #0071e3
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X4ylxw5ERlYb512JjvDIPTD2ef9pKs3vB1qAPF9OQC2kRN02l8HZ1lFuAwdrS5I1R_l7NAdmf9Xj7Rt9IQR5WGv-uzV5pcX-bGBcgHZ1VTFxEL5d0Rji9xjPno2x3Bz3_5XBOTb2Cah3KFL6lNNiq8WXKoN_R8zVBsfFkgQhnyMvNjEAH1A8aNLVUiLmqMnMerdWephJdgyW6pjFW_JpuI6U0VvU-gtOY4UKq3PFgLSnGG4pki-LSj7J1k"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Dogfood</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Judge Workspace</span></div></div><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="relative"><button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px] text-primary">verified</span><span class="font-medium">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></button></div><div class="flex-1 relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-[18px] text-outline pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-14 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner transition-all" placeholder="Search assigned projects..." type="text"><div class="absolute right-space-sm flex items-center pointer-events-none"><kbd class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono-code text-[10px] uppercase font-semibold">⌘K</kbd></div></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container font-mono-code text-[11px] text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span>us-east-cluster • OK</span></div><button aria-label="Notifications" class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Dr. Elena Rostova</span><span class="font-label-sm text-label-sm text-on-surface-variant">Chamber Juror</span></div></div></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-64 bg-surface-container-low/90 backdrop-blur-xl shadow-[1px_0_12px_rgba(0,0,0,0.03)] z-40 flex flex-col justify-between p-space-md"><div class="flex flex-col gap-space-sm"><div class="px-space-md py-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase font-semibold tracking-wider">Evaluation Queue</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a aria-current="page" class="group flex items-center justify-between px-space-md py-2 rounded-lg transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview</span></div></a><a class="group flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="assigned-projects" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">assignment</span><span>Assigned Projects</span></div><span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant group-hover:bg-surface-container-lowest font-medium">8</span></a><a class="group flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="completed-evaluations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">check_circle</span><span>Completed Evaluations</span></div><span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant group-hover:bg-surface-container-lowest font-medium">6</span></a><a class="group flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="rubric-and-guidelines" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">rule</span><span>Rubric &amp; Guidelines</span></div></a><a class="group flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></div></a></nav></div><div class="flex flex-col gap-space-xs pt-space-md"><a class="flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="judging-handbook" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">help_center</span><span>Judging Handbook &amp; FAQ</span></div><span class="font-mono-code text-[10px] text-outline">v2.4</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-error font-label-md text-label-md transition-colors" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">swap_horiz</span><span>Switch Role / Logout</span></a></div></aside><div class="pl-64"><main class="relative w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Bar (Judge Workspace Control) -->
+<div class="sticky top-14 z-30 w-full px-gutter-desktop py-2.5 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">State Simulator:</span>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto py-0.5 no-scrollbar" id="state-simulator-bar">
+<button class="sim-btn px-3 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-primary-container text-on-primary-container shadow-sm" data-sim-state="default" type="button">
+        Default (In Progress • 3 Rem.)
+      </button>
+<button class="sim-btn px-3 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest" data-sim-state="completed" type="button">
+        All Completed (100%)
+      </button>
+<button class="sim-btn px-3 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest" data-sim-state="empty" type="button">
+        No Assignments Yet
+      </button>
+<button class="sim-btn px-3 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest" data-sim-state="deadline" type="button">
+        Deadline Passed Alert
+      </button>
+<button class="sim-btn px-3 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest" data-sim-state="skeleton" type="button">
+        Loading Skeletons
+      </button>
+</div>
+<div class="hidden lg:flex items-center gap-1 text-on-surface-variant font-mono-code text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-primary">shield_locked</span>
+<span>Jury Signature Verified</span>
+</div>
+</div>
+<div class="p-gutter-desktop space-y-space-lg max-w-7xl mx-auto w-full">
+<!-- Screen Header -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pt-2">
+<div class="space-y-1">
+<div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          CHAMBER JURY EVALUATION ACTIVE
+        </div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight" id="juror-heading">
+          Welcome back, Dr. Elena Rostova
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex flex-wrap items-center gap-x-2 gap-y-1">
+<span>AI Agents World Cup 2025</span>
+<span class="text-outline-variant">•</span>
+<span class="font-medium text-on-surface">Autonomous Code Synthesis Chamber</span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center gap-1 text-primary font-medium" id="window-status-pill">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+            Evaluation Window Closes in 2d 14h
+          </span>
+</p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto shrink-0">
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" href="#rubric-modal">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+<span>Download Rubric PDF</span>
+<span class="material-symbols-outlined text-[14px] text-outline">north_east</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" href="#coi-modal">
+<span class="material-symbols-outlined text-[16px] text-outline">verified_user</span>
+<span>COI Checklist</span>
+</a>
+</div>
+</section>
+<!-- Urgency / Deadline Alert Banner -->
+<div class="rounded-xl p-space-md bg-amber-500/10 border border-amber-500/20 text-on-surface flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md shadow-sm transition-all duration-300" id="urgent-deadline-banner">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-800 shrink-0">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block sm:inline">Ballots Due Soon:</span>
+<span class="font-body-md text-body-md text-on-surface-variant">
+            The evaluation window closes Thursday, Oct 24 at 11:59 PM UTC. Ensure all scored criteria have qualitative notes before submitting final scores.
+          </span>
+</div>
+</div>
+<a class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md font-semibold whitespace-nowrap shrink-0 group" href="#">
+<span>Review Submission Timeline</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Deadline Passed Alert Banner (Hidden by default, shown via simulator) -->
+<div class="hidden rounded-xl p-space-md bg-error-container text-on-error-container border border-error/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md shadow-sm" id="deadline-passed-banner">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-error/20 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[20px]">lock_clock</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-error-container block sm:inline">Evaluation Window Embargoed:</span>
+<span class="font-body-md text-body-md text-on-error-container/90">
+            Grading officially ended on Oct 24 at 11:59 PM UTC. All ballots are frozen for normalization. Read-only audit is active.
+          </span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest text-error font-mono-code text-[11px] font-semibold tracking-wide uppercase">
+        Read-Only Mode
+      </span>
+</div>
+<!-- Metric Progress Summary Strip -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-md" id="metric-strip">
+<!-- Card 1 -->
+<div class="metric-card rounded-xl bg-surface-container-lowest p-space-lg shadow-sm border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Total Assigned</span>
+<span class="material-symbols-outlined text-outline text-[20px]">dataset</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface" id="stat-total">10</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">Projects</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-body-sm text-on-surface-variant pt-2 border-t border-surface-container">
+<span>Chamber quota: 10 ballots</span>
+<span class="font-mono-code text-[11px]">Track: ACS-01</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="metric-card rounded-xl bg-surface-container-lowest p-space-lg shadow-sm border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Completed</span>
+<span class="inline-flex items-center gap-1 font-mono-code text-[12px] text-primary font-medium">
+<span id="stat-percent">70%</span> done
+          </span>
+</div>
+<div>
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface" id="stat-evaluated">7</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">Evaluated</span>
+</div>
+<!-- Progress Arc / Ring SVG -->
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-12 h-12 -rotate-90" viewBox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary transition-all duration-700 ease-out" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" id="progress-svg-path" stroke="currentColor" stroke-dasharray="70, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute material-symbols-outlined text-[16px] text-primary" id="progress-icon">donut_large</span>
+</div>
+</div>
+<div class="mt-2 flex items-center justify-between text-body-sm text-on-surface-variant pt-2 border-t border-surface-container">
+<span>Standard Chamber avg.</span>
+<span class="font-mono-code text-[11px] text-on-surface font-medium">~14m / project</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="metric-card rounded-xl bg-surface-container-lowest p-space-lg shadow-sm border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Remaining to Evaluate</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-mono-code text-[11px] font-semibold" id="stat-remaining-badge">3 Pending</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary" id="stat-remaining">3</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">Projects</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-body-sm text-on-surface-variant pt-2 border-t border-surface-container">
+<span class="text-on-surface font-medium" id="stat-time-estimate">Estimated ~45 mins left</span>
+<span class="font-mono-code text-[11px]">Cohort Review</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Hero Area (Default Up Next vs. Celebration vs. Empty) -->
+<div id="hero-slot">
+<!-- Default Active Next in Queue Hero -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-surface-container-lowest via-surface-container-lowest to-surface-container p-space-xl shadow-md border border-outline-variant/30" id="default-hero">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl relative z-10">
+<div class="space-y-space-sm max-w-3xl">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                Up Next in Queue
+              </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-mono-code text-[11px]">
+                Team: TraceProof Labs
+              </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-mono-code text-[11px]">
+                Track: Autonomous Code Synthesis
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-800 font-label-sm text-label-sm font-medium">
+                2 of 3 Juror Ballots Cast
+              </span>
+</div>
+<h2 class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">
+              AgentBench Zero
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Deterministic agentic compiler benchmark with sandboxed runtime verification and zero-knowledge trace assertions. Evaluates multi-pass syntax self-repair across distributed LLM code gen agents.
+            </p>
+<div class="flex items-center gap-space-lg pt-1 text-on-surface-variant text-body-sm font-mono-code">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+                Repo: github.com/traceproof/agentbench-zero
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">videocam</span>
+                3m 20s Demo Attached
+              </span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch sm:items-center gap-space-sm shrink-0 w-full lg:w-auto">
+<button class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-headline-sm text-headline-sm font-semibold shadow-lg shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.985]" type="button">
+<span>Continue Judging: AgentBench Zero</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="inline-flex items-center justify-center gap-1 px-4 py-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span>Skip / Next Project</span>
+<span class="material-symbols-outlined text-[16px]">skip_next</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Celebratory All Complete Hero (Hidden by default) -->
+<div class="hidden rounded-2xl bg-gradient-to-br from-surface-container-lowest to-surface-container p-space-xl shadow-md border border-emerald-500/30" id="completed-hero">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-lg">
+<div class="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[36px]">verified</span>
+</div>
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 font-label-sm text-label-sm font-semibold">
+                ALL 10 BALLOTS COMMITTED &amp; VERIFIED
+              </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">All Chamber Evaluations Complete!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                Thank you, Dr. Rostova. Your 10 ballots have been cryptographically signed and submitted to the AI Agents World Cup normalization pipeline.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+              Review Submitted Scores
+            </button>
+<button class="px-4 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-all" type="button">
+              Export Ballot Summary
+            </button>
+</div>
+</div>
+</div>
+<!-- No Assignments Empty Hero (Hidden by default) -->
+<div class="hidden rounded-2xl bg-surface-container-lowest p-space-xl text-center space-y-space-md border border-outline-variant/30" id="empty-hero">
+<div class="w-14 h-14 mx-auto rounded-full bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[28px]">inbox</span>
+</div>
+<div class="max-w-md mx-auto space-y-1">
+<h2 class="font-headline-md text-headline-md text-on-surface">No Projects Assigned Yet</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Evaluation assignments are currently being distributed by the organizers. Check back once round 1 begins or contact the chamber coordinator.
+          </p>
+</div>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+          Refresh Chamber Queue
+        </button>
+</div>
+</div>
+<!-- Main Workspace Split: Two-Column Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start" id="main-content-split">
+<!-- Left Column: Pending Queue (60% ~ 7 cols) -->
+<section class="lg:col-span-7 space-y-space-md">
+<div class="flex items-center justify-between pb-1">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight" id="queue-header-title">
+              Assigned Projects Queue (3 Pending)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Ordered by urgency and remaining cohort review coverage
+            </p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline font-semibold" href="#">
+            View All 10 Assigned →
+          </a>
+</div>
+<div class="space-y-space-sm" id="pending-list">
+<!-- Pending Project 1 -->
+<div class="group rounded-xl bg-surface-container-lowest p-space-md shadow-sm border border-outline-variant/30 hover:border-primary/40 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="space-y-1.5 flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-mono-code text-[11px] font-semibold">
+                  Up Next
+                </span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">Est. 15 min</span>
+<span class="text-outline-variant">•</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">2/3 Ballots</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-primary transition-colors">
+                AgentBench Zero
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                Deterministic compiler benchmark with sandboxed runtime verification and zero-knowledge trace assertions.
+              </p>
+<div class="flex items-center gap-2 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+                  Team TraceProof Labs
+                </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">
+                  Autonomous Code Synthesis
+                </span>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2 shrink-0 pt-2 sm:pt-0">
+<span class="px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-800 font-label-sm text-label-sm font-medium">
+                Ready to Score
+              </span>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-colors shadow-sm" type="button">
+                Evaluate Now →
+              </button>
+</div>
+</div>
+<!-- Pending Project 2 -->
+<div class="group rounded-xl bg-surface-container-lowest p-space-md shadow-sm border border-outline-variant/30 hover:border-outline transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="space-y-1.5 flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px] font-semibold">
+                  Queue #2
+                </span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">Est. 12 min</span>
+<span class="text-outline-variant">•</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">1/3 Ballots</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-primary transition-colors">
+                RAG Core Pipeline
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                High-throughput context synthesis engine with dynamic memory retrieval for multi-turn autonomous coding agents.
+              </p>
+<div class="flex items-center gap-2 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+                  Team DeepLogic Systems
+                </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">
+                  Multi-Tool &amp; Agents
+                </span>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2 shrink-0 pt-2 sm:pt-0">
+<span class="px-2 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">
+                Not Started
+              </span>
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors" type="button">
+                Start Evaluation
+              </button>
+</div>
+</div>
+<!-- Pending Project 3 -->
+<div class="group rounded-xl bg-surface-container-lowest p-space-md shadow-sm border border-outline-variant/30 hover:border-outline transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="space-y-1.5 flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px] font-semibold">
+                  Queue #3
+                </span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">Est. 18 min</span>
+<span class="text-outline-variant">•</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">0/3 Ballots</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-primary transition-colors">
+                HyperScale Agents
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                Distributed orchestration runtime running 1,000 parallel test mutations against generated Rust libraries.
+              </p>
+<div class="flex items-center gap-2 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+                  Team KernelSec
+                </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">
+                  Autonomous Code Synthesis
+                </span>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2 shrink-0 pt-2 sm:pt-0">
+<span class="px-2 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">
+                Not Started
+              </span>
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors" type="button">
+                Start Evaluation
+              </button>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low text-on-surface-variant text-body-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">help</span>
+<span>Need to recuse yourself due to Conflict of Interest?</span>
+</div>
+<button class="text-primary hover:underline font-label-sm text-label-sm font-semibold" type="button">
+            Flag COI on Project
+          </button>
+</div>
+</section>
+<!-- Right Column: Recently Evaluated (40% ~ 5 cols) -->
+<section class="lg:col-span-5 space-y-space-md">
+<div class="flex items-center justify-between pb-1">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight" id="completed-header-title">
+              Recently Evaluated (7 Completed)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Submitted ballots &amp; scores with jury consensus
+            </p>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-mono-code text-[11px]">
+            Read-Only Audit
+          </span>
+</div>
+<div class="space-y-space-sm" id="completed-list">
+<!-- Completed 1 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm border border-outline-variant/20 flex items-center justify-between gap-space-sm">
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-800 font-label-sm text-label-sm font-medium inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span>
+                  Completed
+                </span>
+<span class="font-mono-code text-[11px] text-outline">2h ago</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">
+                zkEval Protocol
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Team TraceProof • Zero-knowledge code proof
+              </p>
+</div>
+<div class="flex flex-col items-end gap-1.5 shrink-0">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">94</span>
+<span class="font-body-sm text-body-sm text-outline">/100</span>
+</div>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm font-medium inline-flex items-center gap-0.5" type="button">
+<span>View Evaluation</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Completed 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm border border-outline-variant/20 flex items-center justify-between gap-space-sm">
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-800 font-label-sm text-label-sm font-medium inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span>
+                  Completed
+                </span>
+<span class="font-mono-code text-[11px] text-outline">5h ago</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">
+                MicroJail Sandbox
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Team SecureRuntime • Wasm execution boundary
+              </p>
+</div>
+<div class="flex flex-col items-end gap-1.5 shrink-0">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">88</span>
+<span class="font-body-sm text-body-sm text-outline">/100</span>
+</div>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm font-medium inline-flex items-center gap-0.5" type="button">
+<span>View Evaluation</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Completed 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm border border-outline-variant/20 flex items-center justify-between gap-space-sm">
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-800 font-label-sm text-label-sm font-medium inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span>
+                  Completed
+                </span>
+<span class="font-mono-code text-[11px] text-outline">Yesterday</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">
+                OmniSynth RAG
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Team SynthLabs • Multi-modal AST parser
+              </p>
+</div>
+<div class="flex flex-col items-end gap-1.5 shrink-0">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">91</span>
+<span class="font-body-sm text-body-sm text-outline">/100</span>
+</div>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm font-medium inline-flex items-center gap-0.5" type="button">
+<span>View Evaluation</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-2 text-center">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary font-medium inline-flex items-center gap-1 transition-colors" href="#">
+<span>View full audit log of your 7 completed ballots</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</section>
+</div>
+<!-- Skeleton Layout Container (Hidden by default, shown via simulator) -->
+<div class="hidden space-y-space-lg animate-pulse" id="skeleton-container">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="h-32 rounded-xl bg-surface-container-high"></div>
+<div class="h-32 rounded-xl bg-surface-container-high"></div>
+<div class="h-32 rounded-xl bg-surface-container-high"></div>
+</div>
+<div class="h-56 rounded-2xl bg-surface-container-high"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-7 space-y-4">
+<div class="h-8 w-48 rounded bg-surface-container-high"></div>
+<div class="h-24 rounded-xl bg-surface-container-high"></div>
+<div class="h-24 rounded-xl bg-surface-container-high"></div>
+<div class="h-24 rounded-xl bg-surface-container-high"></div>
+</div>
+<div class="lg:col-span-5 space-y-4">
+<div class="h-8 w-48 rounded bg-surface-container-high"></div>
+<div class="h-20 rounded-xl bg-surface-container-high"></div>
+<div class="h-20 rounded-xl bg-surface-container-high"></div>
+<div class="h-20 rounded-xl bg-surface-container-high"></div>
+</div>
+</div>
+</div>
+<!-- Guidelines & Rubric Quick Reference Strip -->
+<section class="rounded-xl bg-surface-container-lowest p-space-md border border-outline-variant/20 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start md:items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Evaluation Criteria Weights:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block md:inline md:ml-1">
+            Code Completeness &amp; Architecture (35%) • Technical Innovation (25%) • Practical Utility &amp; Benchmark Results (25%) • Presentation &amp; Docs (15%)
+          </span>
+</div>
+</div>
+<button class="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">tune</span>
+<span>Open Rubric Guide Panel</span>
+</button>
+</section>
+</div>
+</div>
+<script>
+  (function initJudgeDashboard() {
+    const simButtons = document.querySelectorAll('.sim-btn');
+    
+    // UI Panels & Elements
+    const defaultHero = document.getElementById('default-hero');
+    const completedHero = document.getElementById('completed-hero');
+    const emptyHero = document.getElementById('empty-hero');
+    const urgentBanner = document.getElementById('urgent-deadline-banner');
+    const deadlinePassedBanner = document.getElementById('deadline-passed-banner');
+    const metricStrip = document.getElementById('metric-strip');
+    const mainSplit = document.getElementById('main-content-split');
+    const skeletonContainer = document.getElementById('skeleton-container');
+
+    // Dynamic stats
+    const statTotal = document.getElementById('stat-total');
+    const statEvaluated = document.getElementById('stat-evaluated');
+    const statPercent = document.getElementById('stat-percent');
+    const statRemaining = document.getElementById('stat-remaining');
+    const statRemainingBadge = document.getElementById('stat-remaining-badge');
+    const statTimeEstimate = document.getElementById('stat-time-estimate');
+    const progressSvgPath = document.getElementById('progress-svg-path');
+    const progressIcon = document.getElementById('progress-icon');
+    const windowStatusPill = document.getElementById('window-status-pill');
+    const queueHeaderTitle = document.getElementById('queue-header-title');
+
+    function setActiveButton(activeState) {
+      simButtons.forEach(btn => {
+        const state = btn.getAttribute('data-sim-state');
+        if (state === activeState) {
+          btn.className = 'sim-btn px-3 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-primary-container text-on-primary-container shadow-sm';
+        } else {
+          btn.className = 'sim-btn px-3 py-1 rounded-full font-label-sm text-label-sm font-medium transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest';
+        }
+      });
+    }
+
+    function applyState(state) {
+      setActiveButton(state);
+
+      // Reset base displays
+      skeletonContainer.classList.add('hidden');
+      metricStrip.classList.remove('hidden');
+      mainSplit.classList.remove('hidden');
+      urgentBanner.classList.remove('hidden');
+      deadlinePassedBanner.classList.add('hidden');
+      defaultHero.classList.add('hidden');
+      completedHero.classList.add('hidden');
+      emptyHero.classList.add('hidden');
+
+      if (state === 'default') {
+        defaultHero.classList.remove('hidden');
+        statTotal.textContent = '10';
+        statEvaluated.textContent = '7';
+        statPercent.textContent = '70%';
+        statRemaining.textContent = '3';
+        statRemainingBadge.textContent = '3 Pending';
+        statTimeEstimate.textContent = 'Estimated ~45 mins left';
+        progressSvgPath.setAttribute('stroke-dasharray', '70, 100');
+        progressIcon.textContent = 'donut_large';
+        windowStatusPill.innerHTML = '<span class="material-symbols-outlined text-[16px]">schedule</span> Evaluation Window Closes in 2d 14h';
+        queueHeaderTitle.textContent = 'Assigned Projects Queue (3 Pending)';
+      } 
+      else if (state === 'completed') {
+        completedHero.classList.remove('hidden');
+        urgentBanner.classList.add('hidden');
+        statTotal.textContent = '10';
+        statEvaluated.textContent = '10';
+        statPercent.textContent = '100%';
+        statRemaining.textContent = '0';
+        statRemainingBadge.textContent = '0 Pending';
+        statRemainingBadge.className = 'px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-800 font-mono-code text-[11px] font-semibold';
+        statTimeEstimate.textContent = 'All chamber ballots cast';
+        progressSvgPath.setAttribute('stroke-dasharray', '100, 100');
+        progressIcon.textContent = 'check_circle';
+        progressIcon.className = 'absolute material-symbols-outlined text-[18px] text-emerald-600';
+        queueHeaderTitle.textContent = 'Assigned Projects Queue (0 Pending)';
+      } 
+      else if (state === 'empty') {
+        emptyHero.classList.remove('hidden');
+        urgentBanner.classList.add('hidden');
+        mainSplit.classList.add('hidden');
+        statTotal.textContent = '0';
+        statEvaluated.textContent = '0';
+        statPercent.textContent = '0%';
+        statRemaining.textContent = '0';
+        statRemainingBadge.textContent = 'Awaiting Cohort';
+        statTimeEstimate.textContent = 'No current queue';
+        progressSvgPath.setAttribute('stroke-dasharray', '0, 100');
+        windowStatusPill.innerHTML = '<span class="material-symbols-outlined text-[16px]">hourglass_empty</span> Queue Assignment in Progress';
+      } 
+      else if (state === 'deadline') {
+        defaultHero.classList.remove('hidden');
+        urgentBanner.classList.add('hidden');
+        deadlinePassedBanner.classList.remove('hidden');
+        windowStatusPill.innerHTML = '<span class="material-symbols-outlined text-[16px] text-error">lock</span> Window Closed on Oct 24';
+        windowStatusPill.className = 'inline-flex items-center gap-1 text-error font-medium';
+      } 
+      else if (state === 'skeleton') {
+        metricStrip.classList.add('hidden');
+        urgentBanner.classList.add('hidden');
+        mainSplit.classList.add('hidden');
+        skeletonContainer.classList.remove('hidden');
+      }
+    }
+
+    simButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const state = btn.getAttribute('data-sim-state');
+        applyState(state);
+      });
+    });
+  })();
+</script></main></div></body></html>

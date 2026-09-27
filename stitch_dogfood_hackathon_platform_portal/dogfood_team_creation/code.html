@@ -1,0 +1,695 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-container":"#fefcff","on-tertiary-fixed":"#0c006b","surface-container":"#efedf3","surface-container-low":"#f4f3f8","surface":"#faf8fe","outline-variant":"#c1c6d6","tertiary":"#4a47d2","on-tertiary-container":"#fefaff","surface-bright":"#faf8fe","inverse-on-surface":"#f1f0f6","secondary":"#0051d5","on-primary-fixed-variant":"#00458f","secondary-container":"#316bf3","primary-fixed":"#d7e2ff","inverse-primary":"#abc7ff","on-tertiary-fixed-variant":"#332dbc","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","on-secondary-fixed":"#00174b","background":"#faf8fe","on-primary":"#ffffff","surface-tint":"#005cbb","on-error-container":"#93000a","primary-container":"#0071e3","inverse-surface":"#2f3034","on-primary-container":"#fcfbff","error":"#ba1a1a","on-error":"#ffffff","secondary-fixed-dim":"#b4c5ff","on-surface-variant":"#414753","on-tertiary":"#ffffff","tertiary-container":"#6462ec","tertiary-fixed":"#e2dfff","secondary-fixed":"#dbe1ff","tertiary-fixed-dim":"#c2c1ff","surface-variant":"#e3e2e7","on-surface":"#1a1b1f","primary":"#0059b5","error-container":"#ffdad6","on-secondary-fixed-variant":"#003ea8","on-background":"#1a1b1f","surface-container-high":"#e9e7ed","surface-container-highest":"#e3e2e7","primary-fixed-dim":"#abc7ff","outline":"#717785","on-primary-fixed":"#001b3f","surface-dim":"#dbd9df"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xs":"0.25rem","margin-tablet":"2rem","space-sm":"0.5rem",gutter:"1rem","space-lg":"1.25rem","space-md":"0.75rem","space-xl":"2rem","margin-desktop":"3rem",margin:"1rem","gutter-desktop":"1.5rem"},fontFamily:{"headline-sm":["Inter"],"display-lg-mobile":["Inter"],"mono-code":["JetBrains Mono"],"body-sm":["Inter"],"headline-lg":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"body-md":["Inter"],"label-md":["Inter"]},fontSize:{"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"mono-code":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.005em",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"400"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"19px",letterSpacing:"0em",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-64 bg-surface-container-low/95 backdrop-blur-2xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Dogfood Platform Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XFolziqjX2O3dIfh14x-0pksaympgFfP4_AHvWofl_NJ4aWB-bcIhJV87ZncKEY3qGSKoZ-lgovdenQDBhHa-EXUB0-p-vq5fwNG3WrVxSM4gg2JeG2n711UpoLXyVmrmxsNoTWjRpbhXhXfI7h7KpEoEFCJ97iiGNlaWheup3EvMx6RKOhEPMUQJNbzMqyvXDuYqJoBlviuPHWYJstuz94qCkbiefh8sCaRkklhnTmlJ_q80ber93ukl8"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Dogfood</span><span class="font-mono-code text-mono-code text-on-surface-variant leading-none mt-1">v2.4.0 Self-Hosted</span></div></div></div><div class="px-space-md mt-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold px-space-sm">Platform Core</span></div><nav class="flex flex-col gap-1 px-space-sm mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="events" href="#">Events</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="submissions" href="#">Submissions</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="judging-and-rubrics" href="#">Judging &amp; Rubrics</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="teams-and-matchmaking" href="#">Teams &amp; Matchmaking</a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="team-creation" href="#">Team Creation</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics-and-telemetry" href="#">Analytics &amp; Telemetry</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="platform-settings" href="#">Platform Settings</a></nav></div><div class="p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-surface-container/60"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Cluster OK</span></div><span class="font-mono-code text-mono-code text-on-surface-variant">99.98%</span></div><div class="flex items-center justify-between pt-space-xs"><a class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[14px]">help</span><span>Docs</span></a><button class="flex items-center justify-center p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">left_panel_close</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-2xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg"><nav aria-label="Breadcrumb" class="flex items-center gap-1.5 font-label-md text-label-md"><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">Events</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors max-w-[140px] truncate sm:max-w-none">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">Teams</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="font-semibold text-on-surface">Create Team</span></nav><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)] text-on-surface-variant w-64"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">search</span><span class="font-body-sm text-body-sm text-on-surface-variant flex-1">Search submissions, teams...</span><kbd class="font-mono-code text-mono-code px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm font-medium">Production</span></div><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden sm:flex flex-col text-right"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Alex Chen</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Senior Evaluator</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Viewport State Simulator Bar -->
+<div class="w-full bg-surface-container-high/90 backdrop-blur-md px-space-md py-space-xs shadow-sm sticky top-0 z-30">
+<div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">tune</span>
+<span class="font-mono-code text-mono-code text-on-surface font-semibold uppercase tracking-wider">Flow Simulator</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm hidden sm:inline">• Test Viewport States</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5" id="simulator-pills">
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-primary text-on-primary font-semibold shadow-sm" data-state="create-default" onclick="setState('create-default')" type="button">
+          Default (Create)
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container text-on-surface hover:bg-surface-variant" data-state="create-error" onclick="setState('create-error')" type="button">
+          Validation Error
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container text-on-surface hover:bg-surface-variant" data-state="create-submitting" onclick="setState('create-submitting')" type="button">
+          Submitting / Loading
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container text-on-surface hover:bg-surface-variant" data-state="create-success" onclick="setState('create-success')" type="button">
+          Create Success
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container text-on-surface hover:bg-surface-variant" data-state="join-default" onclick="setState('join-default')" type="button">
+          Join Team Tab
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container text-on-surface hover:bg-surface-variant" data-state="join-error" onclick="setState('join-error')" type="button">
+          Join Error (Invalid)
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container text-on-surface hover:bg-surface-variant" data-state="join-success" onclick="setState('join-success')" type="button">
+          Join Success
+        </button>
+</div>
+</div>
+</div>
+<!-- Main Content Layout -->
+<div class="w-full px-space-md py-space-xl md:px-margin-tablet lg:px-margin-desktop">
+<div class="max-w-[760px] mx-auto flex flex-col gap-space-lg">
+<!-- Header & Context Banner -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            AI Agents World Cup 2025
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">timer</span>
+            Deadline: Nov 10, 2025 • 4 days remaining
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">group</span>
+            Max 4 Members
+          </span>
+</div>
+<div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight font-semibold" id="page-title">
+            Create Your Team
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1" id="page-subtitle">
+            Teams for AI Agents World Cup 2025 can have up to 4 members. You can invite teammates now or share access codes later before submission freeze.
+          </p>
+</div>
+</div>
+<!-- Segmented Path Toggle (Create vs Join) -->
+<div class="bg-surface-container-high/80 p-1 rounded-xl shadow-inner flex items-center gap-1 max-w-md" id="segmented-toggle">
+<button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg font-label-md text-label-md transition-all font-semibold bg-surface-container-lowest text-primary shadow-sm" id="tab-btn-create" onclick="switchMainTab('create')" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+          Create a New Team
+        </button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg font-label-md text-label-md transition-all font-medium text-on-surface-variant hover:text-on-surface" id="tab-btn-join" onclick="switchMainTab('join')" type="button">
+<span class="material-symbols-outlined text-[18px]">key</span>
+          Join an Existing Team
+        </button>
+</div>
+<!-- VIEW 1: CREATE A NEW TEAM (DEFAULT) -->
+<div class="flex flex-col gap-space-lg" id="view-create">
+<form class="flex flex-col gap-space-xl bg-surface-container-lowest/90 backdrop-blur-xl rounded-2xl p-space-lg sm:p-space-xl shadow-sm" id="team-create-form" onsubmit="event.preventDefault(); simulateSubmit();">
+<!-- Section 01: Team Identity -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-mono-code text-mono-code font-semibold">01</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Team Identity</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">* Required for registration</span>
+</div>
+<!-- Team Name Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center justify-between" for="team-name">
+<span>Team Name <span class="text-error">*</span></span>
+<span class="font-mono-code text-mono-code text-on-surface-variant font-normal">Slug: <span class="text-primary" id="team-slug-preview">neural-vanguard</span></span>
+</label>
+<div class="relative">
+<input class="w-full px-3.5 py-2.5 rounded-lg font-body-lg text-body-lg bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm transition-all" id="team-name" oninput="updateSlug(this.value)" placeholder="e.g. Neural Vanguard" type="text" value="Neural Vanguard">
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant text-[20px]" id="team-name-icon">verified</span>
+</div>
+<!-- Error Helper Message (Toggled via JS) -->
+<div class="hidden items-center gap-1.5 text-error font-body-sm text-body-sm mt-0.5" id="team-name-error">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span>Team name is required and must be between 3 and 40 characters.</span>
+</div>
+</div>
+<!-- Team Description Textarea -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="team-desc">
+                  Team Description <span class="font-normal text-on-surface-variant">(Optional)</span>
+</label>
+<span class="font-mono-code text-mono-code text-on-surface-variant" id="char-counter">42 / 280</span>
+</div>
+<textarea class="w-full px-3.5 py-2.5 rounded-lg font-body-md text-body-md bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm transition-all resize-none" id="team-desc" oninput="document.getElementById('char-counter').innerText = this.value.length + ' / 280'" placeholder="Briefly describe your team's focus, agent architecture, or project goals..." rows="3">Autonomous orchestration using dual-agent synthesis.</textarea>
+</div>
+</section>
+<!-- Section 02: Track Alignment (2x2 Grid) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-mono-code text-mono-code font-semibold">02</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Evaluation Track Alignment</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Adjustable until freeze</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant -mt-2">
+              Choose the primary competition category your team plans to submit to for jury rubrics and automated bench tests.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm" id="tracks-grid">
+<!-- Track 1: Selected Default -->
+<div class="track-card cursor-pointer p-space-md rounded-xl bg-primary-fixed/30 shadow-sm transition-all flex flex-col justify-between gap-space-sm ring-2 ring-primary" id="track-card-1" onclick="selectTrack(1)">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Autonomous Code Synthesis</span>
+</div>
+<span class="track-check material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-2">
+<span class="text-on-surface-variant">Prize Pool</span>
+<span class="font-mono-code text-mono-code font-semibold text-primary">$30,000</span>
+</div>
+</div>
+<!-- Track 2 -->
+<div class="track-card cursor-pointer p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container shadow-sm transition-all flex flex-col justify-between gap-space-sm" id="track-card-2" onclick="selectTrack(2)">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Multi-Tool RAG &amp; Agents</span>
+</div>
+<span class="track-check material-symbols-outlined text-outline-variant text-[20px]">radio_button_unchecked</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-2">
+<span class="text-on-surface-variant">Prize Pool</span>
+<span class="font-mono-code text-mono-code font-semibold text-on-surface">$20,000</span>
+</div>
+</div>
+<!-- Track 3 -->
+<div class="track-card cursor-pointer p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container shadow-sm transition-all flex flex-col justify-between gap-space-sm" id="track-card-3" onclick="selectTrack(3)">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Deterministic Safety &amp; Guardrails</span>
+</div>
+<span class="track-check material-symbols-outlined text-outline-variant text-[20px]">radio_button_unchecked</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-2">
+<span class="text-on-surface-variant">Prize Pool</span>
+<span class="font-mono-code text-mono-code font-semibold text-on-surface">$15,000</span>
+</div>
+</div>
+<!-- Track 4 -->
+<div class="track-card cursor-pointer p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container shadow-sm transition-all flex flex-col justify-between gap-space-sm" id="track-card-4" onclick="selectTrack(4)">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Local / Edge LLM Execution</span>
+</div>
+<span class="track-check material-symbols-outlined text-outline-variant text-[20px]">radio_button_unchecked</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-2">
+<span class="text-on-surface-variant">Prize Pool</span>
+<span class="font-mono-code text-mono-code font-semibold text-on-surface">$10,000</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 03: Capacity & Roster Preview -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-mono-code text-mono-code font-semibold">03</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Team Capacity &amp; Roster Preview</h2>
+</div>
+<span class="font-label-md text-label-md font-semibold text-primary" id="roster-count-text">1 of 4 slots filled</span>
+</div>
+<!-- Capacity Grid (4 Slots) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Slot 1: Active User (Captain) -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col items-center text-center gap-2 shadow-sm">
+<div class="relative">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center font-semibold">
+                    AC
+                  </div>
+<span class="absolute -bottom-1 -right-1 p-0.5 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Alex Chen (You)</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Team Captain</span>
+<span class="font-mono-code text-mono-code text-on-surface-variant truncate max-w-[120px] mt-0.5">alex.chen@org.ai</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm mt-1">Confirmed</span>
+</div>
+<!-- Slot 2: Pending Teammate 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col items-center text-center justify-center gap-2 shadow-sm min-h-[140px]" id="roster-slot-2">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-md text-label-md font-medium text-on-surface" id="slot-2-title">Available Slot</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="slot-2-sub">Awaiting invitee</span>
+</div>
+</div>
+<!-- Slot 3: Pending Teammate 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col items-center text-center justify-center gap-2 shadow-sm min-h-[140px]" id="roster-slot-3">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-md text-label-md font-medium text-on-surface" id="slot-3-title">Available Slot</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="slot-3-sub">Awaiting invitee</span>
+</div>
+</div>
+<!-- Slot 4: Empty -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col items-center text-center justify-center gap-2 shadow-sm min-h-[140px]">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-md text-label-md font-medium text-on-surface">Available Slot</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Slot 4</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 04: Teammate Invitations -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-mono-code text-mono-code font-semibold">04</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Teammate Invitations</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Link or Direct Email</span>
+</div>
+<!-- Shareable Invite Link -->
+<div class="flex flex-col gap-1.5 p-space-md rounded-xl bg-surface-container-low">
+<span class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">link</span>
+                Shareable Direct Registration Link
+              </span>
+<div class="flex items-center gap-space-xs mt-1">
+<div class="flex-1 px-3 py-2 rounded-lg bg-surface-container-lowest font-mono-code text-mono-code text-on-surface truncate select-all shadow-inner" id="copy-link-text">
+                  https://dogfood.local/join/evt-2025-08a?token=df-inv-8f2c-9a1b
+                </div>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md font-medium transition-all flex items-center gap-1.5 shadow-sm" onclick="copyInviteLink('copy-link-text', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span class="btn-text">Copy Link</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Anyone with this one-time token link can join your team directly without approval.</span>
+</div>
+<!-- Direct Email Invites -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="invite-email-input">
+                Invite by Email
+              </label>
+<div class="flex items-center gap-space-xs">
+<div class="relative flex-1">
+<input class="w-full px-3.5 py-2 rounded-lg font-body-md text-body-md bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm transition-all" id="invite-email-input" placeholder="colleague@mit.csail.edu" type="email">
+</div>
+<button class="px-4 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold hover:bg-primary transition-all flex items-center gap-1 shadow-sm" onclick="addEmailInvite()" type="button">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Add Invite</span>
+</button>
+</div>
+<!-- Pending Invites Pill List -->
+<div class="flex flex-wrap items-center gap-2 mt-2" id="pending-invites-container">
+<!-- Example Chip 1 -->
+<div class="invite-chip flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface text-label-md font-label-md shadow-sm">
+<div class="w-5 h-5 rounded-full bg-primary-fixed text-primary font-mono-code text-mono-code flex items-center justify-center font-bold">SL</div>
+<span class="font-mono-code text-mono-code">sarah.lin@cs.stanford.edu</span>
+<span class="px-1.5 py-0.2 rounded bg-surface text-on-surface-variant font-label-sm text-[10px]">Pending</span>
+<button class="hover:text-error text-on-surface-variant transition-colors flex items-center" onclick="removeInviteChip(this)" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<!-- Example Chip 2 -->
+<div class="invite-chip flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface text-label-md font-label-md shadow-sm">
+<div class="w-5 h-5 rounded-full bg-secondary-fixed text-secondary font-mono-code text-mono-code flex items-center justify-center font-bold">MT</div>
+<span class="font-mono-code text-mono-code">m.tian@cmu.edu</span>
+<span class="px-1.5 py-0.2 rounded bg-surface text-on-surface-variant font-label-sm text-[10px]">Pending</span>
+<button class="hover:text-error text-on-surface-variant transition-colors flex items-center" onclick="removeInviteChip(this)" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Footer -->
+<div class="flex flex-col gap-space-md pt-space-sm">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors underline decoration-dotted" onclick="skipToSolo()" type="button">
+                I'll do this later (Continue as Solo Builder)
+              </button>
+<button class="w-full sm:w-auto px-6 py-3 rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold hover:bg-primary transition-all flex items-center justify-center gap-2 shadow-md" id="submit-btn" type="submit">
+<span id="submit-btn-text">Create Team →</span>
+<span class="material-symbols-outlined text-[20px]" id="submit-btn-icon">rocket_launch</span>
+</button>
+</div>
+<!-- Trust Footer -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-center gap-2 text-center text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Cluster identity verified • gVisor sandbox container provisioned automatically upon team creation</span>
+</div>
+</div>
+</form>
+</div>
+<!-- VIEW 2: JOIN AN EXISTING TEAM -->
+<div class="hidden flex-col gap-space-lg" id="view-join">
+<div class="bg-surface-container-lowest/90 backdrop-blur-xl rounded-2xl p-space-lg sm:p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-secondary-fixed text-secondary">
+<span class="material-symbols-outlined text-[20px]">key</span>
+</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Join an Existing Team</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Enter the 8-character invite code or paste the invitation link shared by your team captain to enter their workspace.
+            </p>
+</div>
+<!-- Join Input Form -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="join-code-input">
+                Team Access / Invite Code
+              </label>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+<div class="relative flex-1">
+<input class="w-full uppercase px-3.5 py-3 rounded-xl font-mono-code text-[15px] bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm transition-all tracking-wider" id="join-code-input" placeholder="e.g. DF-INV-XXXX" type="text" value="DF-INV-8F2C">
+</div>
+<button class="px-5 py-3 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-secondary transition-all flex items-center justify-center gap-1.5 shadow-sm" id="verify-btn" onclick="verifyJoinCode()" type="button">
+<span>Verify &amp; Join Team</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Join Error State Banner (Toggled via JS) -->
+<div class="hidden p-space-md rounded-xl bg-error-container text-on-error-container flex items-start gap-2 shadow-sm" id="join-error-banner">
+<span class="material-symbols-outlined text-[20px] text-error">cancel</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-error">Invalid or Expired Invite Code</span>
+<span class="font-body-sm text-body-sm text-on-error-container">The code <code class="font-mono-code font-bold">DF-INV-0000</code> does not match any open team in this event. Please verify with your team owner.</span>
+</div>
+</div>
+<!-- Join Target Team Preview Card (Appears on Verified State) -->
+<div class="hidden p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-sm" id="join-target-preview">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-secondary uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Invitation Verified
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cluster: us-east-01</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Team Vector • Autonomous Systems</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Captain: Elena Rostova (elena.r@vectoresearch.org)</span>
+</div>
+<div class="text-right">
+<span class="font-mono-code text-mono-code font-semibold text-primary">3 of 4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Members filled</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 py-2.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold hover:bg-primary transition-all flex items-center justify-center gap-1 shadow-sm" onclick="confirmJoinTeam()" type="button">
+<span>Confirm &amp; Join Team</span>
+<span class="material-symbols-outlined text-[16px]">group_add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- VIEW 3: IN-PLACE SUCCESS STATE (CREATE COMPLETED) -->
+<div class="hidden flex-col gap-space-lg" id="view-success">
+<div class="bg-surface-container-lowest/90 backdrop-blur-xl rounded-2xl p-space-lg sm:p-space-xl shadow-sm flex flex-col items-center text-center gap-space-lg">
+<!-- Animated Checkmark Emblem -->
+<div class="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col gap-1 max-w-lg">
+<h2 class="font-display-lg text-headline-lg font-semibold text-on-surface">Team "Neural Vanguard" Created!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Your team workspace, repository sync, and shared compute environment have been initialized in cluster <code class="font-mono-code text-primary bg-surface-container px-1 py-0.5 rounded">us-east-01</code>.
+            </p>
+</div>
+<!-- Team Summary Card -->
+<div class="w-full p-space-md rounded-xl bg-surface-container-low flex flex-col gap-3 text-left">
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Provisioned Pod Details</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-mono-code text-mono-code font-semibold">
+                ACTIVE • gVisor SANDBOX
+              </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Track</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface mt-0.5">Autonomous Code Synthesis</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Capacity</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface mt-0.5">1 / 4 Confirmed</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Compute Allocation</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface mt-0.5">8 vCPUs • 32GB ECC</span>
+</div>
+</div>
+<!-- Immediate Share Token -->
+<div class="mt-2 p-2.5 rounded-lg bg-surface-container-high/60 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-[18px] text-primary">key</span>
+<span class="font-mono-code text-mono-code text-on-surface truncate">Invite Code: <strong>DF-INV-8F2C</strong></span>
+</div>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface hover:text-primary font-label-sm text-label-sm font-semibold transition-all flex items-center gap-1 shadow-sm" onclick="copyInviteLinkCode('DF-INV-8F2C', this)" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span class="btn-text">Copy Code</span>
+</button>
+</div>
+</div>
+<!-- Navigation Actions -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full max-w-md pt-2">
+<button class="w-full sm:flex-1 py-3 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md font-semibold transition-all" onclick="switchMainTab('create')" type="button">
+              Return to Event Overview
+            </button>
+<a class="w-full sm:flex-1 py-3 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-all flex items-center justify-center gap-1 shadow-md" href="#">
+<span>Go to Team Pod</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic State Controller for Simulator & User Actions
+  function setState(stateName) {
+    // Update Simulator Pill Active Styling
+    const pills = document.querySelectorAll('.sim-btn');
+    pills.forEach(p => {
+      if (p.getAttribute('data-state') === stateName) {
+        p.className = 'sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-primary text-on-primary font-semibold shadow-sm';
+      } else {
+        p.className = 'sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-surface-container text-on-surface hover:bg-surface-variant';
+      }
+    });
+
+    const viewCreate = document.getElementById('view-create');
+    const viewJoin = document.getElementById('view-join');
+    const viewSuccess = document.getElementById('view-success');
+    const teamNameInput = document.getElementById('team-name');
+    const teamNameError = document.getElementById('team-name-error');
+    const submitBtn = document.getElementById('submit-btn');
+    const submitBtnText = document.getElementById('submit-btn-text');
+    const submitBtnIcon = document.getElementById('submit-btn-icon');
+    const joinErrorBanner = document.getElementById('join-error-banner');
+    const joinTargetPreview = document.getElementById('join-target-preview');
+    const joinCodeInput = document.getElementById('join-code-input');
+    const pageTitle = document.getElementById('page-title');
+    const pageSubtitle = document.getElementById('page-subtitle');
+
+    // Reset common modifiers
+    teamNameError.classList.add('hidden');
+    teamNameInput.classList.remove('bg-error-container', 'ring-2', 'ring-error');
+    submitBtn.classList.remove('opacity-75', 'cursor-wait');
+    submitBtnText.innerText = 'Create Team →';
+    submitBtnIcon.innerText = 'rocket_launch';
+    joinErrorBanner.classList.add('hidden');
+    joinTargetPreview.classList.add('hidden');
+
+    switch (stateName) {
+      case 'create-default':
+        switchMainTab('create');
+        break;
+
+      case 'create-error':
+        switchMainTab('create');
+        teamNameInput.value = '';
+        updateSlug('');
+        teamNameInput.classList.add('bg-error-container', 'ring-2', 'ring-error');
+        teamNameError.classList.remove('hidden');
+        teamNameError.classList.add('flex');
+        teamNameInput.focus();
+        break;
+
+      case 'create-submitting':
+        switchMainTab('create');
+        submitBtn.classList.add('opacity-75', 'cursor-wait');
+        submitBtnText.innerText = 'Creating Team Pod...';
+        submitBtnIcon.innerText = 'autorenew';
+        submitBtnIcon.classList.add('animate-spin');
+        break;
+
+      case 'create-success':
+        viewCreate.classList.add('hidden');
+        viewJoin.classList.add('hidden');
+        viewSuccess.classList.remove('hidden');
+        viewSuccess.classList.add('flex');
+        pageTitle.innerText = 'Team Provisioned';
+        pageSubtitle.innerText = 'Your team credentials and compute space are live.';
+        break;
+
+      case 'join-default':
+        switchMainTab('join');
+        joinCodeInput.value = 'DF-INV-8F2C';
+        break;
+
+      case 'join-error':
+        switchMainTab('join');
+        joinCodeInput.value = 'DF-INV-0000';
+        joinErrorBanner.classList.remove('hidden');
+        break;
+
+      case 'join-success':
+        switchMainTab('join');
+        joinCodeInput.value = 'DF-INV-8F2C';
+        joinTargetPreview.classList.remove('hidden');
+        break;
+    }
+  }
+
+  function switchMainTab(mode) {
+    const viewCreate = document.getElementById('view-create');
+    const viewJoin = document.getElementById('view-join');
+    const viewSuccess = document.getElementById('view-success');
+    const tabBtnCreate = document.getElementById('tab-btn-create');
+    const tabBtnJoin = document.getElementById('tab-btn-join');
+    const pageTitle = document.getElementById('page-title');
+    const pageSubtitle = document.getElementById('page-subtitle');
+
+    viewSuccess.classList.add('hidden');
+
+    if (mode === 'create') {
+      viewCreate.classList.remove('hidden');
+      viewCreate.classList.add('flex');
+      viewJoin.classList.add('hidden');
+      tabBtnCreate.className = 'flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg font-label-md text-label-md transition-all font-semibold bg-surface-container-lowest text-primary shadow-sm';
+      tabBtnJoin.className = 'flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg font-label-md text-label-md transition-all font-medium text-on-surface-variant hover:text-on-surface';
+      pageTitle.innerText = 'Create Your Team';
+      pageSubtitle.innerText = 'Teams for AI Agents World Cup 2025 can have up to 4 members. You can invite teammates now or share access codes later before submission freeze.';
+    } else {
+      viewCreate.classList.add('hidden');
+      viewJoin.classList.remove('hidden');
+      viewJoin.classList.add('flex');
+      tabBtnJoin.className = 'flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg font-label-md text-label-md transition-all font-semibold bg-surface-container-lowest text-primary shadow-sm';
+      tabBtnCreate.className = 'flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg font-label-md text-label-md transition-all font-medium text-on-surface-variant hover:text-on-surface';
+      pageTitle.innerText = 'Join an Existing Team';
+      pageSubtitle.innerText = 'Have an invitation code or token link? Validate your credentials below to immediately attach to an established roster.';
+    }
+  }
+
+  function updateSlug(val) {
+    const slug = val.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'your-team';
+    document.getElementById('team-slug-preview').innerText = slug;
+  }
+
+  function selectTrack(index) {
+    for (let i = 1; i <= 4; i++) {
+      const card = document.getElementById('track-card-' + i);
+      const icon = card.querySelector('.track-check');
+      if (i === index) {
+        card.className = 'track-card cursor-pointer p-space-md rounded-xl bg-primary-fixed/30 shadow-sm transition-all flex flex-col justify-between gap-space-sm ring-2 ring-primary';
+        icon.className = 'track-check material-symbols-outlined text-primary text-[20px]';
+        icon.innerText = 'check_circle';
+      } else {
+        card.className = 'track-card cursor-pointer p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container shadow-sm transition-all flex flex-col justify-between gap-space-sm';
+        icon.className = 'track-check material-symbols-outlined text-outline-variant text-[20px]';
+        icon.innerText = 'radio_button_unchecked';
+      }
+    }
+  }
+
+  function copyInviteLink(elementId, btn) {
+    const text = document.getElementById(elementId).innerText.trim();
+    navigator.clipboard.writeText(text).catch(() => {});
+    const label = btn.querySelector('.btn-text');
+    const icon = btn.querySelector('.material-symbols-outlined');
+    const prevText = label.innerText;
+    label.innerText = 'Copied!';
+    icon.innerText = 'check';
+    btn.classList.add('bg-secondary-fixed', 'text-secondary');
+    setTimeout(() => {
+      label.innerText = prevText;
+      icon.innerText = 'content_copy';
+      btn.classList.remove('bg-secondary-fixed', 'text-secondary');
+    }, 2000);
+  }
+
+  function copyInviteLinkCode(code, btn) {
+    navigator.clipboard.writeText(code).catch(() => {});
+    const label = btn.querySelector('.btn-text');
+    const icon = btn.querySelector('.material-symbols-outlined');
+    label.innerText = 'Copied!';
+    icon.innerText = 'check';
+    setTimeout(() => {
+      label.innerText = 'Copy Code';
+      icon.innerText = 'content_copy';
+    }, 2000);
+  }
+
+  function addEmailInvite() {
+    const input = document.getElementById('invite-email-input');
+    const email = input.value.trim();
+    if (!email || !email.includes('@')) {
+      input.focus();
+      return;
+    }
+    const container = document.getElementById('pending-invites-container');
+    const initials = email.substring(0, 2).toUpperCase();
+
+    const chip = document.createElement('div');
+    chip.className = 'invite-chip flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface text-label-md font-label-md shadow-sm animate-fade-in';
+    chip.innerHTML = `
+      <div class="w-5 h-5 rounded-full bg-primary-fixed text-primary font-mono-code text-mono-code flex items-center justify-center font-bold">${initials}</div>
+      <span class="font-mono-code text-mono-code">${email}</span>
+      <span class="px-1.5 py-0.2 rounded bg-surface text-on-surface-variant font-label-sm text-[10px]">Pending</span>
+      <button type="button" onclick="removeInviteChip(this)" class="hover:text-error text-on-surface-variant transition-colors flex items-center">
+        <span class="material-symbols-outlined text-[14px]">close</span>
+      </button>
+    `;
+    container.appendChild(chip);
+    input.value = '';
+
+    // Update slot preview title
+    const slot2 = document.getElementById('slot-2-title');
+    const slot2sub = document.getElementById('slot-2-sub');
+    if (slot2 && slot2sub) {
+      slot2.innerText = email.split('@')[0];
+      slot2sub.innerText = 'Invite Dispatched';
+    }
+  }
+
+  function removeInviteChip(btn) {
+    const chip = btn.closest('.invite-chip');
+    if (chip) chip.remove();
+  }
+
+  function simulateSubmit() {
+    const nameInput = document.getElementById('team-name');
+    if (!nameInput.value.trim()) {
+      setState('create-error');
+      return;
+    }
+    setState('create-submitting');
+    setTimeout(() => {
+      setState('create-success');
+    }, 900);
+  }
+
+  function verifyJoinCode() {
+    const code = document.getElementById('join-code-input').value.trim().toUpperCase();
+    if (code === 'DF-INV-8F2C') {
+      setState('join-success');
+    } else {
+      setState('join-error');
+    }
+  }
+
+  function confirmJoinTeam() {
+    alert('Successfully linked to Team Vector! Redirecting to Workspace...');
+  }
+
+  function skipToSolo() {
+    alert('Configuring solo workspace profile. You can still form or join a team until submission freeze.');
+  }
+</script></main></div></body></html>

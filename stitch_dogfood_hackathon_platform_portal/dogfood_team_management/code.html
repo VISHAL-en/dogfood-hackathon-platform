@@ -1,0 +1,912 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-container":"#fefcff","on-tertiary-fixed":"#0c006b","surface-container":"#efedf3","surface-container-low":"#f4f3f8","surface":"#faf8fe","outline-variant":"#c1c6d6","tertiary":"#4a47d2","on-tertiary-container":"#fefaff","surface-bright":"#faf8fe","inverse-on-surface":"#f1f0f6","secondary":"#0051d5","on-primary-fixed-variant":"#00458f","secondary-container":"#316bf3","primary-fixed":"#d7e2ff","inverse-primary":"#abc7ff","on-tertiary-fixed-variant":"#332dbc","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","on-secondary-fixed":"#00174b","background":"#faf8fe","on-primary":"#ffffff","surface-tint":"#005cbb","on-error-container":"#93000a","primary-container":"#0071e3","inverse-surface":"#2f3034","on-primary-container":"#fcfbff","error":"#ba1a1a","on-error":"#ffffff","secondary-fixed-dim":"#b4c5ff","on-surface-variant":"#414753","on-tertiary":"#ffffff","tertiary-container":"#6462ec","tertiary-fixed":"#e2dfff","secondary-fixed":"#dbe1ff","tertiary-fixed-dim":"#c2c1ff","surface-variant":"#e3e2e7","on-surface":"#1a1b1f","primary":"#0059b5","error-container":"#ffdad6","on-secondary-fixed-variant":"#003ea8","on-background":"#1a1b1f","surface-container-high":"#e9e7ed","surface-container-highest":"#e3e2e7","primary-fixed-dim":"#abc7ff","outline":"#717785","on-primary-fixed":"#001b3f","surface-dim":"#dbd9df"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xs":"0.25rem","margin-tablet":"2rem","space-sm":"0.5rem",gutter:"1rem","space-lg":"1.25rem","space-md":"0.75rem","space-xl":"2rem","margin-desktop":"3rem",margin:"1rem","gutter-desktop":"1.5rem"},fontFamily:{"headline-sm":["Inter"],"display-lg-mobile":["Inter"],"mono-code":["JetBrains Mono"],"body-sm":["Inter"],"headline-lg":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"body-md":["Inter"],"label-md":["Inter"]},fontSize:{"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"mono-code":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.005em",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"400"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"19px",letterSpacing:"0em",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-64 bg-surface-container-low/95 backdrop-blur-2xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Dogfood Platform Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XFolziqjX2O3dIfh14x-0pksaympgFfP4_AHvWofl_NJ4aWB-bcIhJV87ZncKEY3qGSKoZ-lgovdenQDBhHa-EXUB0-p-vq5fwNG3WrVxSM4gg2JeG2n711UpoLXyVmrmxsNoTWjRpbhXhXfI7h7KpEoEFCJ97iiGNlaWheup3EvMx6RKOhEPMUQJNbzMqyvXDuYqJoBlviuPHWYJstuz94qCkbiefh8sCaRkklhnTmlJ_q80ber93ukl8"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Dogfood</span><span class="font-mono-code text-mono-code text-on-surface-variant leading-none mt-1">v2.4.0 Self-Hosted</span></div></div></div><div class="px-space-md mt-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold px-space-sm">Platform Core</span></div><nav class="flex flex-col gap-1 px-space-sm mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="events" href="#">Events</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="submissions" href="#">Submissions</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="judging-and-rubrics" href="#">Judging &amp; Rubrics</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="teams-and-matchmaking" href="#">Teams &amp; Matchmaking</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="team-creation" href="#">Team Creation</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics-and-telemetry" href="#">Analytics &amp; Telemetry</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="platform-settings" href="#">Platform Settings</a></nav></div><div class="p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-surface-container/60"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Cluster OK</span></div><span class="font-mono-code text-mono-code text-on-surface-variant">99.98%</span></div><div class="flex items-center justify-between pt-space-xs"><a class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[14px]">help</span><span>Docs</span></a><button class="flex items-center justify-center p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">left_panel_close</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-2xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg"><nav aria-label="Breadcrumb" class="flex items-center gap-1.5 font-label-md text-label-md"><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">Events</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors max-w-[140px] truncate sm:max-w-none">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">Teams</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="font-semibold text-on-surface">Create Team</span></nav><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)] text-on-surface-variant w-64"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">search</span><span class="font-body-sm text-body-sm text-on-surface-variant flex-1">Search submissions, teams...</span><kbd class="font-mono-code text-mono-code px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm font-medium">Production</span></div><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden sm:flex flex-col text-right"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Alex Chen</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Senior Evaluator</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Viewport / Interactive State Simulator Bar -->
+<div class="w-full px-space-lg py-2.5 bg-surface-container-low shadow-sm flex items-center justify-between gap-space-md select-none overflow-x-auto">
+<div class="flex items-center gap-2 min-w-max">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[10px] uppercase font-semibold tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+        FLOW SIMULATOR • Viewport States
+      </div>
+<div class="h-4 w-px bg-outline-variant/40 mx-1"></div>
+<div class="flex items-center gap-1" id="state-tabs">
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-primary-container text-on-primary-container font-medium shadow-sm" id="tab-default" onclick="setSimState('default')">
+          Default (Owner • 3/4)
+        </button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest" id="tab-full" onclick="setSimState('full')">
+          Team Full (4/4)
+        </button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest" id="tab-member" onclick="setSimState('member')">
+          Member View (Non-Owner)
+        </button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest" id="tab-skeletons" onclick="setSimState('skeletons')">
+          Loading Skeletons
+        </button>
+</div>
+</div>
+<div class="flex items-center gap-1.5 min-w-max">
+<span class="font-mono-code text-[11px] text-on-surface-variant">Modals:</span>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:bg-surface-container-highest font-mono-code text-[11px] transition-colors" onclick="openModal('transfer')">
+        Transfer
+      </button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:bg-surface-container-highest font-mono-code text-[11px] transition-colors" onclick="openModal('remove')">
+        Remove
+      </button>
+<button class="px-2 py-0.5 rounded text-error hover:bg-error-container/40 font-mono-code text-[11px] transition-colors" onclick="openModal('disband')">
+        Disband
+      </button>
+</div>
+</div>
+<!-- Main Content Layout Area -->
+<div class="max-w-7xl mx-auto w-full px-space-md sm:px-space-lg lg:px-space-xl py-space-lg flex flex-col gap-space-lg">
+<!-- Header Section with Breadcrumbs and Main Title -->
+<div class="flex flex-col gap-1.5">
+<div class="flex flex-wrap items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Events</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">AI Agents World Cup 2025</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Teams</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Neural Vanguard</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md mt-1">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight" id="display-team-name">Neural Vanguard</h1>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="toggleEditTeam()" title="Quick edit team name">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="font-body-md text-body-md text-on-surface-variant">
+              AI Agents World Cup 2025 • Track: <span class="font-medium text-on-surface">Autonomous Code Synthesis</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+<span id="role-indicator">Owner / Team Captain</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              gVisor-pod-nv-8f2c
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-high transition-all flex items-center gap-1.5" onclick="copyDirectLink()">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">share</span>
+<span>Share Link</span>
+</button>
+<a class="px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-medium shadow-sm hover:opacity-95 transition-all flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>Go to Workspace</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Top Strip: 2-Card Metric & Connection Status Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Team Capacity Strip -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Team Roster Capacity</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-headline-lg font-bold text-on-surface" id="capacity-count">3 of 4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Members registered</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">group</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Progress bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500" id="capacity-bar" style="width: 75%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-secondary" id="capacity-badge-text">
+<span class="material-symbols-outlined text-[14px]">info</span>
+              1 open invite slot available before freeze on Nov 10
+            </span>
+<span class="font-mono-code text-mono-code" id="capacity-pct">75% Full</span>
+</div>
+</div>
+</div>
+<!-- Submission Connection Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Primary Submission Target</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-medium">
+                Draft Active
+              </span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">AgentBench Zero (v0.3-beta)</span>
+</div>
+<span class="font-mono-code text-[11px] text-on-surface-variant mt-0.5">
+              Synced with branch <span class="text-on-surface font-medium">origin/feat-swe-loop</span> • 14m ago by Alex Chen
+            </span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>SWE-Bench eval: <strong class="font-mono-code font-semibold">28/30</strong></span>
+</div>
+<span class="text-on-surface-variant font-body-sm text-body-sm">•</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">Latency: 1.4s/step</span>
+</div>
+<a class="inline-flex items-center gap-1 text-primary hover:text-secondary font-label-md text-label-md font-semibold transition-colors" href="#">
+            Continue Draft
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Skeletons State View (Hidden by default, shown via toggle) -->
+<div class="hidden flex-col gap-space-lg animate-pulse" id="skeletons-wrapper">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="h-6 w-48 bg-surface-container-high rounded-md"></div>
+<div class="space-y-3">
+<div class="h-16 bg-surface-container-low rounded-lg w-full"></div>
+<div class="h-16 bg-surface-container-low rounded-lg w-full"></div>
+<div class="h-16 bg-surface-container-low rounded-lg w-full"></div>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="h-6 w-56 bg-surface-container-high rounded-md"></div>
+<div class="h-10 bg-surface-container-low rounded-lg w-full"></div>
+</div>
+</div>
+<!-- Main Workspace Two-Column Flow -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start" id="main-content-flow">
+<!-- Left 7-col: Members List + Invites -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Members Section -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Team Roster</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-mono-code text-[11px] font-semibold text-on-surface" id="member-counter-badge">
+                3 / 4 Seats
+              </span>
+</div>
+<button class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary font-medium transition-colors" onclick="scrollToInvite()">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Invite Member</span>
+</button>
+</div>
+<!-- Member Rows Stack -->
+<div class="flex flex-col gap-2.5" id="members-list">
+<!-- Row 1: Current User (Alex Chen) -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low/70 transition-all hover:bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm font-semibold shadow-xs">
+                  AC
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Alex Chen</span>
+<span class="px-2 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] font-semibold">YOU</span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-semibold">
+<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+                      Captain
+                    </span>
+</div>
+<div class="flex items-center gap-2 font-mono-code text-[11px] text-on-surface-variant mt-0.5">
+<span>alex.chen@org.ai</span>
+<span>•</span>
+<span>Joined Oct 18, 2025</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 font-mono-code text-[11px] text-on-surface-variant px-2 py-1">
+                Primary Account
+              </div>
+</div>
+<!-- Row 2: Sarah Lin -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low/70 transition-all hover:bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-headline-sm text-headline-sm font-semibold">
+                  SL
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Sarah Lin</span>
+<span class="px-2 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[10px] font-medium">
+                      Core Agent Synthesizer
+                    </span>
+</div>
+<div class="flex items-center gap-2 font-mono-code text-[11px] text-on-surface-variant mt-0.5">
+<span>sarah.lin@cs.stanford.edu</span>
+<span>•</span>
+<span>Joined Oct 20, 2025</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 member-action-controls">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="openModal('transfer', 'Sarah Lin')" title="Transfer Ownership to Sarah">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" onclick="openModal('remove', 'Sarah Lin')" title="Remove Sarah from team">
+<span class="material-symbols-outlined text-[18px]">person_remove</span>
+</button>
+</div>
+</div>
+<!-- Row 3: Marcus Tian -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low/70 transition-all hover:bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-headline-sm text-headline-sm font-semibold">
+                  MT
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Marcus Tian</span>
+<span class="px-2 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[10px] font-medium">
+                      Benchmark Harness
+                    </span>
+</div>
+<div class="flex items-center gap-2 font-mono-code text-[11px] text-on-surface-variant mt-0.5">
+<span>m.tian@cmu.edu</span>
+<span>•</span>
+<span>Joined Oct 21, 2025</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 member-action-controls">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="openModal('transfer', 'Marcus Tian')" title="Transfer Ownership to Marcus">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" onclick="openModal('remove', 'Marcus Tian')" title="Remove Marcus from team">
+<span class="material-symbols-outlined text-[18px]">person_remove</span>
+</button>
+</div>
+</div>
+<!-- Row 4: Member (Dynamic fourth slot or empty) -->
+<div class="hidden items-center justify-between p-3 rounded-xl bg-surface-container-low/70 transition-all hover:bg-surface-container-low" id="fourth-slot-occupied">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm font-semibold">
+                  DK
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Dev Kumar</span>
+<span class="px-2 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[10px] font-medium">
+                      Infra &amp; Sandbox Ops
+                    </span>
+</div>
+<div class="flex items-center gap-2 font-mono-code text-[11px] text-on-surface-variant mt-0.5">
+<span>dev.k@berkeley.edu</span>
+<span>•</span>
+<span>Joined Just Now</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 member-action-controls">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="openModal('transfer', 'Dev Kumar')" title="Transfer Ownership">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" onclick="openModal('remove', 'Dev Kumar')" title="Remove Member">
+<span class="material-symbols-outlined text-[18px]">person_remove</span>
+</button>
+</div>
+</div>
+<!-- Empty Slot 4 Placeholder -->
+<div class="p-3.5 rounded-xl bg-surface-container-low/30 flex items-center justify-between shadow-xs" id="fourth-slot-empty">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Available Slot 4 of 4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Awaiting invitee acceptance or direct registration token.</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-sm text-label-sm font-medium transition-colors" onclick="document.getElementById('invite-email-input').focus()">
+                Fill Slot
+              </button>
+</div>
+</div>
+</div>
+<!-- Invite Management Section -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-md" id="invite-section">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Invite &amp; Teammate Access</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct link and outstanding platform invitations</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-code text-[11px]">
+              TTL: 7 days
+            </span>
+</div>
+<!-- Active Invites Body (Toggled in full state) -->
+<div class="flex flex-col gap-4" id="active-invite-controls">
+<!-- Shareable Registration Link -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider">
+                Direct Registration Token URL
+              </label>
+<div class="flex items-center gap-2">
+<div class="flex-1 flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container-low font-mono-code text-mono-code text-on-surface overflow-hidden shadow-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">link</span>
+<input class="bg-transparent border-0 outline-none w-full text-on-surface select-all cursor-text font-mono-code text-[12px]" id="share-link-input" readonly="" type="text" value="https://dogfood.local/join/evt-2025-08a?token=df-inv-8f2c-9a1b">
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-primary-container text-on-primary-container hover:opacity-95 font-label-md text-label-md font-medium shadow-sm transition-all flex items-center gap-1.5 min-w-max" id="btn-copy-link" onclick="copyDirectLink()">
+<span class="material-symbols-outlined text-[16px]" id="copy-icon">content_copy</span>
+<span id="copy-text">Copy Link</span>
+</button>
+</div>
+</div>
+<!-- Email Invite Form -->
+<div class="flex flex-col gap-1.5 pt-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider">
+                Invite Teammate by Email
+              </label>
+<form class="flex items-center gap-2" onsubmit="handleSendInvite(event)">
+<div class="flex-1 flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container-low shadow-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">mail</span>
+<input class="bg-transparent border-0 outline-none w-full text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/60" id="invite-email-input" placeholder="colleague@institution.edu or username" required="" type="email">
+</div>
+<button class="px-4 py-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-md text-label-md font-semibold shadow-xs transition-all flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Send Invite</span>
+</button>
+</form>
+</div>
+<!-- Pending Invitations Queue -->
+<div class="flex flex-col gap-2 pt-2">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider">
+                Pending Invitations (2)
+              </span>
+<div class="flex flex-col gap-2" id="pending-invites-list">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low transition-all" id="invite-elena">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-mono-code text-[11px] font-semibold">
+                      ER
+                    </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-medium">Elena Rostova</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest font-mono-code text-[10px] text-on-surface-variant">e.rostova@ox.ac.uk</span>
+</div>
+<span class="font-mono-code text-[10px] text-on-surface-variant">Sent 2 days ago • Awaiting authorization</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2 py-1 rounded text-primary hover:bg-surface-container font-label-sm text-label-sm transition-colors" onclick="resendInvite('Elena Rostova')">
+                      Resend
+                    </button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors" onclick="revokeInvite('invite-elena')" title="Revoke Invitation">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low transition-all" id="invite-dev">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-mono-code text-[11px] font-semibold">
+                      DK
+                    </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-medium">Dev Kumar</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest font-mono-code text-[10px] text-on-surface-variant">dev.k@berkeley.edu</span>
+</div>
+<span class="font-mono-code text-[10px] text-on-surface-variant">Sent 5 hours ago • Direct link generated</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2 py-1 rounded text-primary hover:bg-surface-container font-label-sm text-label-sm transition-colors" onclick="resendInvite('Dev Kumar')">
+                      Resend
+                    </button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors" onclick="revokeInvite('invite-dev')" title="Revoke Invitation">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Muted Full Capacity Notice (Hidden by default, shown when 4/4 full) -->
+<div class="hidden p-4 rounded-xl bg-surface-container-low flex flex-col gap-2 items-center text-center" id="full-capacity-notice">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Team Roster at Maximum Capacity</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant max-w-md mt-0.5">
+                Neural Vanguard currently has all 4 member slots assigned. Active invite links are temporarily disabled until a seat opens.
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 5-col: Team Profile + Danger Zone -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Team Profile & Alignment Card -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Team Profile</h2>
+<span class="font-mono-code text-[11px] text-on-surface-variant">ID: nv-8f2c-cup25</span>
+</div>
+<div class="flex flex-col gap-3.5">
+<!-- Team Name Field -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider">
+                Display Name
+              </label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="input-team-name" type="text" value="Neural Vanguard">
+</div>
+<!-- Team Slug Field -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider">
+                Public Identifier Slug
+              </label>
+<div class="flex items-center px-3 py-2 rounded-lg bg-surface-container-low font-mono-code text-[12px] text-on-surface-variant">
+<span>dogfood.local/teams/</span>
+<span class="text-on-surface font-semibold" id="slug-text">neural-vanguard</span>
+</div>
+</div>
+<!-- Team Description Field -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider">
+                  Mission Statement &amp; Bio
+                </label>
+<span class="font-mono-code text-[10px] text-on-surface-variant" id="char-counter">94 / 280</span>
+</div>
+<textarea class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all resize-none" id="input-team-desc" oninput="updateCharCount(this)" rows="3">Autonomous orchestration using dual-agent synthesis and deterministic self-healing sandboxes.</textarea>
+</div>
+<!-- Track Alignment -->
+<div class="flex flex-col gap-1.5 pt-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider">
+                Registered Competition Track
+              </label>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed/50 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Autonomous Code Synthesis</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">$30,000 Track Prize Pool</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">lock</span>
+</div>
+<span class="font-mono-code text-[10px] text-on-surface-variant pl-1">
+                Track selection locked after first draft submission artifact was registered.
+              </span>
+</div>
+<div class="pt-2 flex justify-end">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium transition-all shadow-xs flex items-center gap-1.5" onclick="saveProfileNotification()">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Save Profile Changes</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Danger Zone Area -->
+<div class="rounded-xl bg-surface-container-low/90 shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center gap-2 pb-space-xs">
+<span class="material-symbols-outlined text-[20px] text-error">warning</span>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Danger Zone</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Irreversible team ownership and lifecycle actions</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Transfer Ownership option -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest shadow-xs flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Transfer Team Ownership</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Appoint another active member as primary team captain.</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-md text-label-md font-medium transition-colors min-w-max" onclick="openModal('transfer')">
+                Transfer...
+              </button>
+</div>
+<!-- Disband Team (Owner) or Leave Team (Member) -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest shadow-xs flex items-center justify-between gap-3" id="danger-owner-option">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-error">Disband Team Neural Vanguard</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Permanently unlinks runners, deletes draft artifacts, and cancels invites.</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-lg bg-error-container/60 hover:bg-error-container text-error font-label-md text-label-md font-semibold transition-colors min-w-max" onclick="openModal('disband')">
+                Disband Team...
+              </button>
+</div>
+<div class="hidden p-3.5 rounded-lg bg-surface-container-lowest shadow-xs flex items-center justify-between gap-3" id="danger-member-option">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-error">Leave Neural Vanguard</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">You will forfeit your seat and participation credit under this roster.</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-lg bg-error-container/60 hover:bg-error-container text-error font-label-md text-label-md font-semibold transition-colors min-w-max" onclick="openModal('leave')">
+                Leave Team...
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Modal Backdrop & Modals -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/30 backdrop-blur-md" id="modal-container">
+<!-- Disband Team Modal -->
+<div class="hidden w-full max-w-lg rounded-2xl bg-surface-container-lowest shadow-xl p-space-lg flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-150" id="modal-disband">
+<div class="flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-full bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">delete_forever</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Disband Neural Vanguard?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            This will immediately remove all 3 members, unassign the allocated gVisor sandbox pod (<code class="font-mono-code text-on-surface">pod-nv-8f2c</code>), and permanently purge all draft submission artifacts and test runs.
+          </p>
+<div class="p-2.5 rounded-lg bg-error-container/40 text-on-error-container font-mono-code text-[11px] mt-2.5">
+            WARNING: This operation is immediate and irreversible.
+          </div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2.5 pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" onclick="closeModal()">
+          Cancel
+        </button>
+<button class="px-4 py-2 rounded-lg bg-error text-on-error hover:opacity-90 font-label-md text-label-md font-semibold shadow-sm transition-all" onclick="confirmDisbandAction()">
+          Disband Team
+        </button>
+</div>
+</div>
+<!-- Transfer Ownership Modal -->
+<div class="hidden w-full max-w-lg rounded-2xl bg-surface-container-lowest shadow-xl p-space-lg flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-150" id="modal-transfer">
+<div class="flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">swap_horiz</span>
+</div>
+<div class="flex flex-col w-full">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Transfer Team Ownership</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Designate a new Team Captain. You will remain an active contributor member but will relinquish sole admin rights to disband or rename the team.
+          </p>
+<div class="flex flex-col gap-2 mt-3 w-full">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant uppercase tracking-wider">
+              Select New Owner
+            </label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface outline-none" id="transfer-select">
+<option value="Sarah Lin">Sarah Lin (sarah.lin@cs.stanford.edu)</option>
+<option value="Marcus Tian">Marcus Tian (m.tian@cmu.edu)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2.5 pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" onclick="closeModal()">
+          Cancel
+        </button>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary-container hover:opacity-95 font-label-md text-label-md font-semibold shadow-sm transition-all" onclick="confirmTransferAction()">
+          Transfer Captain Role
+        </button>
+</div>
+</div>
+<!-- Remove Member Modal -->
+<div class="hidden w-full max-w-lg rounded-2xl bg-surface-container-lowest shadow-xl p-space-lg flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-150" id="modal-remove">
+<div class="flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-full bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">person_remove</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Remove <span id="remove-target-name">Member</span>?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            This member will lose access to team repositories, test harness clusters, and will no longer be listed on final project evaluations.
+          </p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2.5 pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" onclick="closeModal()">
+          Cancel
+        </button>
+<button class="px-4 py-2 rounded-lg bg-error text-on-error hover:opacity-90 font-label-md text-label-md font-semibold shadow-sm transition-all" onclick="confirmRemoveAction()">
+          Confirm Removal
+        </button>
+</div>
+</div>
+<!-- Leave Team Modal (Member view) -->
+<div class="hidden w-full max-w-lg rounded-2xl bg-surface-container-lowest shadow-xl p-space-lg flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-150" id="modal-leave">
+<div class="flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-full bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">logout</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Leave Neural Vanguard?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            You will forfeit your current seat and will need an explicit invite from the Captain to rejoin this team before the roster freeze deadline.
+          </p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2.5 pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" onclick="closeModal()">
+          Cancel
+        </button>
+<button class="px-4 py-2 rounded-lg bg-error text-on-error hover:opacity-90 font-label-md text-label-md font-semibold shadow-sm transition-all" onclick="closeModal()">
+          Leave Team
+        </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl" id="toast">
+<span class="material-symbols-outlined text-[18px] text-inverse-primary" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md font-medium" id="toast-msg">Direct link copied to clipboard</span>
+</div>
+<!-- Client-side Interactive State Machine Scripts -->
+<script>
+    let currentState = 'default';
+
+    function setSimState(state) {
+      currentState = state;
+      
+      // Update Tab Styles
+      const tabs = ['default', 'full', 'member', 'skeletons'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-' + t);
+        if (t === state) {
+          btn.className = "px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all bg-primary-container text-on-primary-container font-medium shadow-sm";
+        } else {
+          btn.className = "px-2.5 py-1 rounded-full font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest";
+        }
+      });
+
+      const skeletonsWrapper = document.getElementById('skeletons-wrapper');
+      const mainContentFlow = document.getElementById('main-content-flow');
+      
+      // Handle Loading Skeletons state
+      if (state === 'skeletons') {
+        skeletonsWrapper.classList.remove('hidden');
+        skeletonsWrapper.classList.add('flex');
+        mainContentFlow.classList.add('hidden');
+        return;
+      } else {
+        skeletonsWrapper.classList.add('hidden');
+        skeletonsWrapper.classList.remove('flex');
+        mainContentFlow.classList.remove('hidden');
+      }
+
+      // References
+      const fourthEmpty = document.getElementById('fourth-slot-empty');
+      const fourthOccupied = document.getElementById('fourth-slot-occupied');
+      const capacityCount = document.getElementById('capacity-count');
+      const capacityBar = document.getElementById('capacity-bar');
+      const capacityBadgeText = document.getElementById('capacity-badge-text');
+      const capacityPct = document.getElementById('capacity-pct');
+      const memberCounterBadge = document.getElementById('member-counter-badge');
+      const activeInviteControls = document.getElementById('active-invite-controls');
+      const fullCapacityNotice = document.getElementById('full-capacity-notice');
+      const roleIndicator = document.getElementById('role-indicator');
+      const memberActionControls = document.querySelectorAll('.member-action-controls');
+      const dangerOwner = document.getElementById('danger-owner-option');
+      const dangerMember = document.getElementById('danger-member-option');
+
+      if (state === 'default') {
+        // Owner with 3/4
+        capacityCount.textContent = "3 of 4";
+        capacityBar.style.width = "75%";
+        capacityBadgeText.innerHTML = '<span class="material-symbols-outlined text-[14px]">info</span> 1 open invite slot available before freeze on Nov 10';
+        capacityPct.textContent = "75% Full";
+        memberCounterBadge.textContent = "3 / 4 Seats";
+
+        fourthEmpty.classList.remove('hidden');
+        fourthEmpty.classList.add('flex');
+        fourthOccupied.classList.add('hidden');
+        fourthOccupied.classList.remove('flex');
+
+        activeInviteControls.classList.remove('hidden');
+        fullCapacityNotice.classList.add('hidden');
+
+        roleIndicator.textContent = "Owner / Team Captain";
+        memberActionControls.forEach(el => el.classList.remove('opacity-0', 'pointer-events-none'));
+        dangerOwner.classList.remove('hidden');
+        dangerMember.classList.add('hidden');
+      } 
+      else if (state === 'full') {
+        // 4/4 Members
+        capacityCount.textContent = "4 of 4";
+        capacityBar.style.width = "100%";
+        capacityBadgeText.innerHTML = '<span class="material-symbols-outlined text-[14px] text-primary">verified</span> Team roster is locked and complete';
+        capacityPct.textContent = "100% Full";
+        memberCounterBadge.textContent = "4 / 4 Seats";
+
+        fourthEmpty.classList.add('hidden');
+        fourthEmpty.classList.remove('flex');
+        fourthOccupied.classList.remove('hidden');
+        fourthOccupied.classList.add('flex');
+
+        activeInviteControls.classList.add('hidden');
+        fullCapacityNotice.classList.remove('hidden');
+
+        roleIndicator.textContent = "Owner / Team Captain";
+        memberActionControls.forEach(el => el.classList.remove('opacity-0', 'pointer-events-none'));
+        dangerOwner.classList.remove('hidden');
+        dangerMember.classList.add('hidden');
+      } 
+      else if (state === 'member') {
+        // Non-owner member view
+        capacityCount.textContent = "3 of 4";
+        capacityBar.style.width = "75%";
+        capacityBadgeText.innerHTML = '<span class="material-symbols-outlined text-[14px]">info</span> 1 open seat remaining';
+        capacityPct.textContent = "75% Full";
+        memberCounterBadge.textContent = "3 / 4 Seats";
+
+        fourthEmpty.classList.remove('hidden');
+        fourthEmpty.classList.add('flex');
+        fourthOccupied.classList.add('hidden');
+        fourthOccupied.classList.remove('flex');
+
+        activeInviteControls.classList.remove('hidden');
+        fullCapacityNotice.classList.add('hidden');
+
+        roleIndicator.textContent = "Member • Core Agent";
+        // Hide owner transfer and remove actions from non-owners
+        memberActionControls.forEach(el => el.classList.add('opacity-0', 'pointer-events-none'));
+        dangerOwner.classList.add('hidden');
+        dangerMember.classList.remove('hidden');
+      }
+    }
+
+    function openModal(type, targetName = '') {
+      const container = document.getElementById('modal-container');
+      const modals = ['modal-disband', 'modal-transfer', 'modal-remove', 'modal-leave'];
+      modals.forEach(m => document.getElementById(m).classList.add('hidden'));
+
+      if (type === 'disband') {
+        document.getElementById('modal-disband').classList.remove('hidden');
+      } else if (type === 'transfer') {
+        if (targetName) {
+          const select = document.getElementById('transfer-select');
+          if (select) select.value = targetName;
+        }
+        document.getElementById('modal-transfer').classList.remove('hidden');
+      } else if (type === 'remove') {
+        if (targetName) {
+          document.getElementById('remove-target-name').textContent = targetName;
+        }
+        document.getElementById('modal-remove').classList.remove('hidden');
+      } else if (type === 'leave') {
+        document.getElementById('modal-leave').classList.remove('hidden');
+      }
+
+      container.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('modal-container').classList.add('hidden');
+    }
+
+    function copyDirectLink() {
+      const input = document.getElementById('share-link-input');
+      input.select();
+      navigator.clipboard.writeText(input.value).catch(() => {});
+      
+      const icon = document.getElementById('copy-icon');
+      const text = document.getElementById('copy-text');
+      icon.textContent = 'check';
+      text.textContent = 'Copied!';
+      showToast('Registration token link copied to clipboard');
+
+      setTimeout(() => {
+        icon.textContent = 'content_copy';
+        text.textContent = 'Copy Link';
+      }, 2000);
+    }
+
+    function handleSendInvite(e) {
+      e.preventDefault();
+      const input = document.getElementById('invite-email-input');
+      const email = input.value.trim();
+      if (!email) return;
+
+      const list = document.getElementById('pending-invites-list');
+      const div = document.createElement('div');
+      div.className = "flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low transition-all animate-in fade-in";
+      div.innerHTML = `
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-mono-code text-[11px] font-semibold">
+            ${email.substring(0, 2).toUpperCase()}
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2">
+              <span class="font-label-md text-label-md text-on-surface font-medium">${email.split('@')[0]}</span>
+              <span class="px-1.5 py-0.2 rounded bg-surface-container-highest font-mono-code text-[10px] text-on-surface-variant">${email}</span>
+            </div>
+            <span class="font-mono-code text-[10px] text-on-surface-variant">Sent just now • Pending acceptance</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <button onclick="this.closest('.flex.items-center.justify-between').remove(); showToast('Invite revoked');" title="Revoke" class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined text-[16px]">close</span>
+          </button>
+        </div>
+      `;
+      list.prepend(div);
+      input.value = '';
+      showToast('Invitation dispatched to ' + email);
+    }
+
+    function revokeInvite(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.remove();
+        showToast('Invite revoked');
+      }
+    }
+
+    function resendInvite(name) {
+      showToast('Fresh invitation sent to ' + name);
+    }
+
+    function updateCharCount(el) {
+      const count = el.value.length;
+      document.getElementById('char-counter').textContent = count + ' / 280';
+    }
+
+    function toggleEditTeam() {
+      const input = document.getElementById('input-team-name');
+      input.focus();
+      input.select();
+    }
+
+    function saveProfileNotification() {
+      const newName = document.getElementById('input-team-name').value;
+      document.getElementById('display-team-name').textContent = newName;
+      document.getElementById('slug-text').textContent = newName.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      showToast('Team profile and slug settings saved');
+    }
+
+    function scrollToInvite() {
+      const el = document.getElementById('invite-section');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('invite-email-input').focus();
+      }
+    }
+
+    function confirmDisbandAction() {
+      closeModal();
+      showToast('Team disbanded successfully. Redirecting...');
+    }
+
+    function confirmTransferAction() {
+      const select = document.getElementById('transfer-select');
+      closeModal();
+      showToast('Transferred Captain role to ' + select.value);
+    }
+
+    function confirmRemoveAction() {
+      closeModal();
+      showToast('Team member removed from active roster');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2600);
+    }
+
+    // Close modal on Escape
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</div></main></div></body></html>

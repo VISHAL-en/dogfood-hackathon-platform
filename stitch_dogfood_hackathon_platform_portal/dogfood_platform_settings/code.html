@@ -1,0 +1,1120 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","surface-tint":"#005cbb","on-surface-variant":"#414753","on-error":"#ffffff","inverse-on-surface":"#f1f0f6","surface-dim":"#dbd9df","primary-fixed":"#d7e2ff","on-background":"#1a1b1f","on-tertiary-fixed-variant":"#332dbc","on-tertiary":"#ffffff","surface-container-highest":"#e3e2e7","tertiary-fixed-dim":"#c2c1ff","outline":"#717785","secondary-container":"#316bf3","surface-container-high":"#e9e7ed","on-secondary-fixed":"#00174b","surface-variant":"#e3e2e7","on-primary-container":"#fcfbff","on-secondary-container":"#fefcff","on-tertiary-container":"#fefaff","surface-container-low":"#f4f3f8","error-container":"#ffdad6","on-secondary":"#ffffff","on-error-container":"#93000a","surface-container":"#efedf3","tertiary-fixed":"#e2dfff","background":"#faf8fe","secondary":"#0051d5","surface-bright":"#faf8fe","on-surface":"#1a1b1f","secondary-fixed-dim":"#b4c5ff","tertiary-container":"#6462ec","secondary-fixed":"#dbe1ff","on-primary-fixed":"#001b3f","primary":"#0059b5","on-primary-fixed-variant":"#00458f","inverse-primary":"#abc7ff","error":"#ba1a1a","inverse-surface":"#2f3034","primary-container":"#0071e3","outline-variant":"#c1c6d6","on-secondary-fixed-variant":"#003ea8","surface":"#faf8fe","tertiary":"#4a47d2","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#0c006b","primary-fixed-dim":"#abc7ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{gutter:"1rem","margin-tablet":"2rem","gutter-desktop":"1.5rem","space-xl":"2rem","space-md":"0.75rem","margin-desktop":"3rem","space-xs":"0.25rem","space-sm":"0.5rem","space-lg":"1.25rem",margin:"1rem"},fontFamily:{"body-sm":["Inter"],"display-lg-mobile":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"mono-code":["JetBrains Mono"],"label-sm":["Inter"],"display-lg":["Inter"],"headline-md":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},fontSize:{"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.005em",fontWeight:"400"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"19px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"mono-code":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.01em",fontWeight:"500"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"500"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col pt-4 pb-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="px-5 pb-4 mb-2 flex items-center gap-3"><img alt="Brand logo. - Primary color: #0071e3
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X4ylxw5ERlYb512JjvDIPTD2ef9pKs3vB1qAPF9OQC2kRN02l8HZ1lFuAwdrS5I1R_l7NAdmf9Xj7Rt9IQR5WGv-uzV5pcX-bGBcgHZ1VTFxEL5d0Rji9xjPno2x3Bz3_5XBOTb2Cah3KFL6lNNiq8WXKoN_R8zVBsfFkgQhnyMvNjEAH1A8aNLVUiLmqMnMerdWephJdgyW6pjFW_JpuI6U0VvU-gtOY4UKq3PFgLSnGG4pki-LSj7J1k"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Dogfood</span><span class="font-mono-code text-mono-code text-on-surface-variant text-[10px] mt-0.5">NODE_ROOT_INFRA</span></div></div><div class="px-5 py-2 mb-2"><div class="flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-lg"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Self-Hosted Cluster</span></div></div><nav class="flex-1 px-3 space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><div class="px-2 pt-2 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Infrastructure</span></div><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview-instance-health" href="#"><span class="font-label-md text-label-md">Overview / Instance Health</span><span class="font-mono-code text-mono-code text-[11px] text-outline">v2.4</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="event-control" href="#"><span class="font-label-md text-label-md">Event Control</span></a><a aria-current="page" class="flex items-center justify-between px-3 py-2 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="platform-settings" href="#"><span class="font-label-md text-label-md">Platform Settings</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary text-on-secondary font-medium text-[10px]">Admin</span></a><div class="px-2 pt-4 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Access &amp; Security</span></div><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="users-roles" href="#"><span class="font-label-md text-label-md">Users &amp; Roles</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="system-integrations" href="#"><span class="font-label-md text-label-md">System Integrations</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="cryptographic-nodes" href="#"><span class="font-label-md text-label-md">Cryptographic Nodes</span><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-ledger" href="#"><span class="font-label-md text-label-md">Audit Ledger</span></a></nav><div class="px-4 pt-3 mt-auto bg-surface-container-lowest/60 rounded-xl mx-3 p-3"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Kernel Engine</span><span class="font-mono-code text-mono-code text-primary text-[11px]">ONLINE</span></div><div class="mt-1 text-[11px] font-mono-code text-outline">SHA: 4a9f3c20e</div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6"><div class="flex items-center gap-4 min-w-0"><img alt="Brand logo. - Primary color: #0071e3
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-7 w-auto object-contain md:hidden" src="https://lh3.googleusercontent.com/aida/AEtjO1X4ylxw5ERlYb512JjvDIPTD2ef9pKs3vB1qAPF9OQC2kRN02l8HZ1lFuAwdrS5I1R_l7NAdmf9Xj7Rt9IQR5WGv-uzV5pcX-bGBcgHZ1VTFxEL5d0Rji9xjPno2x3Bz3_5XBOTb2Cah3KFL6lNNiq8WXKoN_R8zVBsfFkgQhnyMvNjEAH1A8aNLVUiLmqMnMerdWephJdgyW6pjFW_JpuI6U0VvU-gtOY4UKq3PFgLSnGG4pki-LSj7J1k"><div class="flex items-center gap-2 truncate"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Self-Hosted Cluster</span><span class="text-outline text-xs">•</span><span class="font-body-md text-body-md text-on-surface-variant truncate">Root Admin (Sarah Jenkins)</span></div><div class="hidden xl:flex items-center gap-2 pl-4 border-l border-outline-variant/30"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-mono-code text-mono-code text-on-surface-variant">OK · 99.98%</span></div></div><div class="flex items-center gap-3"><div class="relative flex items-center bg-surface-container px-3 py-1.5 rounded-lg w-52 sm:w-64"><span class="material-symbols-outlined text-outline text-[18px] mr-2">search</span><span class="font-body-sm text-body-sm text-outline flex-1 select-none">Search telemetry...</span><kbd class="font-mono-code text-mono-code text-[10px] bg-surface-container-lowest text-on-surface-variant px-1.5 py-0.5 rounded shadow-xs">⌘K</kbd></div><button class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-2 pl-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Toolbar -->
+<div class="w-full bg-surface-container-high px-6 py-2.5 flex items-center justify-between gap-4 overflow-x-auto shadow-sm select-none">
+<div class="flex items-center gap-2 shrink-0">
+<span class="material-symbols-outlined text-outline text-[18px]">tune</span>
+<span class="font-mono-code text-mono-code text-[11px] text-on-surface-variant font-medium uppercase tracking-wider">State Simulator:</span>
+</div>
+<div class="flex items-center gap-1.5 shrink-0" id="state-simulator-bar">
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-lowest text-on-surface shadow-xs transition-colors" data-sim="general" onclick="switchTab('general')" type="button">General</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-sim="event-defaults" onclick="switchTab('event-defaults')" type="button">Event Defaults</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-sim="permissions" onclick="switchTab('permissions')" type="button">Permissions &amp; Roles</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-sim="integrations" onclick="switchTab('integrations')" type="button">Integrations</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-sim="email-notifications" onclick="switchTab('email-notifications')" type="button">Email &amp; Notifications</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-sim="audit-log" onclick="switchTab('audit-log')" type="button">Audit Log</button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-sim="system-info" onclick="switchTab('system-info')" type="button">System Info</button>
+<span class="w-px h-3.5 bg-outline-variant/40 mx-1"></span>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm text-primary hover:bg-primary/10 transition-colors flex items-center gap-1" onclick="triggerSaveNotification()" type="button">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+        Flash Save
+      </button>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm text-secondary hover:bg-secondary/10 transition-colors flex items-center gap-1" onclick="toggleRoleModal(true)" type="button">
+<span class="material-symbols-outlined text-[14px]">admin_panel_settings</span>
+        Role Modal
+      </button>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm text-error hover:bg-error-container transition-colors flex items-center gap-1" onclick="toggleForbiddenBanner()" type="button">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+        403 State
+      </button>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1" onclick="toggleSkeletons()" type="button">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span>
+        Skeletons
+      </button>
+</div>
+</div>
+<!-- Toast Notification Bar (Save Flash) -->
+<div class="hidden fixed top-20 right-8 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl items-center gap-3 transition-all duration-300" id="save-toast">
+<span class="material-symbols-outlined text-primary-fixed text-[20px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Instance Configuration Synchronized</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80">All changes committed across cluster nodes via Raft consensus.</span>
+</div>
+<button class="ml-2 text-inverse-on-surface/60 hover:text-inverse-on-surface" onclick="document.getElementById('save-toast').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- 403 Restricted Banner (Toggleable) -->
+<div class="hidden w-full bg-error-container text-on-error-container px-6 py-3 flex items-center justify-between shadow-sm" id="forbidden-banner">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error text-[22px]">gpp_maybe</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-error-container font-semibold">403 Restricted Access Mode Active</span>
+<span class="font-body-sm text-body-sm text-on-error-container/80 ml-2">Non-Root Admins are barred from modifying encryption keys and cluster telemetry.</span>
+</div>
+</div>
+<button class="px-3 py-1 bg-surface-container-lowest text-error rounded-lg font-label-sm text-label-sm font-medium shadow-xs" onclick="toggleForbiddenBanner()" type="button">Dismiss</button>
+</div>
+<!-- Main Content Canvas -->
+<div class="p-6 md:p-8 space-y-6 max-w-[1600px] w-full mx-auto">
+<!-- Header Area -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-4 pb-6">
+<div class="space-y-1">
+<div class="flex items-center gap-3">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Platform Settings</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-on-background text-surface-container-lowest font-mono-code text-[11px] font-semibold tracking-wider flex items-center gap-1 shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            ADMIN
+          </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px]">
+            CLUSTER: node-core-01
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Global instance configuration, default evaluation parameters, cryptographic authority, and infrastructure controls. Changes apply across all hosted hackathons.
+        </p>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<button class="h-9 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-2 shadow-xs hover:bg-surface-container-high active:scale-95 transition-all" onclick="exportConfigJson()" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">download</span>
+          Export Config (.JSON)
+        </button>
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold flex items-center gap-2 shadow-sm hover:bg-primary hover:text-on-primary active:scale-95 transition-all" onclick="triggerSaveNotification()" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+          Save All Changes
+        </button>
+</div>
+</div>
+<!-- 2-Column Settings Workspace Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column (Navigation Sidebar: 280px equivalent on lg) -->
+<div class="lg:col-span-4 xl:col-span-3 space-y-6">
+<!-- Navigation Menu Card -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-sm space-y-1">
+<button class="nav-tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-left transition-colors bg-primary-container text-on-primary-container font-medium shadow-xs" data-tab="general" onclick="switchTab('general')" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">branding_watermark</span>
+<span class="font-label-md text-label-md">General</span>
+</div>
+<span class="material-symbols-outlined text-[16px] opacity-75">chevron_right</span>
+</button>
+<button class="nav-tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-left transition-colors text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-tab="event-defaults" onclick="switchTab('event-defaults')" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">rule_settings</span>
+<span class="font-label-md text-label-md">Event Defaults</span>
+</div>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</button>
+<button class="nav-tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-left transition-colors text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-tab="permissions" onclick="switchTab('permissions')" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">security</span>
+<span class="font-label-md text-label-md">Permissions &amp; Roles</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">6 Admins</span>
+</button>
+<button class="nav-tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-left transition-colors text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-tab="integrations" onclick="switchTab('integrations')" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+<span class="font-label-md text-label-md">Integrations</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-semibold">4 Active</span>
+</button>
+<button class="nav-tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-left transition-colors text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-tab="email-notifications" onclick="switchTab('email-notifications')" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span class="font-label-md text-label-md">Email &amp; Notifications</span>
+</div>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</button>
+<button class="nav-tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-left transition-colors text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-tab="audit-log" onclick="switchTab('audit-log')" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span class="font-label-md text-label-md">Audit Log</span>
+</div>
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              Live
+            </span>
+</button>
+<button class="nav-tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-left transition-colors text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" data-tab="system-info" onclick="switchTab('system-info')" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">dns</span>
+<span class="font-label-md text-label-md">System Information</span>
+</div>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</button>
+</div>
+<!-- Infrastructure Status Anchored Widget -->
+<div class="bg-surface-container-low rounded-xl p-4 shadow-sm space-y-3.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Cluster Infrastructure</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-mono-code text-[10px] font-semibold flex items-center gap-1 shadow-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              HEALTHY
+            </span>
+</div>
+<div class="space-y-2 pt-1 font-mono-code text-[11px]">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Node ID</span>
+<span class="text-on-surface font-medium truncate max-w-[130px]">dogfood-core-primary</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Uptime</span>
+<span class="text-on-surface font-medium">99.98% (42d 18h)</span>
+</div>
+<div class="space-y-1 pt-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Storage Pool</span>
+<span class="text-on-surface font-medium">48.2 GB / 250 GB</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 19.28%"></div>
+</div>
+</div>
+</div>
+<div class="pt-2 border-t-0 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Dogfood Engine</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-medium flex items-center gap-1" href="#">
+              Release Notes v2.4.0
+              <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Column: Settings Panels Canvas (col-span-8 or 9) -->
+<div class="lg:col-span-8 xl:col-span-9 space-y-6">
+<!-- Skeleton Mock Layer (Hidden by default) -->
+<div class="hidden space-y-4 animate-pulse" id="skeleton-layer">
+<div class="h-44 bg-surface-container rounded-xl"></div>
+<div class="h-64 bg-surface-container rounded-xl"></div>
+<div class="h-52 bg-surface-container rounded-xl"></div>
+</div>
+<!-- 1. GENERAL PANEL -->
+<div class="settings-panel space-y-6" id="panel-general">
+<!-- Platform Branding Section -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-5">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Platform Branding &amp; Identity</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Customize global mark displayed on judging sheets, submission portals, and administrative views.</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">brush</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-6 p-4 bg-surface-container-low rounded-xl">
+<div class="w-56 h-16 bg-surface-container-lowest rounded-lg p-2 flex items-center justify-center shadow-xs">
+<img alt="Current Platform Logo" class="max-h-10 max-w-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X4ylxw5ERlYb512JjvDIPTD2ef9pKs3vB1qAPF9OQC2kRN02l8HZ1lFuAwdrS5I1R_l7NAdmf9Xj7Rt9IQR5WGv-uzV5pcX-bGBcgHZ1VTFxEL5d0Rji9xjPno2x3Bz3_5XBOTb2Cah3KFL6lNNiq8WXKoN_R8zVBsfFkgQhnyMvNjEAH1A8aNLVUiLmqMnMerdWephJdgyW6pjFW_JpuI6U0VvU-gtOY4UKq3PFgLSnGG4pki-LSj7J1k">
+</div>
+<div class="space-y-1.5 flex-1">
+<div class="flex items-center gap-3">
+<button class="px-3.5 py-1.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md font-medium shadow-xs hover:bg-primary-container active:scale-95 transition-all" type="button">
+                    Upload New Brand Mark
+                  </button>
+<button class="px-3 py-1.5 text-error hover:bg-error-container rounded-lg font-label-md text-label-md transition-colors" type="button">
+                    Remove
+                  </button>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+                  SVG or transparent PNG recommended. Minimum dimension 256×256px, max payload size 2MB.
+                </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Instance Display Name</label>
+<input class="w-full h-10 px-3.5 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-xs focus:outline-none focus:ring-2 focus:ring-primary/40" type="text" value="Dogfood Enterprise Core">
+<p class="font-body-sm text-body-sm text-outline">Shown in browser titles, email templates, and generated reports.</p>
+</div>
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Custom Domain / FQDN</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-mono-code text-[12px] text-outline select-none">https://</span>
+<input class="w-full h-10 pl-20 pr-28 bg-surface-container-lowest text-on-surface font-mono-code text-[13px] rounded-lg shadow-xs focus:outline-none focus:ring-2 focus:ring-primary/40" type="text" value="hack.dogfood.io">
+<span class="absolute right-2 px-2 py-0.5 rounded bg-surface-container-high text-primary font-mono-code text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">lock</span> SSL OK
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Managed automatically via Let's Encrypt ACME cluster hook.</p>
+</div>
+</div>
+</div>
+<!-- Discovery & Locale Section -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-5">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Instance Visibility &amp; Locale</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Control unauthenticated exploration and baseline localized formatting.</p>
+</div>
+<!-- Public Discovery Toggle -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl">
+<div class="space-y-0.5 max-w-xl">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Public Instance Access</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Allow unauthenticated visitors to discover published hackathons, live galleries, and historical project showcases without logging in.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="public-access-toggle" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Default System Timezone</label>
+<div class="relative">
+<select class="w-full h-10 px-3.5 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-xs appearance-none focus:outline-none focus:ring-2 focus:ring-primary/40 cursor-pointer">
+<option selected="">UTC-08:00 (Pacific Time - Los Angeles)</option>
+<option>UTC-05:00 (Eastern Time - New York)</option>
+<option>UTC+00:00 (Universal Coordinated Time - London)</option>
+<option>UTC+01:00 (Central European Time - Berlin)</option>
+<option>UTC+09:00 (Japan Standard Time - Tokyo)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Submission timelines default to this reference clock unless overridden.</p>
+</div>
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Default System Locale</label>
+<div class="relative">
+<select class="w-full h-10 px-3.5 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-xs appearance-none focus:outline-none focus:ring-2 focus:ring-primary/40 cursor-pointer">
+<option selected="">English (United States) [en-US]</option>
+<option>English (United Kingdom) [en-GB]</option>
+<option>Deutsch (Deutschland) [de-DE]</option>
+<option>日本語 (日本) [ja-JP]</option>
+<option>Français (France) [fr-FR]</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Governs numeric formatting, decimal separators, and date strings.</p>
+</div>
+</div>
+</div>
+<!-- Panel Footer Actions -->
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+              Revert Changes
+            </button>
+<button class="px-5 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold shadow-xs hover:bg-primary transition-all" onclick="triggerSaveNotification()" type="button">
+              Save General Settings
+            </button>
+</div>
+</div>
+<!-- 2. EVENT DEFAULTS PANEL -->
+<div class="settings-panel hidden space-y-6" id="panel-event-defaults">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-5">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Global Event Defaults</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Parameters inherited automatically whenever an organizer initializes a new hackathon workspace.</p>
+</div>
+<!-- Team Constraints -->
+<div class="p-4 bg-surface-container-low rounded-xl space-y-4">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Team Size Constraints</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Default Minimum Members</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-3 py-1.5 shadow-2xs">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">person</span>
+<input class="w-full bg-transparent font-mono-code text-[13px] text-on-surface focus:outline-none" max="10" min="1" type="number" value="1">
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Default Maximum Members</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-3 py-1.5 shadow-2xs">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">group</span>
+<input class="w-full bg-transparent font-mono-code text-[13px] text-on-surface focus:outline-none" max="20" min="1" type="number" value="5">
+</div>
+</div>
+</div>
+</div>
+<!-- Score Normalization Engine -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Default Normalization Algorithm</label>
+<div class="relative">
+<select class="w-full h-11 px-3.5 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg shadow-xs appearance-none focus:outline-none focus:ring-2 focus:ring-primary/40 cursor-pointer">
+<option selected="">Z-Score Gaussian Calibration (Standard Dogfood Recommended)</option>
+<option>Min-Max Linear Percentile Mapping (Simple Range)</option>
+<option>Bayesian Mean Ranking with Judge Deviation Penalty</option>
+<option>Raw Arithmetic Mean (Uncalibrated - Not Recommended)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+                Z-Score Gaussian Calibration standardizes judging variance across disparate evaluator cohorts, eliminating harsh or generous grader bias automatically.
+              </p>
+</div>
+<!-- Pre-selected Rubric Template Card -->
+<div class="space-y-2 pt-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Default Evaluation Rubric</label>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">Customize Default Rubric</a>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Comprehensive 4-Tier Rubric</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-mono-code text-[11px] font-medium">Standard Master</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-2xs">
+<span class="font-mono-code text-[11px] text-outline block">Tier 01</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Technical Rigor</span>
+<span class="font-mono-code text-[10px] text-primary block mt-0.5">30% Weight</span>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-2xs">
+<span class="font-mono-code text-[11px] text-outline block">Tier 02</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Innovation</span>
+<span class="font-mono-code text-[10px] text-primary block mt-0.5">25% Weight</span>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-2xs">
+<span class="font-mono-code text-[11px] text-outline block">Tier 03</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Determinism</span>
+<span class="font-mono-code text-[10px] text-primary block mt-0.5">25% Weight</span>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-2xs">
+<span class="font-mono-code text-[11px] text-outline block">Tier 04</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Utility &amp; UX</span>
+<span class="font-mono-code text-[10px] text-primary block mt-0.5">20% Weight</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Lock Policy -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl">
+<div class="space-y-0.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Default Hard Submission Lock</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automatically lock code freeze and repo commit recording at countdown expiry (0 min grace period).</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">Revert</button>
+<button class="px-5 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold shadow-xs hover:bg-primary transition-all" onclick="triggerSaveNotification()" type="button">Save Event Defaults</button>
+</div>
+</div>
+<!-- 3. PERMISSIONS & ROLES PANEL -->
+<div class="settings-panel hidden space-y-6" id="panel-permissions">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Elevated Accounts &amp; Authority</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Manage root administrator privileges and global organizer delegates.</p>
+</div>
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold flex items-center gap-1.5 shadow-xs hover:bg-primary active:scale-95 transition-all self-start sm:self-auto" onclick="toggleRoleModal(true)" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                Invite Admin or Organizer
+              </button>
+</div>
+<!-- Filter Toolbar -->
+<div class="flex flex-col sm:flex-row items-center gap-3">
+<div class="relative flex-1 w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg shadow-2xs focus:outline-none focus:ring-2 focus:ring-primary/40" placeholder="Filter elevated accounts by name or email..." type="text">
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<select class="h-9 px-3 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-lg shadow-2xs focus:outline-none">
+<option>All Elevated Roles</option>
+<option>Platform Root Admin</option>
+<option>Platform Admin</option>
+<option>Global Organizer</option>
+</select>
+</div>
+</div>
+<!-- Elevated Accounts Table -->
+<div class="overflow-x-auto rounded-xl">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<th class="py-3 px-4 font-semibold">User</th>
+<th class="py-3 px-4 font-semibold">Assigned Role</th>
+<th class="py-3 px-4 font-semibold">Date Granted</th>
+<th class="py-3 px-4 font-semibold">2FA Security</th>
+<th class="py-3 px-4 font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md font-semibold">SJ</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Sarah Jenkins</div>
+<div class="font-mono-code text-[11px] text-outline">sarah.j@traceproof.io</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2.5 py-1 rounded-full bg-on-background text-surface-container-lowest font-mono-code text-[11px] font-semibold">Platform Root Admin</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-mono-code text-[12px]">2023-10-12</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-[11px] text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                        Hardware FIDO2
+                      </span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="font-label-sm text-[11px] text-outline italic">Protected Root</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md font-semibold">AT</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Dr. Aris Thorne</div>
+<div class="font-mono-code text-[11px] text-outline">thorne@dogfood.io</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-code text-[11px] font-medium">Platform Admin</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-mono-code text-[12px]">2024-01-15</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-[11px] text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                        TOTP Enforced
+                      </span>
+</td>
+<td class="py-3 px-4 text-right space-x-1">
+<button class="p-1 hover:text-primary transition-colors" onclick="toggleRoleModal(true)" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">person_remove</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md font-semibold">ER</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Elena Rostova</div>
+<div class="font-mono-code text-[11px] text-outline">elena@rostova-labs.org</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-code text-[11px] font-medium">Platform Admin</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-mono-code text-[12px]">2024-02-01</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-[11px] text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                        TOTP Enforced
+                      </span>
+</td>
+<td class="py-3 px-4 text-right space-x-1">
+<button class="p-1 hover:text-primary transition-colors" onclick="toggleRoleModal(true)" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">person_remove</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md font-semibold">MV</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Marcus Vance</div>
+<div class="font-mono-code text-[11px] text-outline">m.vance@dogfood.io</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-mono-code text-[11px]">Global Organizer</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-mono-code text-[12px]">2024-02-18</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-[11px] text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                        TOTP Enforced
+                      </span>
+</td>
+<td class="py-3 px-4 text-right space-x-1">
+<button class="p-1 hover:text-primary transition-colors" onclick="toggleRoleModal(true)" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">person_remove</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md font-semibold">KS</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Kenji Sato</div>
+<div class="font-mono-code text-[11px] text-outline">kenji.s@tokyo-kernel.dev</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-mono-code text-[11px]">Global Organizer</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-mono-code text-[12px]">2024-03-02</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-[11px] text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                        TOTP Enforced
+                      </span>
+</td>
+<td class="py-3 px-4 text-right space-x-1">
+<button class="p-1 hover:text-primary transition-colors" onclick="toggleRoleModal(true)" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">person_remove</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- 4. INTEGRATIONS PANEL -->
+<div class="settings-panel hidden space-y-6" id="panel-integrations">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Platform Infrastructure Integrations</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Managed cloud persistence, outbound message relays, single sign-on, and cryptographic modules.</p>
+</div>
+<button class="px-3.5 py-1.5 bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md font-medium shadow-xs hover:bg-surface-container-high transition-colors" type="button">
+              Test All Endpoints
+            </button>
+</div>
+<!-- 3x2 Integration Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+<!-- S3 / R2 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-mono-code text-[11px] font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Connected
+                  </span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">AWS S3 / Cloudflare R2</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Asset storage for submissions, videos, and certificates.</p>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg space-y-1 font-mono-code text-[11px]">
+<div class="text-outline truncate">Endpoint: s3.us-east-1.r2.cloudflarestorage.com</div>
+<div class="text-on-surface-variant font-medium truncate">Bucket: dogfood-production-assets</div>
+</div>
+</div>
+<button class="w-full py-1.5 bg-surface-container text-on-surface rounded-lg font-label-sm text-label-sm font-medium hover:bg-surface-container-high transition-colors" type="button">Configure Storage</button>
+</div>
+<!-- SMTP -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">forward_to_inbox</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-mono-code text-[11px] font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Connected
+                  </span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">SMTP &amp; Email Relay</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Transactional notifications, jury invitations &amp; password recovery.</p>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg space-y-1 font-mono-code text-[11px]">
+<div class="text-outline truncate">Relay: smtp.resend.com:587</div>
+<div class="text-on-surface-variant font-medium truncate">Sender: noreply@dogfood.io</div>
+</div>
+</div>
+<button class="w-full py-1.5 bg-surface-container text-on-surface rounded-lg font-label-sm text-label-sm font-medium hover:bg-surface-container-high transition-colors" type="button">Configure Relay</button>
+</div>
+<!-- GitHub OAuth -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-mono-code text-[11px] font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Connected
+                  </span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">GitHub OAuth &amp; Repos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Monorepo clone verification, commit tracking &amp; code freeze.</p>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg space-y-1 font-mono-code text-[11px]">
+<div class="text-outline truncate">App ID: dogfood-core-v2</div>
+<div class="text-on-surface-variant font-medium truncate">Scope: repo, user:email, read:org</div>
+</div>
+</div>
+<button class="w-full py-1.5 bg-surface-container text-on-surface rounded-lg font-label-sm text-label-sm font-medium hover:bg-surface-container-high transition-colors" type="button">Configure OAuth</button>
+</div>
+<!-- Google Workspace SSO -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">vpn_key</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-mono-code text-[11px] font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Connected
+                  </span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Google Workspace SSO</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Enterprise SAML 2.0 and OIDC federated login for staff.</p>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg space-y-1 font-mono-code text-[11px]">
+<div class="text-outline truncate">Domain: dogfood.io</div>
+<div class="text-on-surface-variant font-medium truncate">Enforcement: Strict SAML Only</div>
+</div>
+</div>
+<button class="w-full py-1.5 bg-surface-container text-on-surface rounded-lg font-label-sm text-label-sm font-medium hover:bg-surface-container-high transition-colors" type="button">Configure SSO</button>
+</div>
+<!-- Cryptographic HSM -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-mono-code text-[11px] font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Connected
+                  </span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Cryptographic Node HSM</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ed25519 tamper-proof hardware signing module for audit blocks.</p>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg space-y-1 font-mono-code text-[11px]">
+<div class="text-outline truncate">Module: Nitro Enclave (Ed25519)</div>
+<div class="text-on-surface-variant font-medium truncate">Attestations: 4,912 Validated</div>
+</div>
+</div>
+<button class="w-full py-1.5 bg-surface-container text-on-surface rounded-lg font-label-sm text-label-sm font-medium hover:bg-surface-container-high transition-colors" type="button">Rotate Keys</button>
+</div>
+<!-- Webhook Dispatch (Unconfigured) -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[24px]">webhook</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px] font-medium">
+                    Not Configured
+                  </span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Webhook &amp; Event Stream</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dispatch platform telemetry to custom HTTP sinks or Apache Kafka.</p>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg space-y-1 font-mono-code text-[11px] text-outline italic">
+                  No active webhooks or outbound event listeners configured.
+                </div>
+</div>
+<button class="w-full py-1.5 bg-primary-container text-on-primary-container rounded-lg font-label-sm text-label-sm font-medium hover:bg-primary transition-colors" type="button">Setup Webhook</button>
+</div>
+</div>
+</div>
+<!-- 5. EMAIL & NOTIFICATIONS PANEL -->
+<div class="settings-panel hidden space-y-6" id="panel-email-notifications">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-5">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Email Notification Templates</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Manage tokenized templates for transactional system events and elevated invites.</p>
+</div>
+<!-- Template Selector Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 border-b-0">
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold shadow-xs" type="button">Admin Invitation</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Password Reset</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Submission Deadline Warning</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Certificate Conferred</button>
+</div>
+<!-- Token Insert Bar -->
+<div class="p-3 bg-surface-container-low rounded-xl space-y-2">
+<span class="font-label-sm text-label-sm font-semibold text-outline uppercase tracking-wider">Available Dynamic Tokens</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container-lowest rounded font-mono-code text-[11px] text-primary shadow-2xs select-all cursor-pointer">{{instance_name}}</span>
+<span class="px-2 py-0.5 bg-surface-container-lowest rounded font-mono-code text-[11px] text-primary shadow-2xs select-all cursor-pointer">{{recipient_name}}</span>
+<span class="px-2 py-0.5 bg-surface-container-lowest rounded font-mono-code text-[11px] text-primary shadow-2xs select-all cursor-pointer">{{invite_url}}</span>
+<span class="px-2 py-0.5 bg-surface-container-lowest rounded font-mono-code text-[11px] text-primary shadow-2xs select-all cursor-pointer">{{expires_in}}</span>
+<span class="px-2 py-0.5 bg-surface-container-lowest rounded font-mono-code text-[11px] text-primary shadow-2xs select-all cursor-pointer">{{role}}</span>
+</div>
+</div>
+<!-- Subject Field -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Subject Line</label>
+<input class="w-full h-10 px-3.5 bg-surface-container-low text-on-surface font-mono-code text-[13px] rounded-lg shadow-2xs focus:outline-none focus:ring-2 focus:ring-primary/40" type="text" value="You have been granted elevated access to {{instance_name}}">
+</div>
+<!-- Body Area -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Template Body (Markdown Supported)</label>
+<textarea class="w-full p-3.5 bg-surface-container-low text-on-surface font-mono-code text-[12px] leading-relaxed rounded-lg shadow-2xs focus:outline-none focus:ring-2 focus:ring-primary/40 resize-y" rows="7">Hello {{recipient_name}},
+
+An elevated role of **{{role}}** has been authorized for your credentials on the {{instance_name}} cluster.
+
+To initialize your hardware key or complete multi-factor registration, open the following verification link:
+{{invite_url}}
+
+This invitation expires in {{expires_in}}. If you did not request this, please notify the cluster root immediately.
+
+— Dogfood Kernel Security Subsystem</textarea>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
+<button class="w-full sm:w-auto px-4 py-2 bg-surface-container text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+                Send Test Email to sarah.j@traceproof.io
+              </button>
+<button class="w-full sm:w-auto px-5 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold shadow-xs hover:bg-primary transition-all" onclick="triggerSaveNotification()" type="button">
+                Save Template Changes
+              </button>
+</div>
+</div>
+</div>
+<!-- 6. AUDIT LOG PANEL -->
+<div class="settings-panel hidden space-y-6" id="panel-audit-log">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Cryptographic Tamper-Proof Audit Ledger</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Chronological record verified against the Merkle tree state on the secure hardware enclave.</p>
+</div>
+<button class="h-9 px-4 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-medium flex items-center gap-1.5 shadow-2xs hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                Verify Ledger Proof
+              </button>
+</div>
+<!-- Ledger Filter Toolbar -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<input class="h-9 px-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg shadow-2xs focus:outline-none" placeholder="Search audit ledger..." type="text">
+<select class="h-9 px-3 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-lg shadow-2xs focus:outline-none">
+<option>All Categories (Auth, Config, Roles, HSM)</option>
+<option>Role &amp; Privilege Modifications</option>
+<option>Instance Configuration Changes</option>
+<option>HSM &amp; Cryptographic Keys</option>
+</select>
+<select class="h-9 px-3 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-lg shadow-2xs focus:outline-none">
+<option>Past 24 Hours</option>
+<option>Past 7 Days</option>
+<option>Past 30 Days</option>
+<option>Full Ledger (All Blocks)</option>
+</select>
+</div>
+<!-- Tamper-proof Table -->
+<div class="overflow-x-auto rounded-xl">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<th class="py-3 px-4 font-semibold">Timestamp (UTC)</th>
+<th class="py-3 px-4 font-semibold">Actor &amp; Origin</th>
+<th class="py-3 px-4 font-semibold">Action Type</th>
+<th class="py-3 px-4 font-semibold">Target Entity</th>
+<th class="py-3 px-4 font-semibold text-right">Verification Hash</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface font-mono-code text-[12px]">
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 text-on-surface-variant">2025-02-23 18:41:02</td>
+<td class="py-3 px-4">
+<div class="text-on-surface font-medium">sarah.jenkins</div>
+<div class="text-[10px] text-outline">192.168.1.104</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold text-[11px]">ROLE_MODIFIED</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant">user:m.vance (Global Org)</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 text-[11px] text-primary">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                        sha256:7f8a9e2d...
+                      </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 text-on-surface-variant">2025-02-23 16:14:55</td>
+<td class="py-3 px-4">
+<div class="text-on-surface font-medium">sarah.jenkins</div>
+<div class="text-[10px] text-outline">192.168.1.104</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold text-[11px]">CONFIG_UPDATED</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant">system:timezone (UTC-8)</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 text-[11px] text-primary">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                        sha256:91c2b48e...
+                      </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 text-on-surface-variant">2025-02-22 09:20:11</td>
+<td class="py-3 px-4">
+<div class="text-on-surface font-medium">system:cron-daemon</div>
+<div class="text-[10px] text-outline">127.0.0.1 (Nitro HSM)</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-semibold text-[11px]">NODE_REKEYED</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant">enclave:slot-01</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 text-[11px] text-primary">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                        sha256:4ca8110b...
+                      </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 text-on-surface-variant">2025-02-21 14:02:49</td>
+<td class="py-3 px-4">
+<div class="text-on-surface font-medium">thorne@dogfood.io</div>
+<div class="text-[10px] text-outline">10.0.4.12</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold text-[11px]">INTEGRATION_ADDED</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant">storage:r2-bucket</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 text-[11px] text-primary">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                        sha256:e1a90c21...
+                      </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Ledger Footer -->
+<div class="p-3 bg-surface-container-low rounded-xl flex flex-col sm:flex-row items-center justify-between gap-2 font-mono-code text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Ledger Verified • SHA-256 Merkle Consistency Tree</span>
+</div>
+<div>Block Height #581,920 · Root Hash: 0x98f4c...32ae</div>
+</div>
+</div>
+</div>
+<!-- 7. SYSTEM INFORMATION PANEL -->
+<div class="settings-panel hidden space-y-6" id="panel-system-info">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm space-y-5">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">System Telemetry &amp; Node Diagnostics</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Real-time hardware allocation, containerized runtimes, and snapshot controls.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">developer_board</span>
+</div>
+<!-- Engine Specs Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-4 rounded-xl space-y-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Core Kernel</span>
+<div class="font-mono-code text-[14px] font-semibold text-on-surface">v2.4.0-prod</div>
+<div class="font-mono-code text-[11px] text-on-surface-variant">Git SHA: commit #99c8f2</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl space-y-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Runtime Environment</span>
+<div class="font-mono-code text-[14px] font-semibold text-on-surface">Linux x86_64</div>
+<div class="font-mono-code text-[11px] text-on-surface-variant">Docker Containerized (Alpine)</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl space-y-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Persistence Layer</span>
+<div class="font-mono-code text-[14px] font-semibold text-on-surface">PostgreSQL 16.2</div>
+<div class="font-mono-code text-[11px] text-on-surface-variant">Redis 7.2 In-Memory Cache</div>
+</div>
+</div>
+<!-- Resource Utilization -->
+<div class="space-y-4 pt-2">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface">Live Node Utilization</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- CPU -->
+<div class="bg-surface-container-low p-4 rounded-xl space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-medium text-on-surface">CPU Load</span>
+<span class="font-mono-code text-[13px] font-semibold text-on-surface">14%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 14%"></div>
+</div>
+<span class="font-mono-code text-[11px] text-outline block">8 Cores (AMD EPYC™ 7763)</span>
+</div>
+<!-- Memory -->
+<div class="bg-surface-container-low p-4 rounded-xl space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-medium text-on-surface">Memory Allocated</span>
+<span class="font-mono-code text-[13px] font-semibold text-on-surface">3.2 GB / 16 GB</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 20%"></div>
+</div>
+<span class="font-mono-code text-[11px] text-outline block">20% RAM Consumed</span>
+</div>
+<!-- Storage -->
+<div class="bg-surface-container-low p-4 rounded-xl space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-medium text-on-surface">Disk Pool (NVMe)</span>
+<span class="font-mono-code text-[13px] font-semibold text-on-surface">48.2 GB / 250 GB</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 19.28%"></div>
+</div>
+<span class="font-mono-code text-[11px] text-outline block">19.3% NVMe Storage Used</span>
+</div>
+</div>
+</div>
+<!-- Maintenance & Database Backups -->
+<div class="p-4 bg-surface-container-low rounded-xl space-y-3">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Database Snapshot &amp; Replication</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Last automated snapshot taken 42 mins ago. Off-site replica synced to Cloudflare R2.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 bg-surface-container-lowest text-on-surface rounded-lg font-label-sm text-label-sm font-medium shadow-xs hover:bg-surface-container transition-colors" type="button">
+                    Trigger Manual Backup
+                  </button>
+<button class="px-3.5 py-1.5 bg-surface-container-lowest text-on-surface rounded-lg font-label-sm text-label-sm font-medium shadow-xs hover:bg-surface-container transition-colors" type="button">
+                    Download Diagnostics Bundle
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Role Change Warning Modal Preview -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-4" id="role-modal">
+<div class="bg-surface-container-lowest rounded-2xl p-6 max-w-lg w-full shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-150">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Modify Elevated Privilege Level</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Altering administrative privileges gives this account the authority to inspect confidential judging submissions, alter scoring rubrics, or rotate cluster cryptographic modules.
+          </p>
+</div>
+</div>
+<div class="space-y-3 p-4 bg-surface-container-low rounded-xl">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm font-medium text-on-surface">Select Target Role</label>
+<select class="w-full h-10 px-3 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-2xs focus:outline-none">
+<option>Platform Admin (Manage events, rubrics, users)</option>
+<option>Global Organizer (Create hackathons, grade cohorts)</option>
+<option>Platform Root Admin (Unrestricted cryptographic keys)</option>
+</select>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<input class="rounded text-primary" id="confirm-hsm" type="checkbox">
+<label class="font-body-sm text-body-sm text-on-surface" for="confirm-hsm">Record signed attestation to Merkle audit ledger</label>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-4 py-2 bg-surface-container text-on-surface-variant rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="toggleRoleModal(false)" type="button">
+          Cancel
+        </button>
+<button class="px-4 py-2 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md font-semibold hover:bg-primary shadow-xs transition-colors" onclick="toggleRoleModal(false); triggerSaveNotification();" type="button">
+          Confirm Role Update
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchTab(tabId) {
+    // Hide all panels
+    const panels = document.querySelectorAll('.settings-panel');
+    panels.forEach(p => p.classList.add('hidden'));
+
+    // Show active panel
+    const targetPanel = document.getElementById('panel-' + tabId);
+    if (targetPanel) {
+      targetPanel.classList.remove('hidden');
+    }
+
+    // Update left sidebar active tab pill styling
+    const tabButtons = document.querySelectorAll('.nav-tab-btn');
+    tabButtons.forEach(btn => {
+      if (btn.getAttribute('data-tab') === tabId) {
+        btn.className = 'nav-tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-left transition-colors bg-primary-container text-on-primary-container font-medium shadow-xs';
+      } else {
+        btn.className = 'nav-tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-left transition-colors text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface';
+      }
+    });
+
+    // Update state simulator pill indicator
+    const simBtns = document.querySelectorAll('.sim-btn');
+    simBtns.forEach(btn => {
+      if (btn.getAttribute('data-sim') === tabId) {
+        btn.className = 'sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container-lowest text-on-surface shadow-xs transition-colors';
+      } else {
+        btn.className = 'sim-btn px-2.5 py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors';
+      }
+    });
+  }
+
+  function triggerSaveNotification() {
+    const toast = document.getElementById('save-toast');
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+      toast.classList.remove('flex');
+    }, 4000);
+  }
+
+  function toggleForbiddenBanner() {
+    const banner = document.getElementById('forbidden-banner');
+    banner.classList.toggle('hidden');
+  }
+
+  function toggleRoleModal(show) {
+    const modal = document.getElementById('role-modal');
+    if (show) {
+      modal.classList.remove('hidden');
+    } else {
+      modal.classList.add('hidden');
+    }
+  }
+
+  function toggleSkeletons() {
+    const skel = document.getElementById('skeleton-layer');
+    const panels = document.querySelectorAll('.settings-panel');
+    if (skel.classList.contains('hidden')) {
+      skel.classList.remove('hidden');
+      panels.forEach(p => p.classList.add('hidden'));
+    } else {
+      skel.classList.add('hidden');
+      // restore current tab
+      switchTab('general');
+    }
+  }
+
+  function exportConfigJson() {
+    const dummyConfig = {
+      instance: "Dogfood Enterprise Core",
+      domain: "hack.dogfood.io",
+      version: "2.4.0-prod",
+      cluster_node: "dogfood-core-primary",
+      timezone: "UTC-08:00",
+      normalization: "Z-Score Gaussian Calibration",
+      tamper_proof_ledger: true,
+      exported_at: new Date().toISOString()
+    };
+    const blob = new Blob([JSON.stringify(dummyConfig, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "dogfood-platform-config.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+</script></main></div></body></html>

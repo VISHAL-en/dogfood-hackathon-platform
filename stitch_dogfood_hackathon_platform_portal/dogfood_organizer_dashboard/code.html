@@ -1,0 +1,817 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#faf8fe","tertiary-container":"#6462ec","secondary":"#0051d5","secondary-container":"#316bf3","on-secondary-fixed-variant":"#003ea8","surface-tint":"#005cbb","on-secondary-fixed":"#00174b","on-primary-container":"#fcfbff","secondary-fixed":"#dbe1ff","on-tertiary-container":"#fefaff","surface":"#faf8fe","on-error-container":"#93000a","primary":"#0059b5","on-tertiary-fixed-variant":"#332dbc","surface-container-highest":"#e3e2e7","tertiary":"#4a47d2","inverse-primary":"#abc7ff","on-secondary":"#ffffff","tertiary-fixed":"#e2dfff","on-primary-fixed-variant":"#00458f","inverse-surface":"#2f3034","surface-variant":"#e3e2e7","primary-container":"#0071e3","surface-container-lowest":"#ffffff","outline-variant":"#c1c6d6","on-error":"#ffffff","outline":"#717785","surface-bright":"#faf8fe","on-background":"#1a1b1f","on-primary-fixed":"#001b3f","primary-fixed-dim":"#abc7ff","inverse-on-surface":"#f1f0f6","surface-dim":"#dbd9df","error":"#ba1a1a","error-container":"#ffdad6","on-secondary-container":"#fefcff","primary-fixed":"#d7e2ff","surface-container":"#efedf3","on-tertiary":"#ffffff","surface-container-high":"#e9e7ed","on-tertiary-fixed":"#0c006b","on-surface":"#1a1b1f","on-primary":"#ffffff","tertiary-fixed-dim":"#c2c1ff","surface-container-low":"#f4f3f8","secondary-fixed-dim":"#b4c5ff","on-surface-variant":"#414753"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"1rem","margin-desktop":"3rem","space-lg":"1.25rem","gutter":"1rem","space-md":"0.75rem","margin-tablet":"2rem","space-xs":"0.25rem","gutter-desktop":"1.5rem","space-xl":"2rem","space-sm":"0.5rem"},fontFamily:{"headline-sm":["Inter"],"mono-code":["JetBrains Mono"],"headline-md":["Inter"],"display-lg":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Inter"],"headline-lg":["Inter"],"label-sm":["Inter"]},fontSize:{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"mono-code":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"-0.005em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"19px","letterSpacing":"0em","fontWeight":"400"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.025em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.01em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col min-h-0"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm shadow-sm"><span class="material-symbols-outlined text-[18px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-tight">Dogfood</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Eval Platform</span></div></div><div class="overflow-y-auto px-space-sm py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-md text-label-md"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg transition-all bg-primary-container text-on-primary-container font-label-md text-label-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span>Overview</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="events" href="#"><span class="material-symbols-outlined text-[18px]">calendar_month</span>Events</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="participants" href="#"><span class="material-symbols-outlined text-[18px]">group</span>Participants</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="teams" href="#"><span class="material-symbols-outlined text-[18px]">diversity_3</span>Teams</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="submissions" href="#"><span class="material-symbols-outlined text-[18px]">folder_zip</span>Submissions</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="eligibility" href="#"><span class="material-symbols-outlined text-[18px]">verified</span>Eligibility</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="judges" href="#"><span class="material-symbols-outlined text-[18px]">gavel</span>Judges</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="judging" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span>Judging</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="normalization" href="#"><span class="material-symbols-outlined text-[18px]">tune</span>Normalization</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="results" href="#"><span class="material-symbols-outlined text-[18px]">trophy</span>Results</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="certificates" href="#"><span class="material-symbols-outlined text-[18px]">workspace_premium</span>Certificates</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="archive" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span>Archive</a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span>Settings</a></nav></div></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm">Cluster OK</span></div><span class="font-mono-code text-mono-code text-on-surface-variant">99.98%</span></div><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Docs &amp; API</span><span class="font-mono-code text-mono-code">v2.4-prod</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-all shadow-[0_1px_3px_rgba(0,0,0,0.03)]" type="button"><span class="material-symbols-outlined text-primary text-[18px]">layers</span><span class="font-label-md text-label-md font-semibold">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-mono-code text-mono-code text-on-surface">us-east-cluster • OK</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><div class="flex items-center gap-space-sm w-72 h-8.5 px-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_2px_rgba(0,0,0,0.02)] text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">search</span><input class="w-full bg-transparent border-none text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none" placeholder="Search submissions, teams, judges..." type="text"><kbd class="font-mono-code text-mono-code px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant text-[10px]">⌘K</kbd></div></div><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Lead Organizer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full px-gutter-desktop bg-surface min-h-screen"><div class="flex flex-col w-full pb-16 space-y-space-lg">
+<!-- TOP INTERACTIVE STATE SIMULATOR BAR (Frosted Control Pill) -->
+<section class="w-full pt-space-sm">
+<div class="p-space-xs rounded-xl bg-surface-container-high/70 backdrop-blur-md shadow-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs pl-space-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">science</span>
+<span class="font-mono-code text-mono-code text-on-surface-variant font-medium">SIMULATOR STATE:</span>
+</div>
+<div class="flex items-center gap-1 overflow-x-auto py-0.5" id="state-selector-bar">
+<button class="state-btn px-space-md py-1 rounded-lg text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-primary shadow-sm font-semibold" data-sim="active" onclick="setDashboardState('active')" type="button">
+          Default Active (Judging)
+        </button>
+<button class="state-btn px-space-md py-1 rounded-lg text-label-sm font-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low" data-sim="prelaunch" onclick="setDashboardState('prelaunch')" type="button">
+          Pre-Launch Setup
+        </button>
+<button class="state-btn px-space-md py-1 rounded-lg text-label-sm font-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low" data-sim="noalerts" onclick="setDashboardState('noalerts')" type="button">
+          No Alerts (Clean)
+        </button>
+<button class="state-btn px-space-md py-1 rounded-lg text-label-sm font-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low" data-sim="archived" onclick="setDashboardState('archived')" type="button">
+          Archived / Concluded
+        </button>
+<button class="state-btn px-space-md py-1 rounded-lg text-label-sm font-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low" data-sim="loading" onclick="setDashboardState('loading')" type="button">
+          Loading Skeletons
+        </button>
+</div>
+<div class="pr-space-xs hidden md:flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Organizers Mode</span>
+</div>
+</div>
+</section>
+<!-- LOADING SKELETON LAYER (Controlled by state) -->
+<div class="hidden flex-col w-full space-y-space-lg animate-pulse" id="skeleton-view">
+<div class="h-28 rounded-xl bg-surface-container-high/60"></div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-md">
+<div class="h-24 rounded-xl bg-surface-container-high/60"></div>
+<div class="h-24 rounded-xl bg-surface-container-high/60"></div>
+<div class="h-24 rounded-xl bg-surface-container-high/60"></div>
+<div class="h-24 rounded-xl bg-surface-container-high/60"></div>
+<div class="h-24 rounded-xl bg-surface-container-high/60"></div>
+</div>
+<div class="h-32 rounded-xl bg-surface-container-high/60"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-7 h-80 rounded-xl bg-surface-container-high/60"></div>
+<div class="lg:col-span-5 h-80 rounded-xl bg-surface-container-high/60"></div>
+</div>
+<div class="h-64 rounded-xl bg-surface-container-high/60"></div>
+</div>
+<!-- MAIN OPERATIONAL VIEW -->
+<div class="flex flex-col w-full space-y-space-lg" id="live-content-view">
+<!-- PAGE HEADER & PHASE STEPPER -->
+<section class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center flex-wrap gap-space-sm">
+<h1 class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">Overview</h1>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold" id="header-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" id="header-pulse"></span>
+<span id="header-event-badge">AI Agents World Cup 2025 · Judging Phase</span>
+</div>
+<span class="px-2 py-0.5 rounded font-mono-code text-mono-code bg-surface-container text-on-surface-variant font-medium" id="header-status-code">STAGE 4/6</span>
+</div>
+<div class="flex items-center gap-space-md flex-wrap text-on-surface-variant font-body-sm text-body-sm pt-0.5">
+<span class="flex items-center gap-1 font-mono-code text-mono-code">
+<span class="material-symbols-outlined text-[14px]">fingerprint</span>
+<span id="event-id-tag">ev-2025-a1c</span>
+</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+              UTC System Clock
+            </span>
+<span>•</span>
+<span id="event-elapsed-label">14 Days Elapsed (Day 3 of Evaluation)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-start lg:self-center">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+            Summary PDF
+          </button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+            Judging Console
+          </button>
+</div>
+</div>
+<!-- Compact Phase-Progress Stepper -->
+<div class="pt-space-md">
+<div class="relative flex items-center justify-between w-full">
+<!-- Background Track -->
+<div class="absolute left-6 right-6 top-4 -translate-y-1/2 h-1 bg-surface-container rounded-full z-0">
+<div class="h-full bg-secondary rounded-full transition-all duration-500" id="stepper-progress-fill" style="width: 65%;"></div>
+</div>
+<!-- Step 1: Registration -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer" onclick="setDashboardState('prelaunch')">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm ring-4 ring-surface-container-lowest" id="step-node-1">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm font-semibold text-on-surface text-center">Registration</span>
+<span class="font-mono-code text-[10px] text-on-surface-variant" id="step-sub-1">Closed Oct 30</span>
+</div>
+<!-- Step 2: Submissions -->
+<div class="relative z-10 flex flex-col items-center group">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm ring-4 ring-surface-container-lowest" id="step-node-2">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm font-semibold text-on-surface text-center">Submissions</span>
+<span class="font-mono-code text-[10px] text-on-surface-variant" id="step-sub-2">Frozen Nov 12</span>
+</div>
+<!-- Step 3: Eligibility -->
+<div class="relative z-10 flex flex-col items-center group">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm ring-4 ring-surface-container-lowest" id="step-node-3">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm font-semibold text-on-surface text-center">Eligibility</span>
+<span class="font-mono-code text-[10px] text-on-surface-variant" id="step-sub-3">Cleared 42/42</span>
+</div>
+<!-- Step 4: Judging -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer" onclick="setDashboardState('active')">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm font-bold shadow-md ring-4 ring-secondary-fixed" id="step-node-4">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest animate-ping absolute"></span>
+<span class="material-symbols-outlined text-[16px]">fact_check</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm font-semibold text-primary text-center" id="step-title-4">Judging</span>
+<span class="font-mono-code text-[10px] text-primary font-medium" id="step-sub-4">Active · 68.4%</span>
+</div>
+<!-- Step 5: Results -->
+<div class="relative z-10 flex flex-col items-center group">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm font-semibold ring-4 ring-surface-container-lowest" id="step-node-5">
+              5
+            </div>
+<span class="mt-2 font-label-sm text-label-sm font-semibold text-on-surface-variant text-center">Results</span>
+<span class="font-mono-code text-[10px] text-outline" id="step-sub-5">Nov 18, 18:00</span>
+</div>
+<!-- Step 6: Archived -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer" onclick="setDashboardState('archived')">
+<div class="w-8 h-8 rounded-full bg-surface-container text-outline flex items-center justify-center font-label-sm text-label-sm ring-4 ring-surface-container-lowest" id="step-node-6">
+              6
+            </div>
+<span class="mt-2 font-label-sm text-label-sm font-semibold text-outline text-center">Archive</span>
+<span class="font-mono-code text-[10px] text-outline" id="step-sub-6">Post-Event</span>
+</div>
+</div>
+</div>
+</section>
+<!-- KEY METRICS ROW (5 Compact Frosted Cards) -->
+<section class="grid grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-medium">Registrations</span>
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+</div>
+<div class="py-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface" id="metric-registrations">842</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px]">
+<span class="text-secondary font-medium" id="metric-reg-sub">+18 today</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded">100% capacity</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-medium">Teams Formed</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">diversity_3</span>
+</div>
+<div class="py-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface" id="metric-teams">164</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px]">
+<span id="metric-teams-sub">avg 3.4/team</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded">All Locked</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-medium">Submissions</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">folder_zip</span>
+</div>
+<div class="py-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface" id="metric-submissions">42</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px]">
+<span class="text-on-surface font-medium" id="metric-sub-status">Verified OCI Images</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded">Locked</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-medium">Eligibility</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+</div>
+<div class="py-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface" id="metric-eligibility">42 / 42</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px]">
+<span class="text-secondary font-medium">100% Cleared</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded" id="metric-appeals">1 appeal in queue</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between col-span-2 lg:col-span-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-medium">Judging Progress</span>
+<span class="material-symbols-outlined text-[16px] text-primary">fact_check</span>
+</div>
+<div class="py-1 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface" id="metric-judging">68.4%</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant" id="metric-ballots-ratio">143 / 210</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px]">
+<span class="text-primary font-medium" id="metric-speed">4.8 ballots/hr</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded font-semibold" id="metric-pace">Active</span>
+</div>
+</div>
+</section>
+<!-- ALERTS / ACTION-NEEDED SECTION -->
+<section class="flex flex-col w-full space-y-space-sm" id="alerts-section">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Action Required</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold" id="alerts-badge">3 items pending review</span>
+</div>
+<button class="text-primary font-label-sm text-label-sm hover:underline flex items-center gap-1 font-semibold" type="button">
+          Dismiss all non-critical
+          <span class="material-symbols-outlined text-[14px]">done_all</span>
+</button>
+</div>
+<!-- Alert Rows Container -->
+<div class="space-y-space-xs" id="alerts-container">
+<!-- Item 1: Inactive Judges Alert -->
+<div class="group flex flex-col md:flex-row md:items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">warning</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">3 judges have not started rubric scoring</span>
+<span class="px-1.5 py-0.2 rounded font-mono-code text-[10px] bg-surface-container-highest text-on-surface-variant uppercase">Jury Chamber #2 &amp; #4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Judging window closes in 31 hours. Automated email reminders can be dispatched immediately.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center shrink-0">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors font-medium" onclick="alert('Dispatched ping notifications to 3 jurors via Resend webhook.')" type="button">
+              Dispatch Ping
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1 font-medium" type="button">
+              View Judges
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Freeze Appeal -->
+<div class="group flex flex-col md:flex-row md:items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Submission freeze appeal: Team “HyperScale” requested patch re-upload</span>
+<span class="px-1.5 py-0.2 rounded font-mono-code text-[10px] bg-surface-container-highest text-on-surface-variant uppercase">Ticket #AP-882</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Claimed container registry timeout at freeze timestamp (23:59 UTC). Diagnostic OCI digest log attached.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center shrink-0">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors font-medium" type="button">
+              Audit Logs
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1 font-medium" type="button">
+              Review Appeal
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 3: Score Divergence -->
+<div class="group flex flex-col md:flex-row md:items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Score divergence flagged: Project #18 “TraceProof”</span>
+<span class="px-1.5 py-0.2 rounded font-mono-code text-[10px] bg-secondary-fixed text-on-secondary-fixed font-semibold">Δ 3.4 σ</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Judge 02 gave 96.0 while Judge 05 gave 58.5. Criteria discrepancy on Deterministic Verification.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center shrink-0">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors font-medium" type="button">
+              Side-by-Side Diff
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1 font-medium" type="button">
+              Resolve Divergence
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- No Alerts Replacement Box (Used in Clean state) -->
+<div class="hidden p-space-lg rounded-xl bg-surface-container-lowest text-center flex-col items-center justify-center space-y-2 shadow-sm" id="no-alerts-placeholder">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">All Caught Up</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">No pending juror anomalies, unhandled freeze appeals, or score divergences. The platform evaluation pipeline is running smoothly.</p>
+</div>
+<!-- Prelaunch Setup Box (Used in Prelaunch state) -->
+<div class="hidden p-space-md rounded-xl bg-surface-container-lowest flex-col space-y-space-sm shadow-sm" id="prelaunch-checklist">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Pre-Flight Launch Checklist</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">1. Evaluation Tracks</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 categories defined, rubrics mapped.</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold mt-1">Ready ✓</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">2. Juror Invitations</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">18 of 24 jurors confirmed credentials.</span>
+<span class="font-label-sm text-label-sm text-outline font-semibold mt-1">Pending 6 confirmations</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">3. Code Sandbox Engine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">gVisor clusters verified on AWS us-east-1.</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold mt-1">Operational ✓</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TWO-COLUMN OPERATIONAL CONTENT AREA -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN (~58% / 7 cols): Judging Completion & Track Breakdown -->
+<div class="lg:col-span-7 flex flex-col space-y-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col space-y-space-md">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Judging Progress &amp; Track Health</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Live telemetry from 24 jurors across 5 chambers</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+                By Chamber
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold" type="button">
+                By Track
+              </button>
+</div>
+</div>
+<!-- Restrained Segmented Overall Progress Bar -->
+<div class="flex flex-col space-y-1.5 p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md font-semibold">Overall Ballots Submitted</span>
+<span class="font-mono-code text-mono-code font-bold text-primary" id="track-overall-ratio">143 / 210 (68.4%)</span>
+</div>
+<!-- Segmented visual bar -->
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex gap-0.5 p-0.5">
+<div class="h-full bg-primary rounded-l-full transition-all duration-500" id="track-visual-fill" style="width: 68.4%;"></div>
+<div class="h-full bg-secondary-fixed rounded-r-full transition-all duration-500" id="track-visual-remaining" style="width: 31.6%;"></div>
+</div>
+<div class="flex items-center justify-between font-mono-code text-[11px] text-on-surface-variant pt-1">
+<span>67 ballots pending</span>
+<span>Target: 100% by Nov 17 23:59 UTC</span>
+</div>
+</div>
+<!-- Track Breakdown Table / Rows -->
+<div class="space-y-space-xs">
+<!-- Track 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-md bg-surface-container text-on-surface flex items-center justify-center font-mono-code text-[11px] font-bold">
+                  T1
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Autonomous Code Synthesis</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">48 / 60 ballots completed (80.0%)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-end md:self-center">
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 80%;"></div>
+</div>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed font-semibold">On Track</span>
+</div>
+</div>
+<!-- Track 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-md bg-surface-container text-on-surface flex items-center justify-center font-mono-code text-[11px] font-bold">
+                  T2
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Multi-Tool Orchestration &amp; RAG</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">42 / 60 ballots completed (70.0%)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-end md:self-center">
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 70%;"></div>
+</div>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed font-semibold">On Track</span>
+</div>
+</div>
+<!-- Track 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-md bg-surface-container text-on-surface flex items-center justify-center font-mono-code text-[11px] font-bold">
+                  T3
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Deterministic Safety &amp; Sandboxing</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">31 / 45 ballots completed (68.9%)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-end md:self-center">
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 68.9%;"></div>
+</div>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-highest text-on-surface-variant font-medium">Attention</span>
+</div>
+</div>
+<!-- Track 4 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-md bg-surface-container text-on-surface flex items-center justify-center font-mono-code text-[11px] font-bold">
+                  T4
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Local / Edge LLM Execution</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">22 / 45 ballots completed (48.9%)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-end md:self-center">
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 48.9%;"></div>
+</div>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-error-container text-on-error-container font-semibold">2 Slow Jurors</span>
+</div>
+</div>
+</div>
+<!-- Footer Actions inside Track Card -->
+<div class="pt-space-xs flex items-center justify-between flex-wrap gap-2">
+<button class="text-primary font-label-sm text-label-sm hover:underline flex items-center gap-1 font-semibold" type="button">
+<span class="material-symbols-outlined text-[14px]">filter_alt</span>
+              Filter by Incomplete Judges
+            </button>
+<button class="text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">download</span>
+              Export Raw Ballots (.csv)
+            </button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (~42% / 5 cols): Upcoming Milestones & Deadlines -->
+<div class="lg:col-span-5 flex flex-col space-y-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between h-full space-y-space-md">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Upcoming Milestones</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Autonomous deadline orchestration</span>
+</div>
+<span class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">event_upcoming</span>
+</span>
+</div>
+<!-- Timeline List -->
+<div class="relative pl-6 space-y-space-md mt-space-sm">
+<!-- Vertical Guide Line -->
+<div class="absolute left-2.5 top-2 bottom-3 w-0.5 bg-surface-container"></div>
+<!-- Milestone 1 -->
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-6 top-1.5 w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Judging Window Closes</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-code text-[10px] font-bold flex items-center gap-1" id="countdown-pill">
+<span class="material-symbols-outlined text-[12px]">timer</span>
+                    31h 14m left
+                  </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 17, 23:59 UTC • Hard Lock</span>
+</div>
+<!-- Milestone 2 -->
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-6 top-1.5 w-2.5 h-2.5 rounded-full bg-surface-container-highest ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Normalization &amp; Calibration</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">In 40 hours</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 18, 08:00 UTC • Bayesian Engine</span>
+</div>
+<!-- Milestone 3 -->
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-6 top-1.5 w-2.5 h-2.5 rounded-full bg-surface-container-highest ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Final Winner Deliberation</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">In 46 hours</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 18, 14:00 UTC • Jury Leads Meeting</span>
+</div>
+<!-- Milestone 4 -->
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-6 top-1.5 w-2.5 h-2.5 rounded-full bg-surface-container-highest ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Public Gallery &amp; Results Release</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">In 50 hours</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 18, 18:00 UTC • Livestream Demo Day</span>
+</div>
+</div>
+</div>
+<!-- Bottom calendar export link -->
+<div class="pt-space-md flex items-center justify-between">
+<a class="text-primary font-label-sm text-label-sm hover:underline flex items-center gap-1.5 font-semibold" href="#">
+<span class="material-symbols-outlined text-[15px]">calendar_add_on</span>
+              Subscribe to iCal / CalDAV feed
+            </a>
+<span class="font-mono-code text-[11px] text-outline">Synced UTC-0</span>
+</div>
+</div>
+</div>
+</section>
+<!-- RECENT PLATFORM ACTIVITY LOG (Organizer Audit Stream) -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Recent Platform Activity</h2>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-mono-code text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+<span>Live stream active • 3s ago</span>
+</div>
+</div>
+</div>
+<!-- Filter Segmented Control -->
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container-low self-start md:self-auto" id="activity-filters">
+<button class="px-space-sm py-1 rounded-md text-label-sm font-label-sm bg-surface-container-lowest text-on-surface font-semibold shadow-sm transition-all" onclick="filterActivity('all', this)" type="button">All</button>
+<button class="px-space-sm py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all" onclick="filterActivity('judging', this)" type="button">Judging</button>
+<button class="px-space-sm py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all" onclick="filterActivity('submissions', this)" type="button">Submissions</button>
+<button class="px-space-sm py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all" onclick="filterActivity('system', this)" type="button">System</button>
+</div>
+</div>
+<!-- Activity Items List -->
+<div class="flex flex-col space-y-space-xs" id="activity-feed">
+<!-- Row 1: Judging -->
+<div class="activity-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors gap-2" data-cat="judging">
+<div class="flex items-center gap-3">
+<span class="font-mono-code text-[11px] text-outline w-20 shrink-0">14:32:05 UTC</span>
+<div class="w-6 h-6 rounded-md bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+</div>
+<div class="flex flex-wrap items-center gap-1 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">Judge Elena Rostova</span>
+<span class="text-on-surface-variant">(Jury Chamber #3) submitted ballot for</span>
+<span class="font-mono-code text-[12px] px-1.5 py-0.2 rounded bg-surface-container font-semibold">AgentBench Zero</span>
+</div>
+</div>
+<span class="font-mono-code text-mono-code text-primary font-bold self-end sm:self-auto">98.4 / 100</span>
+</div>
+<!-- Row 2: Submissions / Sandbox -->
+<div class="activity-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors gap-2" data-cat="submissions">
+<div class="flex items-center gap-3">
+<span class="font-mono-code text-[11px] text-outline w-20 shrink-0">14:15:22 UTC</span>
+<div class="w-6 h-6 rounded-md bg-surface-container text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">terminal</span>
+</div>
+<div class="flex flex-wrap items-center gap-1 font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Automated sandbox evaluation completed for</span>
+<span class="font-mono-code text-[11px] px-1.5 py-0.2 rounded bg-surface-container">sub-df-8f2c91</span>
+</div>
+</div>
+<span class="font-mono-code text-[11px] text-secondary font-semibold self-end sm:self-auto">gVisor Passed (0 escapes)</span>
+</div>
+<!-- Row 3: Submissions -->
+<div class="activity-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors gap-2" data-cat="submissions">
+<div class="flex items-center gap-3">
+<span class="font-mono-code text-[11px] text-outline w-20 shrink-0">13:58:40 UTC</span>
+<div class="w-6 h-6 rounded-md bg-surface-container text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-tertiary">code</span>
+</div>
+<div class="flex flex-wrap items-center gap-1 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">Team Neural Vanguard</span>
+<span class="text-on-surface-variant">updated container mirror tag</span>
+<span class="font-mono-code text-[11px] text-outline">commit 8b4ef21</span>
+</div>
+</div>
+<span class="font-mono-code text-[11px] text-outline self-end sm:self-auto">SHA256 verified</span>
+</div>
+<!-- Row 4: Judging Auth -->
+<div class="activity-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors gap-2" data-cat="judging">
+<div class="flex items-center gap-3">
+<span class="font-mono-code text-[11px] text-outline w-20 shrink-0">13:12:11 UTC</span>
+<div class="w-6 h-6 rounded-md bg-surface-container text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">lock_open</span>
+</div>
+<div class="flex flex-wrap items-center gap-1 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">Judge David K.</span>
+<span class="text-on-surface-variant">logged in from designated CIDR</span>
+<span class="font-mono-code text-[11px] text-outline">(OCI evaluation session init)</span>
+</div>
+</div>
+<span class="font-mono-code text-[11px] text-secondary font-semibold self-end sm:self-auto">2FA Enforced</span>
+</div>
+<!-- Row 5: System Telemetry -->
+<div class="activity-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors gap-2" data-cat="system">
+<div class="flex items-center gap-3">
+<span class="font-mono-code text-[11px] text-outline w-20 shrink-0">12:45:00 UTC</span>
+<div class="w-6 h-6 rounded-md bg-surface-container text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-outline">cloud_sync</span>
+</div>
+<div class="flex flex-wrap items-center gap-1 font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Hourly telemetry snapshot encrypted &amp; archived to</span>
+<span class="font-mono-code text-[11px] text-outline">s3://dogfood-eval-audit/2025/h22</span>
+</div>
+</div>
+<span class="font-mono-code text-[11px] text-outline self-end sm:self-auto">Checksum 4a9f...</span>
+</div>
+<!-- Row 6: Organizer Eligibility Batch -->
+<div class="activity-row flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors gap-2" data-cat="system">
+<div class="flex items-center gap-3">
+<span class="font-mono-code text-[11px] text-outline w-20 shrink-0">11:20:18 UTC</span>
+<div class="w-6 h-6 rounded-md bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+</div>
+<div class="flex flex-wrap items-center gap-1 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">Lead Organizer Sarah J.</span>
+<span class="text-on-surface-variant">approved eligibility batch #4 (12 submissions cleared)</span>
+</div>
+</div>
+<span class="font-mono-code text-[11px] text-secondary font-semibold self-end sm:self-auto">Batch Complete</span>
+</div>
+</div>
+<!-- Complete Ledger Link -->
+<div class="pt-space-xs flex items-center justify-center">
+<button class="w-full py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center justify-center gap-1 font-medium" type="button">
+          View Complete Immutable Audit Ledger
+          <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+<script>
+  function setDashboardState(state) {
+    const liveView = document.getElementById('live-content-view');
+    const skeletonView = document.getElementById('skeleton-view');
+    const alertsContainer = document.getElementById('alerts-container');
+    const noAlertsBox = document.getElementById('no-alerts-placeholder');
+    const prelaunchChecklist = document.getElementById('prelaunch-checklist');
+    const alertsBadge = document.getElementById('alerts-badge');
+
+    // Header elements
+    const headerEventBadge = document.getElementById('header-event-badge');
+    const headerStatusCode = document.getElementById('header-status-code');
+    const headerElapsedLabel = document.getElementById('event-elapsed-label');
+    const stepperFill = document.getElementById('stepper-progress-fill');
+
+    // Metrics
+    const mReg = document.getElementById('metric-registrations');
+    const mRegSub = document.getElementById('metric-reg-sub');
+    const mTeams = document.getElementById('metric-teams');
+    const mSub = document.getElementById('metric-submissions');
+    const mSubStatus = document.getElementById('metric-sub-status');
+    const mElig = document.getElementById('metric-eligibility');
+    const mJudging = document.getElementById('metric-judging');
+    const mBallots = document.getElementById('metric-ballots-ratio');
+    const mSpeed = document.getElementById('metric-speed');
+    const mPace = document.getElementById('metric-pace');
+
+    // Stepper nodes
+    const step4Node = document.getElementById('step-node-4');
+    const step4Title = document.getElementById('step-title-4');
+    const step4Sub = document.getElementById('step-sub-4');
+    const step6Node = document.getElementById('step-node-6');
+    const step6Sub = document.getElementById('step-sub-6');
+
+    // Update active button state in the simulator bar
+    document.querySelectorAll('.state-btn').forEach(btn => {
+      if (btn.getAttribute('data-sim') === state) {
+        btn.className = 'state-btn px-space-md py-1 rounded-lg text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-primary shadow-sm font-semibold';
+      } else {
+        btn.className = 'state-btn px-space-md py-1 rounded-lg text-label-sm font-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low';
+      }
+    });
+
+    if (state === 'loading') {
+      liveView.classList.add('hidden');
+      skeletonView.classList.remove('hidden');
+      skeletonView.classList.add('flex');
+      return;
+    } else {
+      liveView.classList.remove('hidden');
+      skeletonView.classList.add('hidden');
+      skeletonView.classList.remove('flex');
+    }
+
+    if (state === 'active') {
+      headerEventBadge.textContent = 'AI Agents World Cup 2025 · Judging Phase';
+      headerStatusCode.textContent = 'STAGE 4/6';
+      headerElapsedLabel.textContent = '14 Days Elapsed (Day 3 of Evaluation)';
+      stepperFill.style.width = '65%';
+
+      alertsContainer.classList.remove('hidden');
+      noAlertsBox.classList.add('hidden');
+      prelaunchChecklist.classList.add('hidden');
+      alertsBadge.textContent = '3 items pending review';
+      alertsBadge.className = 'px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold';
+
+      mReg.textContent = '842';
+      mRegSub.textContent = '+18 today';
+      mTeams.textContent = '164';
+      mSub.textContent = '42';
+      mSubStatus.textContent = 'Verified OCI Images';
+      mElig.textContent = '42 / 42';
+      mJudging.textContent = '68.4%';
+      mBallots.textContent = '143 / 210';
+      mSpeed.textContent = '4.8 ballots/hr';
+      mPace.textContent = 'Active';
+
+      step4Title.textContent = 'Judging';
+      step4Sub.textContent = 'Active · 68.4%';
+      step4Node.className = 'w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm font-bold shadow-md ring-4 ring-secondary-fixed';
+      step6Sub.textContent = 'Post-Event';
+    } else if (state === 'noalerts') {
+      headerEventBadge.textContent = 'AI Agents World Cup 2025 · Judging Phase';
+      headerStatusCode.textContent = 'STAGE 4/6';
+      stepperFill.style.width = '65%';
+
+      alertsContainer.classList.add('hidden');
+      noAlertsBox.classList.remove('hidden');
+      noAlertsBox.classList.add('flex');
+      prelaunchChecklist.classList.add('hidden');
+      alertsBadge.textContent = '0 items pending';
+      alertsBadge.className = 'px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold';
+    } else if (state === 'prelaunch') {
+      headerEventBadge.textContent = 'AI Agents World Cup 2025 · Pre-Launch Setup';
+      headerStatusCode.textContent = 'STAGE 1/6';
+      headerElapsedLabel.textContent = 'T-minus 4 days to Opening Keynote';
+      stepperFill.style.width = '8%';
+
+      alertsContainer.classList.add('hidden');
+      noAlertsBox.classList.add('hidden');
+      prelaunchChecklist.classList.remove('hidden');
+      prelaunchChecklist.classList.add('flex');
+      alertsBadge.textContent = 'Setup in progress';
+      alertsBadge.className = 'px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold';
+
+      mReg.textContent = '218';
+      mRegSub.textContent = 'Open for signups';
+      mTeams.textContent = '48';
+      mSub.textContent = '0';
+      mSubStatus.textContent = 'Portal opens Nov 10';
+      mElig.textContent = '—';
+      mJudging.textContent = '0.0%';
+      mBallots.textContent = '0 / 0';
+      mSpeed.textContent = 'Awaiting launch';
+      mPace.textContent = 'Scheduled';
+
+      step4Title.textContent = 'Judging';
+      step4Sub.textContent = 'Queued Nov 15';
+      step4Node.className = 'w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm font-semibold ring-4 ring-surface-container-lowest';
+    } else if (state === 'archived') {
+      headerEventBadge.textContent = 'AI Agents World Cup 2025 · Concluded & Archived';
+      headerStatusCode.textContent = 'FINALIZED';
+      headerElapsedLabel.textContent = 'Event Concluded Nov 18, 2025 • Public Ledger Locked';
+      stepperFill.style.width = '100%';
+
+      alertsContainer.classList.add('hidden');
+      noAlertsBox.classList.remove('hidden');
+      noAlertsBox.classList.add('flex');
+      alertsBadge.textContent = 'Archived Read-Only';
+      alertsBadge.className = 'px-2 py-0.5 rounded-full bg-surface-container-high text-outline font-label-sm text-label-sm font-semibold';
+
+      mReg.textContent = '842';
+      mRegSub.textContent = 'Final Count';
+      mTeams.textContent = '164';
+      mSub.textContent = '42';
+      mSubStatus.textContent = 'All Benchmarked';
+      mElig.textContent = '42 / 42';
+      mJudging.textContent = '100.0%';
+      mBallots.textContent = '210 / 210';
+      mSpeed.textContent = 'Deliberated';
+      mPace.textContent = 'Concluded';
+
+      step4Node.className = 'w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm ring-4 ring-surface-container-lowest';
+      step4Sub.textContent = 'Completed ✓';
+      step6Node.className = 'w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm font-bold ring-4 ring-secondary-fixed';
+      step6Sub.textContent = 'Permanent Record';
+    }
+  }
+
+  function filterActivity(category, btn) {
+    const rows = document.querySelectorAll('.activity-row');
+    const container = document.getElementById('activity-filters');
+    
+    container.querySelectorAll('button').forEach(b => {
+      b.className = 'px-space-sm py-1 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all';
+    });
+    btn.className = 'px-space-sm py-1 rounded-md text-label-sm font-label-sm bg-surface-container-lowest text-on-surface font-semibold shadow-sm transition-all';
+
+    rows.forEach(row => {
+      if (category === 'all' || row.getAttribute('data-cat') === category) {
+        row.style.display = 'flex';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+</script></main></div></body></html>

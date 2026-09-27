@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Dogfood Public Hub</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c1c6d6", "tertiary": "#4a47d2", "surface-tint": "#005cbb", "secondary-fixed": "#dbe1ff", "surface-container-high": "#e9e7ed", "secondary": "#0051d5", "on-tertiary-fixed-variant": "#332dbc", "surface-container-highest": "#e3e2e7", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "on-background": "#1a1b1f", "surface": "#faf8fe", "on-secondary-container": "#fefcff", "surface-container-low": "#f4f3f8", "surface-dim": "#dbd9df", "on-surface-variant": "#414753", "on-error-container": "#93000a", "tertiary-fixed-dim": "#c2c1ff", "error-container": "#ffdad6", "primary-container": "#0071e3", "on-secondary-fixed-variant": "#003ea8", "inverse-on-surface": "#f1f0f6", "on-surface": "#1a1b1f", "background": "#faf8fe", "on-secondary": "#ffffff", "on-primary-fixed": "#001b3f", "primary": "#0059b5", "tertiary-container": "#6462ec", "surface-container": "#efedf3", "primary-fixed-dim": "#abc7ff", "on-primary": "#ffffff", "primary-fixed": "#d7e2ff", "on-secondary-fixed": "#00174b", "outline": "#717785", "inverse-primary": "#abc7ff", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#0c006b", "secondary-container": "#316bf3", "on-primary-container": "#fcfbff", "inverse-surface": "#2f3034", "surface-variant": "#e3e2e7", "tertiary-fixed": "#e2dfff", "surface-bright": "#faf8fe", "on-tertiary-container": "#fefaff", "error": "#ba1a1a", "on-primary-fixed-variant": "#00458f", "secondary-fixed-dim": "#b4c5ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-tablet": "2rem", "margin": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "margin-desktop": "3rem", "space-lg": "1.25rem", "gutter": "1rem", "space-md": "0.75rem", "space-xs": "0.25rem" }, "fontFamily": { "display-lg": ["Inter"], "mono-code": ["JetBrains Mono"], "body-lg": ["Inter"], "display-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "mono-code": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "500" }], "body-md": ["13px", { "lineHeight": "19px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="h-14 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs" data-path="events-directory" href="#"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[18px]">terminal</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">Dogfood</span></a><div class="h-4 w-[1px] bg-outline-variant/40 hidden sm:block"></div><nav class="hidden sm:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg"><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" data-path="events-directory" href="#">Browse Events</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" data-path="documentation" href="#">Docs</a></nav></div><div class="flex items-center gap-space-sm"><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" data-path="sign-in" href="#">Sign In</a><a class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all shadow-sm font-label-md text-label-md" data-path="create-account" href="#">Create Account</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-surface flex-1"><div class="flex flex-col w-full relative">
+<!-- Interactive State Controller Bar (iOS Core Floating Toolstrip) -->
+<div class="w-full flex justify-center px-4 pt-6 pb-2">
+<div class="inline-flex items-center gap-1 p-1 bg-surface-container/80 backdrop-blur-md rounded-full shadow-sm max-w-full overflow-x-auto">
+<span class="font-mono-code text-[10px] uppercase tracking-wider text-outline px-2.5 hidden sm:inline-block font-semibold">Live State:</span>
+<button class="state-pill px-3 py-1 rounded-full font-label-sm text-label-sm transition-all duration-150 bg-surface-container-lowest text-on-surface shadow-xs font-semibold" id="btn-state-default" onclick="setFormState('default')" type="button">
+        Default
+      </button>
+<button class="state-pill px-3 py-1 rounded-full font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface" id="btn-state-valid" onclick="setFormState('valid')" type="button">
+        Filled &amp; Valid
+      </button>
+<button class="state-pill px-3 py-1 rounded-full font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface" id="btn-state-errors" onclick="setFormState('errors')" type="button">
+        Validation Errors
+      </button>
+<button class="state-pill px-3 py-1 rounded-full font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface" id="btn-state-missing-consent" onclick="setFormState('missing-consent')" type="button">
+        Missing Consent
+      </button>
+<button class="state-pill px-3 py-1 rounded-full font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface" id="btn-state-loading" onclick="setFormState('loading')" type="button">
+        Loading
+      </button>
+<button class="state-pill px-3 py-1 rounded-full font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface" id="btn-state-success" onclick="setFormState('success')" type="button">
+        Account Created (Success)
+      </button>
+</div>
+</div>
+<!-- Decorative subtle ambient backdrop highlights -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+<div class="absolute top-12 left-1/2 -translate-x-1/2 w-[720px] h-[480px] bg-gradient-to-b from-primary/5 via-tertiary/5 to-transparent rounded-full blur-3xl opacity-70"></div>
+<div class="absolute top-64 right-1/4 w-[380px] h-[380px] bg-secondary-fixed/30 rounded-full blur-3xl opacity-50"></div>
+</div>
+<!-- Centered Content Stage -->
+<div class="w-full flex-1 flex flex-col items-center justify-center px-4 py-8 sm:py-12">
+<!-- Form Card Container -->
+<div class="w-full max-w-[460px] bg-surface-container-lowest/85 backdrop-blur-2xl rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.03),0_12px_32px_rgba(0,0,0,0.04)] p-7 sm:p-9 transition-all duration-300">
+<!-- VIEW A: Registration Form Panel -->
+<div class="flex flex-col gap-5" id="registration-panel">
+<!-- Brand Glyph & Tagline -->
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<!-- Dogfood Brand Mark Minimal Glyph -->
+<div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-xs">
+<span class="material-symbols-outlined text-[17px]">terminal</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Dogfood</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant text-[11px] font-mono-code">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>Self-Hosted</span>
+</div>
+</div>
+<!-- Heading Group -->
+<div class="space-y-1">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight font-semibold">Create Account</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Set up your credentials to participate, build, or judge across self-hosted hackathon workspaces.
+          </p>
+</div>
+<!-- Form Body -->
+<form class="flex flex-col gap-4" id="create-account-form" onsubmit="event.preventDefault(); triggerSubmitState();">
+<!-- Full Name Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="field-name">
+<span>Full Name</span>
+</label>
+<div class="relative">
+<input autocomplete="name" class="w-full h-[38px] px-3.5 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline/70 font-body-md text-body-md outline-none transition-all shadow-xs focus:shadow-[0_0_0_3px_rgba(0,113,227,0.18)]" id="field-name" placeholder="e.g. Alex Chen" type="text" value="">
+</div>
+</div>
+<!-- Email Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="field-email">
+<span>Work or Institutional Email</span>
+</label>
+<div class="relative">
+<input autocomplete="email" class="w-full h-[38px] px-3.5 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline/70 font-body-md text-body-md outline-none transition-all shadow-xs focus:shadow-[0_0_0_3px_rgba(0,113,227,0.18)]" id="field-email" placeholder="alex.chen@organization.org" type="email" value="">
+</div>
+<!-- Email Error Message Container -->
+<p class="hidden font-body-sm text-body-sm text-error flex items-center gap-1 pt-0.5" id="email-error">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>Enter a valid institutional email address</span>
+</p>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="field-password">
+<span>Password</span>
+</label>
+<div class="relative flex items-center">
+<input autocomplete="new-password" class="w-full h-[38px] pl-3.5 pr-10 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline/70 font-body-md text-body-md outline-none transition-all shadow-xs focus:shadow-[0_0_0_3px_rgba(0,113,227,0.18)] tracking-wider" id="field-password" placeholder="••••••••••••" type="password" value="">
+<button class="absolute right-2.5 p-1 rounded-lg text-outline hover:text-on-surface transition-colors" onclick="togglePasswordVisibility('field-password', this)" title="Toggle password visibility" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+<!-- Segmented Password Strength Bar (4 Segments) -->
+<div class="pt-1 flex flex-col gap-1.5">
+<div class="grid grid-cols-4 gap-1.5 h-1">
+<div class="h-full rounded-full bg-surface-container-highest transition-colors" id="bar-seg-1"></div>
+<div class="h-full rounded-full bg-surface-container-highest transition-colors" id="bar-seg-2"></div>
+<div class="h-full rounded-full bg-surface-container-highest transition-colors" id="bar-seg-3"></div>
+<div class="h-full rounded-full bg-surface-container-highest transition-colors" id="bar-seg-4"></div>
+</div>
+<!-- Password Requirements Checklist -->
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 pt-0.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 transition-colors" id="req-len">
+<span class="material-symbols-outlined text-[13px] text-outline">circle</span>
+<span>8+ characters</span>
+</span>
+<span class="flex items-center gap-1 transition-colors" id="req-case">
+<span class="material-symbols-outlined text-[13px] text-outline">circle</span>
+<span>Upper &amp; lowercase</span>
+</span>
+<span class="flex items-center gap-1 transition-colors" id="req-num">
+<span class="material-symbols-outlined text-[13px] text-outline">circle</span>
+<span>Number or symbol</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Confirm Password Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="field-confirm">
+<span>Confirm Password</span>
+</label>
+<div class="relative flex items-center">
+<input autocomplete="new-password" class="w-full h-[38px] pl-3.5 pr-10 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline/70 font-body-md text-body-md outline-none transition-all shadow-xs focus:shadow-[0_0_0_3px_rgba(0,113,227,0.18)]" id="field-confirm" placeholder="Re-enter password" type="password" value="">
+<button class="absolute right-2.5 p-1 rounded-lg text-outline hover:text-on-surface transition-colors" onclick="togglePasswordVisibility('field-confirm', this)" title="Toggle password visibility" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+<!-- Confirm Password Error Message Container -->
+<p class="hidden font-body-sm text-body-sm text-error flex items-center gap-1 pt-0.5" id="confirm-error">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>Passwords do not match</span>
+</p>
+</div>
+<!-- Consent Area -->
+<div class="pt-1 flex flex-col gap-1.5">
+<div class="flex items-start gap-2.5 p-2 rounded-xl transition-all" id="consent-container">
+<div class="pt-0.5 flex items-center">
+<input class="w-4 h-4 rounded-md text-primary focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" id="consent-checkbox" type="checkbox">
+</div>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer select-none leading-tight" for="consent-checkbox">
+                I agree to the
+                <a class="text-primary hover:text-primary-container font-medium underline underline-offset-2" href="#">Terms of Service</a>
+                and
+                <a class="text-primary hover:text-primary-container font-medium underline underline-offset-2" href="#">Privacy Policy</a>
+</label>
+</div>
+<p class="hidden font-body-sm text-body-sm text-error flex items-center gap-1 px-2" id="consent-error">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>You must agree to the Terms of Service to continue</span>
+</p>
+</div>
+<!-- Primary Submit Button -->
+<button class="mt-1 w-full h-[40px] px-4 rounded-xl bg-primary-container hover:bg-secondary-container active:scale-[0.985] text-on-primary-container font-label-md text-label-md font-semibold transition-all shadow-xs flex items-center justify-center gap-2" id="btn-submit" type="submit">
+<span id="btn-submit-text">Create Account →</span>
+<div class="hidden w-4 h-4 rounded-full border-2 border-on-primary-container border-t-transparent animate-spin" id="btn-submit-spinner"></div>
+</button>
+</form>
+<!-- SSO Divider -->
+<div class="flex items-center gap-3 py-1">
+<div class="flex-1 h-[1px] bg-surface-container-high"></div>
+<span class="font-label-sm text-label-sm text-outline font-medium tracking-tight">or authenticate with</span>
+<div class="flex-1 h-[1px] bg-surface-container-high"></div>
+</div>
+<!-- SSO Buttons Group -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- GitHub SSO -->
+<button class="h-[36px] px-3 rounded-xl bg-surface-container-low hover:bg-surface-container active:scale-[0.99] text-on-surface font-label-md text-label-md font-medium transition-all shadow-2xs flex items-center justify-center gap-2" type="button">
+<svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+<span>GitHub</span>
+</button>
+<!-- SAML / Okta SSO -->
+<button class="h-[36px] px-3 rounded-xl bg-surface-container-low hover:bg-surface-container active:scale-[0.99] text-on-surface font-label-md text-label-md font-medium transition-all shadow-2xs flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[17px] text-tertiary">key</span>
+<span>SAML / Okta</span>
+</button>
+</div>
+</div>
+<!-- VIEW B: Success / Created State Panel (Toggled via Switcher or Submission) -->
+<div class="hidden flex-col items-center text-center py-5 gap-5" id="success-panel">
+<div class="relative">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[32px]">check_circle</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Account Created</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+            Your workspace profile has been provisioned. Initializing session telemetry and redirecting to the Hackathon Event Portal...
+          </p>
+</div>
+<!-- Ambient Progress Bar -->
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-2">
+<div class="h-full bg-primary-container rounded-full w-2/3 animate-[pulse_1.5s_infinite]"></div>
+</div>
+<div class="w-full pt-3 flex flex-col gap-2">
+<a class="w-full h-[40px] px-4 rounded-xl bg-primary-container hover:bg-secondary-container active:scale-[0.985] text-on-primary-container font-label-md text-label-md font-semibold transition-all shadow-xs flex items-center justify-center gap-1.5" data-path="events-directory" href="#">
+<span>Continue Immediately</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm py-1.5 transition-colors" onclick="setFormState('default')" type="button">
+            Return to form configuration
+          </button>
+</div>
+</div>
+</div>
+<!-- Below Card Footnotes and Navigation links -->
+<div class="mt-6 flex flex-col items-center gap-2.5 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Already have an account?
+        <a class="font-semibold text-primary hover:text-primary-container transition-colors ml-1" data-path="sign-in" href="#">Sign in</a>
+</p>
+<div class="inline-flex items-center gap-1.5 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>256-bit TLS encrypted session • Air-gapped key management enabled</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function togglePasswordVisibility(fieldId, triggerBtn) {
+    const field = document.getElementById(fieldId);
+    const icon = triggerBtn.querySelector('.material-symbols-outlined');
+    if (!field || !icon) return;
+
+    if (field.type === 'password') {
+      field.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      field.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function setFormState(state) {
+    // Reset Pill Active Styles
+    const pills = document.querySelectorAll('.state-pill');
+    pills.forEach((p) => {
+      p.className = 'state-pill px-3 py-1 rounded-full font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface';
+    });
+    const activeBtn = document.getElementById('btn-state-' + state);
+    if (activeBtn) {
+      activeBtn.className = 'state-pill px-3 py-1 rounded-full font-label-sm text-label-sm transition-all duration-150 bg-surface-container-lowest text-on-surface shadow-xs font-semibold';
+    }
+
+    const regPanel = document.getElementById('registration-panel');
+    const successPanel = document.getElementById('success-panel');
+    const nameInput = document.getElementById('field-name');
+    const emailInput = document.getElementById('field-email');
+    const emailError = document.getElementById('email-error');
+    const passInput = document.getElementById('field-password');
+    const confirmInput = document.getElementById('field-confirm');
+    const confirmError = document.getElementById('confirm-error');
+    const consentContainer = document.getElementById('consent-container');
+    const consentCheckbox = document.getElementById('consent-checkbox');
+    const consentError = document.getElementById('consent-error');
+    const submitBtn = document.getElementById('btn-submit');
+    const submitText = document.getElementById('btn-submit-text');
+    const submitSpinner = document.getElementById('btn-submit-spinner');
+
+    const seg1 = document.getElementById('bar-seg-1');
+    const seg2 = document.getElementById('bar-seg-2');
+    const seg3 = document.getElementById('bar-seg-3');
+    const seg4 = document.getElementById('bar-seg-4');
+
+    const reqLen = document.getElementById('req-len');
+    const reqCase = document.getElementById('req-case');
+    const reqNum = document.getElementById('req-num');
+
+    // Reset base field visuals
+    regPanel.classList.remove('hidden');
+    successPanel.classList.add('hidden');
+    emailError.classList.add('hidden');
+    confirmError.classList.add('hidden');
+    consentError.classList.add('hidden');
+    consentContainer.classList.remove('bg-error-container/20');
+    submitBtn.classList.remove('opacity-50', 'pointer-events-none');
+    submitSpinner.classList.add('hidden');
+    submitText.textContent = 'Create Account →';
+
+    nameInput.classList.remove('bg-error-container/10');
+    emailInput.classList.remove('bg-error-container/10');
+    confirmInput.classList.remove('bg-error-container/10');
+
+    // Reset strength bars
+    seg1.className = 'h-full rounded-full bg-surface-container-highest transition-colors';
+    seg2.className = 'h-full rounded-full bg-surface-container-highest transition-colors';
+    seg3.className = 'h-full rounded-full bg-surface-container-highest transition-colors';
+    seg4.className = 'h-full rounded-full bg-surface-container-highest transition-colors';
+
+    function resetReq(el) {
+      el.className = 'flex items-center gap-1 transition-colors';
+      const icon = el.querySelector('.material-symbols-outlined');
+      icon.textContent = 'circle';
+      icon.className = 'material-symbols-outlined text-[13px] text-outline';
+    }
+    resetReq(reqLen);
+    resetReq(reqCase);
+    resetReq(reqNum);
+
+    if (state === 'default') {
+      nameInput.value = '';
+      emailInput.value = '';
+      passInput.value = '';
+      confirmInput.value = '';
+      consentCheckbox.checked = false;
+    } else if (state === 'valid') {
+      nameInput.value = 'Alex Morgan';
+      emailInput.value = 'alex.morgan@mit.edu';
+      passInput.value = 'K9-dogfood-Secure!';
+      confirmInput.value = 'K9-dogfood-Secure!';
+      consentCheckbox.checked = true;
+
+      // Strong state indicator
+      seg1.className = 'h-full rounded-full bg-primary-container transition-colors';
+      seg2.className = 'h-full rounded-full bg-primary-container transition-colors';
+      seg3.className = 'h-full rounded-full bg-primary-container transition-colors';
+      seg4.className = 'h-full rounded-full bg-primary-container transition-colors';
+
+      [reqLen, reqCase, reqNum].forEach((el) => {
+        el.className = 'flex items-center gap-1 text-on-surface font-medium transition-colors';
+        const icon = el.querySelector('.material-symbols-outlined');
+        icon.textContent = 'check_circle';
+        icon.className = 'material-symbols-outlined text-[13px] text-primary';
+      });
+    } else if (state === 'errors') {
+      nameInput.value = 'Alex';
+      emailInput.value = 'invalid-email-address';
+      emailInput.classList.add('bg-error-container/10');
+      emailError.classList.remove('hidden');
+
+      passInput.value = 'short';
+      confirmInput.value = 'different-pass';
+      confirmInput.classList.add('bg-error-container/10');
+      confirmError.classList.remove('hidden');
+
+      // Weak segment bar
+      seg1.className = 'h-full rounded-full bg-error transition-colors';
+
+      // Specific unmet checklist pills
+      reqLen.className = 'flex items-center gap-1 text-error font-medium transition-colors';
+      reqLen.querySelector('.material-symbols-outlined').textContent = 'cancel';
+      reqLen.querySelector('.material-symbols-outlined').className = 'material-symbols-outlined text-[13px] text-error';
+
+      reqCase.className = 'flex items-center gap-1 text-outline transition-colors';
+      reqNum.className = 'flex items-center gap-1 text-outline transition-colors';
+
+      consentCheckbox.checked = true;
+    } else if (state === 'missing-consent') {
+      nameInput.value = 'Alex Morgan';
+      emailInput.value = 'alex.morgan@mit.edu';
+      passInput.value = 'K9-dogfood-Secure!';
+      confirmInput.value = 'K9-dogfood-Secure!';
+      consentCheckbox.checked = false;
+
+      consentContainer.classList.add('bg-error-container/20');
+      consentError.classList.remove('hidden');
+      submitBtn.classList.add('opacity-50', 'pointer-events-none');
+
+      // Bars valid
+      seg1.className = 'h-full rounded-full bg-primary-container transition-colors';
+      seg2.className = 'h-full rounded-full bg-primary-container transition-colors';
+      seg3.className = 'h-full rounded-full bg-primary-container transition-colors';
+      seg4.className = 'h-full rounded-full bg-primary-container transition-colors';
+    } else if (state === 'loading') {
+      nameInput.value = 'Alex Morgan';
+      emailInput.value = 'alex.morgan@mit.edu';
+      passInput.value = 'K9-dogfood-Secure!';
+      confirmInput.value = 'K9-dogfood-Secure!';
+      consentCheckbox.checked = true;
+
+      submitBtn.classList.add('pointer-events-none', 'opacity-90');
+      submitText.textContent = 'Creating Account...';
+      submitSpinner.classList.remove('hidden');
+
+      seg1.className = 'h-full rounded-full bg-primary-container transition-colors';
+      seg2.className = 'h-full rounded-full bg-primary-container transition-colors';
+      seg3.className = 'h-full rounded-full bg-primary-container transition-colors';
+      seg4.className = 'h-full rounded-full bg-primary-container transition-colors';
+    } else if (state === 'success') {
+      regPanel.classList.add('hidden');
+      successPanel.classList.remove('hidden');
+    }
+  }
+
+  function triggerSubmitState() {
+    setFormState('loading');
+    setTimeout(() => {
+      setFormState('success');
+    }, 900);
+  }
+</script></main><footer class="w-full bg-surface-container-lowest/80 border-t border-outline-variant/30 py-6"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-outline-variant/40 font-mono-code text-mono-code"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span>v2.4.0 Self-Hosted</span><span class="text-outline-variant">•</span><span>Cluster OK</span></div></div><div class="flex items-center gap-space-lg"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="documentation" href="#">Docs</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="github-repository" href="#">GitHub</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="api-status" href="#">API Status</a></div></div></footer></body></html>

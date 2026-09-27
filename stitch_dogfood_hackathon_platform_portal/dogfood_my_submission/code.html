@@ -1,0 +1,801 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#faf8fe","surface-variant":"#e3e2e7","on-error-container":"#93000a","on-secondary-fixed-variant":"#003ea8","surface-container-low":"#f4f3f8","primary":"#0059b5","tertiary-fixed-dim":"#c2c1ff","outline-variant":"#c1c6d6","surface-container":"#efedf3","on-surface":"#1a1b1f","on-tertiary-fixed-variant":"#332dbc","secondary":"#0051d5","primary-container":"#0071e3","on-primary":"#ffffff","on-primary-fixed":"#001b3f","on-secondary-container":"#fefcff","secondary-fixed":"#dbe1ff","on-tertiary-container":"#fefaff","outline":"#717785","on-secondary-fixed":"#00174b","background":"#faf8fe","inverse-surface":"#2f3034","primary-fixed-dim":"#abc7ff","error":"#ba1a1a","on-primary-fixed-variant":"#00458f","surface-container-high":"#e9e7ed","primary-fixed":"#d7e2ff","on-tertiary":"#ffffff","on-secondary":"#ffffff","secondary-fixed-dim":"#b4c5ff","on-background":"#1a1b1f","tertiary-fixed":"#e2dfff","surface-container-highest":"#e3e2e7","surface":"#faf8fe","on-tertiary-fixed":"#0c006b","tertiary":"#4a47d2","inverse-primary":"#abc7ff","secondary-container":"#316bf3","inverse-on-surface":"#f1f0f6","error-container":"#ffdad6","on-error":"#ffffff","tertiary-container":"#6462ec","on-primary-container":"#fcfbff","surface-dim":"#dbd9df","surface-container-lowest":"#ffffff","surface-tint":"#005cbb","on-surface-variant":"#414753"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-tablet":"2rem","space-xl":"2rem","space-xs":"0.25rem",gutter:"1rem","space-sm":"0.5rem",margin:"1rem","margin-desktop":"3rem","space-md":"0.75rem","space-lg":"1.25rem","gutter-desktop":"1.5rem"},fontFamily:{"display-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"display-lg-mobile":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"mono-code":["JetBrains Mono"],"label-sm":["Inter"],"body-sm":["Inter"],"label-md":["Inter"]},fontSize:{"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-md":["13px",{lineHeight:"19px",letterSpacing:"0em",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"mono-code":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.01em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.005em",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-64 bg-surface-container-low/95 backdrop-blur-2xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Dogfood Platform Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XFolziqjX2O3dIfh14x-0pksaympgFfP4_AHvWofl_NJ4aWB-bcIhJV87ZncKEY3qGSKoZ-lgovdenQDBhHa-EXUB0-p-vq5fwNG3WrVxSM4gg2JeG2n711UpoLXyVmrmxsNoTWjRpbhXhXfI7h7KpEoEFCJ97iiGNlaWheup3EvMx6RKOhEPMUQJNbzMqyvXDuYqJoBlviuPHWYJstuz94qCkbiefh8sCaRkklhnTmlJ_q80ber93ukl8"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Dogfood</span><span class="font-mono-code text-mono-code text-on-surface-variant leading-none mt-1">v2.4.0 Self-Hosted</span></div></div></div><div class="px-space-md mt-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold px-space-sm">Platform Core</span></div><nav class="flex flex-col gap-1 px-space-sm mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="events" href="#">Events</a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="dogfood---my-submission" href="#">Submissions / My Submission</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dogfood---submission-review" href="#">Submission Review</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="judging-and-rubrics" href="#">Judging &amp; Rubrics</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="teams-and-matchmaking" href="#">Teams &amp; Matchmaking</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="team-creation" href="#">Team Creation</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics-and-telemetry" href="#">Analytics &amp; Telemetry</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="platform-settings" href="#">Platform Settings</a></nav></div><div class="p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-surface-container/60"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Cluster OK</span></div><span class="font-mono-code text-mono-code text-on-surface-variant">99.98%</span></div><div class="flex items-center justify-between pt-space-xs"><a class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[14px]">help</span><span>Docs</span></a><button class="flex items-center justify-center p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">left_panel_close</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-2xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg"><nav aria-label="Breadcrumb" class="flex items-center gap-1.5 font-label-md text-label-md"><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">Events</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors max-w-[140px] truncate sm:max-w-none">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">Submissions</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="font-semibold text-on-surface">My Submission</span></nav><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)] text-on-surface-variant w-64"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">search</span><span class="font-body-sm text-body-sm text-on-surface-variant flex-1">Search submissions, teams...</span><kbd class="font-mono-code text-mono-code px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm font-medium">Production</span></div><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden sm:flex flex-col text-right"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Alex Chen</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Senior Evaluator</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Flow Simulator Bar (Dogfood Design Tooling) -->
+<div class="sticky top-16 z-30 w-full bg-surface-container-low/90 backdrop-blur-xl px-space-lg py-2.5 shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap- space-sm">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary-container text-on-primary text-[11px] font-mono-code font-bold">⌘</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Flow Simulator:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5" id="simulator-controls">
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-primary-container text-on-primary-container font-medium shadow-sm transition-all" data-sim="submitted" type="button">
+          Submitted &amp; Locked
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" data-sim="draft" type="button">
+          Draft (Editable)
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" data-sim="pending" type="button">
+          Eligibility Pending
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" data-sim="ineligible" type="button">
+          Ineligible (Flagged)
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" data-sim="judging" type="button">
+          Judging Active
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" data-sim="results" type="button">
+          Results Published
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" data-sim="skeleton" type="button">
+          Skeleton
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" data-sim="empty" type="button">
+          No Submission
+        </button>
+</div>
+<div class="hidden xl:flex items-center gap-1 font-mono-code text-[11px] text-on-surface-variant">
+<span>STATE:</span>
+<span class="text-primary font-semibold" id="active-state-tag">SUBMITTED_LOCKED</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto w-full px-gutter-desktop py-space-xl flex flex-col gap-space-lg">
+<!-- Skeleton Container (Shown when simulator clicks 'Skeleton') -->
+<div class="hidden flex-col gap-space-lg animate-pulse w-full" id="skeleton-view">
+<div class="h-20 bg-surface-container-high rounded-xl w-full"></div>
+<div class="h-24 bg-surface-container-high rounded-xl w-full"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="h-28 bg-surface-container-high rounded-xl"></div>
+<div class="h-28 bg-surface-container-high rounded-xl"></div>
+<div class="h-28 bg-surface-container-high rounded-xl"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<div class="lg:col-span-2 h-96 bg-surface-container-high rounded-xl"></div>
+<div class="h-96 bg-surface-container-high rounded-xl"></div>
+</div>
+</div>
+<!-- Empty State Container (Shown when simulator clicks 'No Submission') -->
+<div class="hidden flex-col items-center justify-center py-20 px-space-xl text-center bg-surface-container-lowest rounded-2xl shadow-sm" id="empty-view">
+<div class="w-16 h-16 rounded-2xl bg-surface-container flex items-center justify-center text-primary-container mb-space-md">
+<span class="material-symbols-outlined text-[32px]">folder_open</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">No Submission Recorded</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mt-2 mb-space-lg">
+        Your team "Neural Vanguard" has registered for the AI Agents World Cup 2025, but no dossier or codebase has been submitted to the jury chamber yet.
+      </p>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-secondary-container transition-all flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+          Initialize Submission Draft
+        </button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all" type="button">
+          Browse Evaluation Guide
+        </button>
+</div>
+</div>
+<!-- Live Content Container (Default viewable state) -->
+<div class="flex flex-col gap-space-lg w-full" id="main-content-view">
+<!-- Dynamic Celebration Banner (For Results Published state) -->
+<div class="hidden rounded-xl bg-gradient-to-r from-primary/10 via-tertiary-fixed/30 to-secondary-container/10 p-space-lg shadow-sm" id="results-banner">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">emoji_events</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Jury Evaluation Published</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">94.8 / 100 Overall</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                Chamber consensus reached. "AgentBench Zero" ranked <strong class="text-on-surface">2nd Place · Autonomous Code Track</strong>.
+              </p>
+</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium shadow-sm hover:bg-primary-container transition-all flex items-center gap-1.5 shrink-0 self-start sm:self-auto" type="button">
+<span>View Rubric Ballots &amp; Jury Remarks</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Ineligible Notice Banner (For Ineligible state) -->
+<div class="hidden rounded-xl bg-error-container text-on-error-container p-space-lg shadow-sm" id="ineligible-banner">
+<div class="flex items-start gap-space-md">
+<span class="material-symbols-outlined text-[24px] text-error shrink-0">report_problem</span>
+<div class="flex-1">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-error-container">Charter Compliance Flagged: Submission Ineligible</h3>
+<p class="font-body-md text-body-md mt-1 text-on-error-container/90">
+              The automated verification harness failed during reproduction: <strong>Missing `reproduce_eval.sh` execution script in repo root</strong>. Jury review is paused.
+            </p>
+<div class="mt-space-sm flex items-center gap-space-md font-label-md text-label-md">
+<button class="underline font-semibold hover:text-error transition-colors" type="button">Submit Appeal &amp; Fast-Track Re-eval</button>
+<button class="hover:underline text-on-error-container/80" type="button">View Failure Telemetry Log</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Page Header & Spatial Context -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-3">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">AgentBench Zero</h1>
+<!-- Dynamic Status Badge -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed/70 text-on-secondary-fixed shadow-sm" id="status-badge">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide uppercase" id="status-badge-text">✓ SUBMITTED &amp; LOCKED</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2 mt-1.5 font-body-md text-body-md text-on-surface-variant">
+<span>Team: <strong class="text-on-surface font-medium">Neural Vanguard</strong></span>
+<span>•</span>
+<span>Track: <strong class="text-on-surface font-medium">Autonomous Code Synthesis</strong></span>
+<span>•</span>
+<span class="font-mono-code text-mono-code px-1.5 py-0.5 rounded bg-surface-container">ID: sub-df-8f2c91</span>
+<span class="text-on-surface-variant hidden sm:inline" id="submitted-timestamp-meta">• Submitted Nov 15, 14:22 UTC</span>
+</div>
+</div>
+<!-- Top Right Actions Strip -->
+<div class="flex items-center gap-2 self-start lg:self-center">
+<button class="hidden px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-medium shadow-sm hover:bg-secondary-container transition-all flex items-center gap-1.5" id="edit-draft-action" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Submission</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium shadow-sm hover:bg-surface-container transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span>Preview Dossier ↗</span>
+</button>
+<button class="px-2.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all shadow-sm" title="Export Verification JSON" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</div>
+<!-- Horizontal Lifecycle Stepper Strip -->
+<div class="w-full bg-surface-container-lowest rounded-2xl p-space-md shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-2 relative">
+<!-- Step 1: Draft -->
+<div class="flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-surface-container-low transition-all" id="step-1">
+<div class="flex items-center justify-between w-full">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono-code text-xs font-semibold">✓</span>
+<span class="hidden md:inline font-mono-code text-mono-code text-on-surface-variant">01</span>
+</div>
+<div class="ml-3 md:ml-0 md:mt-2">
+<p class="font-label-md text-label-md font-semibold text-on-surface">Draft</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Initialized Nov 12</p>
+</div>
+</div>
+<!-- Step 2: Submitted -->
+<div class="flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-surface-container-low transition-all" id="step-2">
+<div class="flex items-center justify-between w-full">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono-code text-xs font-semibold">✓</span>
+<span class="hidden md:inline font-mono-code text-mono-code text-on-surface-variant">02</span>
+</div>
+<div class="ml-3 md:ml-0 md:mt-2">
+<p class="font-label-md text-label-md font-semibold text-on-surface">Submitted</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Locked Nov 15</p>
+</div>
+</div>
+<!-- Step 3: Eligibility Reviewed -->
+<div class="flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-surface-container-low transition-all" id="step-3">
+<div class="flex items-center justify-between w-full">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono-code text-xs font-semibold" id="step-3-badge">✓</span>
+<span class="hidden md:inline font-mono-code text-mono-code text-on-surface-variant">03</span>
+</div>
+<div class="ml-3 md:ml-0 md:mt-2">
+<p class="font-label-md text-label-md font-semibold text-on-surface" id="step-3-title">Eligibility Verified</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate" id="step-3-sub">Charter compliant</p>
+</div>
+</div>
+<!-- Step 4: Judging -->
+<div class="flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-primary-fixed/30 shadow-sm transition-all" id="step-4">
+<div class="flex items-center justify-between w-full">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono-code text-xs font-semibold animate-pulse" id="step-4-badge">●</span>
+<span class="hidden md:inline font-mono-code text-mono-code text-primary font-bold">ACTIVE</span>
+</div>
+<div class="ml-3 md:ml-0 md:mt-2">
+<p class="font-label-md text-label-md font-semibold text-primary" id="step-4-title">Judging Chamber</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate" id="step-4-sub">3 of 5 ballots in</p>
+</div>
+</div>
+<!-- Step 5: Results -->
+<div class="flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-surface-container-low opacity-60 transition-all" id="step-5">
+<div class="flex items-center justify-between w-full">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-mono-code text-xs" id="step-5-badge">5</span>
+<span class="hidden md:inline font-mono-code text-mono-code text-on-surface-variant">05</span>
+</div>
+<div class="ml-3 md:ml-0 md:mt-2">
+<p class="font-label-md text-label-md font-medium text-on-surface" id="step-5-title">Results Announcement</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate" id="step-5-sub">Nov 18, 16:00 UTC</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Key Info Card Row (3 Compact Frosted Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1: Timestamp & Digest -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Timestamp &amp; Digest</span>
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-1" id="digest-timestamp">Nov 15, 2025 · 14:22:09 UTC</p>
+</div>
+<div class="mt-3 flex items-center gap-1.5 font-mono-code text-mono-code bg-surface-container px-2.5 py-1.5 rounded-lg text-on-surface-variant truncate">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="truncate">sha256:4a8f9c1d2e5b77...8f9c</span>
+</div>
+</div>
+<!-- Card 2: Eligibility Status -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col justify-between" id="eligibility-card">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Eligibility Verification</span>
+<span class="material-symbols-outlined text-[16px]" id="eligibility-icon">check_circle</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-1" id="eligibility-status-text">✓ Verified &amp; Compliant</p>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2" id="eligibility-desc-text">
+            Charter, OCI runner sandbox &amp; Apache 2.0 open-source license confirmed by organizer jury.
+          </p>
+</div>
+<!-- Card 3: Judging Telemetry -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col justify-between" id="judging-card">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Blind Rubric Chamber</span>
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface" id="judging-headline-text">In Progress (Chamber #4)</p>
+</div>
+</div>
+<div class="mt-2 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span id="ballots-text">3 of 5 blind evaluations filed</span>
+<span class="font-mono-code font-semibold" id="ballots-pct">60%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" id="judging-progress-bar" style="width: 60%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Rich Submission Details (~70%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Section 01: Project Identity & Abstract -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">01 / Project Identity &amp; Overview</span>
+<span class="font-mono-code text-mono-code text-on-surface-variant">canonical: dogfood.dev/s/agentbench-zero</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Dual-Agent Autonomous SWE Synthesis Engine</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+              AgentBench Zero is an autonomous dual-agent software engineering framework orchestrating a high-level recursive architectural planner alongside a sandboxed AST compiler agent. Designed to tackle repository-level patch generation with zero human intervention.
+            </p>
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SWE-Bench Verified</span>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-0.5">48.2% Solve Rate</p>
+<span class="font-mono-code text-[11px] text-secondary">+12.4% over baseline</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Median Patch Latency</span>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-0.5">38.4 seconds</p>
+<span class="font-mono-code text-[11px] text-on-surface-variant">4x parallel rollouts</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sandbox Safety</span>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-0.5">gVisor Isolated</p>
+<span class="font-mono-code text-[11px] text-on-surface-variant">Tier 0 rootless runtime</span>
+</div>
+</div>
+</div>
+<!-- Section 02: Architecture & Methodology -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">02 / Architecture &amp; Execution Topology</span>
+<div class="mt-space-md flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Rather than deploying an monolithic generalist LLM, our topology bifurcates responsibilities between an <strong class="text-on-surface">Architect Agent</strong> (reasoning over cross-file dependency trees and generating reproducible unit proofs) and a specialized <strong class="text-on-surface">Refactor Synthesizer</strong> executing within an ephemeral microVM.
+              </p>
+<!-- SVG Architecture Topology Diagram -->
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between mb-3">
+<span class="font-mono-code text-mono-code text-on-surface-variant">TOPOLOGY FLOW: AGENT CO-ORDINATION GRAPH</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Asynchronous RPC</span>
+</div>
+<svg class="w-full h-36" fill="none" viewBox="0 0 680 140" xmlns="http://www.w3.org/2000/svg">
+<!-- Flow Node 1 -->
+<rect class="shadow-sm" fill="#FFFFFF" height="70" rx="8" width="130" x="10" y="30"></rect>
+<text fill="#1A1B1F" font-family="Inter" font-size="12" font-weight="600" x="25" y="60">Repo Ingestion</text>
+<text fill="#717785" font-family="JetBrains Mono" font-size="10" x="25" y="80">AST Parse &amp; Index</text>
+<!-- Arrow 1 to 2 -->
+<path d="M140 65 H175" stroke="#0059B5" stroke-dasharray="3 3" stroke-width="2"></path>
+<polygon fill="#0059B5" points="175,61 183,65 175,69"></polygon>
+<!-- Flow Node 2 -->
+<rect class="shadow-sm" fill="#FFFFFF" height="100" rx="8" width="150" x="185" y="15"></rect>
+<text fill="#0059B5" font-family="Inter" font-size="12" font-weight="700" x="200" y="45">Architect Agent</text>
+<text fill="#414753" font-family="Inter" font-size="10" x="200" y="65">Symbolic Dependency</text>
+<text fill="#414753" font-family="Inter" font-size="10" x="200" y="82">Failure Reproduction</text>
+<text fill="#717785" font-family="JetBrains Mono" font-size="9" x="200" y="98">vLLM / Llama-3-70B</text>
+<!-- Arrow 2 to 3 -->
+<path d="M335 65 H370" stroke="#0059B5" stroke-width="2"></path>
+<polygon fill="#0059B5" points="370,61 378,65 370,69"></polygon>
+<!-- Flow Node 3 -->
+<rect class="shadow-sm" fill="#FFFFFF" height="100" rx="8" width="150" x="380" y="15"></rect>
+<text fill="#0051D5" font-family="Inter" font-size="12" font-weight="700" x="395" y="45">Synthesizer Agent</text>
+<text fill="#414753" font-family="Inter" font-size="10" x="395" y="65">Sandboxed Test Suite</text>
+<text fill="#414753" font-family="Inter" font-size="10" x="395" y="82">Git Diff Generation</text>
+<text fill="#717785" font-family="JetBrains Mono" font-size="9" x="395" y="98">DeepSeek-Coder-V2</text>
+<!-- Arrow 3 to 4 -->
+<path d="M530 65 H565" stroke="#0059B5" stroke-width="2"></path>
+<polygon fill="#0059B5" points="565,61 573,65 565,69"></polygon>
+<!-- Flow Node 4 -->
+<rect class="shadow-sm" fill="#FFFFFF" height="70" rx="8" width="95" x="575" y="30"></rect>
+<text fill="#1A1B1F" font-family="Inter" font-size="12" font-weight="600" x="590" y="58">Verification</text>
+<text fill="#0051D5" font-family="Inter" font-size="10" font-weight="600" x="590" y="76">Pass (100%)</text>
+</svg>
+</div>
+</div>
+</div>
+<!-- Section 03: Repository & Deployed Artifacts -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">03 / Repository &amp; Artifact Verification</span>
+<div class="mt-space-md grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<a class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between group" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">GitHub Repository</span>
+<p class="font-mono-code text-[11px] text-on-surface-variant">neural-vanguard/agentbench-zero</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono-code text-[11px] text-secondary font-medium">commit 8b4ef21</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</div>
+</a>
+<a class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between group" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Live Evaluator Demo</span>
+<p class="font-mono-code text-[11px] text-on-surface-variant">https://agentbench.dogfood.run</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-mono-code text-[11px]">42ms RTT</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Section 04: Visual Deliverables Gallery (High-Res Media) -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">04 / Visual Deliverables &amp; Run Telemetry</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 high-resolution exhibits</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Screenshot 1 -->
+<div class="flex flex-col gap-2">
+<div class="overflow-hidden rounded-xl bg-surface-container h-48 relative">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="High-resolution interface screengrab of an autonomous AI software developer terminal running dual agent consensus, dark mode terminal with bright blue syntax highlighting and latency indicators in macOS Cupertino light aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyHhJuZ-o2tI72dOW1PsPZEBdzCtXozS2BIXI2PJ5CQhXY9w5aO-9jeoCv3ReGZlOBzXbtvuzIr5qaHYlrRk39eomR2FXgFAhTf-oBJEqUvTY42QD_uscZIjJpuRVV0fLX0qkOO5vFqIwNpdlj55q3I4VnWMqsISLwCZPoYGXZoQsA6uM7MvAJ6MhiGRDFABxKBGIBIOyRfGh14dzAu4oXhOxsjSALnak6loDwJNjD2b-0AwYWEAvMwA">
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-md bg-inverse-surface/80 text-inverse-on-surface font-mono-code text-[10px]">Matrix Evaluation Console</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Figure 1.1: Live AST solver traversing 1,400 files in under 3 seconds.</p>
+</div>
+<!-- Screenshot 2 -->
+<div class="flex flex-col gap-2">
+<div class="overflow-hidden rounded-xl bg-surface-container h-48 relative">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="Technical blueprint visual showing neural multi-agent architecture and distributed RPC graph rendered in crisp clean light minimalist palette with subtle shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9-lE5ccI5KO8FVmr2UHJ2bHhmVi1SufhGUNy7AORSIUUE9JhdEmXZuiU8Yhy76EBW-QoeYhp-ZdPw9xWzcLFEiW2r2IalkgwrSjcbQ2GKCeytcc8ep8D7d45-BCaTOI-gl20RBYnUqGIZj47ND7NyupJYfVK3cidbcuNEwGurAQKhrPetNOwVyJlhS_o4HSIKU7Nk4zlLskFKR7Qr5MjtaZDqa4JEVeEua3whGhymQG2uL0-t2yyZrg">
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-md bg-inverse-surface/80 text-inverse-on-surface font-mono-code text-[10px]">Container Isolation Tree</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Figure 1.2: Rootless gVisor isolation barrier preventing test escape.</p>
+</div>
+</div>
+</div>
+<!-- Section 05: Technologies & Frameworks -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">05 / Stack &amp; Infrastructure Ecosystem</span>
+<div class="mt-space-md flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-mono-code text-mono-code text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>Python 3.12 (Strict Typing)
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-mono-code text-mono-code text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>PyTorch 2.3.1
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-mono-code text-mono-code text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>vLLM PagedAttention v2
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-mono-code text-mono-code text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>gVisor Container Sandbox
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-mono-code text-mono-code text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>SWE-Bench Harness 1.2
+              </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-mono-code text-mono-code text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>Docker OCI v2
+              </span>
+</div>
+</div>
+<!-- Section 06: Juror Reproducibility Instruction -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">06 / Juror Reproducibility &amp; Hardware Spec</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Validated by Runner</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-sm">
+              Organizers and jury members can replicate the complete benchmark evaluation locally in one line using the pinned image:
+            </p>
+<div class="rounded-xl bg-inverse-surface p-space-md text-inverse-on-surface font-mono-code text-mono-code flex items-center justify-between overflow-x-auto shadow-inner">
+<code>docker run --runtime=runsc --gpus all -v /tmp/bench:/bench ghcr.io/neural-vanguard/agentbench:eval-v2.4 --seed 42</code>
+<button class="ml-4 px-2 py-1 rounded bg-surface-container/20 hover:bg-surface-container/40 text-inverse-on-surface text-xs font-mono-code transition-colors" title="Copy snippet" type="button">Copy</button>
+</div>
+<div class="mt-3 flex items-center gap-space-lg font-mono-code text-[11px] text-on-surface-variant">
+<span>Req: 1x NVIDIA A10G (24GB VRAM)</span>
+<span>•</span>
+<span>Disk: 18 GB ephemeral</span>
+<span>•</span>
+<span>Runtime: ~14 mins</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar Metadata & Integrity (~30%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Team Vanguard Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Submitting Team</span>
+<a class="font-label-md text-label-md text-primary font-medium hover:underline flex items-center gap-1" href="#">
+<span>Manage Team</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<div class="mt-space-md flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary font-bold flex items-center justify-center text-lg shadow-sm">
+                NV
+              </div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Neural Vanguard</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 core contributors</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-space-sm divide-y-0">
+<!-- Member 1: Alex -->
+<div class="flex items-center justify-between py-1.5">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary text-xs font-semibold">AC</div>
+<div>
+<p class="font-label-md text-label-md font-medium text-on-surface">Alex Chen</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Team Lead &amp; LLM Arch</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-mono-code">Captain</span>
+</div>
+<!-- Member 2: Sarah -->
+<div class="flex items-center justify-between py-1.5">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-secondary flex items-center justify-center text-on-secondary text-xs font-semibold">SL</div>
+<div>
+<p class="font-label-md text-label-md font-medium text-on-surface">Sarah Lin</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Sandbox &amp; Kernel Infra</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-code">Member</span>
+</div>
+<!-- Member 3: Marcus -->
+<div class="flex items-center justify-between py-1.5">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary text-xs font-semibold">MT</div>
+<div>
+<p class="font-label-md text-label-md font-medium text-on-surface">Marcus Tian</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Evaluation &amp; Benchmarks</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-code">Member</span>
+</div>
+</div>
+<!-- Compute pod info -->
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px]">
+<span>Allocated Runner:</span>
+<span class="text-on-surface font-semibold">gVisor-nv-8f2c</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-mono-code text-[11px] mt-1">
+<span>Cluster Health:</span>
+<span class="text-secondary font-semibold">99.98% uptime</span>
+</div>
+</div>
+</div>
+<!-- Submission Cryptographic Integrity & Receipt Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Submission Integrity &amp; Receipt</span>
+<div class="mt-space-md flex flex-col gap-space-sm">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">lock</span>
+<div>
+<p class="font-label-md text-label-md font-medium text-on-surface">Immutability Lock Active</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Changes restricted while jury chamber is active.</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5 mt-1">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">key</span>
+<div>
+<p class="font-label-md text-label-md font-medium text-on-surface">GPG Verification Sig</p>
+<p class="font-mono-code text-[11px] text-on-surface-variant truncate w-48">Key ID: 0x9B2C4F01A24B</p>
+</div>
+</div>
+</div>
+<div class="mt-space-lg flex flex-col gap-2">
+<button class="w-full py-2 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download Submission Bundle (.tar.gz)</span>
+</button>
+<button class="w-full py-2 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>Cryptographic Audit Proof</span>
+</button>
+</div>
+</div>
+<!-- Deadlines & Timeline Reminder Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Chamber Milestones</span>
+<div class="mt-space-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-md text-body-md text-on-surface">Submissions Closed</span>
+</div>
+<span class="font-mono-code text-mono-code text-on-surface-variant">Nov 15, 12:00</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Judging Concludes</span>
+</div>
+<span class="font-mono-code text-mono-code text-primary font-medium">Nov 17, 23:59</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-body-md text-body-md text-on-surface-variant">Global Ceremony</span>
+</div>
+<span class="font-mono-code text-mono-code text-on-surface-variant">Nov 18, 16:00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive State Machine Simulator -->
+<script>
+    (function () {
+      const simButtons = document.querySelectorAll('.sim-btn');
+      const stateTag = document.getElementById('active-state-tag');
+      const skeletonView = document.getElementById('skeleton-view');
+      const emptyView = document.getElementById('empty-view');
+      const mainContentView = document.getElementById('main-content-view');
+      
+      const resultsBanner = document.getElementById('results-banner');
+      const ineligibleBanner = document.getElementById('ineligible-banner');
+      const editDraftAction = document.getElementById('edit-draft-action');
+      const statusBadge = document.getElementById('status-badge');
+      const statusBadgeText = document.getElementById('status-badge-text');
+      const submittedTimestampMeta = document.getElementById('submitted-timestamp-meta');
+
+      const step3Badge = document.getElementById('step-3-badge');
+      const step3Title = document.getElementById('step-3-title');
+      const step3Sub = document.getElementById('step-3-sub');
+      
+      const step4Badge = document.getElementById('step-4-badge');
+      const step4Title = document.getElementById('step-4-title');
+      const step4Sub = document.getElementById('step-4-sub');
+      const step4Card = document.getElementById('step-4');
+
+      const step5Badge = document.getElementById('step-5-badge');
+      const step5Card = document.getElementById('step-5');
+
+      const eligibilityCard = document.getElementById('eligibility-card');
+      const eligibilityStatusText = document.getElementById('eligibility-status-text');
+      const eligibilityDescText = document.getElementById('eligibility-desc-text');
+      const eligibilityIcon = document.getElementById('eligibility-icon');
+
+      const judgingHeadlineText = document.getElementById('judging-headline-text');
+      const ballotsText = document.getElementById('ballots-text');
+      const ballotsPct = document.getElementById('ballots-pct');
+      const judgingProgressBar = document.getElementById('judging-progress-bar');
+
+      function resetViews() {
+        skeletonView.classList.add('hidden');
+        skeletonView.classList.remove('flex');
+        emptyView.classList.add('hidden');
+        emptyView.classList.remove('flex');
+        mainContentView.classList.remove('hidden');
+
+        resultsBanner.classList.add('hidden');
+        ineligibleBanner.classList.add('hidden');
+        editDraftAction.classList.add('hidden');
+
+        // Reset badge
+        statusBadge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed/70 text-on-secondary-fixed shadow-sm';
+        statusBadgeText.textContent = '✓ SUBMITTED & LOCKED';
+        submittedTimestampMeta.textContent = '• Submitted Nov 15, 14:22 UTC';
+        submittedTimestampMeta.classList.remove('hidden');
+
+        // Reset Steps
+        step3Badge.className = 'w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono-code text-xs font-semibold';
+        step3Badge.textContent = '✓';
+        step3Title.textContent = 'Eligibility Verified';
+        step3Title.className = 'font-label-md text-label-md font-semibold text-on-surface';
+        step3Sub.textContent = 'Charter compliant';
+
+        step4Badge.className = 'w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono-code text-xs font-semibold animate-pulse';
+        step4Badge.textContent = '●';
+        step4Title.textContent = 'Judging Chamber';
+        step4Title.className = 'font-label-md text-label-md font-semibold text-primary';
+        step4Sub.textContent = '3 of 5 ballots in';
+        step4Card.className = 'flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-primary-fixed/30 shadow-sm transition-all';
+
+        step5Badge.className = 'w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-mono-code text-xs';
+        step5Badge.textContent = '5';
+        step5Card.className = 'flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-surface-container-low opacity-60 transition-all';
+
+        // Reset Cards
+        eligibilityCard.className = 'bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col justify-between';
+        eligibilityStatusText.textContent = '✓ Verified & Compliant';
+        eligibilityStatusText.className = 'font-headline-sm text-headline-sm font-semibold text-on-surface mt-1';
+        eligibilityDescText.textContent = 'Charter, OCI runner sandbox & Apache 2.0 open-source license confirmed by organizer jury.';
+        eligibilityIcon.textContent = 'check_circle';
+        eligibilityIcon.className = 'material-symbols-outlined text-[16px] text-secondary';
+
+        judgingHeadlineText.textContent = 'In Progress (Chamber #4)';
+        ballotsText.textContent = '3 of 5 blind evaluations filed';
+        ballotsPct.textContent = '60%';
+        judgingProgressBar.style.width = '60%';
+      }
+
+      function updateState(sim) {
+        resetViews();
+
+        simButtons.forEach(btn => {
+          if (btn.getAttribute('data-sim') === sim) {
+            btn.className = 'sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-primary-container text-on-primary-container font-medium shadow-sm transition-all';
+          } else {
+            btn.className = 'sim-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all';
+          }
+        });
+
+        switch(sim) {
+          case 'submitted':
+            stateTag.textContent = 'SUBMITTED_LOCKED';
+            break;
+
+          case 'draft':
+            stateTag.textContent = 'DRAFT_IN_PROGRESS';
+            statusBadge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant shadow-sm';
+            statusBadgeText.textContent = '● DRAFT IN PROGRESS';
+            submittedTimestampMeta.textContent = '• Last autosaved 2 mins ago';
+            editDraftAction.classList.remove('hidden');
+
+            step3Badge.className = 'w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-mono-code text-xs';
+            step3Badge.textContent = '3';
+            step3Sub.textContent = 'Awaiting submission';
+            
+            step4Badge.className = 'w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-mono-code text-xs';
+            step4Badge.textContent = '4';
+            step4Title.className = 'font-label-md text-label-md font-medium text-on-surface';
+            step4Card.className = 'flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-surface-container-low opacity-60 transition-all';
+            step4Sub.textContent = 'Queued';
+
+            eligibilityStatusText.textContent = 'Draft Not Submitted';
+            eligibilityDescText.textContent = 'Complete required fields and click submit to trigger automated verification harness.';
+            eligibilityIcon.textContent = 'edit_note';
+            
+            judgingHeadlineText.textContent = 'Chamber Inactive';
+            ballotsText.textContent = '0 evaluations queued';
+            ballotsPct.textContent = '0%';
+            judgingProgressBar.style.width = '0%';
+            break;
+
+          case 'pending':
+            stateTag.textContent = 'ELIGIBILITY_PENDING';
+            eligibilityStatusText.textContent = '⏳ Automated Audit In Progress';
+            eligibilityDescText.textContent = 'OCI runner is building verification sandbox and parsing repo test harness.';
+            eligibilityIcon.textContent = 'hourglass_top';
+            eligibilityIcon.className = 'material-symbols-outlined text-[16px] text-primary animate-spin';
+
+            step3Badge.className = 'w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-mono-code text-xs font-semibold animate-pulse';
+            step3Badge.textContent = '⏳';
+            step3Title.textContent = 'Verifying Charter...';
+            step3Sub.textContent = 'Sandbox running';
+
+            step4Card.className = 'flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-surface-container-low opacity-60 transition-all';
+            step4Sub.textContent = 'Pending verification';
+            break;
+
+          case 'ineligible':
+            stateTag.textContent = 'INELIGIBLE_FLAGGED';
+            ineligibleBanner.classList.remove('hidden');
+            statusBadge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-on-error-container shadow-sm';
+            statusBadgeText.textContent = '⚠ INELIGIBLE (FLAGGED)';
+            
+            eligibilityCard.className = 'bg-error-container text-on-error-container rounded-2xl p-space-md shadow-sm flex flex-col justify-between';
+            eligibilityStatusText.textContent = '⚠ Flagged: Ineligible';
+            eligibilityStatusText.className = 'font-headline-sm text-headline-sm font-semibold text-error mt-1';
+            eligibilityDescText.textContent = 'Missing reproduce_eval.sh in repo root. Appeal waiver window open until Nov 16.';
+            eligibilityIcon.textContent = 'error';
+            eligibilityIcon.className = 'material-symbols-outlined text-[16px] text-error';
+
+            step3Badge.className = 'w-7 h-7 rounded-full bg-error text-on-error flex items-center justify-center font-mono-code text-xs font-semibold';
+            step3Badge.textContent = '!';
+            step3Title.textContent = 'Flagged: Ineligible';
+            step3Title.className = 'font-label-md text-label-md font-semibold text-error';
+            step3Sub.textContent = 'Script missing';
+
+            step4Card.className = 'flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-surface-container-low opacity-40 transition-all';
+            step4Sub.textContent = 'Chamber suspended';
+            break;
+
+          case 'judging':
+            stateTag.textContent = 'JUDGING_ACTIVE';
+            ballotsText.textContent = '4 of 5 blind evaluations filed';
+            ballotsPct.textContent = '80%';
+            judgingProgressBar.style.width = '80%';
+            step4Sub.textContent = '4 of 5 ballots in';
+            break;
+
+          case 'results':
+            stateTag.textContent = 'RESULTS_PUBLISHED';
+            resultsBanner.classList.remove('hidden');
+            statusBadge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-sm';
+            statusBadgeText.textContent = '🏆 RESULTS PUBLISHED';
+
+            step4Badge.className = 'w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono-code text-xs font-semibold';
+            step4Badge.textContent = '✓';
+            step4Card.className = 'flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-surface-container-low transition-all';
+            step4Title.className = 'font-label-md text-label-md font-semibold text-on-surface';
+            step4Sub.textContent = '5/5 ballots locked';
+
+            step5Badge.className = 'w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono-code text-xs font-semibold';
+            step5Badge.textContent = '★';
+            step5Card.className = 'flex items-center md:flex-col md:items-start p-2.5 rounded-xl bg-tertiary-fixed/30 shadow-sm transition-all';
+            step5Card.classList.remove('opacity-60');
+
+            judgingHeadlineText.textContent = 'Completed (Aggregate 94.8)';
+            ballotsText.textContent = 'All 5 jury ballots filed & confirmed';
+            ballotsPct.textContent = '100%';
+            judgingProgressBar.style.width = '100%';
+            break;
+
+          case 'skeleton':
+            stateTag.textContent = 'LOADING_SKELETON';
+            mainContentView.classList.add('hidden');
+            skeletonView.classList.remove('hidden');
+            skeletonView.classList.add('flex');
+            break;
+
+          case 'empty':
+            stateTag.textContent = 'NO_SUBMISSION_EMPTY';
+            mainContentView.classList.add('hidden');
+            emptyView.classList.remove('hidden');
+            emptyView.classList.add('flex');
+            break;
+        }
+      }
+
+      simButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const sim = btn.getAttribute('data-sim');
+          updateState(sim);
+        });
+      });
+    })();
+  </script>
+</div></main></div></body></html>

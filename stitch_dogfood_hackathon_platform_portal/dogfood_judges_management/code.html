@@ -1,0 +1,1489 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#fefaff", "inverse-surface": "#2f3034", "on-primary": "#ffffff", "on-secondary": "#ffffff", "on-background": "#1a1b1f", "secondary-container": "#316bf3", "on-tertiary-fixed": "#0c006b", "surface-dim": "#dbd9df", "outline-variant": "#c1c6d6", "error": "#ba1a1a", "surface-container": "#efedf3", "tertiary-fixed-dim": "#c2c1ff", "secondary": "#0051d5", "on-error-container": "#93000a", "inverse-primary": "#abc7ff", "on-secondary-fixed-variant": "#003ea8", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#abc7ff", "on-primary-fixed": "#001b3f", "surface-container-low": "#f4f3f8", "on-surface": "#1a1b1f", "on-surface-variant": "#414753", "primary": "#0059b5", "secondary-fixed-dim": "#b4c5ff", "surface-container-highest": "#e3e2e7", "on-tertiary-fixed-variant": "#332dbc", "on-primary-container": "#fcfbff", "on-primary-fixed-variant": "#00458f", "on-secondary-container": "#fefcff", "background": "#faf8fe", "error-container": "#ffdad6", "surface-bright": "#faf8fe", "primary-container": "#0071e3", "primary-fixed": "#d7e2ff", "tertiary-fixed": "#e2dfff", "inverse-on-surface": "#f1f0f6", "tertiary": "#4a47d2", "surface-container-high": "#e9e7ed", "surface": "#faf8fe", "on-tertiary": "#ffffff", "tertiary-container": "#6462ec", "surface-tint": "#005cbb", "on-secondary-fixed": "#00174b", "on-error": "#ffffff", "secondary-fixed": "#dbe1ff", "outline": "#717785", "surface-variant": "#e3e2e7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1rem", "space-xl": "2rem", "space-md": "0.75rem", "space-lg": "1.25rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "display-lg-mobile": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "display-lg": ["Inter"], "mono-code": ["JetBrains Mono"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "19px", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "mono-code": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-semibold">Dogfood</span><span class="font-label-sm text-label-sm tracking-wider text-on-surface-variant uppercase font-medium">Organizer Suite</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span>Overview</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="events" href="#"><span class="material-symbols-outlined text-[18px]">event</span>Events</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="participants" href="#"><span class="material-symbols-outlined text-[18px]">group</span>Participants</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="teams" href="#"><span class="material-symbols-outlined text-[18px]">diversity_3</span>Teams</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="submissions" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span>Submissions</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="eligibility" href="#"><span class="material-symbols-outlined text-[18px]">verified</span>Eligibility</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="judges" href="#"><span class="material-symbols-outlined text-[18px]">gavel</span>Judges</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="judging" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span>Judging</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="normalization" href="#"><span class="material-symbols-outlined text-[18px]">tune</span>Normalization</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="results" href="#"><span class="material-symbols-outlined text-[18px]">leaderboard</span>Results</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="certificates" href="#"><span class="material-symbols-outlined text-[18px]">workspace_premium</span>Certificates</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="archive" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span>Archive</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span>Settings</a></nav></div></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container-low"><div class="flex items-center justify-between px-space-sm py-space-xs rounded bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)]"><span class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface font-medium"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Cluster OK</span><span class="font-mono-code text-mono-code text-on-surface-variant">99.98%</span></div><div class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant font-label-sm text-label-sm"><span>Docs &amp; API</span><span class="font-mono-code text-mono-code text-primary font-medium">v2.4-prod</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-shrink-0"><div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)] text-on-surface font-label-md text-label-md font-medium cursor-pointer hover:bg-surface-container-low transition-colors"><span>AI Agents World Cup 2025</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden xl:flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-high text-on-surface font-mono-code text-mono-code"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span>us-east-cluster · OK · 99.98%</span></div></div><div class="flex-1 max-w-xl mx-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px] pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-12 rounded-lg bg-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-[0_1px_3px_rgba(0,0,0,0.02)] transition-all" placeholder="Search telemetry, submissions, dossiers..." type="text"><kbd class="absolute right-2.5 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-label-sm">⌘K</kbd></div></div><div class="flex items-center gap-space-md flex-shrink-0"><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm py-1 pr-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)]"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-medium leading-none">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-0.5">Lead Organizer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Control Strip -->
+<aside aria-label="Interactive State Simulator" class="w-full bg-surface-container-high/60 backdrop-blur-md px-space-lg py-2.5 flex items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono-code text-[11px] font-medium tracking-tight">
+<span class="material-symbols-outlined text-[14px] text-primary">science</span>
+<span>STATE SIMULATOR</span>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5" id="simulator-pills">
+<button class="sim-btn px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all duration-150 bg-primary-container text-on-primary-container shadow-sm" data-state="default" onclick="setSimState('default')">Default Populated</button>
+<button class="sim-btn px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="drawer" onclick="setSimState('drawer')">Judge Detail Drawer Open</button>
+<button class="sim-btn px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="selected" onclick="setSimState('selected')">Rows Selected (2)</button>
+<button class="sim-btn px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="pending" onclick="setSimState('pending')">Pending Invites Filter</button>
+<button class="sim-btn px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="overdue" onclick="setSimState('overdue')">Overdue Judges Only</button>
+<button class="sim-btn px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="empty" onclick="setSimState('empty')">Empty State</button>
+<button class="sim-btn px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="no-results" onclick="setSimState('no-results')">No Results</button>
+<button class="sim-btn px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-state="loading" onclick="setSimState('loading')">Loading Skeletons</button>
+</div>
+</div>
+<div class="hidden lg:flex items-center gap-2 font-mono-code text-[11px] text-on-surface-variant flex-shrink-0">
+<span>Auto-syncing to jury shards</span>
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+</div>
+</aside>
+<!-- Main Canvas Wrapper -->
+<div class="p-space-lg lg:p-space-xl flex flex-col gap-space-lg max-w-[1720px] mx-auto w-full relative">
+<!-- Breadcrumb & Top Bar Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<nav class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="hover:text-primary transition-colors cursor-pointer">Events</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">AI Agents World Cup 2025</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-medium">Judges</span>
+</nav>
+<div class="flex items-center gap-3 mt-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Judges</h1>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-label-sm font-medium">Cohort A-12</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          AI Agents World Cup 2025 • Oversee juror roster, invitation status, ballot loads, and scoring completion
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<div class="relative">
+<button class="h-9 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-all duration-150 font-label-md text-label-md font-medium flex items-center gap-1.5 shadow-[0_1px_3px_rgba(0,0,0,0.06)] active:scale-[0.985]" id="export-dropdown-btn" onclick="toggleExportMenu()">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">file_download</span>
+<span>Export CSV</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 mt-1.5 w-48 bg-surface-container-lowest rounded-xl shadow-xl z-30 p-1.5 font-label-md text-label-md text-on-surface" id="export-menu">
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container text-body-sm flex items-center justify-between">
+<span>Full Juror Roster</span>
+<span class="font-mono-code text-[10px] text-on-surface-variant">.CSV</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container text-body-sm flex items-center justify-between">
+<span>Ballot Matrix &amp; Scores</span>
+<span class="font-mono-code text-[10px] text-on-surface-variant">.CSV</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container text-body-sm flex items-center justify-between">
+<span>COI &amp; Audit Logs</span>
+<span class="font-mono-code text-[10px] text-on-surface-variant">.JSON</span>
+</button>
+</div>
+</div>
+<button class="h-9 px-4 rounded-lg bg-primary-container hover:bg-[#0077ED] text-on-primary font-label-md text-label-md font-medium flex items-center gap-1.5 shadow-[0_1px_2px_rgba(0,113,227,0.25)] transition-all duration-150 active:scale-[0.985]" onclick="toggleInviteModal(true)">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Invite Judge</span>
+</button>
+</div>
+</div>
+<!-- Tally / Metric Strip: 5 Cupertino frosted cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Card 1: Total Invited -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between transition-all hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-medium">Total Invited</span>
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">12</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Jurors</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Cohort capacity targeted at 12</span>
+</div>
+</div>
+<!-- Card 2: Accepted & Active -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between transition-all hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-medium">Accepted &amp; Active</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">9</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Confirmed</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center gap-1">
+<span class="text-secondary font-mono-code font-medium">75.0%</span>
+<span>acceptance rate</span>
+</div>
+</div>
+<!-- Card 3: Pending Acceptance -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between transition-all hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-medium">Pending Acceptance</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">mail</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">2</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Awaiting</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between">
+<span>Responses overdue</span>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm font-medium" onclick="resendAllInvites()">Resend all</button>
+</div>
+</div>
+<!-- Card 4: Declined -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between transition-all hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-medium">Declined</span>
+<span class="material-symbols-outlined text-[18px] text-outline">cancel</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">1</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Unavailable</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Conflict of interest noted</span>
+</div>
+</div>
+<!-- Card 5: Overall Ballots -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between transition-all hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-medium">Ballots Evaluated</span>
+<span class="material-symbols-outlined text-[18px] text-primary">fact_check</span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">64</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-mono-code font-normal">/ 92</span>
+</div>
+<div class="mt-2 flex flex-col gap-1">
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 69.6%"></div>
+</div>
+<div class="flex items-center justify-between font-mono-code text-[10px] text-on-surface-variant">
+<span>69.6% complete</span>
+<span>Δ 0.14 dev</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter & Master Toolbar Row -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm bg-surface-container-lowest p-2.5 rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+<div class="flex-1 min-w-[280px] max-w-xl relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px] pointer-events-none">search</span>
+<input class="w-full h-9 pl-9 pr-12 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,113,227,0.2)] transition-all" id="judge-search" oninput="handleSearch(this.value)" placeholder="Search judge by name, email, chamber, organization... (⌘K)" type="text">
+<span class="absolute right-2.5 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono-code text-[10px]">ESC</span>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<!-- Status Dropdown Filter -->
+<div class="relative">
+<select class="h-9 px-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md appearance-none cursor-pointer focus:outline-none hover:bg-surface-container transition-colors" id="filter-status" onchange="filterTable()">
+<option value="all">Invitation Status: All (12)</option>
+<option value="accepted">Accepted (9)</option>
+<option value="invited">Invited / Pending (2)</option>
+<option value="declined">Declined (1)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2.5 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Chamber Dropdown Filter -->
+<div class="relative">
+<select class="h-9 px-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md appearance-none cursor-pointer focus:outline-none hover:bg-surface-container transition-colors" id="filter-chamber" onchange="filterTable()">
+<option value="all">Chamber: All Chambers</option>
+<option value="Autonomous Code Synthesis">Autonomous Code Synthesis</option>
+<option value="Multi-Tool &amp; RAG">Multi-Tool &amp; RAG</option>
+<option value="Deterministic Safety">Deterministic Safety</option>
+<option value="Local / Edge LLM">Local / Edge LLM</option>
+<option value="General Multimodal">General Multimodal</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2.5 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Evaluation Progress Filter -->
+<div class="relative">
+<select class="h-9 px-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md appearance-none cursor-pointer focus:outline-none hover:bg-surface-container transition-colors" id="filter-progress" onchange="filterTable()">
+<option value="all">Progress: All</option>
+<option value="completed">Completed (100%)</option>
+<option value="on-track">On Track (&gt;80%)</option>
+<option value="overdue">Behind / Overdue</option>
+<option value="unassigned">Unassigned / Pending</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2.5 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<div class="h-4 w-px bg-surface-container mx-1 hidden sm:block"></div>
+<button class="h-9 px-3 rounded-lg text-primary hover:bg-surface-container-low font-label-md text-label-md transition-colors" onclick="resetFilters()">
+          Reset
+        </button>
+</div>
+</div>
+<!-- Count Indicator & Active Subtext -->
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium" id="results-count">
+        Showing 1 – 8 of 12 judges · Active Cohort Sync
+      </span>
+<div class="flex items-center gap-3">
+<span class="font-mono-code text-[11px] text-on-surface-variant">Live Juror Heartbeat</span>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+</div>
+</div>
+<!-- Master Data Table Container -->
+<div class="relative rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.02)] overflow-hidden">
+<!-- Loading Skeletons Overlay (hidden by default) -->
+<div class="hidden p-space-lg flex-col gap-4" id="loading-skeletons">
+<div class="h-10 bg-surface-container-high/50 rounded-lg animate-pulse"></div>
+<div class="h-14 bg-surface-container/60 rounded-lg animate-pulse"></div>
+<div class="h-14 bg-surface-container/60 rounded-lg animate-pulse"></div>
+<div class="h-14 bg-surface-container/60 rounded-lg animate-pulse"></div>
+<div class="h-14 bg-surface-container/60 rounded-lg animate-pulse"></div>
+</div>
+<!-- Empty State View -->
+<div class="hidden p-16 flex-col items-center justify-center text-center" id="state-empty">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-[30px]">gavel</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">No Judges Invited Yet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">
+          Start assembling your jury by issuing invitations to specialized track experts, verified mentors, or guest partners.
+        </p>
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-medium flex items-center gap-2 shadow-sm" onclick="toggleInviteModal(true)">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Invite First Judge</span>
+</button>
+</div>
+<!-- No Results View -->
+<div class="hidden p-16 flex-col items-center justify-center text-center" id="state-no-results">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant mb-3">
+<span class="material-symbols-outlined text-[24px]">search_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">No Matching Judges Found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-4">
+          Adjust your active query or clear applied chamber and progress filters to view juror profiles.
+        </p>
+<button class="text-primary hover:underline font-label-md text-label-md font-medium" onclick="resetFilters()">Clear All Filters</button>
+</div>
+<!-- Responsive Table View -->
+<div class="overflow-x-auto" id="table-container">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider select-none">
+<th class="py-3 px-4 w-12 text-center">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-[#0071E3]" id="select-all-checkbox" onchange="toggleSelectAll(this)" type="checkbox">
+</th>
+<th class="py-3 px-4 font-semibold">Name &amp; Affiliation</th>
+<th class="py-3 px-4 font-semibold">Email &amp; Identity</th>
+<th class="py-3 px-4 font-semibold">Chamber</th>
+<th class="py-3 px-4 font-semibold">Invitation Status</th>
+<th class="py-3 px-4 font-semibold">Assigned</th>
+<th class="py-3 px-4 font-semibold w-52">Judging Progress</th>
+<th class="py-3 px-4 font-semibold">Last Active</th>
+<th class="py-3 px-4 w-12 text-right"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-md font-body-md text-on-surface" id="judge-tbody">
+<!-- Row 1: Dr. Elena Rostova -->
+<tr class="judge-row hover:bg-surface-container-low/50 transition-colors cursor-pointer group" data-chamber="Autonomous Code Synthesis" data-id="1" data-progress="on-track" data-status="accepted" onclick="handleRowClick(event, '1')">
+<td class="py-3.5 px-4 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer accent-[#0071E3]" onchange="updateSelectedCount()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-semibold flex-shrink-0">
+                    ER
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Dr. Elena Rostova</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Senior AI Research Fellow, Stanford AI Lab</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-mono-code text-[12px] text-on-surface">elena.rostova@stanford.edu</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">@erostova • verified-sig</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap">
+                  Autonomous Code Synthesis
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Accepted</span>
+</span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[12px] text-on-surface">
+                10 Projects
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex items-center justify-between text-body-sm font-label-sm">
+<span class="font-medium text-on-surface">9/10 Completed</span>
+<span class="font-mono-code text-[11px] text-secondary font-medium">90%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full transition-all duration-300" style="width: 90%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code">18m ago</span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" onclick="toggleActionMenu(event, 'menu-1')">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<div class="row-menu hidden absolute right-0 mt-1 w-52 bg-surface-container-lowest rounded-xl shadow-xl z-20 py-1.5 text-label-md text-label-md" id="menu-1">
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="openJudgeDrawer('1')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Dossier &amp; Rubric</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="reassignJudge('Elena Rostova')">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Reassign Chamber</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="nudgeJudge('Elena Rostova')">
+<span class="material-symbols-outlined text-[16px]">forward_to_inbox</span>
+<span>Send Progress Nudge</span>
+</button>
+<div class="h-px bg-surface-container my-1"></div>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-error-container text-error flex items-center gap-2" onclick="removeJudge('Elena Rostova')">
+<span class="material-symbols-outlined text-[16px]">person_remove</span>
+<span>Remove from Jury</span>
+</button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 2: Marcus Vance -->
+<tr class="judge-row hover:bg-surface-container-low/50 transition-colors cursor-pointer group" data-chamber="Deterministic Safety" data-id="2" data-progress="on-track" data-status="accepted" onclick="handleRowClick(event, '2')">
+<td class="py-3.5 px-4 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer accent-[#0071E3]" onchange="updateSelectedCount()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-md text-label-md font-semibold flex-shrink-0">
+                    MV
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Marcus Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Principal Systems Architect, KernelSec / Former DARPA</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-mono-code text-[12px] text-on-surface">marcus.vance@kernelsec.io</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">@mvance-sec • yubikey</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap">
+                  Deterministic Safety
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Accepted</span>
+</span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[12px] text-on-surface">
+                8 Projects
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex items-center justify-between text-body-sm font-label-sm">
+<span class="font-medium text-on-surface">7/8 Completed</span>
+<span class="font-mono-code text-[11px] text-primary font-medium">87.5%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full transition-all duration-300" style="width: 87.5%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code">1h ago</span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" onclick="toggleActionMenu(event, 'menu-2')">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<div class="row-menu hidden absolute right-0 mt-1 w-52 bg-surface-container-lowest rounded-xl shadow-xl z-20 py-1.5 text-label-md text-label-md" id="menu-2">
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="openJudgeDrawer('2')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Dossier &amp; Rubric</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="reassignJudge('Marcus Vance')">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Reassign Chamber</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="nudgeJudge('Marcus Vance')">
+<span class="material-symbols-outlined text-[16px]">forward_to_inbox</span>
+<span>Send Progress Nudge</span>
+</button>
+<div class="h-px bg-surface-container my-1"></div>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-error-container text-error flex items-center gap-2" onclick="removeJudge('Marcus Vance')">
+<span class="material-symbols-outlined text-[16px]">person_remove</span>
+<span>Remove from Jury</span>
+</button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 3: Priya Patel -->
+<tr class="judge-row hover:bg-surface-container-low/50 transition-colors cursor-pointer group" data-chamber="Multi-Tool &amp; RAG" data-id="3" data-progress="on-track" data-status="accepted" onclick="handleRowClick(event, '3')">
+<td class="py-3.5 px-4 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer accent-[#0071E3]" onchange="updateSelectedCount()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-label-md text-label-md font-semibold flex-shrink-0">
+                    PP
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Priya Patel</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Staff ML Compiler Engineer, DeepLogic</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-mono-code text-[12px] text-on-surface">priya.patel@deeplogic.ai</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">@ppatel-compile • github</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap">
+                  Multi-Tool &amp; RAG
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Accepted</span>
+</span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[12px] text-on-surface">
+                9 Projects
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex items-center justify-between text-body-sm font-label-sm">
+<span class="font-medium text-on-surface">8/9 Completed</span>
+<span class="font-mono-code text-[11px] text-primary font-medium">88.9%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full transition-all duration-300" style="width: 88.9%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code">3h ago</span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" onclick="toggleActionMenu(event, 'menu-3')">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<div class="row-menu hidden absolute right-0 mt-1 w-52 bg-surface-container-lowest rounded-xl shadow-xl z-20 py-1.5 text-label-md text-label-md" id="menu-3">
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="openJudgeDrawer('3')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Dossier &amp; Rubric</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="reassignJudge('Priya Patel')">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Reassign Chamber</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="nudgeJudge('Priya Patel')">
+<span class="material-symbols-outlined text-[16px]">forward_to_inbox</span>
+<span>Send Progress Nudge</span>
+</button>
+<div class="h-px bg-surface-container my-1"></div>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-error-container text-error flex items-center gap-2" onclick="removeJudge('Priya Patel')">
+<span class="material-symbols-outlined text-[16px]">person_remove</span>
+<span>Remove from Jury</span>
+</button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 4: Alex Mercer (Overdue) -->
+<tr class="judge-row hover:bg-surface-container-low/50 transition-colors cursor-pointer group bg-surface-container-low/20" data-chamber="Deterministic Safety" data-id="4" data-progress="overdue" data-status="accepted" onclick="handleRowClick(event, '4')">
+<td class="py-3.5 px-4 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer accent-[#0071E3]" onchange="updateSelectedCount()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-label-md text-label-md font-semibold flex-shrink-0">
+                    AM
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Alex Mercer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Distinguished Fellow, Center for Algorithmic Integrity</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-mono-code text-[12px] text-on-surface">alex.mercer@algoint.org</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">@mercer-audit</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap">
+                  Deterministic Safety
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Accepted</span>
+</span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[12px] text-on-surface">
+                10 Projects
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex items-center justify-between text-body-sm font-label-sm">
+<span class="font-medium text-error flex items-center gap-1">
+<span>3/10 (Overdue)</span>
+</span>
+<span class="font-mono-code text-[11px] text-error font-semibold">30%</span>
+</div>
+<div class="w-full bg-error-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-error h-1.5 rounded-full" style="width: 30%"></div>
+</div>
+<span class="text-[10px] text-error font-medium leading-none">Pacing behind by 4 ballots</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm text-error font-mono-code font-medium">2d ago</span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" onclick="toggleActionMenu(event, 'menu-4')">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<div class="row-menu hidden absolute right-0 mt-1 w-52 bg-surface-container-lowest rounded-xl shadow-xl z-20 py-1.5 text-label-md text-label-md" id="menu-4">
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="openJudgeDrawer('4')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Dossier &amp; Rubric</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container text-error flex items-center gap-2 font-medium" onclick="nudgeJudge('Alex Mercer')">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>Send Urgent Nudge</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="reassignJudge('Alex Mercer')">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Reassign Chamber</span>
+</button>
+<div class="h-px bg-surface-container my-1"></div>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-error-container text-error flex items-center gap-2" onclick="removeJudge('Alex Mercer')">
+<span class="material-symbols-outlined text-[16px]">person_remove</span>
+<span>Remove from Jury</span>
+</button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 5: Sophia Chen (100% Completed) -->
+<tr class="judge-row hover:bg-surface-container-low/50 transition-colors cursor-pointer group" data-chamber="Local / Edge LLM" data-id="5" data-progress="completed" data-status="accepted" onclick="handleRowClick(event, '5')">
+<td class="py-3.5 px-4 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer accent-[#0071E3]" onchange="updateSelectedCount()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md text-label-md font-semibold flex-shrink-0">
+                    SC
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Sophia Chen</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Head of Infrastructure, Lattice Compute</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-mono-code text-[12px] text-on-surface">sophia.chen@latticecompute.net</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">@sophia-edge • passkey</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap">
+                  Local / Edge LLM
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Accepted</span>
+</span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[12px] text-on-surface">
+                8 Projects
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex items-center justify-between text-body-sm font-label-sm">
+<span class="font-medium text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>8/8 Completed</span>
+</span>
+<span class="font-mono-code text-[11px] text-secondary font-medium">100%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-code">4h ago</span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" onclick="toggleActionMenu(event, 'menu-5')">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<div class="row-menu hidden absolute right-0 mt-1 w-52 bg-surface-container-lowest rounded-xl shadow-xl z-20 py-1.5 text-label-md text-label-md" id="menu-5">
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="openJudgeDrawer('5')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Dossier &amp; Rubric</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="reassignJudge('Sophia Chen')">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Reassign Chamber</span>
+</button>
+<div class="h-px bg-surface-container my-1"></div>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-error-container text-error flex items-center gap-2" onclick="removeJudge('Sophia Chen')">
+<span class="material-symbols-outlined text-[16px]">person_remove</span>
+<span>Remove from Jury</span>
+</button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 6: David Sterling (Pending Invite) -->
+<tr class="judge-row hover:bg-surface-container-low/50 transition-colors cursor-pointer group" data-chamber="General Multimodal" data-id="6" data-progress="unassigned" data-status="invited" onclick="handleRowClick(event, '6')">
+<td class="py-3.5 px-4 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer accent-[#0071E3]" onchange="updateSelectedCount()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-semibold flex-shrink-0">
+                    DS
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors truncate">David Sterling</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Partner, Benchmark Horizon Ventures</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-mono-code text-[12px] text-on-surface">david.sterling@benchmarkhorizon.com</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">@dsterling-vc</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap">
+                  General Multimodal
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>Pending (Sent 3d ago)</span>
+</span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[12px] text-outline">
+                —
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2 text-on-surface-variant text-body-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Awaiting Confirmation</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm text-outline font-mono-code">Never</span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded text-primary hover:bg-surface-container font-label-sm text-label-sm font-medium" onclick="resendInvite('David Sterling')">
+                    Resend
+                  </button>
+<div class="relative inline-block text-left">
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" onclick="toggleActionMenu(event, 'menu-6')">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<div class="row-menu hidden absolute right-0 mt-1 w-52 bg-surface-container-lowest rounded-xl shadow-xl z-20 py-1.5 text-label-md text-label-md" id="menu-6">
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="resendInvite('David Sterling')">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Resend Invitation Email</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="copyInviteLink('david.sterling')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Copy Claim Token</span>
+</button>
+<div class="h-px bg-surface-container my-1"></div>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-error-container text-error flex items-center gap-2" onclick="removeJudge('David Sterling')">
+<span class="material-symbols-outlined text-[16px]">person_remove</span>
+<span>Revoke Invitation</span>
+</button>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 7: Dr. Kenjiro Takahashi (Pending Invite) -->
+<tr class="judge-row hover:bg-surface-container-low/50 transition-colors cursor-pointer group" data-chamber="Deterministic Safety" data-id="7" data-progress="unassigned" data-status="invited" onclick="handleRowClick(event, '7')">
+<td class="py-3.5 px-4 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer accent-[#0071E3]" onchange="updateSelectedCount()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-semibold flex-shrink-0">
+                    KT
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Dr. Kenjiro Takahashi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Professor of Applied Cryptography, Tokyo Tech</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-mono-code text-[12px] text-on-surface">k.takahashi@titech.ac.jp</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">@ktakahashi-crypto</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap">
+                  Deterministic Safety
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>Pending (Sent 1d ago)</span>
+</span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[12px] text-outline">
+                —
+              </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2 text-on-surface-variant text-body-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Awaiting Confirmation</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm text-outline font-mono-code">Never</span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded text-primary hover:bg-surface-container font-label-sm text-label-sm font-medium" onclick="resendInvite('Kenjiro Takahashi')">
+                    Resend
+                  </button>
+<div class="relative inline-block text-left">
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" onclick="toggleActionMenu(event, 'menu-7')">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<div class="row-menu hidden absolute right-0 mt-1 w-52 bg-surface-container-lowest rounded-xl shadow-xl z-20 py-1.5 text-label-md text-label-md" id="menu-7">
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="resendInvite('Kenjiro Takahashi')">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Resend Invitation Email</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="copyInviteLink('k.takahashi')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Copy Claim Token</span>
+</button>
+<div class="h-px bg-surface-container my-1"></div>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-error-container text-error flex items-center gap-2" onclick="removeJudge('Kenjiro Takahashi')">
+<span class="material-symbols-outlined text-[16px]">person_remove</span>
+<span>Revoke Invitation</span>
+</button>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 8: Rachel Adams (Declined) -->
+<tr class="judge-row hover:bg-surface-container-low/50 transition-colors cursor-pointer group opacity-60 bg-surface-container/20" data-chamber="Autonomous Code Synthesis" data-id="8" data-progress="unassigned" data-status="declined" onclick="handleRowClick(event, '8')">
+<td class="py-3.5 px-4 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer accent-[#0071E3]" onchange="updateSelectedCount()" type="checkbox">
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-dim text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-semibold flex-shrink-0">
+                    RA
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-lg font-semibold text-on-surface truncate line-through">Rachel Adams</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Lead Product Architect, Anthropic ecosystem</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-mono-code text-[12px] text-on-surface-variant">rachel.adams@ecosystem.ai</span>
+<span class="font-mono-code text-[11px] text-outline">COI conflict logged</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium whitespace-nowrap">
+                  Autonomous Code Synthesis
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px] text-outline">do_not_disturb_on</span>
+<span>Declined (COI Conflict)</span>
+</span>
+</td>
+<td class="py-3.5 px-4 font-mono-code text-[12px] text-outline">
+                0 Projects
+              </td>
+<td class="py-3.5 px-4">
+<span class="font-body-sm text-body-sm text-outline">Unavailable</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm text-outline font-mono-code">Nov 14</span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" onclick="toggleActionMenu(event, 'menu-8')">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<div class="row-menu hidden absolute right-0 mt-1 w-52 bg-surface-container-lowest rounded-xl shadow-xl z-20 py-1.5 text-label-md text-label-md" id="menu-8">
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="openJudgeDrawer('8')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Declination Note</span>
+</button>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-surface-container flex items-center gap-2" onclick="reinviteJudge('Rachel Adams')">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Re-issue Exception Invite</span>
+</button>
+<div class="h-px bg-surface-container my-1"></div>
+<button class="w-full text-left px-3.5 py-1.5 hover:bg-error-container text-error flex items-center gap-2" onclick="removeJudge('Rachel Adams')">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Purge Entry</span>
+</button>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="py-3 px-space-md bg-surface-container-low/60 flex items-center justify-between text-label-sm text-on-surface-variant border-t border-surface-container" id="table-pagination">
+<span class="font-mono-code text-[11px]">8 active roster entries displayed • Shard #04</span>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-outline cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono-code text-[11px] font-medium">1 / 1</span>
+<button class="p-1 rounded text-outline cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bulk Actions Bar (Appears when 1+ checkboxes are checked) -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 hidden transition-all duration-200" id="sticky-bulk-bar">
+<div class="bg-inverse-surface/95 backdrop-blur-xl text-inverse-on-surface px-5 py-2.5 rounded-2xl shadow-[0_12px_36px_rgba(0,0,0,0.25)] flex items-center gap-4">
+<div class="flex items-center gap-2 pr-2 border-r border-outline/40">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md font-semibold" id="bulk-selection-count">2 judges selected</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest/20 hover:bg-surface-container-highest/30 transition-colors font-label-md text-label-md flex items-center gap-1.5 text-inverse-on-surface" onclick="bulkReassign()">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Reassign Chamber</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest/20 hover:bg-surface-container-highest/30 transition-colors font-label-md text-label-md flex items-center gap-1.5 text-inverse-on-surface" onclick="bulkNudge()">
+<span class="material-symbols-outlined text-[16px]">forward_to_inbox</span>
+<span>Send Batch Nudge</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest/20 hover:bg-surface-container-highest/30 transition-colors font-label-md text-label-md flex items-center gap-1.5 text-inverse-on-surface" onclick="bulkExport()">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Export Selected</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-error hover:bg-error/90 text-on-error transition-colors font-label-md text-label-md flex items-center gap-1.5" onclick="bulkRemove()">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Remove</span>
+</button>
+</div>
+<button class="p-1 rounded-full hover:bg-surface-container-highest/30 text-inverse-on-surface ml-1 transition-colors" onclick="clearBulkSelection()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Slide-Over Drawer: Judge Dossier & Rubric (Dr. Elena Rostova) -->
+<div class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-all duration-300" id="judge-drawer">
+<!-- Scrim overlay -->
+<div class="absolute inset-0 bg-on-surface/20 backdrop-blur-sm opacity-0 transition-opacity duration-300 pointer-events-auto" id="drawer-backdrop" onclick="closeJudgeDrawer()"></div>
+<div class="fixed inset-y-0 right-0 max-w-full flex pl-10 pointer-events-auto">
+<div class="w-screen max-w-xl bg-surface-container-lowest shadow-[0_24px_48px_rgba(0,0,0,0.15)] flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out" id="drawer-panel">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-start justify-between gap-space-md border-b border-surface-container">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm font-bold shadow-sm">
+              ER
+            </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Dr. Elena Rostova</h2>
+<span class="material-symbols-outlined text-secondary text-[18px]" title="Identity Verified &amp; Signed">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Senior AI Research Fellow • Stanford AI Lab</span>
+<span class="font-mono-code text-[11px] text-primary mt-0.5">elena.rostova@stanford.edu</span>
+</div>
+</div>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="closeJudgeDrawer()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Fast Actions & Tags Strip -->
+<div class="px-space-lg py-2.5 bg-surface flex items-center justify-between gap-space-sm border-b border-surface-container">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-medium">
+              Autonomous Code Synthesis
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+              Lead Juror Track 1
+            </span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1 transition-colors" onclick="nudgeJudge('Dr. Elena Rostova')">
+<span class="material-symbols-outlined text-[14px]">send</span>
+<span>Direct Ping</span>
+</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1 transition-colors" onclick="reassignJudge('Dr. Elena Rostova')">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+<span>Reassign</span>
+</button>
+</div>
+</div>
+<!-- Drawer Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-lg">
+<!-- Metric Cards in Drawer -->
+<div class="grid grid-cols-2 gap-space-md">
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Ballot Completion</span>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">90%</span>
+<span class="font-mono-code text-[11px] text-secondary font-medium">9 of 10</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 mt-2 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Scoring Behavior &amp; Bias</span>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">89.2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">avg pts</span>
+</div>
+<span class="font-mono-code text-[11px] text-on-surface-variant mt-2">Variance: +1.2σ (Consistent)</span>
+</div>
+</div>
+<!-- Section: Ballots & Assigned Projects Breakdown -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Assigned Projects &amp; Ballots</h3>
+<span class="font-mono-code text-[11px] text-on-surface-variant">1 Pending Evaluation</span>
+</div>
+<div class="flex flex-col divide-y divide-surface-container rounded-xl bg-surface-container-low overflow-hidden">
+<!-- Project 1 -->
+<div class="p-3 flex items-center justify-between gap-3 hover:bg-surface-container-high/40 transition-colors">
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface truncate">AgentBench Zero</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Autonomous Code • Team SyntaxForge</span>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-secondary font-mono-code text-[11px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span>
+<span>Scored 94/100</span>
+</span>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="p-3 flex items-center justify-between gap-3 hover:bg-surface-container-high/40 transition-colors">
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface truncate">TraceProof</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Deterministic Safety • Team FormalLang</span>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-secondary font-mono-code text-[11px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span>
+<span>Scored 88/100</span>
+</span>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="p-3 flex items-center justify-between gap-3 hover:bg-surface-container-high/40 transition-colors">
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface truncate">OmniSynth RAG</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Multi-Tool &amp; RAG • Team VectorX</span>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-secondary font-mono-code text-[11px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span>
+<span>Scored 91/100</span>
+</span>
+</div>
+</div>
+<!-- Project 4: Pending -->
+<div class="p-3 flex items-center justify-between gap-3 bg-primary/5 hover:bg-primary/10 transition-colors">
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface truncate">zkEval Protocol</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Autonomous Code • Team VerifierZero</span>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-mono-code text-[11px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">hourglass_top</span>
+<span>Draft In Progress</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Verification & Legal/COI Compliance -->
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Governance &amp; COI Verification</h3>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2.5">
+<div class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span class="font-medium">Signed Jury Charter &amp; Non-Disclosure Agreements</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>No Corporate Conflict of Interest (COI) declared</span>
+</div>
+<div class="text-[11px] font-mono-code text-on-surface-variant bg-surface-container px-2.5 py-1.5 rounded-lg flex items-center justify-between">
+<span>Charter Audit Hash: 0x98f...d34e</span>
+<span>Verified Nov 12, 10:14 UTC</span>
+</div>
+</div>
+</div>
+<!-- Section: Activity Log -->
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Telemetry &amp; Audit Trail</h3>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-3 font-body-sm text-body-sm">
+<div class="flex items-start gap-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="text-on-surface">Submitted final rubric ballot for <strong class="font-medium">TraceProof</strong></span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">2h ago • Score: 88 pts</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline mt-1.5 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="text-on-surface">Authenticated juror session</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">18m ago • IP 134.12.89.201 (Stanford, CA)</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline mt-1.5 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="text-on-surface">Saved draft comments on <strong class="font-medium">zkEval Protocol</strong></span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">3h ago • autosaved</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Footer -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between border-t border-surface-container">
+<span class="font-mono-code text-[11px] text-on-surface-variant">Juror ID: JUR-STANFORD-09</span>
+<button class="h-8 px-4 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container transition-colors" onclick="closeJudgeDrawer()">
+            Close Dossier
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Invite Judge Modal Dialog -->
+<div class="fixed inset-0 z-50 overflow-y-auto hidden items-center justify-center p-4" id="invite-modal">
+<div class="fixed inset-0 bg-on-surface/30 backdrop-blur-sm transition-opacity" onclick="toggleInviteModal(false)"></div>
+<div class="relative bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-lg shadow-2xl z-10 flex flex-col gap-space-md border border-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Invite Judge</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Send an onboarding invite token to a track juror</span>
+</div>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container" onclick="toggleInviteModal(false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-3.5" onsubmit="handleInviteSubmit(event)">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Full Name</label>
+<input class="h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. Dr. Aris Thorne" required="" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Email Address</label>
+<input class="h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="name@institution.org" required="" type="email">
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Affiliation</label>
+<input class="h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. MIT CSAIL" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Chamber / Track</label>
+<select class="h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none">
+<option>Autonomous Code Synthesis</option>
+<option>Multi-Tool &amp; RAG</option>
+<option>Deterministic Safety</option>
+<option>Local / Edge LLM</option>
+<option>General Multimodal</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Personal Invitation Note (Optional)</label>
+<textarea class="p-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Include custom juror instructions or welcome context..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="h-9 px-4 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors" onclick="toggleInviteModal(false)" type="button">
+            Cancel
+          </button>
+<button class="h-9 px-4 rounded-lg bg-primary-container hover:bg-[#0077ED] text-on-primary font-label-md text-label-md font-medium flex items-center gap-1.5 shadow-sm transition-all active:scale-[0.985]" type="submit">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Dispatch Invitation</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed top-20 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toast-container"></div>
+<!-- Inline Micro-interactions & Simulator Logic -->
+<script>
+    // Ensure active sidebar item matches Judges
+    document.addEventListener("DOMContentLoaded", function() {
+      const navLinks = document.querySelectorAll('aside nav a[data-path]');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'judges') {
+          link.className = "flex items-center gap-space-md px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container font-medium shadow-sm font-body-md text-body-md";
+        } else {
+          link.className = "flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md";
+        }
+      });
+    });
+
+    // Toast generator
+    function showToast(message, icon = 'info') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = "pointer-events-auto bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-2.5 font-label-md text-label-md transition-all duration-300 transform translate-y-2 opacity-0";
+      toast.innerHTML = `<span class="material-symbols-outlined text-[18px] text-primary-fixed">${icon}</span><span>${message}</span>`;
+      container.appendChild(toast);
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      });
+      setTimeout(() => {
+        toast.classList.add('opacity-0', '-translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // Export Menu
+    function toggleExportMenu() {
+      const menu = document.getElementById('export-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    document.addEventListener('click', function(e) {
+      const btn = document.getElementById('export-dropdown-btn');
+      const menu = document.getElementById('export-menu');
+      if (btn && menu && !btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+      // Close any open row menus
+      if (!e.target.closest('.row-menu') && !e.target.closest('button[onclick*="toggleActionMenu"]')) {
+        document.querySelectorAll('.row-menu').forEach(m => m.classList.add('hidden'));
+      }
+    });
+
+    // Row Actions Dropdown
+    function toggleActionMenu(e, menuId) {
+      e.stopPropagation();
+      const menu = document.getElementById(menuId);
+      const isHidden = menu.classList.contains('hidden');
+      document.querySelectorAll('.row-menu').forEach(m => m.classList.add('hidden'));
+      if (isHidden) {
+        menu.classList.remove('hidden');
+      }
+    }
+
+    // Row selection and bulk actions
+    function toggleSelectAll(master) {
+      const checkboxes = document.querySelectorAll('.row-checkbox');
+      checkboxes.forEach(cb => {
+        const row = cb.closest('tr');
+        if (row && row.style.display !== 'none') {
+          cb.checked = master.checked;
+        }
+      });
+      updateSelectedCount();
+    }
+
+    function updateSelectedCount() {
+      const checked = document.querySelectorAll('.row-checkbox:checked');
+      const count = checked.length;
+      const bar = document.getElementById('sticky-bulk-bar');
+      const countLabel = document.getElementById('bulk-selection-count');
+      const masterCheckbox = document.getElementById('select-all-checkbox');
+
+      if (count > 0) {
+        bar.classList.remove('hidden');
+        countLabel.textContent = `${count} judge${count > 1 ? 's' : ''} selected`;
+      } else {
+        bar.classList.add('hidden');
+      }
+
+      const visibleCheckboxes = Array.from(document.querySelectorAll('.row-checkbox')).filter(cb => cb.closest('tr').style.display !== 'none');
+      if (visibleCheckboxes.length > 0 && checked.length === visibleCheckboxes.length) {
+        masterCheckbox.checked = true;
+        masterCheckbox.indeterminate = false;
+      } else if (checked.length > 0) {
+        masterCheckbox.checked = false;
+        masterCheckbox.indeterminate = true;
+      } else {
+        masterCheckbox.checked = false;
+        masterCheckbox.indeterminate = false;
+      }
+    }
+
+    function clearBulkSelection() {
+      document.querySelectorAll('.row-checkbox').forEach(cb => cb.checked = false);
+      const master = document.getElementById('select-all-checkbox');
+      if (master) master.checked = false;
+      updateSelectedCount();
+    }
+
+    // Modal invite
+    function toggleInviteModal(open) {
+      const modal = document.getElementById('invite-modal');
+      if (open) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function handleInviteSubmit(e) {
+      e.preventDefault();
+      toggleInviteModal(false);
+      showToast('Invitation dispatched with claim token', 'send');
+    }
+
+    // Slide-over drawer logic
+    function openJudgeDrawer(judgeId) {
+      const drawer = document.getElementById('judge-drawer');
+      const backdrop = document.getElementById('drawer-backdrop');
+      const panel = document.getElementById('drawer-panel');
+
+      drawer.classList.remove('pointer-events-none');
+      backdrop.classList.remove('opacity-0');
+      backdrop.classList.add('opacity-100');
+      panel.classList.remove('translate-x-full');
+      panel.classList.add('translate-x-0');
+    }
+
+    function closeJudgeDrawer() {
+      const drawer = document.getElementById('judge-drawer');
+      const backdrop = document.getElementById('drawer-backdrop');
+      const panel = document.getElementById('drawer-panel');
+
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0');
+      panel.classList.remove('translate-x-0');
+      panel.classList.add('translate-x-full');
+
+      setTimeout(() => {
+        drawer.classList.add('pointer-events-none');
+      }, 300);
+    }
+
+    function handleRowClick(event, judgeId) {
+      openJudgeDrawer(judgeId);
+    }
+
+    // Filter and search mechanics
+    function handleSearch(query) {
+      filterTable();
+    }
+
+    function filterTable() {
+      const searchVal = (document.getElementById('judge-search').value || '').toLowerCase().trim();
+      const statusVal = document.getElementById('filter-status').value;
+      const chamberVal = document.getElementById('filter-chamber').value;
+      const progressVal = document.getElementById('filter-progress').value;
+
+      const rows = document.querySelectorAll('.judge-row');
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const rStatus = row.getAttribute('data-status');
+        const rChamber = row.getAttribute('data-chamber');
+        const rProgress = row.getAttribute('data-progress');
+
+        const matchesSearch = !searchVal || text.includes(searchVal);
+        const matchesStatus = statusVal === 'all' || rStatus === statusVal;
+        const matchesChamber = chamberVal === 'all' || rChamber === chamberVal;
+        const matchesProgress = progressVal === 'all' || rProgress === progressVal;
+
+        if (matchesSearch && matchesStatus && matchesChamber && matchesProgress) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      const noResults = document.getElementById('state-no-results');
+      const pagination = document.getElementById('table-pagination');
+      const countLabel = document.getElementById('results-count');
+
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+        noResults.classList.add('flex');
+        pagination.classList.add('hidden');
+        countLabel.textContent = `Showing 0 judges &middot; Active Cohort Sync`;
+      } else {
+        noResults.classList.add('hidden');
+        noResults.classList.remove('flex');
+        pagination.classList.remove('hidden');
+        countLabel.textContent = `Showing 1 – ${visibleCount} of 12 judges &middot; Active Cohort Sync`;
+      }
+
+      updateSelectedCount();
+    }
+
+    function resetFilters() {
+      document.getElementById('judge-search').value = '';
+      document.getElementById('filter-status').value = 'all';
+      document.getElementById('filter-chamber').value = 'all';
+      document.getElementById('filter-progress').value = 'all';
+      filterTable();
+      showToast('Filters reset to default', 'restart_alt');
+    }
+
+    // Quick row operations
+    function resendInvite(name) {
+      showToast(`Invitation re-sent to ${name}`, 'send');
+    }
+
+    function copyInviteLink(handle) {
+      showToast(`Claim token for ${handle} copied to clipboard`, 'content_copy');
+    }
+
+    function nudgeJudge(name) {
+      showToast(`Progress nudge dispatched to ${name}`, 'forward_to_inbox');
+    }
+
+    function reassignJudge(name) {
+      showToast(`Chamber reallocation opened for ${name}`, 'swap_horiz');
+    }
+
+    function removeJudge(name) {
+      showToast(`${name} removed from active jury panel`, 'person_remove');
+    }
+
+    function reinviteJudge(name) {
+      showToast(`COI waiver invited for ${name}`, 'refresh');
+    }
+
+    function resendAllInvites() {
+      showToast('Dispatched 2 batch reminders to pending invitees', 'mail');
+    }
+
+    function bulkReassign() {
+      showToast('Opening chamber reallocation dialog for selected jurors', 'swap_horiz');
+    }
+
+    function bulkNudge() {
+      showToast('Sent batch reminder emails to selected jurors', 'forward_to_inbox');
+    }
+
+    function bulkExport() {
+      showToast('Exporting selected jurors to CSV...', 'download');
+    }
+
+    function bulkRemove() {
+      showToast('Removed selected jurors from jury', 'delete');
+      clearBulkSelection();
+    }
+
+    // State Simulator handler
+    function setSimState(state) {
+      // Update pills UI
+      document.querySelectorAll('#simulator-pills .sim-btn').forEach(btn => {
+        if (btn.getAttribute('data-state') === state) {
+          btn.className = "sim-btn px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all duration-150 bg-primary-container text-on-primary-container shadow-sm";
+        } else {
+          btn.className = "sim-btn px-2.5 py-1 rounded-full text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-on-surface hover:bg-surface-container";
+        }
+      });
+
+      // Reset base containers
+      const tableContainer = document.getElementById('table-container');
+      const tablePagination = document.getElementById('table-pagination');
+      const loadingView = document.getElementById('loading-skeletons');
+      const emptyView = document.getElementById('state-empty');
+      const noResultsView = document.getElementById('state-no-results');
+
+      tableContainer.classList.remove('hidden');
+      tablePagination.classList.remove('hidden');
+      loadingView.classList.add('hidden');
+      emptyView.classList.add('hidden');
+      noResultsView.classList.add('hidden');
+
+      closeJudgeDrawer();
+      clearBulkSelection();
+
+      if (state === 'default') {
+        resetFilters();
+      } else if (state === 'drawer') {
+        resetFilters();
+        openJudgeDrawer('1');
+      } else if (state === 'selected') {
+        resetFilters();
+        const checkboxes = document.querySelectorAll('.row-checkbox');
+        if (checkboxes[0]) checkboxes[0].checked = true;
+        if (checkboxes[1]) checkboxes[1].checked = true;
+        updateSelectedCount();
+      } else if (state === 'pending') {
+        document.getElementById('filter-status').value = 'invited';
+        document.getElementById('filter-chamber').value = 'all';
+        document.getElementById('filter-progress').value = 'all';
+        filterTable();
+      } else if (state === 'overdue') {
+        document.getElementById('filter-status').value = 'all';
+        document.getElementById('filter-chamber').value = 'all';
+        document.getElementById('filter-progress').value = 'overdue';
+        filterTable();
+      } else if (state === 'empty') {
+        tableContainer.classList.add('hidden');
+        tablePagination.classList.add('hidden');
+        emptyView.classList.remove('hidden');
+        emptyView.classList.add('flex');
+        document.getElementById('results-count').textContent = 'Showing 0 judges &middot; Active Cohort Sync';
+      } else if (state === 'no-results') {
+        document.getElementById('judge-search').value = 'xyz-nonexistent-juror';
+        filterTable();
+      } else if (state === 'loading') {
+        tableContainer.classList.add('hidden');
+        tablePagination.classList.add('hidden');
+        loadingView.classList.remove('hidden');
+        loadingView.classList.add('flex');
+      }
+    }
+  </script>
+</div></main></div></body></html>

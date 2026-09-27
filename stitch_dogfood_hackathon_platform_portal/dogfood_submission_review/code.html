@@ -1,0 +1,775 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#faf8fe","surface-variant":"#e3e2e7","on-error-container":"#93000a","on-secondary-fixed-variant":"#003ea8","surface-container-low":"#f4f3f8","primary":"#0059b5","tertiary-fixed-dim":"#c2c1ff","outline-variant":"#c1c6d6","surface-container":"#efedf3","on-surface":"#1a1b1f","on-tertiary-fixed-variant":"#332dbc","secondary":"#0051d5","primary-container":"#0071e3","on-primary":"#ffffff","on-primary-fixed":"#001b3f","on-secondary-container":"#fefcff","secondary-fixed":"#dbe1ff","on-tertiary-container":"#fefaff","outline":"#717785","on-secondary-fixed":"#00174b","background":"#faf8fe","inverse-surface":"#2f3034","primary-fixed-dim":"#abc7ff","error":"#ba1a1a","on-primary-fixed-variant":"#00458f","surface-container-high":"#e9e7ed","primary-fixed":"#d7e2ff","on-tertiary":"#ffffff","on-secondary":"#ffffff","secondary-fixed-dim":"#b4c5ff","on-background":"#1a1b1f","tertiary-fixed":"#e2dfff","surface-container-highest":"#e3e2e7","surface":"#faf8fe","on-tertiary-fixed":"#0c006b","tertiary":"#4a47d2","inverse-primary":"#abc7ff","secondary-container":"#316bf3","inverse-on-surface":"#f1f0f6","error-container":"#ffdad6","on-error":"#ffffff","tertiary-container":"#6462ec","on-primary-container":"#fcfbff","surface-dim":"#dbd9df","surface-container-lowest":"#ffffff","surface-tint":"#005cbb","on-surface-variant":"#414753"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-tablet":"2rem","space-xl":"2rem","space-xs":"0.25rem",gutter:"1rem","space-sm":"0.5rem",margin:"1rem","margin-desktop":"3rem","space-md":"0.75rem","space-lg":"1.25rem","gutter-desktop":"1.5rem"},fontFamily:{"display-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"display-lg-mobile":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"mono-code":["JetBrains Mono"],"label-sm":["Inter"],"body-sm":["Inter"],"label-md":["Inter"]},fontSize:{"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.025em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-md":["13px",{lineHeight:"19px",letterSpacing:"0em",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"mono-code":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.01em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.005em",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-64 bg-surface-container-low/95 backdrop-blur-2xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Dogfood Platform Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XFolziqjX2O3dIfh14x-0pksaympgFfP4_AHvWofl_NJ4aWB-bcIhJV87ZncKEY3qGSKoZ-lgovdenQDBhHa-EXUB0-p-vq5fwNG3WrVxSM4gg2JeG2n711UpoLXyVmrmxsNoTWjRpbhXhXfI7h7KpEoEFCJ97iiGNlaWheup3EvMx6RKOhEPMUQJNbzMqyvXDuYqJoBlviuPHWYJstuz94qCkbiefh8sCaRkklhnTmlJ_q80ber93ukl8"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Dogfood</span><span class="font-mono-code text-mono-code text-on-surface-variant leading-none mt-1">v2.4.0 Self-Hosted</span></div></div></div><div class="px-space-md mt-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold px-space-sm">Platform Core</span></div><nav class="flex flex-col gap-1 px-space-sm mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="events" href="#">Events</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-submission" href="#">Submissions / My Submission</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="judging-and-rubrics" href="#">Judging &amp; Rubrics</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="teams-and-matchmaking" href="#">Teams &amp; Matchmaking</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="team-creation" href="#">Team Creation</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics-and-telemetry" href="#">Analytics &amp; Telemetry</a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="platform-settings" href="#">Platform Settings</a></nav></div><div class="p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-surface-container/60"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Cluster OK</span></div><span class="font-mono-code text-mono-code text-on-surface-variant">99.98%</span></div><div class="flex items-center justify-between pt-space-xs"><a class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[14px]">help</span><span>Docs</span></a><button class="flex items-center justify-center p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">left_panel_close</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-2xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg"><nav aria-label="Breadcrumb" class="flex items-center gap-1.5 font-label-md text-label-md"><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">Events</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors max-w-[140px] truncate sm:max-w-none">AI Agents World Cup 2025</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">Submissions</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">chevron_right</span><span class="font-semibold text-on-surface">My Submission</span></nav><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)] text-on-surface-variant w-64"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">search</span><span class="font-body-sm text-body-sm text-on-surface-variant flex-1">Search submissions, teams...</span><kbd class="font-mono-code text-mono-code px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm font-medium">Production</span></div><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden sm:flex flex-col text-right"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Alex Chen</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Senior Evaluator</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- TOP STATE SIMULATOR BAR (Interactive preview controls) -->
+<aside aria-label="Development State Simulator" class="sticky top-16 z-30 w-full px-space-lg py-space-xs bg-surface-container-highest/90 backdrop-blur-md shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">tune</span>
+<span class="font-mono-code text-[11px] font-medium tracking-wide uppercase text-on-surface-variant">Simulator:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5" id="sim-controls">
+<button class="sim-btn px-2.5 py-1 rounded-md text-[11px] font-label-sm font-medium transition-all bg-primary text-on-primary shadow-sm" data-sim="ready" type="button">
+          Complete &amp; Ready (100%)
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-[11px] font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container-high" data-sim="incomplete" type="button">
+          Incomplete Warning
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-[11px] font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container-high" data-sim="modal" type="button">
+          Confirmation Modal
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-[11px] font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container-high" data-sim="submitting" type="button">
+          Submitting State
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-[11px] font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container-high" data-sim="success" type="button">
+          Success Receipt
+        </button>
+<button class="sim-btn px-2.5 py-1 rounded-md text-[11px] font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container-high" data-sim="expired" type="button">
+          Deadline Expired
+        </button>
+</div>
+</div>
+</aside>
+<!-- MAIN WRAPPER CONTAINER -->
+<div class="w-full px-4 sm:px-6 lg:px-8 py-space-lg max-w-7xl mx-auto space-y-6 pb-36">
+<!-- PAGE HEADER BLOCK -->
+<header class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+<div class="space-y-1.5 max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container font-mono-code text-[11px] text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Review Phase 04 / 04
+          </span>
+<span class="font-mono-code text-[11px] text-outline">sha256:4a8f9c1d...</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Review Your Submission</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Carefully inspect your technical dossier before cryptographic submission lock. All repository artifacts, benchmarks, and media will be mirrored to the jury harness.
+        </p>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+            Team: <strong class="text-on-surface font-medium">Neural Vanguard</strong>
+</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">military_tech</span>
+            Track: <strong class="text-on-surface font-medium">Autonomous Code Synthesis</strong>
+</span>
+</div>
+</div>
+<!-- DEADLINE BADGE -->
+<div class="self-start flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface shadow-sm" id="deadline-pill">
+<span class="material-symbols-outlined text-[18px] text-secondary">hourglass_top</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant leading-none">Freeze Deadline</span>
+<span class="font-mono-code text-[12px] font-semibold text-on-surface leading-snug mt-0.5" id="deadline-text">Nov 17, 18:00 UTC · 2 days remaining</span>
+</div>
+</div>
+</header>
+<!-- INCOMPLETE STATE ALERT BANNER (Default hidden, toggled by Simulator) -->
+<section class="hidden rounded-xl bg-amber-50/90 text-amber-950 p-4 shadow-sm transition-all duration-300" id="incomplete-banner">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3">
+<div class="p-1.5 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-amber-950">Action Required Before Submission</h2>
+<p class="font-body-md text-body-md text-amber-900/90 mt-0.5">
+              Missing required demo walkthrough video or reproducible container script. 1 of 6 sections is incomplete and must be addressed before the freeze deadline.
+            </p>
+</div>
+</div>
+<button class="shrink-0 px-3 py-1.5 rounded-lg bg-amber-200/80 hover:bg-amber-200 text-amber-950 font-label-md text-label-md transition-colors" type="button">
+          Fix Missing Fields
+        </button>
+</div>
+</section>
+<!-- COMPLETENESS STATUS STRIP (6 Chips) -->
+<section aria-label="Section Status Checklist" class="w-full">
+<div class="p-2 rounded-2xl bg-surface-container-low shadow-sm">
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2" id="status-chips-grid">
+<!-- Chip 1 -->
+<a class="chip-item flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-bright shadow-sm transition-all group" href="#">
+<div class="flex items-center gap-2 min-w-0">
+<span class="status-icon w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">1. Identity</span>
+</div>
+<span class="status-sub font-mono-code text-[10px] text-emerald-700 font-medium">100%</span>
+</a>
+<!-- Chip 2 -->
+<a class="chip-item flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-bright shadow-sm transition-all group" href="#">
+<div class="flex items-center gap-2 min-w-0">
+<span class="status-icon w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">2. Synthesis</span>
+</div>
+<span class="status-sub font-mono-code text-[10px] text-emerald-700 font-medium">418w</span>
+</a>
+<!-- Chip 3 -->
+<a class="chip-item flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-bright shadow-sm transition-all group" href="#">
+<div class="flex items-center gap-2 min-w-0">
+<span class="status-icon w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">3. Evaluation</span>
+</div>
+<span class="status-sub font-mono-code text-[10px] text-emerald-700 font-medium">Locked</span>
+</a>
+<!-- Chip 4 -->
+<a class="chip-item flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-bright shadow-sm transition-all group" href="#">
+<div class="flex items-center gap-2 min-w-0">
+<span class="status-icon w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">4. Endpoints</span>
+</div>
+<span class="status-sub font-mono-code text-[10px] text-emerald-700 font-medium">Pinned</span>
+</a>
+<!-- Chip 5 (Toggle target for Incomplete simulation) -->
+<a class="chip-item flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-bright shadow-sm transition-all group" href="#" id="chip-media">
+<div class="flex items-center gap-2 min-w-0">
+<span class="status-icon w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0" id="chip-media-icon">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">5. Media</span>
+</div>
+<span class="status-sub font-mono-code text-[10px] text-emerald-700 font-medium" id="chip-media-sub">2/2</span>
+</a>
+<!-- Chip 6 -->
+<a class="chip-item flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-bright shadow-sm transition-all group" href="#">
+<div class="flex items-center gap-2 min-w-0">
+<span class="status-icon w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">6. Tooling</span>
+</div>
+<span class="status-sub font-mono-code text-[10px] text-emerald-700 font-medium">7 tags</span>
+</a>
+</div>
+</div>
+</section>
+<!-- MAIN SUBMISSION DOSSIER (READ-ONLY PRESENTATION) -->
+<div class="space-y-6" id="dossier-canvas">
+<!-- SECTION 1: PROJECT IDENTITY -->
+<section class="rounded-2xl bg-surface-container-lowest p-6 shadow-sm relative overflow-hidden transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-4 pb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-headline-lg shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-primary">neurology</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Section 01</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-medium">Verified Identity</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">AgentBench Zero</h2>
+</div>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+            Edit Identity
+          </button>
+</div>
+<div class="space-y-3 pt-2">
+<p class="font-body-lg text-body-lg text-on-surface font-medium">
+            Autonomous dual-agent SWE harness with deterministic sandboxing and zero hallucination guardrails.
+          </p>
+<div class="flex flex-wrap items-center gap-3">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-low font-mono-code text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span>dogfood.local/p/agentbench-zero</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-low font-mono-code text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">category</span>
+<span>Slug: agentbench-zero-cup25</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-semibold">
+              Public Canonical
+            </span>
+</div>
+</div>
+</section>
+<!-- SECTION 2: TECHNICAL ARCHITECTURE & SYNTHESIS -->
+<section class="rounded-2xl bg-surface-container-lowest p-6 shadow-sm relative transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-4 pb-4">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Section 02</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Architecture Synthesis</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-code text-[11px] text-on-surface-variant">418 words · Markdown rendered</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+            Edit Description
+          </button>
+</div>
+<div class="prose max-w-none text-on-surface space-y-4">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            AgentBench Zero introduces an explicit separation of intent and tool actuation for high-risk software engineering modifications. Rather than granting code modification permissions to a monolithic language model, the system operates as a bi-directional actor pair:
+          </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-2">
+<div class="p-4 rounded-xl bg-surface-container-low space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">psychology</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">1. Strategic Planner (Reasoning Model)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Synthesizes AST diff specifications, unit test invariants, and potential security boundary violations. It emits non-executable JSON schemas containing structured step proposals.
+              </p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">terminal</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">2. Execution Worker (Deterministic Tooling)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Validates schema steps within an ephemeral gVisor container runtime. Executes git staging, incremental compilation, and deterministic regression replay before committing changes.
+              </p>
+</div>
+</div>
+<!-- Mini Inline Diagram/Metric Vector -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[24px] text-primary">developer_board</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Execution Pipeline Latency Target</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant">&lt; 320ms median step verification across 48 SWE-Bench instances</span>
+</div>
+</div>
+<!-- Progress Line SVG -->
+<div class="w-full md:w-56 h-8 flex items-center">
+<svg class="w-full h-6" fill="none" viewBox="0 0 200 24">
+<path class="text-primary" d="M 0 16 L 30 14 L 60 18 L 90 8 L 120 12 L 150 6 L 180 10 L 200 4" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<circle class="fill-secondary" cx="200" cy="4" r="3"></circle>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: EVALUATION TRACK & BENCHMARKS -->
+<section class="rounded-2xl bg-surface-container-lowest p-6 shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-4 pb-4">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Section 03</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Evaluation Track &amp; Benchmarks</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+            Edit Track
+          </button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+<div class="lg:col-span-2 space-y-3">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold">
+                Autonomous Code Synthesis
+              </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                Grand Prize Pool: $30,000 USD
+              </span>
+</div>
+<!-- Rubric Focus distribution bars -->
+<div class="p-4 rounded-xl bg-surface-container-low space-y-3">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface font-medium">Jury Evaluation Weights</span>
+<span class="font-mono-code text-on-surface-variant">Total: 100%</span>
+</div>
+<div class="space-y-2">
+<div>
+<div class="flex justify-between font-body-sm text-body-sm mb-1 text-on-surface-variant">
+<span>Patch Determinism &amp; Precision</span>
+<span class="font-mono-code font-medium text-on-surface">40%</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[40%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-body-sm text-body-sm mb-1 text-on-surface-variant">
+<span>Zero Hallucination Guarantee</span>
+<span class="font-mono-code font-medium text-on-surface">30%</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[30%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-body-sm text-body-sm mb-1 text-on-surface-variant">
+<span>Tool Actuation &amp; Invocation Latency</span>
+<span class="font-mono-code font-medium text-on-surface">30%</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-tertiary rounded-full w-[30%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Automated harness verification box -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between space-y-3">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold block mb-2">Automated CI Compliance</span>
+<ul class="space-y-2.5 font-body-sm text-body-sm">
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+<span>Root Dockerfile detected</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+<span>SWE-Bench harness verified</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+<span>OpenAI &amp; Anthropic proxy mock ready</span>
+</li>
+</ul>
+</div>
+<div class="pt-2">
+<span class="inline-flex items-center gap-1 font-mono-code text-[11px] text-emerald-700 bg-emerald-50 px-2 py-1 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Runner Grade A (Compatible)
+              </span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: REPOSITORY & ARTIFACTS -->
+<section class="rounded-2xl bg-surface-container-lowest p-6 shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-4 pb-4">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Section 04</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Repository &amp; Deployed Artifacts</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+            Edit Links
+          </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Repo Card -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[22px] text-on-surface">code_blocks</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Source Control</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">github.com/neural-vanguard/agentbench-zero</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
+</div>
+<div class="flex items-center gap-3 mt-3 pt-3 font-mono-code text-[11px] text-on-surface-variant">
+<span>branch: <strong class="text-on-surface">main</strong></span>
+<span>•</span>
+<span>commit: <strong class="text-primary font-medium">8b4ef21</strong></span>
+<span>•</span>
+<span class="inline-flex items-center gap-1 text-emerald-700">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Ping verified
+              </span>
+</div>
+</div>
+<!-- Endpoint Card -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[22px] text-secondary">captive_portal</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Demo Endpoint</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">https://demo.agentbench.dev</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
+</div>
+<div class="flex items-center gap-3 mt-3 pt-3 font-mono-code text-[11px] text-on-surface-variant">
+<span>protocol: <strong class="text-on-surface">HTTPS / TLS 1.3</strong></span>
+<span>•</span>
+<span>latency: <strong class="text-on-surface">42ms RTT</strong></span>
+<span>•</span>
+<span class="inline-flex items-center gap-1 text-emerald-700">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                HTTP 200 OK
+              </span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: MEDIA & DELIVERABLES GALLERY -->
+<section class="rounded-2xl bg-surface-container-lowest p-6 shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-4 pb-4">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Section 05</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Media &amp; Deliverables Gallery</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-code text-[11px] text-on-surface-variant">2 assets</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+            Edit Media
+          </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Deliverable 1 -->
+<div class="rounded-xl overflow-hidden bg-surface-container-low shadow-sm flex flex-col group">
+<div class="relative w-full h-48 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" data-alt="High tech software architectural diagram showing agent communication flow between planner and execution worker inside a gVisor sandbox container, clean vector minimalist style with deep blues and whites, professional engineering schematic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBRl_ZP3gPfXnDSDVDnxjsvyiGlVQEZpGqFZNgtxNjENbVLRWcATP110KUWiqNhzG12Sn8OLkLHCxeeQsd0hcPfZF_5bmGNUdxtVvzT1Q-RBlhZVLffaHj7R4hYIImWmsGnwNMZlt2Pk0HcATljohARdPbY72HbPr5O0p_Xm-8koWwLYaMlckXSZSvdtL1ntPdWHfTzb61WmCsENXvHPK-iWC955mf2hWfzsPerYvqs7yRxvl_IdR52Q">
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                Cover Image
+              </span>
+<span class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-mono-code text-[10px]">
+                1920 × 1080 PNG
+              </span>
+</div>
+<div class="p-3.5 space-y-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">System Architecture &amp; Sandbox Pipeline</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">End-to-end topology showing gVisor boundary and planner isolation model.</p>
+</div>
+</div>
+<!-- Deliverable 2 -->
+<div class="rounded-xl overflow-hidden bg-surface-container-low shadow-sm flex flex-col group">
+<div class="relative w-full h-48 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" data-alt="Dark mode command line terminal view displaying automated benchmark evaluation matrix with colored progress bars, pass rates, and latency statistics for SWE-Bench software engineering challenge, clean developer UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWcIdA6UxTBkwl4rdheCZDsCVidVGk9rOj7JjYmWNk6OnQzYl6W1J2rDYj15BeZdOo4iRj4eBDDXpn4cgZmMU3XgEEBz0fqnw2z-h4yhDtgvj8o-qfd72mq4XPI_ly6BIJCqrh-KKAheiYv1znQDagqImoFPwYTgSHwlDtUyauUr_-4b9_O1VbqRZof5KQpopMBNlXKs49DXijyIBJrh_ORA1HO3ZHh0Vam1AfOdZ3qPoQq-p_E1KZdA">
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                Benchmark Artifact
+              </span>
+<span class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-mono-code text-[10px]">
+                2560 × 1440 WebP
+              </span>
+</div>
+<div class="p-3.5 space-y-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Evaluation Matrix &amp; Latency Runs</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Terminal run logs illustrating 48 verified SWE-Bench benchmarks completed.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: TECHNOLOGIES & TOOLING -->
+<section class="rounded-2xl bg-surface-container-lowest p-6 shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-4 pb-4">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Section 06</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Technologies &amp; Tooling</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+            Edit Tags
+          </button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-mono-code text-[12px] flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>Python 3.12
+          </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-mono-code text-[12px] flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>PyTorch 2.3
+          </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-mono-code text-[12px] flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>gVisor Sandbox
+          </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-mono-code text-[12px] flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>FastAPI
+          </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-mono-code text-[12px] flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-blue-500"></span>Docker OCI
+          </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-mono-code text-[12px] flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-purple-500"></span>vLLM Engine
+          </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-mono-code text-[12px] flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>SWE-Bench Verified
+          </span>
+</div>
+</section>
+<!-- SECTION 7: JUROR REPRODUCIBILITY NOTES -->
+<section class="rounded-2xl bg-surface-container-lowest p-6 shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-4 pb-3">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Juror Run Instructions</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CLI Command Reference</span>
+</div>
+<span class="inline-flex items-center gap-1 font-mono-code text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+            bash 5.2+
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2.5">
+          Jury automated evaluation nodes can run the standardized reproduction suite with the exact commit snapshot using this command:
+        </p>
+<div class="p-3 rounded-xl bg-surface-container font-mono-code text-[12px] text-on-surface flex items-center justify-between overflow-x-auto">
+<code>./scripts/eval.sh --track-repro --split verified_sample --seeds 42,1337</code>
+<button class="ml-2 p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" title="Copy instruction" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<div class="mt-3 flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">memory</span>
+<span>Minimum hardware requirements: 16GB VRAM for 8B fallback runner or configured OpenAI/Anthropic API credentials.</span>
+</div>
+</section>
+</div>
+<!-- SUCCESS RECEIPT VIEW (Initially Hidden; simulator / action trigger) -->
+<div class="hidden rounded-3xl bg-surface-container-lowest p-8 md:p-12 shadow-md text-center max-w-2xl mx-auto space-y-6" id="receipt-container">
+<div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 mx-auto flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[36px]">verified</span>
+</div>
+<div class="space-y-2">
+<h2 class="font-display-lg text-display-lg text-on-surface tracking-tight">Submission Locked &amp; Mirrored</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto">
+          Your project <strong>AgentBench Zero</strong> has been registered with the jury cluster. Repository commit <code>8b4ef21</code> is locked for evaluation.
+        </p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low text-left font-mono-code text-[12px] space-y-2 max-w-md mx-auto">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Receipt Digest:</span>
+<span class="text-on-surface font-semibold">sha256:9c82b1fa48...</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Timestamp:</span>
+<span class="text-on-surface">Nov 15, 2025 · 14:48:22 UTC</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Target Track:</span>
+<span class="text-on-surface">Autonomous Code Synthesis</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Jury Node Hash:</span>
+<span class="text-emerald-700 font-semibold">cluster-us-east-4a</span>
+</div>
+</div>
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm" type="button">
+          View Locked Submission Dossier →
+        </button>
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all" type="button">
+          Download PDF Proof Receipt
+        </button>
+</div>
+</div>
+</div>
+<!-- PERSISTENT STICKY BOTTOM ACTION BAR -->
+<aside aria-label="Submission Actions" class="fixed bottom-0 left-64 right-0 z-40 bg-surface/90 backdrop-blur-md px-6 py-3.5 shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" id="bottom-action-bar">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+<!-- Status Summary -->
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" id="bottom-status-orb"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface leading-tight" id="bottom-status-title">
+            All 6 sections complete
+          </span>
+<span class="font-body-sm text-[12px] text-on-surface-variant leading-tight" id="bottom-status-subtitle">
+            Ready for cryptographic freeze lock
+          </span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all" id="btn-back" type="button">
+          ← Back to Edit
+        </button>
+<button class="px-6 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-all shadow-sm active:scale-[0.985] flex items-center gap-2" id="btn-submit" type="button">
+<span id="btn-submit-text">Submit Project</span>
+<span class="material-symbols-outlined text-[18px]" id="btn-submit-icon">lock</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- CONFIRMATION MODAL OVERLAY (Initially Hidden) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200" id="confirmation-modal">
+<div class="w-full max-w-lg rounded-3xl bg-surface-container-lowest p-6 sm:p-8 shadow-xl space-y-5 transition-transform duration-200 scale-95" id="modal-box">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-2xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[26px]">lock_clock</span>
+</div>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="modal-close" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Confirm Project Submission</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Submitting is final for this deadline window (Nov 17, 18:00 UTC). Once confirmed, your repository commit <strong class="text-on-surface font-mono-code font-semibold">8b4ef21</strong> will be frozen and dispatched to automated jury evaluation nodes.
+        </p>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant space-y-1">
+<div class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+          Lock Policy:
+        </div>
+<p>You will not be able to edit descriptions, swap branches, or upload new video assets without formal organizer authorization.</p>
+</div>
+<div class="pt-2 flex items-center justify-end gap-2.5">
+<button class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" id="modal-cancel-btn" type="button">
+          Cancel
+        </button>
+<button class="px-5 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-all shadow-sm active:scale-[0.985]" id="modal-confirm-btn" type="button">
+          Confirm &amp; Lock Submission
+        </button>
+</div>
+</div>
+</div>
+<!-- INLINE VANILLA JAVASCRIPT FOR STATE SIMULATION & INTERACTIONS -->
+<script>
+    (function initReviewDashboard() {
+      // DOM elements
+      const simBtns = document.querySelectorAll('.sim-btn');
+      const incompleteBanner = document.getElementById('incomplete-banner');
+      const dossierCanvas = document.getElementById('dossier-canvas');
+      const receiptContainer = document.getElementById('receipt-container');
+      const chipMedia = document.getElementById('chip-media');
+      const chipMediaIcon = document.getElementById('chip-media-icon');
+      const chipMediaSub = document.getElementById('chip-media-sub');
+      const bottomOrb = document.getElementById('bottom-status-orb');
+      const bottomTitle = document.getElementById('bottom-status-title');
+      const bottomSubtitle = document.getElementById('bottom-status-subtitle');
+      const btnSubmit = document.getElementById('btn-submit');
+      const btnSubmitText = document.getElementById('btn-submit-text');
+      const btnSubmitIcon = document.getElementById('btn-submit-icon');
+      const deadlinePill = document.getElementById('deadline-pill');
+      const deadlineText = document.getElementById('deadline-text');
+
+      // Modal elements
+      const modal = document.getElementById('confirmation-modal');
+      const modalBox = document.getElementById('modal-box');
+      const modalClose = document.getElementById('modal-close');
+      const modalCancel = document.getElementById('modal-cancel-btn');
+      const modalConfirm = document.getElementById('modal-confirm-btn');
+
+      function openModal() {
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+          modal.classList.remove('opacity-0');
+          modalBox.classList.remove('scale-95');
+          modalBox.classList.add('scale-100');
+        }, 10);
+      }
+
+      function closeModal() {
+        modal.classList.add('opacity-0');
+        modalBox.classList.remove('scale-100');
+        modalBox.classList.add('scale-95');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+        }, 200);
+      }
+
+      modalClose.addEventListener('click', closeModal);
+      modalCancel.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      btnSubmit.addEventListener('click', () => {
+        if (btnSubmit.disabled) return;
+        openModal();
+      });
+
+      modalConfirm.addEventListener('click', () => {
+        closeModal();
+        applyState('submitting');
+        setTimeout(() => {
+          applyState('success');
+        }, 1200);
+      });
+
+      function setActiveSimButton(activeKey) {
+        simBtns.forEach(btn => {
+          if (btn.getAttribute('data-sim') === activeKey) {
+            btn.className = "sim-btn px-2.5 py-1 rounded-md text-[11px] font-label-sm font-medium transition-all bg-primary text-on-primary shadow-sm";
+          } else {
+            btn.className = "sim-btn px-2.5 py-1 rounded-md text-[11px] font-label-sm font-medium transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container-high";
+          }
+        });
+      }
+
+      function applyState(state) {
+        setActiveSimButton(state);
+
+        // Reset baseline UI elements
+        incompleteBanner.classList.add('hidden');
+        dossierCanvas.classList.remove('hidden');
+        receiptContainer.classList.add('hidden');
+        btnSubmit.disabled = false;
+        btnSubmit.classList.remove('opacity-50', 'cursor-not-allowed');
+
+        // Restore chip 5
+        chipMediaIcon.className = "status-icon w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0";
+        chipMediaIcon.innerHTML = `<span class="material-symbols-outlined text-[13px]">check</span>`;
+        chipMediaSub.textContent = "2/2";
+        chipMediaSub.className = "status-sub font-mono-code text-[10px] text-emerald-700 font-medium";
+
+        // Restore bottom bar
+        bottomOrb.className = "w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse";
+        bottomTitle.textContent = "All 6 sections complete";
+        bottomSubtitle.textContent = "Ready for cryptographic freeze lock";
+        btnSubmitText.textContent = "Submit Project";
+        btnSubmitIcon.textContent = "lock";
+
+        // Restore deadline pill
+        deadlinePill.className = "self-start flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface shadow-sm";
+        deadlineText.textContent = "Nov 17, 18:00 UTC · 2 days remaining";
+
+        if (state === 'ready') {
+          // Default clean 100% complete state
+        } else if (state === 'incomplete') {
+          incompleteBanner.classList.remove('hidden');
+          chipMediaIcon.className = "status-icon w-5 h-5 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center shrink-0";
+          chipMediaIcon.innerHTML = `<span class="material-symbols-outlined text-[13px]">priority_high</span>`;
+          chipMediaSub.textContent = "Missing";
+          chipMediaSub.className = "status-sub font-mono-code text-[10px] text-amber-800 font-semibold";
+
+          bottomOrb.className = "w-2.5 h-2.5 rounded-full bg-amber-500";
+          bottomTitle.textContent = "1 of 6 sections incomplete";
+          bottomSubtitle.textContent = "Missing mandatory media asset";
+          btnSubmit.disabled = true;
+          btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+        } else if (state === 'modal') {
+          openModal();
+        } else if (state === 'submitting') {
+          btnSubmit.disabled = true;
+          btnSubmitText.textContent = "Locking Commit 8b4ef21...";
+          btnSubmitIcon.textContent = "sync";
+          btnSubmitIcon.classList.add('animate-spin');
+          bottomTitle.textContent = "Cryptographic seal in progress...";
+          bottomSubtitle.textContent = "Dispatching repository bundle to jury nodes";
+        } else if (state === 'success') {
+          dossierCanvas.classList.add('hidden');
+          receiptContainer.classList.remove('hidden');
+          bottomOrb.className = "w-2.5 h-2.5 rounded-full bg-emerald-500";
+          bottomTitle.textContent = "Submission Confirmed";
+          bottomSubtitle.textContent = "Digest sha256:9c82b1... locked";
+          btnSubmit.disabled = true;
+          btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+          btnSubmitText.textContent = "Submission Locked";
+          btnSubmitIcon.textContent = "verified";
+          btnSubmitIcon.classList.remove('animate-spin');
+        } else if (state === 'expired') {
+          deadlinePill.className = "self-start flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-red-100 text-red-950 shadow-sm";
+          deadlineText.textContent = "Deadline Expired: Nov 17, 18:00 UTC";
+          bottomOrb.className = "w-2.5 h-2.5 rounded-full bg-error";
+          bottomTitle.textContent = "Submission Window Closed";
+          bottomSubtitle.textContent = "Judging freeze protocol is now active";
+          btnSubmit.disabled = true;
+          btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+          btnSubmitText.textContent = "Submissions Closed";
+          btnSubmitIcon.textContent = "block";
+        }
+      }
+
+      // Attach simulator clicks
+      simBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          applyState(btn.getAttribute('data-sim'));
+        });
+      });
+    })();
+  </script>
+</div></main></div></body></html>

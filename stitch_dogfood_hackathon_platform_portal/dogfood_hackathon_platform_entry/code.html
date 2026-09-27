@@ -1,0 +1,469 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Dogfood Public Hub</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c1c6d6", "tertiary": "#4a47d2", "surface-tint": "#005cbb", "secondary-fixed": "#dbe1ff", "surface-container-high": "#e9e7ed", "secondary": "#0051d5", "on-tertiary-fixed-variant": "#332dbc", "surface-container-highest": "#e3e2e7", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "on-background": "#1a1b1f", "surface": "#faf8fe", "on-secondary-container": "#fefcff", "surface-container-low": "#f4f3f8", "surface-dim": "#dbd9df", "on-surface-variant": "#414753", "on-error-container": "#93000a", "tertiary-fixed-dim": "#c2c1ff", "error-container": "#ffdad6", "primary-container": "#0071e3", "on-secondary-fixed-variant": "#003ea8", "inverse-on-surface": "#f1f0f6", "on-surface": "#1a1b1f", "background": "#faf8fe", "on-secondary": "#ffffff", "on-primary-fixed": "#001b3f", "primary": "#0059b5", "tertiary-container": "#6462ec", "surface-container": "#efedf3", "primary-fixed-dim": "#abc7ff", "on-primary": "#ffffff", "primary-fixed": "#d7e2ff", "on-secondary-fixed": "#00174b", "outline": "#717785", "inverse-primary": "#abc7ff", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#0c006b", "secondary-container": "#316bf3", "on-primary-container": "#fcfbff", "inverse-surface": "#2f3034", "surface-variant": "#e3e2e7", "tertiary-fixed": "#e2dfff", "surface-bright": "#faf8fe", "on-tertiary-container": "#fefaff", "error": "#ba1a1a", "on-primary-fixed-variant": "#00458f", "secondary-fixed-dim": "#b4c5ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-tablet": "2rem", "margin": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "margin-desktop": "3rem", "space-lg": "1.25rem", "gutter": "1rem", "space-md": "0.75rem", "space-xs": "0.25rem" }, "fontFamily": { "display-lg": ["Inter"], "mono-code": ["JetBrains Mono"], "body-lg": ["Inter"], "display-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "mono-code": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "500" }], "body-md": ["13px", { "lineHeight": "19px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="h-14 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs" data-path="events-directory" href="#"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[18px]">terminal</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">Dogfood</span></a><div class="h-4 w-[1px] bg-outline-variant/40 hidden sm:block"></div><nav class="hidden sm:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg"><a aria-current="page" class="px-space-md py-1.5 transition-colors bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg" data-path="events-directory" href="#">Browse Events</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" data-path="documentation" href="#">Docs</a></nav></div><div class="flex items-center gap-space-sm"><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" data-path="sign-in" href="#">Sign In</a><a class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all shadow-sm font-label-md text-label-md" data-path="create-account" href="#">Create Account</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Dynamic Background Canvas Decorators (contained) -->
+<div class="relative w-full overflow-hidden bg-gradient-to-b from-[#EFF4FA] via-surface to-surface">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[980px] h-[480px] bg-primary-fixed-dim/25 rounded-full blur-[140px] pointer-events-none -z-0"></div>
+<div class="absolute top-64 right-[10%] w-[380px] h-[380px] bg-secondary-fixed/30 rounded-full blur-[110px] pointer-events-none -z-0"></div>
+<!-- MAIN HERO CONTAINER -->
+<section class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-16 lg:pt-16 lg:pb-24">
+<div class="flex flex-col items-start max-w-4xl">
+<!-- Instance Status Micro-Badge -->
+<a class="group inline-flex items-center gap-space-sm px-3 py-1.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm transition-all hover:bg-surface-container-lowest" data-path="documentation" href="#">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-mono-code text-mono-code text-on-surface-variant font-medium">Self-Hosted Enterprise Edition • v2.4.2 Ready</span>
+<span class="material-symbols-outlined text-[14px] text-outline group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+<!-- Brand Wordmark Integration -->
+<div class="mt-6 flex items-center gap-3">
+<img alt="Dogfood Wordmark Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VIsxtFr0aWB215eEl9zlEGN2M9k5ftNiczYnC1a5frZ9mD82KuitaTxVc_DCQcHIfdvEcy_GDBT7QJfX3O3QYnXXKMFj7fmiZ0HSxLiLaNO74J5SZyYj4aSaSysnAqWeZrIlp4sW8ZIwmRNtl_WhbH0ZsWJ5npoFb70D9Ve1waSKfRBESDHiMd-ERCZD9Aq3vjVW5-JHjF0UYD3ID-MFrG7UL10kCr-m6K3hzBmmelzDC5F_5cbUGqDxYm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-mono-code text-label-sm">CORE CONTROL</span>
+</div>
+<!-- Headline -->
+<h1 class="mt-6 font-display-lg text-display-lg text-on-surface font-semibold tracking-tight text-balance">
+          The complete platform for hackathon submissions, judging &amp; evaluation.
+        </h1>
+<!-- Supporting Copy -->
+<p class="mt-5 font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl text-pretty">
+          Engineered for organizations running high-stakes hackathons. From multi-track team registration and sandbox submissions to rubric-based blind judging and weighted score normalization.
+        </p>
+<!-- Primary Action Cluster -->
+<div class="mt-8 flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-[0.985]" data-path="sign-in" href="#">
+<span class="material-symbols-outlined text-[18px] mr-2">login</span>
+            Sign In to Instance
+          </a>
+<a class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-surface-container-lowest/80 text-on-surface font-label-md text-label-md backdrop-blur-md shadow-sm hover:bg-surface-container-lowest transition-all active:scale-[0.985]" href="#events-section">
+<span class="material-symbols-outlined text-[18px] mr-2 text-outline">explore</span>
+            Browse Public Events
+          </a>
+<a class="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md ml-1" data-path="documentation" href="#">
+<span>View Organizers Documentation</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Quick Platform Capability Chips -->
+<div class="mt-12 pt-8 grid grid-cols-2 sm:grid-cols-4 gap-space-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">SOC2 • ISO 27001</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Air-gapped deployment</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">visibility_off</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Double-Blind Rubric</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero bias conflict guards</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">functions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Z-Score Engine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Strict mathematical parity</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">dataset</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Self-Hosted DB</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Postgres &amp; S3 compatible</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- PLATFORM LIFECYCLE FEATURE STRIP (4-Column Bento) -->
+<section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-12">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+<div>
+<div class="font-mono-code text-mono-code text-primary uppercase font-semibold tracking-wider">Evaluation Architecture</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Calibrated Hackathon Operations</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+        Designed for strict jury compliance, auditability, and effortless participant experience under deadline crunch.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary mb-4 group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div class="font-mono-code text-label-sm text-outline mb-1">STAGE 01</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">Team Formation &amp; Tracks</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Multi-disciplinary matchmaking, automated project repo provisioning, and track eligibility qualification guards.
+          </p>
+</div>
+<div class="mt-6 pt-4 flex items-center text-outline font-mono-code text-mono-code">
+<span>&lt;git auto-init&gt;</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary mb-4 group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div class="font-mono-code text-label-sm text-outline mb-1">STAGE 02</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">Structured Submissions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Schema-validated artifact uploads, Loom/demo embeds, and private Devpost-free repo snapshot archival.
+          </p>
+</div>
+<div class="mt-6 pt-4 flex items-center text-outline font-mono-code text-mono-code">
+<span>JSONSchema v7</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary mb-4 group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</div>
+<div class="font-mono-code text-label-sm text-outline mb-1">STAGE 03</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">Blind Rubric Judging</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Multi-round blind evaluation, judge conflict detection, weighted criteria matrices, and live score synchronization.
+          </p>
+</div>
+<div class="mt-6 pt-4 flex items-center text-outline font-mono-code text-mono-code">
+<span>Anonymized UUIDs</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary mb-4 group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[20px]">award_star</span>
+</div>
+<div class="font-mono-code text-label-sm text-outline mb-1">STAGE 04</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">Score Normalization</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Z-score distribution normalization, instant audit trail export, and cryptographic PDF certificate issuance.
+          </p>
+</div>
+<div class="mt-6 pt-4 flex items-center text-outline font-mono-code text-mono-code">
+<span>Gaussian Fit / SHA256</span>
+</div>
+</div>
+</div>
+</section>
+<!-- LIVE & UPCOMING EVENTS SECTION WITH INTERACTIVE STATE SWITCHER -->
+<section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-10" id="events-section">
+<!-- Header with interactive state toggle -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-space-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold flex items-center gap-2">
+<span>Live &amp; Scheduled Events</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-mono-code text-label-sm text-primary font-semibold" id="active-count-tag">3 Active</span>
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Explore active rounds or inspect judging telemetry.</p>
+</div>
+</div>
+<!-- State Switcher Pills -->
+<div class="inline-flex p-1 bg-surface-container-low rounded-xl self-start md:self-auto" role="tablist">
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md font-medium transition-all bg-surface-container-lowest text-on-surface shadow-sm" id="tab-active" onclick="switchState('active')">
+          Active Events (3)
+        </button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md font-medium transition-all text-on-surface-variant hover:text-on-surface" id="tab-skeleton" onclick="switchState('skeleton')">
+          Loading Skeleton Preview
+        </button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md font-medium transition-all text-on-surface-variant hover:text-on-surface" id="tab-empty" onclick="switchState('empty')">
+          Empty State View
+        </button>
+</div>
+</div>
+<!-- STATE 1: ACTIVE EVENT GRID (3 Prominent Cards) -->
+<div class="space-y-4" id="state-active-container">
+<!-- Card A: AI Agents World Cup 2025 -->
+<div class="group relative rounded-2xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
+<!-- Abstract Visual Gradient Canvas -->
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-gradient-to-tr from-primary to-tertiary-container flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[32px]">smart_toy</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 text-label-sm font-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                Submissions Open
+              </span>
+<span class="font-mono-code text-mono-code text-outline">EVT-2025-08A</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 14 – Nov 17, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Hybrid (SF + Virtual)</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+              AI Agents World Cup 2025
+            </h3>
+<div class="flex flex-wrap items-center gap-x-5 gap-y-1 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">group</span>
+<strong class="text-on-surface font-semibold">142</strong> Teams Enrolled
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">payments</span>
+<strong class="text-on-surface font-semibold">$75,000</strong> Prize Pool
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">splitscreen</span>
+<strong class="text-on-surface font-semibold">4</strong> Evaluation Tracks
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 pt-2 lg:pt-0">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all active:scale-[0.985]" data-path="event-portal" href="#">
+<span>Enter Event Portal</span>
+<span class="material-symbols-outlined text-[18px] ml-1.5">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card B: Distributed Systems Fall Sprint -->
+<div class="group relative rounded-2xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
+<!-- Abstract Visual Gradient Canvas -->
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-gradient-to-tr from-secondary to-primary-fixed-dim flex items-center justify-center text-on-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[32px]">hub</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 text-label-sm font-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                Judging In Progress
+              </span>
+<span class="font-mono-code text-mono-code text-outline">EVT-2025-07F</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 10 – Nov 13, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Self-Hosted Internal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Distributed Systems Fall Sprint
+            </h3>
+<div class="flex flex-wrap items-center gap-x-5 gap-y-1 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">code_blocks</span>
+<strong class="text-on-surface font-semibold">38</strong> Teams
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">gavel</span>
+<strong class="text-on-surface font-semibold">12</strong> Active Judges
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">sync</span>
+<strong class="text-on-surface font-semibold">Round 2</strong> of 3
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 pt-2 lg:pt-0">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all active:scale-[0.985]" data-path="live-leaderboard" href="#">
+<span>View Live Leaderboard</span>
+<span class="material-symbols-outlined text-[18px] ml-1.5 text-outline">query_stats</span>
+</a>
+</div>
+</div>
+<!-- Card C: NextGen Quantum & Cryptography -->
+<div class="group relative rounded-2xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
+<!-- Abstract Visual Gradient Canvas -->
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-gradient-to-tr from-tertiary to-secondary-container flex items-center justify-center text-on-tertiary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[32px]">lock_reset</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-800 text-label-sm font-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                Registration Open
+              </span>
+<span class="font-mono-code text-mono-code text-outline">EVT-2025-09Q</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dec 01 – Dec 05, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Global Open</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+              NextGen Quantum &amp; Cryptography
+            </h3>
+<div class="flex flex-wrap items-center gap-x-5 gap-y-1 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">how_to_reg</span>
+<strong class="text-on-surface font-semibold">89</strong> Registered
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">psychology</span>
+<strong class="text-on-surface font-semibold">Mentorship Phase</strong> Active
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 pt-2 lg:pt-0">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all active:scale-[0.985]" data-path="register-team" href="#">
+<span>Register Team</span>
+<span class="material-symbols-outlined text-[18px] ml-1.5 text-outline">app_registration</span>
+</a>
+</div>
+</div>
+</div>
+<!-- STATE 2: LOADING SKELETON PREVIEW (Hidden by default, toggled via JS) -->
+<div aria-hidden="true" class="space-y-4 hidden" id="state-skeleton-container">
+<!-- Skeleton Card 1 -->
+<div class="rounded-2xl bg-surface-container-lowest p-6 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-6 animate-pulse">
+<div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center w-full">
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-surface-container-high shrink-0"></div>
+<div class="space-y-2.5 w-full max-w-lg">
+<div class="flex items-center gap-2">
+<div class="h-5 w-28 rounded-full bg-surface-container-high"></div>
+<div class="h-4 w-20 rounded bg-surface-container-high"></div>
+<div class="h-4 w-32 rounded bg-surface-container-high"></div>
+</div>
+<div class="h-6 w-3/4 rounded bg-surface-container-high"></div>
+<div class="flex items-center gap-4 pt-1">
+<div class="h-4 w-24 rounded bg-surface-container-high"></div>
+<div class="h-4 w-28 rounded bg-surface-container-high"></div>
+<div class="h-4 w-20 rounded bg-surface-container-high"></div>
+</div>
+</div>
+</div>
+<div class="h-10 w-36 rounded-xl bg-surface-container-high shrink-0"></div>
+</div>
+<!-- Skeleton Card 2 -->
+<div class="rounded-2xl bg-surface-container-lowest p-6 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-6 animate-pulse">
+<div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center w-full">
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-surface-container-high shrink-0"></div>
+<div class="space-y-2.5 w-full max-w-lg">
+<div class="flex items-center gap-2">
+<div class="h-5 w-32 rounded-full bg-surface-container-high"></div>
+<div class="h-4 w-24 rounded bg-surface-container-high"></div>
+<div class="h-4 w-28 rounded bg-surface-container-high"></div>
+</div>
+<div class="h-6 w-2/3 rounded bg-surface-container-high"></div>
+<div class="flex items-center gap-4 pt-1">
+<div class="h-4 w-24 rounded bg-surface-container-high"></div>
+<div class="h-4 w-28 rounded bg-surface-container-high"></div>
+</div>
+</div>
+</div>
+<div class="h-10 w-36 rounded-xl bg-surface-container-high shrink-0"></div>
+</div>
+<!-- Skeleton Card 3 -->
+<div class="rounded-2xl bg-surface-container-lowest p-6 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-6 animate-pulse">
+<div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center w-full">
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-surface-container-high shrink-0"></div>
+<div class="space-y-2.5 w-full max-w-lg">
+<div class="flex items-center gap-2">
+<div class="h-5 w-24 rounded-full bg-surface-container-high"></div>
+<div class="h-4 w-20 rounded bg-surface-container-high"></div>
+<div class="h-4 w-36 rounded bg-surface-container-high"></div>
+</div>
+<div class="h-6 w-4/5 rounded bg-surface-container-high"></div>
+<div class="flex items-center gap-4 pt-1">
+<div class="h-4 w-32 rounded bg-surface-container-high"></div>
+<div class="h-4 w-28 rounded bg-surface-container-high"></div>
+</div>
+</div>
+</div>
+<div class="h-10 w-36 rounded-xl bg-surface-container-high shrink-0"></div>
+</div>
+</div>
+<!-- STATE 3: EMPTY STATE VIEW (Hidden by default, toggled via JS) -->
+<div aria-hidden="true" class="rounded-2xl bg-surface-container-lowest p-12 lg:p-16 shadow-sm text-center flex flex-col items-center justify-center hidden" id="state-empty-container">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low flex items-center justify-center text-outline mb-4">
+<span class="material-symbols-outlined text-[36px]">event_busy</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">No Public Events Currently Active</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-2">
+        There are no public hackathons scheduled on this node at the moment. Instance administrators can schedule an event or enable public discovery in the console.
+      </p>
+<div class="mt-6 flex flex-wrap items-center justify-center gap-space-sm">
+<a class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all" data-path="admin-console" href="#">
+<span class="material-symbols-outlined text-[18px] mr-1.5">add_circle</span>
+          Deploy New Event
+        </a>
+<a class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all" data-path="documentation" href="#">
+<span class="material-symbols-outlined text-[18px] mr-1.5 text-outline">menu_book</span>
+          Read Deployment Guide
+        </a>
+</div>
+</div>
+</section>
+<!-- OPERATIONAL DIAGNOSTICS MICRO-STRIP -->
+<section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-8">
+<div class="rounded-xl bg-surface-container-low px-4 py-3 shadow-none flex flex-col md:flex-row md:items-center justify-between gap-3 font-mono-code text-mono-code text-on-surface-variant">
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          Cluster: healthy (ap-northeast-1a)
+        </span>
+<span class="text-outline-variant">•</span>
+<span>Postgres 16.2 Read Replica: in-sync</span>
+<span class="text-outline-variant">•</span>
+<span class="text-outline">Blind-Score Audit Hash: sha256:7f4a...e901</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-label-sm font-label-sm text-outline">HTTP 200 OK</span>
+<span class="text-outline">Latency: 14ms</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function switchState(state) {
+    const activeCont = document.getElementById('state-active-container');
+    const skeletonCont = document.getElementById('state-skeleton-container');
+    const emptyCont = document.getElementById('state-empty-container');
+    const countTag = document.getElementById('active-count-tag');
+
+    const tabActive = document.getElementById('tab-active');
+    const tabSkeleton = document.getElementById('tab-skeleton');
+    const tabEmpty = document.getElementById('tab-empty');
+
+    // Reset tabs classes
+    [tabActive, tabSkeleton, tabEmpty].forEach(tab => {
+      tab.className = 'px-3 py-1.5 rounded-lg font-label-md text-label-md font-medium transition-all text-on-surface-variant hover:text-on-surface';
+    });
+
+    const activeClasses = 'px-3 py-1.5 rounded-lg font-label-md text-label-md font-medium transition-all bg-surface-container-lowest text-on-surface shadow-sm';
+
+    // Hide all
+    activeCont.classList.add('hidden');
+    skeletonCont.classList.add('hidden');
+    emptyCont.classList.add('hidden');
+
+    if (state === 'active') {
+      activeCont.classList.remove('hidden');
+      tabActive.className = activeClasses;
+      countTag.textContent = '3 Active';
+      countTag.className = 'px-2 py-0.5 rounded-full bg-surface-container font-mono-code text-label-sm text-primary font-semibold';
+    } else if (state === 'skeleton') {
+      skeletonCont.classList.remove('hidden');
+      tabSkeleton.className = activeClasses;
+      countTag.textContent = 'Loading...';
+      countTag.className = 'px-2 py-0.5 rounded-full bg-surface-container font-mono-code text-label-sm text-outline font-semibold animate-pulse';
+    } else if (state === 'empty') {
+      emptyCont.classList.remove('hidden');
+      tabEmpty.className = activeClasses;
+      countTag.textContent = '0 Active';
+      countTag.className = 'px-2 py-0.5 rounded-full bg-surface-container font-mono-code text-label-sm text-outline font-semibold';
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest/80 border-t border-outline-variant/30 py-6"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-outline-variant/40 font-mono-code text-mono-code"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span>v2.4.0 Self-Hosted</span><span class="text-outline-variant">•</span><span>Cluster OK</span></div></div><div class="flex items-center gap-space-lg"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="documentation" href="#">Docs</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="github-repository" href="#">GitHub</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="api-status" href="#">API Status</a></div></div></footer></body></html>

@@ -1,0 +1,988 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#fefaff", "inverse-surface": "#2f3034", "on-primary": "#ffffff", "on-secondary": "#ffffff", "on-background": "#1a1b1f", "secondary-container": "#316bf3", "on-tertiary-fixed": "#0c006b", "surface-dim": "#dbd9df", "outline-variant": "#c1c6d6", "error": "#ba1a1a", "surface-container": "#efedf3", "tertiary-fixed-dim": "#c2c1ff", "secondary": "#0051d5", "on-error-container": "#93000a", "inverse-primary": "#abc7ff", "on-secondary-fixed-variant": "#003ea8", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#abc7ff", "on-primary-fixed": "#001b3f", "surface-container-low": "#f4f3f8", "on-surface": "#1a1b1f", "on-surface-variant": "#414753", "primary": "#0059b5", "secondary-fixed-dim": "#b4c5ff", "surface-container-highest": "#e3e2e7", "on-tertiary-fixed-variant": "#332dbc", "on-primary-container": "#fcfbff", "on-primary-fixed-variant": "#00458f", "on-secondary-container": "#fefcff", "background": "#faf8fe", "error-container": "#ffdad6", "surface-bright": "#faf8fe", "primary-container": "#0071e3", "primary-fixed": "#d7e2ff", "tertiary-fixed": "#e2dfff", "inverse-on-surface": "#f1f0f6", "tertiary": "#4a47d2", "surface-container-high": "#e9e7ed", "surface": "#faf8fe", "on-tertiary": "#ffffff", "tertiary-container": "#6462ec", "surface-tint": "#005cbb", "on-secondary-fixed": "#00174b", "on-error": "#ffffff", "secondary-fixed": "#dbe1ff", "outline": "#717785", "surface-variant": "#e3e2e7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1rem", "space-xl": "2rem", "space-md": "0.75rem", "space-lg": "1.25rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "display-lg-mobile": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "display-lg": ["Inter"], "mono-code": ["JetBrains Mono"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "19px", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "mono-code": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-semibold">Dogfood</span><span class="font-label-sm text-label-sm tracking-wider text-on-surface-variant uppercase font-medium">Organizer Suite</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span>Overview</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="events" href="#"><span class="material-symbols-outlined text-[18px]">event</span>Events</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="participants" href="#"><span class="material-symbols-outlined text-[18px]">group</span>Participants</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="teams" href="#"><span class="material-symbols-outlined text-[18px]">diversity_3</span>Teams</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="submissions" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span>Submissions</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="eligibility" href="#"><span class="material-symbols-outlined text-[18px]">verified</span>Eligibility</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="judges" href="#"><span class="material-symbols-outlined text-[18px]">gavel</span>Judges</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="judging" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span>Judging</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="normalization" href="#"><span class="material-symbols-outlined text-[18px]">tune</span>Normalization</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="results" href="#"><span class="material-symbols-outlined text-[18px]">leaderboard</span>Results</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="certificates" href="#"><span class="material-symbols-outlined text-[18px]">workspace_premium</span>Certificates</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="archive" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span>Archive</a><a class="flex items-center gap-space-md px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span>Settings</a></nav></div></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container-low"><div class="flex items-center justify-between px-space-sm py-space-xs rounded bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.03)]"><span class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface font-medium"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Cluster OK</span><span class="font-mono-code text-mono-code text-on-surface-variant">99.98%</span></div><div class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant font-label-sm text-label-sm"><span>Docs &amp; API</span><span class="font-mono-code text-mono-code text-primary font-medium">v2.4-prod</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-shrink-0"><div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)] text-on-surface font-label-md text-label-md font-medium cursor-pointer hover:bg-surface-container-low transition-colors"><span>AI Agents World Cup 2025</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden xl:flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-high text-on-surface font-mono-code text-mono-code"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span>us-east-cluster · OK · 99.98%</span></div></div><div class="flex-1 max-w-xl mx-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px] pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-12 rounded-lg bg-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-[0_1px_3px_rgba(0,0,0,0.02)] transition-all" placeholder="Search telemetry, submissions, dossiers..." type="text"><kbd class="absolute right-2.5 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-code text-label-sm">⌘K</kbd></div></div><div class="flex items-center gap-space-md flex-shrink-0"><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm py-1 pr-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)]"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-medium leading-none">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-0.5">Lead Organizer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive View State Bar (System Controller) -->
+<section class="w-full bg-surface-container-high/60 backdrop-blur-md px-space-lg py-space-xs flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm overflow-x-auto py-0.5">
+<span class="flex items-center gap-1 font-mono-code text-label-sm uppercase tracking-wider text-on-surface-variant font-medium mr-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        Workspace State:
+      </span>
+<button class="px-space-md py-1 rounded-full text-label-sm font-medium transition-all shadow-sm bg-primary-container text-on-primary-container" id="btn-state-default" onclick="setWorkspaceState('default')">
+        Default (2 Unassigned)
+      </button>
+<button class="px-space-md py-1 rounded-full text-label-sm font-medium transition-all hover:bg-surface-container-highest text-on-surface-variant" id="btn-state-drag" onclick="setWorkspaceState('drag')">
+        Drag in Progress
+      </button>
+<button class="px-space-md py-1 rounded-full text-label-sm font-medium transition-all hover:bg-surface-container-highest text-on-surface-variant" id="btn-state-modal" onclick="toggleModal(true)">
+        Auto-Assign Modal
+      </button>
+<button class="px-space-md py-1 rounded-full text-label-sm font-medium transition-all hover:bg-surface-container-highest text-on-surface-variant" id="btn-state-balanced" onclick="setWorkspaceState('balanced')">
+        All Balanced (0 Unassigned)
+      </button>
+<button class="px-space-md py-1 rounded-full text-label-sm font-medium transition-all hover:bg-surface-container-highest text-on-surface-variant" id="btn-state-alert" onclick="setWorkspaceState('alert')">
+        Over-assigned Alert
+      </button>
+<button class="px-space-md py-1 rounded-full text-label-sm font-medium transition-all hover:bg-surface-container-highest text-on-surface-variant" id="btn-state-empty" onclick="setWorkspaceState('empty')">
+        Empty State
+      </button>
+</div>
+<div class="hidden xl:flex items-center gap-2 font-mono-code text-label-sm text-on-surface-variant">
+<span>Auto-rebalance: <strong class="text-primary font-medium">Ready</strong></span>
+<span>•</span>
+<span>Seed: #0x92f4e</span>
+</div>
+</section>
+<!-- Workspace Shell & Header Area -->
+<div class="w-full px-space-lg lg:px-space-xl py-space-lg flex flex-col gap-space-lg">
+<!-- Breadcrumb & Workspace Title Header -->
+<header class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<nav aria-label="Breadcrumbs" class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="hover:text-primary transition-colors cursor-pointer">Events</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">AI Agents World Cup 2025</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Judges</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-medium text-on-surface">Assignment</span>
+</nav>
+<div class="flex items-baseline gap-space-md flex-wrap">
+<h1 class="font-headline-lg text-headline-lg tracking-tight text-on-surface font-semibold">Judge Assignment</h1>
+<span class="font-body-sm text-body-sm text-on-surface-variant">AI Agents World Cup 2025 • Balance juror workloads, assign ballot quotas, and resolve track-level coverage</span>
+</div>
+</div>
+<!-- Segmented Navigation Sub-Tabs -->
+<div class="flex items-center p-1 rounded-xl bg-surface-container-high shadow-inner">
+<a class="px-space-md py-1.5 rounded-lg text-label-md font-label-md text-on-surface-variant hover:text-on-surface transition-all" href="#">Juror Roster</a>
+<a class="px-space-md py-1.5 rounded-lg text-label-md font-label-md bg-surface-container-lowest text-on-surface font-semibold shadow-sm transition-all" href="#">Judge Assignment</a>
+<a class="px-space-md py-1.5 rounded-lg text-label-md font-label-md text-on-surface-variant hover:text-on-surface transition-all" href="#">Chamber Configuration</a>
+</div>
+</header>
+<!-- Key Stats Summary Strip -->
+<section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Stat 1 -->
+<div class="flex flex-col justify-between p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Total Projects</span>
+<span class="material-symbols-outlined text-[18px] text-primary">deployed_code</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">34</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">projects</span>
+</div>
+<div class="mt-2 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-2">
+<span>Target Ballot Load</span>
+<span class="font-mono-code font-medium text-on-surface">3 ballots/project</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="flex flex-col justify-between p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Active Jurors</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">gavel</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">12</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">jurors</span>
+</div>
+<div class="mt-2 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-2">
+<span>Cohort Capacity</span>
+<span class="font-mono-code font-medium text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 100% Active
+          </span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="flex flex-col justify-between p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Avg Workload</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">tune</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">8.5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">assigns / juror</span>
+</div>
+<div class="mt-2 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-2">
+<span>Optimal Corridor</span>
+<span class="font-mono-code font-medium text-on-surface">7 – 9 target</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="flex flex-col justify-between p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden" id="stat-unassigned-card">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Needs Quota</span>
+<span class="material-symbols-outlined text-[18px] text-error">pending_actions</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight" id="stat-unassigned-count">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">projects</span>
+</div>
+<div class="mt-2 flex items-center justify-between font-label-sm text-label-sm pt-2">
+<span class="text-on-surface-variant">Pending Ballots</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-mono-code text-[10px] font-semibold" id="stat-unassigned-badge">3 ballots open</span>
+</div>
+</div>
+<!-- Stat 5 -->
+<div class="col-span-2 md:col-span-1 flex flex-col justify-between p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Balance Health</span>
+<span class="material-symbols-outlined text-[18px] text-primary">equalizer</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">94.1%</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Optimal</span>
+</div>
+<div class="mt-2 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-2">
+<span>Std Deviation</span>
+<span class="font-mono-code font-medium text-on-surface">±0.8 ballots</span>
+</div>
+</div>
+</section>
+<!-- Workload Balance Heat-Strip Histogram Visualizer -->
+<section class="w-full p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">bar_chart</span>
+            Juror Quota Distribution Spectrum
+          </span>
+<span class="text-label-sm font-mono-code text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">12 Judges Cohort</span>
+</div>
+<div class="flex items-center gap-space-md text-label-sm text-on-surface-variant font-mono-code">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-primary-container"></span> Optimal (7-9)</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-outline-variant"></span> Under-allocated (&lt;7)</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-error"></span> Over-assigned (10+)</span>
+<span class="hidden md:inline">• Target Quota: 8.5 ballots • 102 total required evaluations</span>
+</div>
+</div>
+<!-- Histogram Micro-Bars -->
+<div class="w-full pt-space-xs">
+<div class="relative h-14 w-full bg-surface-container-low rounded-xl p-2 flex items-end justify-between gap-1 sm:gap-2">
+<!-- Target Threshold Line Overlay -->
+<div class="absolute left-0 right-0 top-[35%] h-[1px] bg-primary/40 pointer-events-none z-10 flex items-center justify-end pr-2">
+<span class="bg-surface-container-lowest/90 px-1.5 py-0.5 rounded text-[10px] font-mono-code text-primary shadow-xs">Quota Baseline: 8.5</span>
+</div>
+<!-- J1 Elena (9) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-primary-container rounded-t h-9 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-on-surface-variant font-medium">9</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Dr. Elena Rostova</span>
+<span class="text-[10px] font-mono-code">9/10 ballots (Optimal)</span>
+</div>
+</div>
+<!-- J2 Marcus (10) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-error rounded-t h-10 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-error font-medium">10</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Marcus Vance</span>
+<span class="text-[10px] font-mono-code">10/10 ballots (Max Capacity)</span>
+</div>
+</div>
+<!-- J3 Priya (8) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-primary-container rounded-t h-8 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-on-surface-variant font-medium">8</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Priya Patel</span>
+<span class="text-[10px] font-mono-code">8/10 ballots (Optimal)</span>
+</div>
+</div>
+<!-- J4 Alex (11) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-error rounded-t h-11 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-error font-semibold">11</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Alex Mercer</span>
+<span class="text-[10px] font-mono-code text-error-container">11/10 ballots (Over-assigned +1)</span>
+</div>
+</div>
+<!-- J5 Sophia (7) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-primary-container rounded-t h-7 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-on-surface-variant font-medium">7</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Sophia Chen</span>
+<span class="text-[10px] font-mono-code">7/10 ballots (Room: 3)</span>
+</div>
+</div>
+<!-- J6 David (8) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-primary-container rounded-t h-8 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-on-surface-variant font-medium">8</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">David Sterling</span>
+<span class="text-[10px] font-mono-code">8/10 ballots (Optimal)</span>
+</div>
+</div>
+<!-- J7 Kenjiro (8) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-primary-container rounded-t h-8 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-on-surface-variant font-medium">8</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Dr. Kenjiro Takahashi</span>
+<span class="text-[10px] font-mono-code">8/10 ballots (Optimal)</span>
+</div>
+</div>
+<!-- J8 Rachel (6) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-outline-variant rounded-t h-6 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-on-surface font-semibold">6</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Rachel Adams</span>
+<span class="text-[10px] font-mono-code">6/10 ballots (Under quota)</span>
+</div>
+</div>
+<!-- J9 Tariq (9) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-primary-container rounded-t h-9 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-on-surface-variant font-medium">9</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Tariq Mansour</span>
+<span class="text-[10px] font-mono-code">9/10 ballots</span>
+</div>
+</div>
+<!-- J10 Clara (8) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-primary-container rounded-t h-8 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-on-surface-variant font-medium">8</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Clara Morales</span>
+<span class="text-[10px] font-mono-code">8/10 ballots</span>
+</div>
+</div>
+<!-- J11 Hiro (9) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-primary-container rounded-t h-9 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-on-surface-variant font-medium">9</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Hiroshi Sato</span>
+<span class="text-[10px] font-mono-code">9/10 ballots</span>
+</div>
+</div>
+<!-- J12 Zoe (8) -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full bg-primary-container rounded-t h-8 transition-all group-hover:brightness-95"></div>
+<span class="font-mono-code text-[10px] text-on-surface-variant font-medium">8</span>
+<div class="absolute bottom-12 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface p-1.5 rounded-lg text-label-sm whitespace-nowrap shadow-xl z-20">
+<span class="font-semibold">Zoe Lindqvist</span>
+<span class="text-[10px] font-mono-code">8/10 ballots</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Operational Toolbar Row -->
+<section class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Left Filters -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Track Filter -->
+<div class="relative">
+<button class="h-9 px-space-md rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-2 shadow-xs hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">category</span>
+<span>All Tracks (4)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+</button>
+</div>
+<!-- Sort Filter -->
+<div class="relative">
+<button class="h-9 px-space-md rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-2 shadow-xs hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">sort</span>
+<span>Sort: Workload (High to Low)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+</button>
+</div>
+<!-- Search Bar with Keyboard shortcut -->
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[18px] text-on-surface-variant pointer-events-none">search</span>
+<input class="w-full h-9 pl-8 pr-10 rounded-xl bg-surface-container-lowest text-body-md font-body-md text-on-surface placeholder:text-on-surface-variant shadow-xs focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search juror or project..." type="text">
+<kbd class="absolute right-2 top-2 px-1 py-0.2 rounded bg-surface-container font-mono-code text-[10px] text-on-surface-variant">⌘K</kbd>
+</div>
+<!-- Manual Drag Indicator Chip -->
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">drag_indicator</span>
+<span>Manual Drag Enabled</span>
+</div>
+</div>
+<!-- Right CTAs -->
+<div class="flex items-center gap-space-sm self-end xl:self-auto">
+<button class="h-9 px-space-md rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-xs hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">restart_alt</span>
+<span>Reset Assignments</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+</button>
+<!-- Primary CTA: Auto-Assign Ballots -->
+<button class="h-9 px-space-lg rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold flex items-center gap-2 shadow-sm hover:brightness-105 active:scale-[0.985] transition-all" onclick="toggleModal(true)">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Auto-Assign Ballots</span>
+</button>
+</div>
+</section>
+<!-- Main Two-Panel Workspace Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Panel: Judges Roster & Workload Allocation (60% / col-span-7) -->
+<section class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Panel Header -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Judges Roster &amp; Allocation</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-mono-code text-label-sm text-on-surface-variant font-medium">12 Jurors</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-primary cursor-pointer hover:underline">
+<span>Filter by Chamber</span>
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</div>
+</div>
+<!-- Over-assigned Global Banner (Shown in Alert state) -->
+<div class="hidden p-space-md rounded-2xl bg-error-container text-on-error-container flex items-center justify-between gap-space-md shadow-sm" id="overassigned-alert-banner">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-error">warning</span>
+<span class="font-body-md text-body-md font-medium">Alex Mercer is assigned 11/10 ballots (+1 above chamber policy ceiling).</span>
+</div>
+<button class="px-space-md py-1 rounded-lg bg-surface-container-lowest text-error font-label-sm font-semibold shadow-xs hover:bg-surface-container-low transition-colors">
+            Rebalance
+          </button>
+</div>
+<!-- Juror Cards Stack -->
+<div class="flex flex-col gap-space-sm" id="jurors-list">
+<!-- Judge 1: Dr. Elena Rostova (Optimal & Expanded Preview) -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow transition-all flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Close-up studio portrait of Dr. Elena Rostova, senior female researcher in artificial intelligence wearing refined neutral spectacles with soft ambient lighting against a sleek minimal architectural backdrop in light Cupertino tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjhZKt1WTG0x3EABVHG0uzklbhYlCP0SfJC3yKXk1cS2Ioy2RSW5axHSEHhWCDjUQzW6NRnkaYfGqMOdQxSkjV6MFR1IYrBT3sg_cEaHeOgdNPdVb-usxUoql2ta_erC6h098-NcDX_AskkNR3SdNK1Wgm796olwXouhQZYQIhgosi-cvt26_QK7MNvQFVf8AUQ136sKGO5SCad03ffq0eExKAloftX6S3hWFaUxg9bVzLgvJSM2s0mg">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Dr. Elena Rostova</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-code text-[11px] font-medium">Autonomous Code Synthesis</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Senior AI Research Fellow • Stanford AI Lab</span>
+</div>
+</div>
+<!-- Quota Indicator -->
+<div class="flex items-center gap-space-md flex-shrink-0">
+<div class="text-right">
+<div class="flex items-baseline justify-end gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">9</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 10</span>
+</div>
+<span class="font-mono-code text-[10px] text-secondary font-medium">Optimal (90%)</span>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant" onclick="toggleExpand('elena-projects')" title="Toggle assigned projects">
+<span class="material-symbols-outlined text-[20px]" id="elena-projects-chevron">expand_less</span>
+</button>
+</div>
+</div>
+<!-- Progress Track -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 90%;"></div>
+</div>
+<!-- Expanded Assigned Projects Dossier List -->
+<div class="pt-space-xs flex flex-col gap-1.5" id="elena-projects">
+<div class="flex items-center justify-between text-[11px] font-mono-code text-on-surface-variant px-1">
+<span>ASSIGNED DOSSIERS (9 OF 10)</span>
+<span class="text-primary cursor-pointer hover:underline">+ Add Manual Slot</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+<div class="p-2 rounded-xl bg-surface-container-low flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[15px] text-primary">terminal</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">AgentBench Zero</span>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors p-0.5" title="Unassign ballot">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<div class="p-2 rounded-xl bg-surface-container-low flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[15px] text-primary">memory</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">RAG Core Pipeline</span>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors p-0.5" title="Unassign ballot">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<div class="p-2 rounded-xl bg-surface-container-low flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">+ 7 More Dossiers</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">open_in_new</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Judge 2: Marcus Vance (At Max Capacity) -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow transition-all flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Contemporary modern photographic headshot portrait of Marcus Vance, a distinguished male systems security architect in tech casual attire with deep focused expression and subtle studio backlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt7cA1gl3EevawGPRGD22v-K7agO4itoQELgaIVcuN20D_VcuvyCi7jPEU2qc0J2bYf9oossNhEcWaw-E7v-zVe_cK5814nP5AxfvEwjPSVM1-9cgOEEBxs9FDIShlIUv_D9_CF0O0Q_hc8KkZfUx685NOVAQOWmiXCvaCi-uc-Pwt3Q-iw3SMTGiyJLEa5nKMgNLM5Kjh530N6APq36CtSJvYhk88ZXIzeVC1wDuK_kBa_oZtvrz4Sw">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Marcus Vance</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px] font-medium">Deterministic Safety</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Principal Systems Architect • KernelSec</span>
+</div>
+</div>
+<!-- Quota Indicator -->
+<div class="flex items-center gap-space-md flex-shrink-0">
+<div class="text-right">
+<div class="flex items-baseline justify-end gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">10</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 10</span>
+</div>
+<span class="font-mono-code text-[10px] text-error font-medium">At Max Capacity</span>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Progress Track -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-error" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Judge 3: Priya Patel (Staff ML Compiler) -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow transition-all flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Portrait of Priya Patel, a smiling female staff machine learning compiler engineer with warm natural studio light, crisp modern framing, and clean high-end tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA671UrSP03Z2frgPFmweezBUfD0hIE3B_LjbIVlVh1l_383AFuH-9X5vzMb6MWaGa5-RuaKMZ9s2ALCrBjjAE1PTvXpYMHsov2blyjqHFLrF4rkg4RythhMWF2FpaEUeX1XB00wLtD1mwxnlOxht05tZtCoTC3FEoHp_9bKMKlYLdSWqlc15XplZ3ABR3mvADemp8h3sx3TEe6kYYuH-oO7r742G1oPLJobes371Ga2Z8xwSKhEraqXQ">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Priya Patel</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px] font-medium">Multi-Tool &amp; RAG</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Staff ML Compiler Engineer • DeepLogic</span>
+</div>
+</div>
+<!-- Quota Indicator -->
+<div class="flex items-center gap-space-md flex-shrink-0">
+<div class="text-right">
+<div class="flex items-baseline justify-end gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 10</span>
+</div>
+<span class="font-mono-code text-[10px] text-secondary font-medium">Optimal (80%)</span>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Progress Track -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Judge 4: Alex Mercer (Over-assigned Alert target) -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow transition-all flex flex-col gap-space-sm" id="judge-alex">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Professional studio portrait of Alex Mercer, seasoned algorithmic intelligence fellow wearing charcoal sweater, soft diffuse lighting, quiet confident demeanor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU-u6c8G9cl1l_v44Phz3Lu17ZESel-mNnFuGEKQWnWw0LvRhgAUvL91h-vZqglkqoY--HAEGwNuHZEOcwTzFVm9FVGHRN6DXb1UJKhiq0jTYrbBCH3KJC6k3HeSF7Hzg1Cz9Po12OUDBonIsquCNrM1sN5Tap-ZoNp-VzacFJG7IciHRmZrPJ2cChE8M8rqC1xSFU7C0Ubj5DqhijW3-zrV7ARYSan8_N_xe5532ykEEr_E_QbGnIag">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Alex Mercer</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-mono-code text-[11px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">warning</span> Over-assigned +1
+                    </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Distinguished Fellow • Algoint</span>
+</div>
+</div>
+<!-- Quota Indicator -->
+<div class="flex items-center gap-space-md flex-shrink-0">
+<div class="text-right">
+<div class="flex items-baseline justify-end gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-error">11</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 10</span>
+</div>
+<span class="font-mono-code text-[10px] text-error font-medium">Excess Workload</span>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Progress Track -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-error" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Judge 5: Sophia Chen (Drop Target Candidate) -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow transition-all flex flex-col gap-space-sm relative" id="judge-sophia">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="High quality studio headshot of Sophia Chen, young female tech executive and head of cloud infrastructure with sleek dark hair, professional blazer, soft bright rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL_yXEOToxaZLNhloQzwzTVC9uw65l7TCESsVX3U7gGewBUpij1sd44LcfalsV4-UVjDLpU1k2ORwO8edD4cyyikflhQE9ZUasaEh9DeBhA1gtxLR2TzUikQRt1Il-ELVnU8n-wFZ2CTUm8Sp6G4XppHkMZ7Ata6U-WYvbpGgVjyNmx9OuHJobihglf8qLjb4pNuUJKylPM5B6qhLykFCqi9OsYxAfd0D3I-va5H0nKWJCj_ApZL5FOA">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Sophia Chen</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px] font-medium">Local / Edge LLM</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Head of Infrastructure • Lattice Compute</span>
+</div>
+</div>
+<!-- Quota Indicator -->
+<div class="flex items-center gap-space-md flex-shrink-0">
+<div class="text-right">
+<div class="flex items-baseline justify-end gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">7</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 10</span>
+</div>
+<span class="font-mono-code text-[10px] text-primary font-medium">Can accept 3 more</span>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Progress Track -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 70%;"></div>
+</div>
+<!-- Drop Target Overlay Active State (Controlled via JS) -->
+<div class="hidden absolute inset-0 bg-primary/10 backdrop-blur-xs rounded-2xl border-2 border-dashed border-primary flex items-center justify-center gap-2 text-primary font-label-md font-semibold shadow-lg" id="sophia-drop-overlay">
+<span class="material-symbols-outlined text-[22px] animate-bounce">download_for_offline</span>
+<span>Drop project here to assign ballot to Sophia Chen</span>
+</div>
+</div>
+<!-- Judge 6: David Sterling -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow transition-all flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant font-semibold text-label-md">
+                  DS
+                </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">David Sterling</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px] font-medium">General Multimodal</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Partner • Benchmark Horizon</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0">
+<div class="text-right">
+<div class="flex items-baseline justify-end gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 10</span>
+</div>
+<span class="font-mono-code text-[10px] text-secondary font-medium">Optimal (80%)</span>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Judge 7: Dr. Kenjiro Takahashi -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow transition-all flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant font-semibold text-label-md">
+                  KT
+                </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Dr. Kenjiro Takahashi</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px] font-medium">Deterministic Safety</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Professor • Tokyo Tech</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0">
+<div class="text-right">
+<div class="flex items-baseline justify-end gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 10</span>
+</div>
+<span class="font-mono-code text-[10px] text-secondary font-medium">Optimal (80%)</span>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Judge 8: Rachel Adams (Capacity Available) -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow transition-all flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant font-semibold text-label-md">
+                  RA
+                </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Rachel Adams</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-code text-[11px] font-medium">Autonomous Code Synthesis</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Lead Product Architect • Anthropic ecosystem</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0">
+<div class="text-right">
+<div class="flex items-baseline justify-end gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">6</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 10</span>
+</div>
+<span class="font-mono-code text-[10px] text-outline font-medium">Capacity Available (4)</span>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-outline-variant" style="width: 60%;"></div>
+</div>
+</div>
+<!-- Remaining Judges Compact Collapsible Summary -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex items-center justify-between text-on-surface-variant cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px]">group</span>
+<span class="font-label-md text-label-md font-medium text-on-surface">4 Additional Cohort Jurors (Tariq, Clara, Hiroshi, Zoe)</span>
+<span class="font-mono-code text-[11px] px-2 py-0.5 rounded-full bg-surface-container-lowest">Avg 8.5 Ballots</span>
+</div>
+<span class="material-symbols-outlined text-[18px]">unfold_more</span>
+</div>
+</div>
+</section>
+<!-- Right Panel: Unassigned / Under-Allocated Projects (40% / col-span-5) -->
+<section class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Panel Header -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Under-Allocated Projects</h2>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-mono-code text-label-sm font-medium" id="unassigned-badge">2 Open</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Target: 3 Jurors / Project</span>
+</div>
+<!-- Unassigned Projects Stack -->
+<div class="flex flex-col gap-space-sm" id="unassigned-projects-container">
+<!-- Project 1: zkEval Protocol -->
+<article class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col gap-space-sm cursor-grab active:cursor-grabbing" id="project-card-1">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline-variant mt-0.5 cursor-grab">drag_indicator</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">zkEval Protocol</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-mono-code text-[11px] text-on-surface-variant font-medium">Deterministic Safety</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Team: TraceProof • Zero-Knowledge proof evaluator for agent execution traces</span>
+</div>
+</div>
+</div>
+<!-- Ballot Status & Action Row -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<!-- Visual Juror Pip Stacks -->
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container" title="Juror 1: Dr. Elena Rostova"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container" title="Juror 2: Marcus Vance"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-highest border border-outline-variant" title="Juror 3: Needed"></span>
+</div>
+<span class="font-mono-code text-label-sm text-on-surface-variant">2/3 Assigned</span>
+<span class="font-label-sm text-error font-medium">(Needs 1 Juror)</span>
+</div>
+<!-- Quick Assign Button -->
+<div class="relative">
+<button class="px-space-md py-1 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium shadow-xs flex items-center gap-1 transition-colors" onclick="quickAssign('zkEval')">
+<span>Assign to Judge</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project 2: MicroJail Security -->
+<article class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col gap-space-sm cursor-grab active:cursor-grabbing" id="project-card-2">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline-variant mt-0.5 cursor-grab">drag_indicator</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">MicroJail Security</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-mono-code text-[11px] text-on-surface-variant font-medium">Deterministic Safety</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Team: SecureRuntime • WASM-level sandboxing for untrusted multi-agent tool calls</span>
+</div>
+</div>
+</div>
+<!-- Ballot Status & Action Row -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<!-- Visual Juror Pip Stacks -->
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container" title="Juror 1: Dr. Kenjiro Takahashi"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-highest border border-outline-variant" title="Juror 2: Needed"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-highest border border-outline-variant" title="Juror 3: Needed"></span>
+</div>
+<span class="font-mono-code text-label-sm text-on-surface-variant">1/3 Assigned</span>
+<span class="font-label-sm text-error font-medium">(Needs 2 Jurors)</span>
+</div>
+<!-- Quick Assign Button -->
+<div class="relative">
+<button class="px-space-md py-1 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium shadow-xs flex items-center gap-1 transition-colors" onclick="quickAssign('MicroJail')">
+<span>Assign to Judge</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Empty State (Hidden in default, shown in balanced & empty states) -->
+<div class="hidden p-space-xl rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col items-center justify-center text-center gap-space-sm py-12" id="all-balanced-state">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">All Projects Fully Assigned</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Every active submission has satisfied its minimum 3-juror quorum. No unallocated ballots remain.</p>
+<div class="mt-2 flex items-center gap-2">
+<button class="px-space-md py-1.5 rounded-xl bg-surface-container-high text-on-surface font-label-md font-medium hover:bg-surface-container-highest transition-colors" onclick="setWorkspaceState('default')">
+                Simulate Reset
+              </button>
+</div>
+</div>
+</div>
+<!-- Fully Allocated Collapsible Drawer at Bottom -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between cursor-pointer" onclick="toggleExpand('allocated-drawer')">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">32 Fully Allocated Projects (3/3 Ballots Cleared)</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant" id="allocated-drawer-chevron">expand_more</span>
+</div>
+<!-- Drawer Content Preview -->
+<div class="hidden pt-space-xs flex flex-col gap-2" id="allocated-drawer">
+<div class="p-2 rounded-xl bg-surface-container-low flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2 truncate">
+<span class="font-mono-code text-[11px] text-on-surface-variant">#PRJ-01</span>
+<span class="font-medium text-on-surface truncate">AgentBench Zero</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-mono-code text-[10px] text-on-surface-variant">Elena, Priya, Tariq</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+</div>
+<div class="p-2 rounded-xl bg-surface-container-low flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2 truncate">
+<span class="font-mono-code text-[11px] text-on-surface-variant">#PRJ-02</span>
+<span class="font-medium text-on-surface truncate">AutoGraph Consensus</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-mono-code text-[10px] text-on-surface-variant">Kenjiro, Rachel, Zoe</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+</div>
+<div class="p-2 rounded-xl bg-surface-container-low flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2 truncate">
+<span class="font-mono-code text-[11px] text-on-surface-variant">#PRJ-03</span>
+<span class="font-medium text-on-surface truncate">TensorSwarm Edge</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-mono-code text-[10px] text-on-surface-variant">Sophia, David, Clara</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+</div>
+<span class="text-center font-label-sm text-primary py-1 cursor-pointer hover:underline">View All 32 Allocated Project Dossiers</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Auto-Assign Ballots Confirmation Modal Overlay -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="auto-assign-modal">
+<div class="w-full max-w-xl bg-surface-container-lowest rounded-3xl shadow-2xl p-space-lg flex flex-col gap-space-lg transform transition-all">
+<!-- Modal Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface">Auto-Assign Ballots</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Deterministic Balancer Algorithm • AI Agents World Cup 2025</span>
+</div>
+</div>
+<button class="p-1 rounded-full hover:bg-surface-container transition-colors text-on-surface-variant" onclick="toggleModal(false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Algorithmic Criteria Pillars -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Automated Distribution Constraints</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-1">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Track Expertise Match</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Maps chamber specialization directly to project tracks.</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">balance</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Strict Quota Parity</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Guarantees 8-9 ballots per judge with variance &lt;1.0.</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">block</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">COI Elimination</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Filters corporate/academic ties &amp; team affiliations.</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">diversity_3</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Quorum Target: 3 Ballots</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Satisfies quorum for zkEval and MicroJail.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Execution Preview Metrics -->
+<div class="flex items-center justify-between p-space-md rounded-2xl bg-surface-container">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pending Ballots to Allocate</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">3 Ballots</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Target Jurors Receiving Ballots</span>
+<span class="font-label-md text-label-md font-medium text-primary">Rachel Adams, Sophia Chen</span>
+</div>
+</div>
+<!-- Modal Action Buttons -->
+<div class="flex items-center justify-end gap-space-md">
+<button class="px-space-lg py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium transition-colors" onclick="toggleModal(false)">
+          Cancel
+        </button>
+<button class="px-space-xl py-2 rounded-xl bg-primary-container hover:brightness-105 active:scale-[0.985] text-on-primary-container font-label-md text-label-md font-semibold flex items-center gap-2 shadow-sm transition-all" onclick="runAutoAllocation()">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Run Auto-Allocation</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Inline Vanilla Logic for Micro-Interactions & State Controller -->
+<script>
+    function toggleExpand(id) {
+      const el = document.getElementById(id);
+      const chevron = document.getElementById(id + '-chevron');
+      if (el) {
+        if (el.classList.contains('hidden')) {
+          el.classList.remove('hidden');
+          if (chevron) chevron.textContent = 'expand_less';
+        } else {
+          el.classList.add('hidden');
+          if (chevron) chevron.textContent = 'expand_more';
+        }
+      }
+    }
+
+    function toggleModal(show) {
+      const modal = document.getElementById('auto-assign-modal');
+      if (modal) {
+        if (show) {
+          modal.classList.remove('hidden');
+        } else {
+          modal.classList.add('hidden');
+        }
+      }
+    }
+
+    function runAutoAllocation() {
+      toggleModal(false);
+      setWorkspaceState('balanced');
+    }
+
+    function quickAssign(projectName) {
+      setWorkspaceState('drag');
+      setTimeout(() => {
+        alert('Assigned ' + projectName + ' to Sophia Chen (Quota now balanced).');
+        setWorkspaceState('balanced');
+      }, 700);
+    }
+
+    function setWorkspaceState(state) {
+      // Clear active styles on buttons
+      const buttons = ['default', 'drag', 'balanced', 'alert', 'empty'];
+      buttons.forEach(b => {
+        const btn = document.getElementById('btn-state-' + b);
+        if (btn) {
+          btn.className = 'px-space-md py-1 rounded-full text-label-sm font-medium transition-all hover:bg-surface-container-highest text-on-surface-variant';
+        }
+      });
+      const activeBtn = document.getElementById('btn-state-' + state);
+      if (activeBtn) {
+        activeBtn.className = 'px-space-md py-1 rounded-full text-label-sm font-medium transition-all shadow-sm bg-primary-container text-on-primary-container';
+      }
+
+      // References
+      const sophiaOverlay = document.getElementById('sophia-drop-overlay');
+      const projectCard1 = document.getElementById('project-card-1');
+      const projectCard2 = document.getElementById('project-card-2');
+      const balancedState = document.getElementById('all-balanced-state');
+      const unassignedBadge = document.getElementById('unassigned-badge');
+      const alertBanner = document.getElementById('overassigned-alert-banner');
+      const statUnassignedCount = document.getElementById('stat-unassigned-count');
+      const statUnassignedBadge = document.getElementById('stat-unassigned-badge');
+      const judgeAlex = document.getElementById('judge-alex');
+
+      // Reset common
+      if (sophiaOverlay) sophiaOverlay.classList.add('hidden');
+      if (alertBanner) alertBanner.classList.add('hidden');
+      if (projectCard1) projectCard1.classList.remove('shadow-2xl', 'scale-[1.02]', 'bg-surface-container-high');
+
+      if (state === 'default') {
+        if (projectCard1) projectCard1.classList.remove('hidden');
+        if (projectCard2) projectCard2.classList.remove('hidden');
+        if (balancedState) balancedState.classList.add('hidden');
+        if (unassignedBadge) unassignedBadge.textContent = '2 Open';
+        if (statUnassignedCount) statUnassignedCount.textContent = '2';
+        if (statUnassignedBadge) statUnassignedBadge.textContent = '3 ballots open';
+      } else if (state === 'drag') {
+        if (projectCard1) {
+          projectCard1.classList.remove('hidden');
+          projectCard1.classList.add('shadow-2xl', 'scale-[1.02]', 'bg-surface-container-high');
+        }
+        if (projectCard2) projectCard2.classList.remove('hidden');
+        if (balancedState) balancedState.classList.add('hidden');
+        if (sophiaOverlay) sophiaOverlay.classList.remove('hidden');
+      } else if (state === 'balanced') {
+        if (projectCard1) projectCard1.classList.add('hidden');
+        if (projectCard2) projectCard2.classList.add('hidden');
+        if (balancedState) balancedState.classList.remove('hidden');
+        if (unassignedBadge) unassignedBadge.textContent = '0 Open';
+        if (statUnassignedCount) statUnassignedCount.textContent = '0';
+        if (statUnassignedBadge) statUnassignedBadge.textContent = 'Quorum Met';
+      } else if (state === 'alert') {
+        if (alertBanner) alertBanner.classList.remove('hidden');
+        if (judgeAlex) {
+          judgeAlex.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      } else if (state === 'empty') {
+        if (projectCard1) projectCard1.classList.add('hidden');
+        if (projectCard2) projectCard2.classList.add('hidden');
+        if (balancedState) balancedState.classList.remove('hidden');
+        if (unassignedBadge) unassignedBadge.textContent = '0 Open';
+        if (statUnassignedCount) statUnassignedCount.textContent = '0';
+        if (statUnassignedBadge) statUnassignedBadge.textContent = 'No Submissions';
+      }
+    }
+  </script>
+</div></main></div></body></html>

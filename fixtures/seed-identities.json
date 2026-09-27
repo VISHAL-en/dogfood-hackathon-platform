@@ -1,0 +1,42 @@
+[
+  {
+    "id": "usr_organizer_001",
+    "email": "organizer@dogfood.local",
+    "name": "Lead Organizer",
+    "role": "organizer",
+    "password": "OrganizerPassword123!",
+    "seedToken": "dogfood_token_organizer"
+  },
+  {
+    "id": "usr_judge_a_001",
+    "email": "judge_a@dogfood.local",
+    "name": "Judge Alice",
+    "role": "judge",
+    "password": "JudgeAPassword123!",
+    "seedToken": "dogfood_token_judge_a"
+  },
+  {
+    "id": "usr_judge_b_001",
+    "email": "judge_b@dogfood.local",
+    "name": "Judge Bob",
+    "role": "judge",
+    "password": "JudgeBPassword123!",
+    "seedToken": "dogfood_token_judge_b"
+  },
+  {
+    "id": "usr_participant_001",
+    "email": "participant@dogfood.local",
+    "name": "Pat Participant",
+    "role": "participant",
+    "password": "ParticipantPassword123!",
+    "seedToken": "dogfood_token_participant"
+  },
+  {
+    "id": "usr_admin_001",
+    "email": "admin@dogfood.local",
+    "name": "Platform Administrator",
+    "role": "admin",
+    "password": "AdminPassword123!",
+    "seedToken": "dogfood_token_admin"
+  }
+]
