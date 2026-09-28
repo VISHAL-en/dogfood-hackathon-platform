@@ -16,7 +16,7 @@ export const OrganizerDashboardPage: React.FC = () => {
 
   useEffect(() => {
     api.events
-      .list()
+      .list({ organizerId: 'me' })
       .then((data) => {
         setEvents(data);
         if (data.length > 0) {
@@ -133,7 +133,7 @@ export const OrganizerDashboardPage: React.FC = () => {
     <div className="workspace-split">
       <Sidebar
         sections={sidebarSections}
-        headerTitle="Organizer Console"
+        headerTitle="Arbiter Organizer"
         headerSubtitle="Evaluation Management"
       />
 
@@ -145,7 +145,7 @@ export const OrganizerDashboardPage: React.FC = () => {
               Lead Operations
             </div>
             <h1 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--on-surface)', marginTop: '2px' }}>
-              Organizer Dashboard
+              Arbiter Organizer Dashboard
             </h1>
           </div>
 

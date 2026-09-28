@@ -48,13 +48,13 @@ export const JudgeDashboardPage: React.FC = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
               <span className="instance-badge">
                 <span className="orb"></span>
-                <span>Active Jury Session</span>
+                <span>Arbiter Jury Session</span>
               </span>
               <span style={{ fontSize: '12px', color: 'var(--outline)' }}>•</span>
               <span style={{ fontSize: '12px', color: 'var(--on-surface-variant)' }}>Judge: {user?.name}</span>
             </div>
             <h1 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--on-surface)' }}>
-              Judge Evaluation Dashboard
+              Arbiter Judge Workspace
             </h1>
             <p style={{ fontSize: '14px', color: 'var(--on-surface-variant)', marginTop: '4px' }}>
               Strict backend score isolation active. Peer scores and evaluations from other jury members are strictly isolated and hidden.
@@ -127,7 +127,7 @@ export const JudgeDashboardPage: React.FC = () => {
                       )}
                     </td>
                     <td>
-                      <span className="hash-pill">{asgn.eventId}</span>
+                      <span className="hash-pill">{asgn.eventName || asgn.eventId}</span>
                     </td>
                     <td className="tabular-nums" style={{ fontSize: '12px', color: 'var(--outline)' }}>
                       {new Date(asgn.assignedAt).toLocaleDateString()}

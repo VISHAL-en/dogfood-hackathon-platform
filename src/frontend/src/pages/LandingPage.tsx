@@ -63,33 +63,24 @@ export const LandingPage: React.FC = () => {
                 backdropFilter: 'blur(10px)'
               }}
             >
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--primary)', display: 'inline-block' }}></span>
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#35bdf6', display: 'inline-block' }}></span>
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: 600, color: 'var(--on-surface-variant)' }}>
-                Self-Hosted Platform • Zero External Dependencies • v2.4.2 Ready
+                Arbiter • Self-Hosted Platform • Zero External Dependencies • Built for DOGFOOD 2026
               </span>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-              <div
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
+              <img
+                src="/branding/arbiter-logo.png"
+                alt="Arbiter"
                 style={{
-                  width: '36px',
-                  height: '36px',
-                  borderRadius: 'var(--radius-md)',
-                  background: 'var(--primary)',
-                  color: '#fff',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  boxShadow: '0 4px 10px rgba(0, 113, 227, 0.3)'
+                  height: '56px',
+                  width: 'auto',
+                  objectFit: 'contain'
                 }}
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: '22px' }}>terminal</span>
-              </div>
-              <span style={{ fontSize: '20px', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--on-surface)' }}>
-                Dogfood
-              </span>
-              <span style={{ fontSize: '11px', background: 'var(--surface-high)', padding: '2px 8px', borderRadius: 'var(--radius-xs)', color: 'var(--on-surface-variant)', fontWeight: 600, fontFamily: 'var(--font-mono)' }}>
-                CORE CONTROL
+              />
+              <span style={{ fontSize: '11px', background: 'rgba(53, 189, 246, 0.12)', color: '#0284c7', border: '1px solid rgba(53, 189, 246, 0.3)', padding: '3px 10px', borderRadius: 'var(--radius-pill)', fontWeight: 700, fontFamily: 'var(--font-mono)', letterSpacing: '0.04em' }}>
+                HACKATHON INFRASTRUCTURE
               </span>
             </div>
 
@@ -131,7 +122,7 @@ export const LandingPage: React.FC = () => {
                 <span>Explore Gallery</span>
               </Link>
               <Link to="/login" className="btn btn-ghost btn-lg">
-                <span>Sign In to Instance</span>
+                <span>Sign In to Arbiter</span>
                 <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
               </Link>
             </div>

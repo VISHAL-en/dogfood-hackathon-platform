@@ -89,22 +89,12 @@ export const SignInPage: React.FC = () => {
         {/* Top Identity Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div
-              style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: 'var(--radius-md)',
-                background: 'var(--primary)',
-                color: '#fff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 2px 6px rgba(0, 113, 227, 0.25)'
-              }}
-            >
-              <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>terminal</span>
-            </div>
-            <span style={{ fontSize: '18px', fontWeight: 800, color: 'var(--on-surface)' }}>Dogfood</span>
+            <img
+              src="/branding/arbiter-icon.png"
+              alt="Arbiter"
+              style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: 'var(--radius-md)' }}
+            />
+            <span style={{ fontSize: '19px', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--on-surface)' }}>Arbiter</span>
           </div>
           <span className="instance-badge">
             <span className="orb"></span>
@@ -115,7 +105,7 @@ export const SignInPage: React.FC = () => {
         {/* Title & Description */}
         <div style={{ marginBottom: '24px' }}>
           <h1 style={{ fontSize: '24px', fontWeight: 700, color: 'var(--on-surface)', letterSpacing: '-0.02em' }}>
-            Sign In
+            Sign In to Arbiter
           </h1>
           <p style={{ fontSize: '13px', color: 'var(--on-surface-variant)', marginTop: '4px' }}>
             Enter your credentials to access your judging dashboard, event portal, or team workspace.

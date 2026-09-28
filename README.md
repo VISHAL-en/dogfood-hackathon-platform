@@ -1,6 +1,6 @@
-# DOGFOOD Hackathon Platform (2026)
+# Arbiter
 
-An open-source, self-hostable hackathon submission, judging, and community voting platform built for complete offline resilience with zero external cloud dependencies.
+Arbiter is an open-source, self-hostable platform for hackathon submissions, judging, normalization, and results. Built for DOGFOOD 2026 with complete offline resilience and zero external cloud dependencies.
 
 ---
 

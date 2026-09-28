@@ -40,27 +40,18 @@ export const PasswordResetPage: React.FC = () => {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-          <div
-            style={{
-              width: '32px',
-              height: '32px',
-              borderRadius: 'var(--radius-md)',
-              background: 'var(--primary)',
-              color: '#fff',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>lock_reset</span>
-          </div>
-          <span style={{ fontSize: '18px', fontWeight: 800, color: 'var(--on-surface)' }}>Dogfood</span>
+          <img
+            src="/branding/arbiter-icon.png"
+            alt="Arbiter"
+            style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: 'var(--radius-md)' }}
+          />
+          <span style={{ fontSize: '19px', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--on-surface)' }}>Arbiter</span>
         </div>
 
         <div style={{ marginBottom: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
             <h1 style={{ fontSize: '22px', fontWeight: 700, color: 'var(--on-surface)', letterSpacing: '-0.02em', margin: 0 }}>
-              Password Recovery
+              Reset Your Arbiter Password
             </h1>
             <span className="badge" style={{ background: 'var(--surface-container)', color: 'var(--outline)', fontSize: '11px' }}>
               UNCONFIGURED

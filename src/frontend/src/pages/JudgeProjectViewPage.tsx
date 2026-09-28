@@ -81,7 +81,7 @@ export const JudgeProjectViewPage: React.FC = () => {
       <div style={{ marginBottom: '16px' }}>
         <Link to="/judge" style={{ fontSize: '13px', color: 'var(--primary)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
           <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>arrow_back</span>
-          <span>Back to Assigned Projects List</span>
+          <span>Back to Arbiter Judge Dashboard</span>
         </Link>
       </div>
 

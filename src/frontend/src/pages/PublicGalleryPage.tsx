@@ -181,7 +181,7 @@ export const PublicGalleryPage: React.FC = () => {
           </div>
           <h1 className="page-title" style={{ marginTop: '2px' }}>Project Gallery</h1>
           <p className="page-subtitle">
-            Explore verified submissions, autonomous toolchains, and offline prototypes built during hackathons on this platform.
+            Explore verified submissions, autonomous toolchains, and offline prototypes built during hackathons on Arbiter.
           </p>
         </div>
       </div>

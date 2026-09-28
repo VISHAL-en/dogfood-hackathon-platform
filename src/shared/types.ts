@@ -1,5 +1,5 @@
 /**
- * Shared types foundation for the DOGFOOD Hackathon Platform.
+ * Shared types foundation for Arbiter — Hackathon Submission & Judging Platform (Built for DOGFOOD 2026).
  */
 
 export type UserRole = 'visitor' | 'participant' | 'judge' | 'organizer' | 'admin';
@@ -157,6 +157,14 @@ export interface Team {
   updatedAt: string;
   memberCount?: number;
   members?: TeamMember[];
+  myRole?: TeamMemberRole;
+  eventName?: string;
+  eventSlug?: string;
+  eventStatus?: EventStatus;
+  submissionId?: string;
+  submissionTitle?: string;
+  submissionStatus?: SubmissionStatus;
+  submissionSlug?: string;
 }
 
 export type InvitationStatus = 'pending' | 'accepted' | 'revoked' | 'expired';
@@ -293,6 +301,7 @@ export type AssignmentStatus = 'assigned' | 'completed';
 export interface JudgeAssignment {
   id: string;
   eventId: string;
+  eventName?: string;
   judgeId: string;
   judgeName?: string;
   judgeEmail?: string;

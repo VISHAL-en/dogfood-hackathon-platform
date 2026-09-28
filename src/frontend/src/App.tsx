@@ -127,8 +127,13 @@ export const App: React.FC = () => {
               <Route path="*" component={<NotFoundPage />} />
             </Routes>
           </main>
-          <footer style={{ borderTop: '1px solid var(--color-border)', padding: '16px 24px', textAlign: 'center', fontSize: '12px', color: 'var(--color-text-secondary)', background: 'var(--color-surface)' }}>
-            DOGFOOD 2026 Evaluation Platform &bull; Cupertino Native Architecture &bull; Self-Hostable &bull; Zero External UI Bloat
+          <footer style={{ borderTop: '1px solid var(--outline-border)', padding: '16px 24px', textAlign: 'center', fontSize: '12px', color: 'var(--outline)', background: 'var(--surface-lowest)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', flexWrap: 'wrap' }}>
+            <img src="/branding/arbiter-icon.png" alt="Arbiter" style={{ width: '16px', height: '16px', objectFit: 'contain' }} />
+            <span style={{ fontWeight: 600, color: 'var(--on-surface)' }}>Arbiter</span>
+            <span>&bull;</span>
+            <span>Open-source infrastructure for hackathon judging</span>
+            <span>&bull;</span>
+            <span>Built for DOGFOOD 2026</span>
           </footer>
         </div>
       </AuthProvider>

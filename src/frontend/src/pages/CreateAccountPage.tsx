@@ -74,21 +74,12 @@ export const CreateAccountPage: React.FC = () => {
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div
-              style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: 'var(--radius-md)',
-                background: 'var(--primary)',
-                color: '#fff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>person_add</span>
-            </div>
-            <span style={{ fontSize: '18px', fontWeight: 800, color: 'var(--on-surface)' }}>Dogfood</span>
+            <img
+              src="/branding/arbiter-icon.png"
+              alt="Arbiter"
+              style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: 'var(--radius-md)' }}
+            />
+            <span style={{ fontSize: '19px', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--on-surface)' }}>Arbiter</span>
           </div>
           <span className="instance-badge">
             <span className="orb"></span>
@@ -98,7 +89,7 @@ export const CreateAccountPage: React.FC = () => {
 
         <div style={{ marginBottom: '20px' }}>
           <h1 style={{ fontSize: '22px', fontWeight: 700, color: 'var(--on-surface)', letterSpacing: '-0.02em' }}>
-            Create Hacker Account
+            Create Your Arbiter Account
           </h1>
           <p style={{ fontSize: '13px', color: 'var(--on-surface-variant)', marginTop: '4px' }}>
             Register to join hackathons, build teams, and submit projects.

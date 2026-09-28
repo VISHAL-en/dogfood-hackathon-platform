@@ -15,11 +15,20 @@ export const AppHeader: React.FC = () => {
     <header className="top-header">
       <div className="top-header-inner">
         <div className="brand-cluster">
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <div className="brand-icon">
-              <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>terminal</span>
-            </div>
-            <span className="brand-title">Dogfood</span>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '9px', textDecoration: 'none' }} title="Arbiter — Home">
+            <img
+              src="/branding/arbiter-icon.png"
+              alt="Arbiter"
+              style={{
+                width: '26px',
+                height: '26px',
+                objectFit: 'contain',
+                borderRadius: '6px'
+              }}
+            />
+            <span className="brand-title" style={{ fontSize: '17px', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--on-surface)' }}>
+              Arbiter
+            </span>
           </Link>
 
           <span className="instance-badge" style={{ marginLeft: '12px' }}>

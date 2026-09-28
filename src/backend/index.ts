@@ -11,7 +11,7 @@ async function bootstrap(): Promise<void> {
   const app = createApp();
 
   const server = app.listen(config.port, () => {
-    console.log(`[Server] DOGFOOD Hackathon Platform running on port ${config.port} (${config.nodeEnv})`);
+    console.log(`[Server] Arbiter Hackathon Platform running on port ${config.port} (${config.nodeEnv})`);
   });
 
   // Graceful shutdown handling
