@@ -352,8 +352,16 @@ export class EventService {
       viewingUser && (viewingUser.role === 'admin' || (options.organizerId && viewingUser.id === options.organizerId));
 
     if (!isOwnerOrAdmin) {
-      conditions.push(`e.status IN (${PUBLIC_STATUSES.map(() => '?').join(',')})`);
-      params.push(...PUBLIC_STATUSES);
+      if (viewingUser && viewingUser.role === 'organizer' && !options.organizerId) {
+        // Authenticated organizer listing without specific organizer filter:
+        // Include public events plus all draft/archived events they own
+        conditions.push(`(e.status IN (${PUBLIC_STATUSES.map(() => '?').join(',')}) OR e.organizer_id = ?)`);
+        params.push(...PUBLIC_STATUSES, viewingUser.id);
+      } else {
+        // Public discovery / participants: strictly public statuses only
+        conditions.push(`e.status IN (${PUBLIC_STATUSES.map(() => '?').join(',')})`);
+        params.push(...PUBLIC_STATUSES);
+      }
     }
 
     if (options.status) {

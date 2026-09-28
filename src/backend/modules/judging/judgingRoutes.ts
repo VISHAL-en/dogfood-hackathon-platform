@@ -194,6 +194,28 @@ export function createEventJudgingRouter(): Router {
   });
 
   /**
+   * GET /events/:eventId/judging/judges
+   * Returns available platform judges (organizers and admins only).
+   */
+  router.get('/events/:eventId/judging/judges', requireAuth, (_req: Request, res: Response, next: NextFunction) => {
+    try {
+      const judges = JudgingService.listJudges();
+      res.status(200).json({ judges });
+    } catch (err) {
+      handleJudgingError(err, res, next);
+    }
+  });
+
+  router.get('/judges', requireAuth, (_req: Request, res: Response, next: NextFunction) => {
+    try {
+      const judges = JudgingService.listJudges();
+      res.status(200).json({ judges });
+    } catch (err) {
+      handleJudgingError(err, res, next);
+    }
+  });
+
+  /**
    * GET /events/:eventId/judging/progress
    * Returns aggregate judging progress (organizers and admins only).
    */

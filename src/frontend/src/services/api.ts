@@ -133,10 +133,11 @@ export const api = {
   // EVENTS
   // --------------------------------------------------------------------------
   events: {
-    async list(params?: { status?: string; search?: string }): Promise<EventListItem[]> {
+    async list(params?: { status?: string; search?: string; organizerId?: string }): Promise<EventListItem[]> {
       const query = new URLSearchParams();
       if (params?.status) query.set('status', params.status);
       if (params?.search) query.set('search', params.search);
+      if (params?.organizerId) query.set('organizerId', params.organizerId);
       const queryString = query.toString() ? `?${query.toString()}` : '';
       const res = await request<{ events: EventListItem[] }>(`/events${queryString}`);
       return res.events;
@@ -221,6 +222,21 @@ export const api = {
       await request(`/teams/${teamId}/members/${userId}`, {
         method: 'DELETE'
       });
+    },
+
+    async getMyTeams(eventId?: string): Promise<TeamWithDetails[]> {
+      const query = eventId ? `?eventId=${encodeURIComponent(eventId)}` : '';
+      const res = await request<{ teams: TeamWithDetails[] }>(`/teams/mine${query}`);
+      return res.teams;
+    },
+
+    async getMyTeamForEvent(eventId: string): Promise<TeamWithDetails | null> {
+      try {
+        const res = await request<{ team: TeamWithDetails | null }>(`/events/${eventId}/my-team`);
+        return res.team;
+      } catch {
+        return null;
+      }
     }
   },
 
@@ -228,6 +244,16 @@ export const api = {
   // SUBMISSIONS
   // --------------------------------------------------------------------------
   submissions: {
+    async getTeamSubmission(eventId: string, teamId: string): Promise<ProjectSubmission | null> {
+      try {
+        const res = await request<{ submission: ProjectSubmission }>(`/events/${eventId}/teams/${teamId}/submission`);
+        return res.submission;
+      } catch (err) {
+        if (err instanceof ApiError && err.status === 404) return null;
+        throw err;
+      }
+    },
+
     async createDraft(
       eventId: string,
       teamId: string,
@@ -377,6 +403,12 @@ export const api = {
       const qs = eventId ? `?eventId=${eventId}` : '';
       const res = await request<string>(`/exports/scores.csv${qs}`);
       return res;
+    },
+
+    async listJudges(eventId?: string): Promise<Array<{ id: string; name: string; email: string; role: string }>> {
+      const path = eventId ? `/events/${eventId}/judging/judges` : '/judges';
+      const res = await request<{ judges: Array<{ id: string; name: string; email: string; role: string }> }>(path);
+      return res.judges;
     }
   },
 

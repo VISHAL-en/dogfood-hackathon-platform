@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from '../router/Router';
-import { EventWithDetails } from '../../../shared/types';
+import { EventWithDetails, TeamWithDetails } from '../../../shared/types';
 import { api, ApiError } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import { LoadingState } from '../components/LoadingState';
@@ -9,6 +9,7 @@ import { ErrorBanner } from '../components/ErrorBanner';
 export const EventRegistrationPage: React.FC = () => {
   const { eventId } = useParams<{ eventId: string }>();
   const [event, setEvent] = useState<EventWithDetails | null>(null);
+  const [existingTeam, setExistingTeam] = useState<TeamWithDetails | null>(null);
   const [loading, setLoading] = useState(true);
   const [mode, setMode] = useState<'create' | 'join'>('create');
   const [teamName, setTeamName] = useState('');
@@ -23,9 +24,14 @@ export const EventRegistrationPage: React.FC = () => {
   useEffect(() => {
     if (!eventId) return;
     setLoading(true);
-    api.events
-      .getByIdOrSlug(eventId)
-      .then((data) => setEvent(data))
+    Promise.all([
+      api.events.getByIdOrSlug(eventId),
+      api.teams.getMyTeamForEvent(eventId)
+    ])
+      .then(([evData, teamData]) => {
+        setEvent(evData);
+        setExistingTeam(teamData);
+      })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   }, [eventId]);
@@ -45,6 +51,11 @@ export const EventRegistrationPage: React.FC = () => {
     } catch (err: unknown) {
       if (err instanceof ApiError) {
         setError(err.message);
+        if (err.message.includes('already a member')) {
+          api.teams.getMyTeamForEvent(eventId).then((t) => {
+            if (t) setExistingTeam(t);
+          }).catch(() => {});
+        }
       } else {
         setError('Failed to create team. Ensure registration is currently open.');
       }
@@ -107,6 +118,31 @@ export const EventRegistrationPage: React.FC = () => {
             Form a new team as captain or join an existing crew with an invitation token.
           </p>
         </div>
+
+        {existingTeam && (
+          <div className="card" style={{ padding: '20px', marginBottom: '20px', borderLeft: '4px solid var(--color-success)', background: 'var(--color-bg)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+              <span className="material-symbols-outlined" style={{ color: 'var(--color-success)', fontSize: '20px' }}>
+                check_circle
+              </span>
+              <span style={{ fontSize: '15px', fontWeight: 700 }}>You are registered in this event!</span>
+            </div>
+            <p style={{ fontSize: '13px', color: 'var(--color-text-secondary)', margin: '0 0 14px 0' }}>
+              You belong to team <strong>{existingTeam.name}</strong> (<code>{existingTeam.slug}</code>) as <strong>{existingTeam.myRole === 'captain' ? 'Captain' : 'Member'}</strong>.
+            </p>
+            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+              <Link to={`/teams/${existingTeam.id}`} className="button button-outline" style={{ textDecoration: 'none' }}>
+                Manage Team
+              </Link>
+              <Link to={`/events/${eventId}/submission`} className="button button-primary" style={{ textDecoration: 'none' }}>
+                Project Submission
+              </Link>
+              <Link to="/dashboard" className="button button-outline" style={{ textDecoration: 'none' }}>
+                My Projects
+              </Link>
+            </div>
+          </div>
+        )}
 
         {error && <ErrorBanner message={error} onDismiss={() => setError(null)} />}
 

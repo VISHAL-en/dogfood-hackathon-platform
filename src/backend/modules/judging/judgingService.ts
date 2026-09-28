@@ -257,9 +257,12 @@ export class JudgingService {
   static getActiveRubric(eventId: string): Rubric | null {
     const db = getDatabase();
 
-    const rubric = db.prepare(`
+    const event = db.prepare('SELECT id FROM events WHERE id = ? OR slug = ?').get(eventId, eventId) as { id: string } | undefined;
+    const resolvedEventId = event ? event.id : eventId;
+
+    let rubric = db.prepare(`
       SELECT * FROM rubrics WHERE event_id = ? AND status = 'active'
-    `).get(eventId) as {
+    `).get(resolvedEventId) as {
       id: string;
       event_id: string;
       name: string;
@@ -269,6 +272,13 @@ export class JudgingService {
       created_at: string;
       updated_at: string;
     } | undefined;
+
+    if (!rubric) {
+      // Fallback: If no event-specific active rubric is found, check for standard platform active rubric
+      rubric = db.prepare(`
+        SELECT * FROM rubrics WHERE status = 'active' ORDER BY created_at ASC LIMIT 1
+      `).get() as any;
+    }
 
     if (!rubric) {
       return null;
@@ -327,15 +337,18 @@ export class JudgingService {
   ): JudgeAssignment {
     const db = getDatabase();
 
+    const event = db.prepare('SELECT id, organizer_id FROM events WHERE id = ? OR slug = ?').get(eventId, eventId) as { id: string; organizer_id: string } | undefined;
+    if (!event) {
+      throw new JudgingServiceError(`Event "${eventId}" not found`, 'NOT_FOUND');
+    }
+
     if (userRole !== 'admin') {
-      const event = db.prepare('SELECT organizer_id FROM events WHERE id = ?').get(eventId) as { organizer_id: string } | undefined;
-      if (!event) {
-        throw new JudgingServiceError(`Event "${eventId}" not found`, 'NOT_FOUND');
-      }
       if (event.organizer_id !== organizerId) {
         throw new JudgingServiceError('Only the event organizer or an admin can assign judges', 'FORBIDDEN');
       }
     }
+
+    const resolvedEventId = event.id;
 
     const { judgeId, submissionId } = input;
     if (!judgeId || !submissionId) {
@@ -363,7 +376,7 @@ export class JudgingService {
       throw new JudgingServiceError(`Submission "${submissionId}" not found`, 'NOT_FOUND');
     }
 
-    if (submission.event_id !== eventId) {
+    if (submission.event_id !== resolvedEventId) {
       throw new JudgingServiceError('Submission belongs to another event', 'BAD_REQUEST');
     }
 
@@ -386,11 +399,11 @@ export class JudgingService {
     db.prepare(`
       INSERT INTO judge_assignments (id, event_id, judge_id, submission_id, status, assigned_at, created_at, updated_at)
       VALUES (?, ?, ?, ?, 'assigned', ?, ?, ?)
-    `).run(id, eventId, judgeId, submissionId, nowIso, nowIso, nowIso);
+    `).run(id, resolvedEventId, judgeId, submissionId, nowIso, nowIso, nowIso);
 
     return {
       id,
-      eventId,
+      eventId: resolvedEventId,
       judgeId,
       judgeName: judge.name,
       submissionId,
@@ -414,6 +427,7 @@ export class JudgingService {
       SELECT
         ja.id,
         ja.event_id,
+        e.name as event_name,
         ja.judge_id,
         u.name as judge_name,
         u.email as judge_email,
@@ -426,6 +440,7 @@ export class JudgingService {
         ja.created_at,
         ja.updated_at
       FROM judge_assignments ja
+      JOIN events e ON ja.event_id = e.id
       JOIN users u ON ja.judge_id = u.id
       JOIN submissions s ON ja.submission_id = s.id
       JOIN teams tm ON s.team_id = tm.id
@@ -434,6 +449,7 @@ export class JudgingService {
     `).all(judgeId) as Array<{
       id: string;
       event_id: string;
+      event_name: string;
       judge_id: string;
       judge_name: string;
       judge_email: string;
@@ -450,6 +466,7 @@ export class JudgingService {
     return rows.map((r) => ({
       id: r.id,
       eventId: r.event_id,
+      eventName: r.event_name,
       judgeId: r.judge_id,
       judgeName: r.judge_name,
       judgeEmail: r.judge_email,
@@ -792,15 +809,18 @@ export class JudgingService {
   static getJudgingProgress(eventId: string, userId: string, userRole: UserRole): JudgingProgress {
     const db = getDatabase();
 
+    const event = db.prepare('SELECT id, organizer_id FROM events WHERE id = ? OR slug = ?').get(eventId, eventId) as { id: string; organizer_id: string } | undefined;
+    if (!event) {
+      throw new JudgingServiceError(`Event "${eventId}" not found`, 'NOT_FOUND');
+    }
+
     if (userRole !== 'admin') {
-      const event = db.prepare('SELECT organizer_id FROM events WHERE id = ?').get(eventId) as { organizer_id: string } | undefined;
-      if (!event) {
-        throw new JudgingServiceError(`Event "${eventId}" not found`, 'NOT_FOUND');
-      }
       if (event.organizer_id !== userId) {
         throw new JudgingServiceError('Access denied: Only event organizers or admins can view judging progress', 'FORBIDDEN');
       }
     }
+
+    const resolvedEventId = event.id;
 
     const counts = db.prepare(`
       SELECT
@@ -810,7 +830,7 @@ export class JudgingService {
         COUNT(DISTINCT submission_id) as assigned_submissions_count
       FROM judge_assignments
       WHERE event_id = ?
-    `).get(eventId) as {
+    `).get(resolvedEventId) as {
       total_assignments: number;
       completed_assignments: number | null;
       assigned_judges_count: number;
@@ -823,7 +843,7 @@ export class JudgingService {
     const completionPercentage = total > 0 ? Math.round((completed / total) * 100) : 0;
 
     return {
-      eventId,
+      eventId: resolvedEventId,
       totalAssignments: total,
       completedAssignments: completed,
       pendingAssignments: pending,
@@ -831,6 +851,19 @@ export class JudgingService {
       assignedSubmissionsCount: counts.assigned_submissions_count || 0,
       completionPercentage
     };
+  }
+
+  /**
+   * Lists all users with the judge role.
+   */
+  static listJudges(): Array<{ id: string; name: string; email: string; role: string }> {
+    const db = getDatabase();
+    return db.prepare(`
+      SELECT id, name, email, role
+      FROM users
+      WHERE role = 'judge'
+      ORDER BY name ASC
+    `).all() as Array<{ id: string; name: string; email: string; role: string }>;
   }
 
   // --------------------------------------------------------------------------

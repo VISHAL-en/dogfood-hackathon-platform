@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from '../router/Router';
-import { EventWithDetails, Rubric, EventTrack, EventPrize } from '../../../shared/types';
+import { EventWithDetails, Rubric, EventTrack, EventPrize, EventStatus } from '../../../shared/types';
 import { api, ApiError } from '../services/api';
 import { LoadingState } from '../components/LoadingState';
 import { ErrorBanner } from '../components/ErrorBanner';
@@ -13,6 +13,8 @@ export const EventSettingsPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [successMsg, setSuccessMsg] = useState<string | null>(null);
+  const [updatingStatus, setUpdatingStatus] = useState(false);
+  const [targetStatus, setTargetStatus] = useState<EventStatus>('draft');
 
   // Track form
   const [newTrackName, setNewTrackName] = useState('');
@@ -32,6 +34,7 @@ export const EventSettingsPage: React.FC = () => {
     ])
       .then(([evData, rubData]) => {
         setEvent(evData);
+        setTargetStatus(evData.status);
         setRubric(rubData);
       })
       .catch((err) => setError(err.message))
@@ -41,6 +44,23 @@ export const EventSettingsPage: React.FC = () => {
   useEffect(() => {
     loadData();
   }, [eventId]);
+
+  const handleUpdateStatus = async (newStatus: EventStatus) => {
+    if (!eventId) return;
+    setUpdatingStatus(true);
+    setError(null);
+    setSuccessMsg(null);
+    try {
+      await api.events.update(eventId, { status: newStatus });
+      setSuccessMsg(`Event lifecycle status successfully updated to "${newStatus.replace(/_/g, ' ')}".`);
+      loadData();
+    } catch (err: unknown) {
+      if (err instanceof ApiError) setError(err.message);
+      else setError('Failed to update event status');
+    } finally {
+      setUpdatingStatus(false);
+    }
+  };
 
   const handleAddTrack = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -110,6 +130,65 @@ export const EventSettingsPage: React.FC = () => {
           <span>{successMsg}</span>
         </div>
       )}
+
+      {/* Event Lifecycle & Visibility Control */}
+      <div className="card" style={{ padding: '24px', marginBottom: '24px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+              <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: '20px' }}>
+                published_with_changes
+              </span>
+              <h2 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--on-surface)' }}>
+                Event Lifecycle & Visibility
+              </h2>
+            </div>
+            <p style={{ fontSize: '13px', color: 'var(--on-surface-variant)' }}>
+              Controls lifecycle phase and participant discovery visibility. Draft events remain private to the organizer until published or registration is opened.
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+            {event.status === 'draft' && (
+              <button
+                type="button"
+                className="btn btn-primary btn-sm"
+                onClick={() => handleUpdateStatus('registration_open')}
+                disabled={updatingStatus}
+                id="btn-publish-open-reg"
+              >
+                <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>rocket_launch</span>
+                <span>{updatingStatus ? 'Publishing...' : 'Publish & Open Registration'}</span>
+              </button>
+            )}
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span style={{ fontSize: '12px', color: 'var(--outline)', fontWeight: 600 }}>Status:</span>
+              <select
+                className="select-input"
+                value={targetStatus}
+                onChange={(e) => {
+                  const val = e.target.value as EventStatus;
+                  setTargetStatus(val);
+                  handleUpdateStatus(val);
+                }}
+                disabled={updatingStatus}
+                style={{ width: '200px', fontWeight: 600 }}
+                id="select-event-lifecycle"
+              >
+                <option value="draft">Draft (Private)</option>
+                <option value="published">Published (Announced)</option>
+                <option value="registration_open">Registration Open</option>
+                <option value="registration_closed">Registration Closed</option>
+                <option value="judging_open">Judging Open</option>
+                <option value="judging_closed">Judging Closed</option>
+                <option value="results_published">Results Published</option>
+                <option value="archived">Archived</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Rubric Configuration Section */}
       <div className="card" style={{ padding: '28px', marginBottom: '28px' }}>

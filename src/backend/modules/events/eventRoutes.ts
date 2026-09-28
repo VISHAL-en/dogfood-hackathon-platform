@@ -32,13 +32,17 @@ export function createEventRouter(): Router {
 
   /**
    * GET /events
-   * Public discovery endpoint listing active/published events.
+   * Public discovery endpoint listing active/published events, or owned events for organizers.
    */
   router.get('/', (req: Request, res: Response, next: NextFunction) => {
     try {
       const search = req.query.search as string | undefined;
       const status = req.query.status as EventStatus | undefined;
-      const organizerId = req.query.organizerId as string | undefined;
+      let organizerId = req.query.organizerId as string | undefined;
+
+      if (organizerId === 'me' && req.user) {
+        organizerId = req.user.id;
+      }
 
       const events = EventService.listEvents({ search, status, organizerId }, req.user || null);
       res.status(200).json({ events });
@@ -95,22 +99,21 @@ export function createEventRouter(): Router {
   );
 
   /**
-   * PUT /events/:id
+   * PUT /events/:id & PATCH /events/:id
    * Updates an existing event. Validates owner/admin authorization.
    */
-  router.put(
-    '/:id',
-    requireRole('organizer', 'admin'),
-    (req: Request, res: Response, next: NextFunction) => {
-      try {
-        const user = req.user!;
-        const event = EventService.updateEvent(req.params.id, user.id, user.role, req.body);
-        res.status(200).json({ event });
-      } catch (err) {
-        handleServiceError(err, res, next);
-      }
+  const updateEventHandler = (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const user = req.user!;
+      const event = EventService.updateEvent(req.params.id, user.id, user.role, req.body);
+      res.status(200).json({ event });
+    } catch (err) {
+      handleServiceError(err, res, next);
     }
-  );
+  };
+
+  router.put('/:id', requireRole('organizer', 'admin'), updateEventHandler);
+  router.patch('/:id', requireRole('organizer', 'admin'), updateEventHandler);
 
   /**
    * DELETE /events/:id

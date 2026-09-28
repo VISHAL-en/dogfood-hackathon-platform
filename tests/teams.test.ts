@@ -531,4 +531,151 @@ describe('DOGFOOD Team Formation & Invitations Tests', () => {
     const invite = db.prepare('SELECT status FROM team_invitations WHERE id = ?').get('inv_atomic') as any;
     assert.equal(invite.status, 'pending', 'Invitation status must remain pending after failed transaction');
   });
+
+  // ==========================================================================
+  // REGRESSION TESTS A - G (My Projects & Team Retrieval)
+  // ==========================================================================
+
+  // A. Participant who is captain sees their team
+  test('A. Participant who is captain sees their team', async () => {
+    const res = await fetch(`${baseUrl}/teams/mine`, {
+      headers: { Authorization: 'Bearer dogfood_token_participant' }
+    });
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.ok(Array.isArray(body.teams), 'Response must contain teams array');
+    const captainTeam = body.teams.find((t: any) => t.id === 'team_alpha_001');
+    assert.ok(captainTeam, 'Captain must see their team team_alpha_001');
+    assert.equal(captainTeam.myRole, 'captain');
+    assert.equal(captainTeam.name, 'Alpha Agents');
+  });
+
+  // B. Participant who is a normal member sees their team
+  test('B. Participant who is a normal member sees their team', async () => {
+    // usr_participant_002 is a normal member of team_alpha_001
+    const res = await fetch(`${baseUrl}/teams/mine`, {
+      headers: { Authorization: 'Bearer dogfood_token_participant_2' }
+    });
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    const memberTeam = body.teams.find((t: any) => t.id === 'team_alpha_001');
+    assert.ok(memberTeam, 'Normal member must see their team team_alpha_001');
+    assert.equal(memberTeam.myRole, 'member');
+    assert.equal(memberTeam.name, 'Alpha Agents');
+  });
+
+  // C. Team with no submission still appears
+  test('C. Team with no submission still appears', async () => {
+    // usr_participant_003 created Delta Force in test 1 with no submission
+    const res = await fetch(`${baseUrl}/teams/mine`, {
+      headers: { Authorization: 'Bearer dogfood_token_participant_3' }
+    });
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    const noSubTeam = body.teams.find((t: any) => t.name === 'Delta Force');
+    assert.ok(noSubTeam, 'Team with no submission must still appear in My Teams');
+    assert.equal(noSubTeam.submissionId, undefined);
+  });
+
+  // D. Team belonging to another event does not appear
+  test('D. Team belonging to another event does not appear', async () => {
+    // team_alpha_001 belongs to event_dogfood_2026, query for event_closed_fixture
+    const res = await fetch(`${baseUrl}/teams/mine?eventId=event_closed_fixture`, {
+      headers: { Authorization: 'Bearer dogfood_token_participant' }
+    });
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    const wrongEventTeam = body.teams.find((t: any) => t.id === 'team_alpha_001');
+    assert.equal(wrongEventTeam, undefined, 'Team belonging to another event must not appear');
+  });
+
+  // E. Participant cannot see another user team
+  test('E. Participant cannot see another user team', async () => {
+    // usr_participant_006 is captain of Beta Builders, not a member of team_alpha_001 or Delta Force
+    const res = await fetch(`${baseUrl}/teams/mine`, {
+      headers: { Authorization: 'Bearer dogfood_token_participant_6' }
+    });
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.ok(
+      !body.teams.some((t: any) => t.id === 'team_alpha_001' || t.name === 'Delta Force'),
+      'Participant 6 must not see teams they do not belong to'
+    );
+
+    // usr_participant_004 is a member of Delta Force, not team_alpha_001 or team_beta_002
+    const res4 = await fetch(`${baseUrl}/teams/mine`, {
+      headers: { Authorization: 'Bearer dogfood_token_participant_4' }
+    });
+    assert.equal(res4.status, 200);
+    const body4 = await res4.json();
+    assert.ok(
+      !body4.teams.some((t: any) => t.id === 'team_alpha_001' || t.id === 'team_beta_002'),
+      'Participant 4 must not see teams they do not belong to'
+    );
+  });
+
+  // F. Existing DOGFOOD Demo Hackathon team appears in My Projects
+  test('F. Existing DOGFOOD Demo Hackathon team appears in My Projects', async () => {
+    // Check main database if present
+    const prodDbPath = path.resolve(process.cwd(), 'data', 'dogfood.sqlite');
+    if (fs.existsSync(prodDbPath)) {
+      const prodDb = new (require('better-sqlite3'))(prodDbPath);
+      const demoTeam = prodDb
+        .prepare(`
+          SELECT t.*, tm.role as my_role
+          FROM team_members tm
+          JOIN teams t ON tm.team_id = t.id
+          WHERE tm.user_id = 'usr_participant_001' AND t.event_id = 'evt_1cb1c3b6fd3d8ba44060'
+        `)
+        .get() as any;
+      if (demoTeam) {
+        assert.equal(demoTeam.name, 'Demo Team Alpha');
+        assert.equal(demoTeam.my_role, 'captain');
+      }
+    }
+
+    // Also verify in test database by creating a demo event and team
+    const db = getDatabase();
+    const now = new Date().toISOString();
+    db.prepare(`
+      INSERT OR IGNORE INTO events (id, organizer_id, name, slug, description, status, registration_start, registration_end, submission_deadline, judging_start, judging_end, results_publish_at, created_at, updated_at)
+      VALUES ('evt_demo_test', 'usr_organizer_001', 'DOGFOOD Demo Hackathon', 'dogfood-demo-test', 'desc', 'registration_open', '2026-09-20T00:00:00.000Z', '2026-10-20T00:00:00.000Z', '2026-10-25T00:00:00.000Z', '2026-10-26T00:00:00.000Z', '2026-10-28T00:00:00.000Z', '2026-10-30T00:00:00.000Z', ?, ?)
+    `).run(now, now);
+
+    db.prepare(`
+      INSERT OR IGNORE INTO teams (id, event_id, name, slug, created_by, created_at, updated_at)
+      VALUES ('team_demo_test', 'evt_demo_test', 'Demo Team Alpha', 'demo-team-alpha', 'usr_participant_001', ?, ?)
+    `).run(now, now);
+
+    db.prepare(`
+      INSERT OR IGNORE INTO team_members (id, team_id, user_id, event_id, role, joined_at)
+      VALUES ('tm_demo_test', 'team_demo_test', 'usr_participant_001', 'evt_demo_test', 'captain', ?)
+    `).run(now);
+
+    const res = await fetch(`${baseUrl}/events/evt_demo_test/my-team`, {
+      headers: { Authorization: 'Bearer dogfood_token_participant' }
+    });
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.ok(body.team, 'Demo hackathon team must be returned');
+    assert.equal(body.team.name, 'Demo Team Alpha');
+    assert.equal(body.team.myRole, 'captain');
+  });
+
+  // G. Existing seeded teams continue working
+  test('G. Existing seeded teams continue working', async () => {
+    // 1. Get by ID
+    const teamRes = await fetch(`${baseUrl}/teams/team_alpha_001`);
+    assert.equal(teamRes.status, 200);
+    const teamBody = await teamRes.json();
+    assert.equal(teamBody.team.id, 'team_alpha_001');
+    assert.equal(teamBody.team.name, 'Alpha Agents');
+    assert.equal(teamBody.team.members.length, 2);
+
+    // 2. List by event
+    const listRes = await fetch(`${baseUrl}/events/event_dogfood_2026/teams`);
+    assert.equal(listRes.status, 200);
+    const listBody = await listRes.json();
+    assert.ok(listBody.teams.some((t: any) => t.id === 'team_alpha_001'));
+  });
 });

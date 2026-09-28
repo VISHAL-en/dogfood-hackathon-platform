@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from '../router/Router';
-import { EventWithDetails, ProjectSubmission, EventTrack } from '../../../shared/types';
+import { useParams, Link } from '../router/Router';
+import { EventWithDetails, ProjectSubmission, EventTrack, TeamWithDetails } from '../../../shared/types';
 import { api, ApiError } from '../services/api';
 import { LoadingState } from '../components/LoadingState';
 import { ErrorBanner } from '../components/ErrorBanner';
@@ -9,6 +9,7 @@ import { StatusPill } from '../components/StatusPill';
 export const ProjectSubmissionPage: React.FC = () => {
   const { eventId } = useParams<{ eventId: string }>();
   const [event, setEvent] = useState<EventWithDetails | null>(null);
+  const [team, setTeam] = useState<TeamWithDetails | null>(null);
   const [submission, setSubmission] = useState<ProjectSubmission | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -26,17 +27,31 @@ export const ProjectSubmissionPage: React.FC = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [reviewMode, setReviewMode] = useState(false);
 
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (!eventId) return;
     setLoading(true);
+    setError(null);
     api.events
       .getByIdOrSlug(eventId)
-      .then((evData) => {
+      .then(async (evData) => {
         setEvent(evData);
-        // Find existing team or submission if any
-        // Check gallery or my submission
+        // Always use canonical event ID
+        const teamData = await api.teams.getMyTeamForEvent(evData.id);
+        setTeam(teamData);
+        if (teamData) {
+          const sub = await api.submissions.getTeamSubmission(evData.id, teamData.id);
+          if (sub) {
+            setSubmission(sub);
+            setTitle(sub.title || '');
+            setTrackId(sub.trackId || '');
+            setShortDescription(sub.shortDescription || '');
+            setDescription(sub.description || '');
+            setRepoUrl(sub.repoUrl || '');
+            setDemoUrl(sub.demoUrl || '');
+            setVideoUrl(sub.videoUrl || '');
+          }
+        }
       })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
@@ -55,21 +70,31 @@ export const ProjectSubmissionPage: React.FC = () => {
     try {
       if (submission?.id) {
         const updated = await api.submissions.updateDraft(submission.id, {
-          title,
+          title: title.trim(),
           trackId: trackId || null,
-          shortDescription,
-          description,
-          repoUrl: repoUrl || null,
-          demoUrl: demoUrl || null,
-          videoUrl: videoUrl || null
+          shortDescription: shortDescription.trim(),
+          description: description.trim(),
+          repoUrl: repoUrl.trim() || null,
+          demoUrl: demoUrl.trim() || null,
+          videoUrl: videoUrl.trim() || null
         });
         setSubmission(updated);
+        setSuccessMsg('Draft updated successfully.');
+      } else if (team && event) {
+        const created = await api.submissions.createDraft(event.id, team.id, {
+          title: title.trim(),
+          trackId: trackId || null,
+          shortDescription: shortDescription.trim(),
+          description: description.trim(),
+          repoUrl: repoUrl.trim() || null,
+          demoUrl: demoUrl.trim() || null,
+          videoUrl: videoUrl.trim() || null
+        });
+        setSubmission(created);
+        setSuccessMsg('Project submission draft created successfully.');
       } else {
-        // Find team ID for current user in this event
-        // Create draft using team
-        alert('To create a submission, ensure you have formed or joined a team for this event first.');
+        setError('To create a submission, ensure you have formed or joined a team for this event first.');
       }
-      setSuccessMsg('Draft saved successfully.');
     } catch (err: unknown) {
       if (err instanceof ApiError) setError(err.message);
       else setError('Failed to save submission draft');
@@ -78,17 +103,54 @@ export const ProjectSubmissionPage: React.FC = () => {
     }
   };
 
-  const handleFinalSubmit = async () => {
-    if (!submission?.id) return;
-    if (!confirm('Are you ready to submit your project? Once submitted, the project will enter the public gallery.')) return;
+  const handleSubmitProject = async () => {
+    if (!title.trim() || !shortDescription.trim() || !description.trim()) {
+      setError('Title, Short Summary, and Project Description are required before submitting.');
+      return;
+    }
+
+    if (!confirm('Are you ready to submit your project? Once submitted, the project will enter the public gallery and be locked for judge evaluation.')) {
+      return;
+    }
 
     setSubmitting(true);
     setError(null);
+    setSuccessMsg(null);
 
     try {
-      const res = await api.submissions.submit(submission.id);
-      setSubmission(res);
-      navigate(`/gallery/${res.slug}`);
+      let draftId = submission?.id;
+
+      if (draftId) {
+        await api.submissions.updateDraft(draftId, {
+          title: title.trim(),
+          trackId: trackId || null,
+          shortDescription: shortDescription.trim(),
+          description: description.trim(),
+          repoUrl: repoUrl.trim() || null,
+          demoUrl: demoUrl.trim() || null,
+          videoUrl: videoUrl.trim() || null
+        });
+      } else if (team && event) {
+        const created = await api.submissions.createDraft(event.id, team.id, {
+          title: title.trim(),
+          trackId: trackId || null,
+          shortDescription: shortDescription.trim(),
+          description: description.trim(),
+          repoUrl: repoUrl.trim() || null,
+          demoUrl: demoUrl.trim() || null,
+          videoUrl: videoUrl.trim() || null
+        });
+        draftId = created.id;
+        setSubmission(created);
+      } else {
+        setError('To submit a project, you must belong to a team registered in this event.');
+        setSubmitting(false);
+        return;
+      }
+
+      const submitted = await api.submissions.submit(draftId);
+      setSubmission(submitted);
+      setSuccessMsg(`Project "${submitted.title}" submitted successfully! Published to the public gallery and queued for judge evaluation.`);
     } catch (err: unknown) {
       if (err instanceof ApiError) setError(err.message);
       else setError('Failed to submit project');
@@ -111,14 +173,29 @@ export const ProjectSubmissionPage: React.FC = () => {
 
   return (
     <div className="page-container" style={{ maxWidth: '900px' }}>
+      <div style={{ marginBottom: '16px' }}>
+        <Link to="/dashboard" style={{ fontSize: '13px', color: 'var(--primary)', display: 'inline-flex', alignItems: 'center', gap: '4px', textDecoration: 'none' }}>
+          <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>arrow_back</span>
+          <span>Back to My Projects</span>
+        </Link>
+      </div>
+
       {/* Header Card */}
       <div className="card" style={{ marginBottom: '24px', padding: '28px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '16px' }}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', flexWrap: 'wrap' }}>
               <StatusPill status={submission?.status || 'draft'} />
               <span style={{ fontSize: '12px', color: 'var(--outline)' }}>•</span>
               <span style={{ fontSize: '12px', color: 'var(--on-surface-variant)' }}>{event.name}</span>
+              {team && (
+                <>
+                  <span style={{ fontSize: '12px', color: 'var(--outline)' }}>•</span>
+                  <span className="badge" style={{ background: 'rgba(0,102,204,0.1)', color: 'var(--primary)', fontWeight: 600 }}>
+                    Team: {team.name} ({team.myRole === 'captain' ? 'Captain' : 'Member'})
+                  </span>
+                </>
+              )}
             </div>
             <h1 style={{ fontSize: '26px', fontWeight: 800, color: 'var(--on-surface)' }}>
               Project Submission Workspace
@@ -141,6 +218,52 @@ export const ProjectSubmissionPage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {!team && (
+        <div className="card" style={{ padding: '20px', marginBottom: '20px', borderLeft: '4px solid #ff9500', background: 'var(--color-bg)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+            <span className="material-symbols-outlined" style={{ color: '#ff9500', fontSize: '20px' }}>warning</span>
+            <span style={{ fontSize: '15px', fontWeight: 700 }}>Team Registration Required</span>
+          </div>
+          <p style={{ fontSize: '13px', color: 'var(--color-text-secondary)', margin: '0 0 12px 0' }}>
+            You are not registered in a squad for this event yet. Submissions are associated with a registered squad.
+          </p>
+          <Link to={`/events/${eventId}/register`} className="button button-primary" style={{ textDecoration: 'none' }}>
+            Create or Join a Team &rarr;
+          </Link>
+        </div>
+      )}
+
+      {isSubmitted && (
+        <div className="card" style={{ padding: '20px 24px', marginBottom: '24px', background: 'rgba(52,199,89,0.08)', border: '1px solid rgba(52,199,89,0.3)', borderRadius: 'var(--radius-lg)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <span className="material-symbols-outlined" style={{ color: 'var(--color-success)', fontSize: '32px' }}>
+                task_alt
+              </span>
+              <div>
+                <div style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-success)' }}>
+                  Project Submitted & Published
+                </div>
+                <div style={{ fontSize: '13px', color: 'var(--on-surface-variant)' }}>
+                  "{submission?.title}" is officially submitted and locked for judging evaluation.
+                </div>
+              </div>
+            </div>
+            <div style={{ display: 'flex', gap: '10px' }}>
+              {submission?.slug && (
+                <Link to={`/gallery/${submission.slug}`} className="button button-primary" style={{ textDecoration: 'none' }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>visibility</span>
+                  <span>View in Public Gallery</span>
+                </Link>
+              )}
+              <Link to="/dashboard" className="button button-outline" style={{ textDecoration: 'none' }}>
+                Back to My Projects
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
 
       {error && <ErrorBanner message={error} onDismiss={() => setError(null)} />}
       {successMsg && (
@@ -196,11 +319,10 @@ export const ProjectSubmissionPage: React.FC = () => {
               <button onClick={() => setReviewMode(false)} className="btn btn-secondary">
                 Back to Edit
               </button>
-              {submission?.id && (
-                <button onClick={handleFinalSubmit} disabled={submitting} className="btn btn-primary">
-                  {submitting ? 'Submitting...' : 'Confirm & Finalize Submission'}
-                </button>
-              )}
+              <button onClick={handleSubmitProject} disabled={submitting || saving} className="btn btn-primary" id="btn-confirm-submit">
+                <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>rocket_launch</span>
+                <span>{submitting ? 'Submitting...' : 'Confirm & Finalize Submission'}</span>
+              </button>
             </div>
           )}
         </div>
@@ -308,16 +430,27 @@ export const ProjectSubmissionPage: React.FC = () => {
             </div>
 
             {!isSubmitted && (
-              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', marginTop: '12px' }}>
-                <button type="submit" disabled={saving} className="btn btn-secondary">
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', marginTop: '12px', flexWrap: 'wrap' }}>
+                <button type="submit" disabled={saving || submitting} className="btn btn-secondary">
                   {saving ? 'Saving...' : 'Save Draft'}
                 </button>
                 <button
                   type="button"
                   onClick={() => setReviewMode(true)}
-                  className="btn btn-primary"
+                  className="btn btn-secondary"
                 >
-                  Proceed to Review
+                  <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>preview</span>
+                  <span>Preview</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={handleSubmitProject}
+                  disabled={submitting || saving}
+                  className="btn btn-primary"
+                  id="btn-submit-project"
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>rocket_launch</span>
+                  <span>{submitting ? 'Submitting...' : 'Submit Project'}</span>
                 </button>
               </div>
             )}

@@ -224,6 +224,96 @@ export class TeamService {
   }
 
   /**
+   * Lists all teams that the given user belongs to (as captain or normal member),
+   * optionally filtered by eventId. Includes event and submission context.
+   */
+  static getUserTeams(userId: string, eventId?: string): Team[] {
+    const db = getDatabase();
+    const conditions = ['tm.user_id = ?'];
+    const params: any[] = [userId];
+
+    if (eventId) {
+      conditions.push('(t.event_id = ? OR e.slug = ?)');
+      params.push(eventId, eventId);
+    }
+
+    const sql = `
+      SELECT
+        t.*,
+        tm.role as my_role,
+        e.name as event_name,
+        e.slug as event_slug,
+        e.status as event_status,
+        s.id as submission_id,
+        s.title as submission_title,
+        s.status as submission_status,
+        s.slug as submission_slug
+      FROM team_members tm
+      JOIN teams t ON tm.team_id = t.id
+      JOIN events e ON t.event_id = e.id
+      LEFT JOIN submissions s ON t.id = s.team_id
+      WHERE ${conditions.join(' AND ')}
+      ORDER BY t.created_at DESC
+    `;
+
+    const rows = db.prepare(sql).all(...params) as any[];
+
+    const membersStmt = db.prepare(`
+      SELECT
+        tm.id,
+        tm.team_id,
+        tm.user_id,
+        u.name as user_name,
+        u.email as user_email,
+        tm.role,
+        tm.joined_at
+      FROM team_members tm
+      JOIN users u ON tm.user_id = u.id
+      WHERE tm.team_id = ?
+      ORDER BY CASE tm.role WHEN 'captain' THEN 0 ELSE 1 END, tm.joined_at ASC
+    `);
+
+    return rows.map((r) => {
+      const members = membersStmt.all(r.id) as any[];
+      return {
+        id: r.id,
+        eventId: r.event_id,
+        name: r.name,
+        slug: r.slug,
+        createdBy: r.created_by,
+        createdAt: r.created_at,
+        updatedAt: r.updated_at,
+        memberCount: members.length,
+        members: members.map((m) => ({
+          id: m.id,
+          teamId: m.team_id,
+          userId: m.user_id,
+          userName: m.user_name,
+          userEmail: m.user_email,
+          role: m.role,
+          joinedAt: m.joined_at
+        })),
+        myRole: r.my_role,
+        eventName: r.event_name,
+        eventSlug: r.event_slug,
+        eventStatus: r.event_status,
+        submissionId: r.submission_id || undefined,
+        submissionTitle: r.submission_title || undefined,
+        submissionStatus: r.submission_status || undefined,
+        submissionSlug: r.submission_slug || undefined
+      };
+    });
+  }
+
+  /**
+   * Retrieves the authenticated user's team for a specific event (or null if not in a team).
+   */
+  static getUserTeamForEvent(userId: string, eventId: string): Team | null {
+    const teams = this.getUserTeams(userId, eventId);
+    return teams.length > 0 ? teams[0] : null;
+  }
+
+  /**
    * Updates team metadata (captain or admin only).
    */
   static updateTeam(

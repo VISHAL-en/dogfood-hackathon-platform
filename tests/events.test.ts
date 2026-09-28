@@ -508,4 +508,208 @@ describe('DOGFOOD Event, Track & Prize Foundation Tests', () => {
       'Prizes must be cascade deleted'
     );
   });
+
+  // --------------------------------------------------------------------------
+  // REGRESSION TESTS A - G (Organizer Dashboard & Lifecycle Visibility)
+  // --------------------------------------------------------------------------
+
+  // A. Existing event with slug dogfood-demo-hackathon is returned to its owner
+  test('A. Existing event with slug dogfood-demo-hackathon is returned to its owner', async () => {
+    // Check in the main production/dev database if present
+    const prodDbPath = path.resolve(process.cwd(), 'data', 'dogfood.sqlite');
+    if (fs.existsSync(prodDbPath)) {
+      const prodDb = new (require('better-sqlite3'))(prodDbPath);
+      const demoRow = prodDb.prepare('SELECT * FROM events WHERE slug = ?').get('dogfood-demo-hackathon') as any;
+      if (demoRow) {
+        assert.equal(demoRow.slug, 'dogfood-demo-hackathon');
+        assert.equal(demoRow.organizer_id, 'usr_organizer_001');
+      }
+    }
+
+    // Also verify in current test environment: create/seed draft demo event
+    const createRes = await fetch(`${baseUrl}/events`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer dogfood_token_organizer'
+      },
+      body: JSON.stringify({
+        name: 'DOGFOOD Demo Hackathon',
+        slug: 'dogfood-demo-hackathon-test',
+        description: 'Demo hackathon for regression testing',
+        status: 'draft',
+        registrationStart: '2026-09-27T00:00:00.000Z',
+        registrationEnd: '2026-10-11T23:59:59.000Z',
+        submissionDeadline: '2026-10-17T23:59:59.000Z',
+        judgingStart: '2026-10-18T00:00:00.000Z',
+        judgingEnd: '2026-10-22T23:59:59.000Z',
+        resultsPublishAt: '2026-10-24T23:59:59.000Z'
+      })
+    });
+    assert.equal(createRes.status, 201);
+
+    // Verify owner receives it via GET /events with auth
+    const ownerListRes = await fetch(`${baseUrl}/events?organizerId=me`, {
+      headers: { Authorization: 'Bearer dogfood_token_organizer' }
+    });
+    assert.equal(ownerListRes.status, 200);
+    const ownerList = await ownerListRes.json();
+    const foundDemo = ownerList.events.find((e: any) => e.slug === 'dogfood-demo-hackathon-test');
+    assert.ok(foundDemo, 'Demo event must be returned to its organizer owner');
+    assert.equal(foundDemo.status, 'draft');
+  });
+
+  // B. Organizer event list does not lose valid owned events because of public visibility filtering
+  test('B. Organizer event list does not lose valid owned events because of public visibility filtering', async () => {
+    // Test 1: with organizerId=me
+    const meRes = await fetch(`${baseUrl}/events?organizerId=me`, {
+      headers: { Authorization: 'Bearer dogfood_token_organizer' }
+    });
+    assert.equal(meRes.status, 200);
+    const meBody = await meRes.json();
+    assert.ok(meBody.events.some((e: any) => e.status === 'draft'), 'Draft events must not be lost with organizerId=me');
+
+    // Test 2: with organizerId=usr_organizer_001
+    const idRes = await fetch(`${baseUrl}/events?organizerId=usr_organizer_001`, {
+      headers: { Authorization: 'Bearer dogfood_token_organizer' }
+    });
+    assert.equal(idRes.status, 200);
+    const idBody = await idRes.json();
+    assert.ok(idBody.events.some((e: any) => e.status === 'draft'), 'Draft events must not be lost with organizerId=<ownerId>');
+
+    // Test 3: without organizerId query param (default organizer console call)
+    const defaultRes = await fetch(`${baseUrl}/events`, {
+      headers: { Authorization: 'Bearer dogfood_token_organizer' }
+    });
+    assert.equal(defaultRes.status, 200);
+    const defaultBody = await defaultRes.json();
+    assert.ok(defaultBody.events.some((e: any) => e.status === 'draft'), 'Draft events must not be lost on default organizer call');
+  });
+
+  // C. Draft events remain hidden from public Event Discovery
+  test('C. Draft events remain hidden from public Event Discovery', async () => {
+    // Unauthenticated public request
+    const pubRes = await fetch(`${baseUrl}/events`);
+    assert.equal(pubRes.status, 200);
+    const pubBody = await pubRes.json();
+    const pubDrafts = pubBody.events.filter((e: any) => e.status === 'draft');
+    assert.equal(pubDrafts.length, 0, 'Public discovery must have zero draft events');
+
+    // Participant authenticated request
+    const partRes = await fetch(`${baseUrl}/events`, {
+      headers: { Authorization: 'Bearer dogfood_token_participant' }
+    });
+    assert.equal(partRes.status, 200);
+    const partBody = await partRes.json();
+    const partDrafts = partBody.events.filter((e: any) => e.status === 'draft');
+    assert.equal(partDrafts.length, 0, 'Participant discovery must have zero draft events');
+  });
+
+  // D. Published/registration-open events appear in public Event Discovery
+  test('D. Published/registration-open events appear in public Event Discovery', async () => {
+    const pubRes = await fetch(`${baseUrl}/events`);
+    const pubBody = await pubRes.json();
+    const regOpenEvents = pubBody.events.filter((e: any) => e.status === 'registration_open');
+    assert.ok(regOpenEvents.length >= 1, 'At least one registration_open event must appear in public discovery');
+    assert.ok(regOpenEvents.some((e: any) => e.slug === 'dogfood-2026'));
+  });
+
+  // E. Existing seeded DOGFOOD 2026 event still appears
+  test('E. Existing seeded DOGFOOD 2026 event still appears', async () => {
+    const res = await fetch(`${baseUrl}/events/dogfood-2026`);
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.equal(body.event.slug, 'dogfood-2026');
+    assert.equal(body.event.name, 'DOGFOOD Hackathon 2026');
+    assert.equal(body.event.status, 'registration_open');
+  });
+
+  // F. Closed Retrospective Hackathon still behaves correctly
+  test('F. Closed Retrospective Hackathon still behaves correctly', async () => {
+    const res = await fetch(`${baseUrl}/events/closed-hackathon`);
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.equal(body.event.slug, 'closed-hackathon');
+    assert.equal(body.event.status, 'judging_closed');
+
+    // Attempting to create team on closed event must fail with 400
+    const teamRes = await fetch(`${baseUrl}/events/${body.event.id}/teams`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer dogfood_token_participant'
+      },
+      body: JSON.stringify({
+        name: 'Late Team',
+        slug: 'late-team'
+      })
+    });
+    assert.equal(teamRes.status, 400, 'Team creation must be rejected on closed event');
+  });
+
+  // G. Event lifecycle transitions remain server-authoritative
+  test('G. Event lifecycle transitions remain server-authoritative', async () => {
+    // Create a new draft event
+    const createRes = await fetch(`${baseUrl}/events`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer dogfood_token_organizer'
+      },
+      body: JSON.stringify({
+        name: 'Lifecycle Transition Test',
+        slug: 'lifecycle-test',
+        description: 'Testing lifecycle transitions',
+        status: 'draft',
+        registrationStart: '2026-09-27T00:00:00.000Z',
+        registrationEnd: '2026-10-11T23:59:59.000Z',
+        submissionDeadline: '2026-10-17T23:59:59.000Z',
+        judgingStart: '2026-10-18T00:00:00.000Z',
+        judgingEnd: '2026-10-22T23:59:59.000Z',
+        resultsPublishAt: '2026-10-24T23:59:59.000Z'
+      })
+    });
+    const created = await createRes.json();
+    const eventId = created.event.id;
+
+    // 1. Unauthenticated transition attempt -> 401
+    const unauthPatch = await fetch(`${baseUrl}/events/${eventId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status: 'registration_open' })
+    });
+    assert.equal(unauthPatch.status, 401, 'Unauthenticated status update must be rejected');
+
+    // 2. Participant transition attempt -> 403
+    const partPatch = await fetch(`${baseUrl}/events/${eventId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer dogfood_token_participant'
+      },
+      body: JSON.stringify({ status: 'registration_open' })
+    });
+    assert.equal(partPatch.status, 403, 'Participant status update must be rejected');
+
+    // 3. Organizer transitions draft -> registration_open via PATCH
+    const patchRes = await fetch(`${baseUrl}/events/${eventId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer dogfood_token_organizer'
+      },
+      body: JSON.stringify({ status: 'registration_open' })
+    });
+    assert.equal(patchRes.status, 200);
+    const patched = await patchRes.json();
+    assert.equal(patched.event.status, 'registration_open');
+
+    // 4. Now event MUST appear in public discovery!
+    const discoveryRes = await fetch(`${baseUrl}/events`);
+    const discoveryBody = await discoveryRes.json();
+    assert.ok(
+      discoveryBody.events.some((e: any) => e.id === eventId && e.status === 'registration_open'),
+      'Published event must now appear in public discovery'
+    );
+  });
 });

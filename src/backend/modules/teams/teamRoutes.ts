@@ -56,9 +56,50 @@ export function createTeamRouter(): Router {
     }
   });
 
+  /**
+   * GET /events/:eventId/my-team
+   * Retrieves the authenticated user's team for a specific event (or null).
+   */
+  router.get('/events/:eventId/my-team', requireAuth, (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const user = req.user!;
+      const team = TeamService.getUserTeamForEvent(user.id, req.params.eventId);
+      res.status(200).json({ team });
+    } catch (err) {
+      handleTeamError(err, res, next);
+    }
+  });
+
   // --------------------------------------------------------------------------
   // TEAM OPERATIONS
   // --------------------------------------------------------------------------
+
+  /**
+   * GET /teams/mine
+   * Lists all teams the authenticated user belongs to (as captain or member).
+   * Supports optional query ?eventId=...
+   */
+  router.get('/teams/mine', requireAuth, (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const user = req.user!;
+      const eventId = req.query.eventId as string | undefined;
+      const teams = TeamService.getUserTeams(user.id, eventId);
+      res.status(200).json({ teams });
+    } catch (err) {
+      handleTeamError(err, res, next);
+    }
+  });
+
+  router.get('/user/teams', requireAuth, (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const user = req.user!;
+      const eventId = req.query.eventId as string | undefined;
+      const teams = TeamService.getUserTeams(user.id, eventId);
+      res.status(200).json({ teams });
+    } catch (err) {
+      handleTeamError(err, res, next);
+    }
+  });
 
   /**
    * GET /teams/:teamId

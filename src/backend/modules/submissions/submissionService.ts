@@ -158,16 +158,18 @@ export class SubmissionService {
     const slug = this.normalizeSlug(title, input.slug);
 
     return db.transaction(() => {
-      // 1. Verify Event existence, state, and deadline
+      // 1. Verify Event existence, state, and deadline (resolve by ID or slug)
       const event = db.prepare(`
         SELECT id, name, status, submission_deadline
         FROM events
-        WHERE id = ?
-      `).get(eventId) as { id: string; name: string; status: EventStatus; submission_deadline: string } | undefined;
+        WHERE id = ? OR slug = ?
+      `).get(eventId, eventId) as { id: string; name: string; status: EventStatus; submission_deadline: string } | undefined;
 
       if (!event) {
         throw new SubmissionServiceError(`Event "${eventId}" not found`, 'NOT_FOUND');
       }
+
+      const resolvedEventId = event.id;
 
       // Check event lifecycle state
       if (['judging_open', 'judging_closed', 'results_published', 'archived'].includes(event.status)) {
@@ -194,7 +196,7 @@ export class SubmissionService {
         throw new SubmissionServiceError(`Team "${teamId}" not found`, 'NOT_FOUND');
       }
 
-      if (team.event_id !== eventId) {
+      if (team.event_id !== resolvedEventId) {
         throw new SubmissionServiceError('Team belongs to another event', 'BAD_REQUEST');
       }
 
@@ -217,7 +219,7 @@ export class SubmissionService {
           SELECT id, event_id FROM event_tracks WHERE id = ?
         `).get(trackId) as { id: string; event_id: string } | undefined;
 
-        if (!track || track.event_id !== eventId) {
+        if (!track || track.event_id !== resolvedEventId) {
           throw new SubmissionServiceError('Track does not exist or belongs to another event', 'BAD_REQUEST');
         }
       }
@@ -225,7 +227,7 @@ export class SubmissionService {
       // 5. Verify no existing submission for this team in this event
       const existingTeamSub = db.prepare(`
         SELECT id FROM submissions WHERE event_id = ? AND team_id = ?
-      `).get(eventId, teamId);
+      `).get(resolvedEventId, teamId);
 
       if (existingTeamSub) {
         throw new SubmissionServiceError('Team already has a submission for this event', 'CONFLICT');
@@ -234,7 +236,7 @@ export class SubmissionService {
       // 6. Verify slug uniqueness within event
       const existingSlugSub = db.prepare(`
         SELECT id FROM submissions WHERE event_id = ? AND slug = ?
-      `).get(eventId, slug);
+      `).get(resolvedEventId, slug);
 
       if (existingSlugSub) {
         throw new SubmissionServiceError(`Submission with slug "${slug}" already exists for this event`, 'CONFLICT');
@@ -251,7 +253,7 @@ export class SubmissionService {
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'draft', NULL, ?, ?)
       `).run(
         id,
-        eventId,
+        resolvedEventId,
         teamId,
         trackId,
         title,
@@ -501,8 +503,14 @@ export class SubmissionService {
   ): ProjectSubmission | null {
     const db = getDatabase();
 
+    const event = db.prepare('SELECT id, organizer_id FROM events WHERE id = ? OR slug = ?').get(eventId, eventId) as { id: string; organizer_id: string } | undefined;
+    if (!event) {
+      throw new SubmissionServiceError(`Event "${eventId}" not found`, 'NOT_FOUND');
+    }
+    const resolvedEventId = event.id;
+
     const team = db.prepare('SELECT id, event_id FROM teams WHERE id = ?').get(teamId) as { id: string; event_id: string } | undefined;
-    if (!team || team.event_id !== eventId) {
+    if (!team || team.event_id !== resolvedEventId) {
       throw new SubmissionServiceError('Team not found for this event', 'NOT_FOUND');
     }
 
@@ -513,11 +521,7 @@ export class SubmissionService {
       `).get(teamId, userId);
 
       if (!isMember) {
-        const isOrganizer = db.prepare(`
-          SELECT 1 FROM events WHERE id = ? AND organizer_id = ?
-        `).get(eventId, userId);
-
-        if (!isOrganizer) {
+        if (event.organizer_id !== userId) {
           throw new SubmissionServiceError('Access denied: You do not have permission to view this submission', 'FORBIDDEN');
         }
       }
@@ -525,7 +529,7 @@ export class SubmissionService {
 
     const row = db.prepare(`
       SELECT * FROM submissions WHERE event_id = ? AND team_id = ?
-    `).get(eventId, teamId) as SubmissionRow | undefined;
+    `).get(resolvedEventId, teamId) as SubmissionRow | undefined;
 
     return row ? this.toSubmissionDTO(row) : null;
   }

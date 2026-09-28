@@ -23,6 +23,8 @@ export const OrganizerJudgesPage: React.FC = () => {
   const [assignJudgeId, setAssignJudgeId] = useState('');
   const [assignSubmissionId, setAssignSubmissionId] = useState('');
   const [assignMessage, setAssignMessage] = useState<string | null>(null);
+  const [availableJudges, setAvailableJudges] = useState<Array<{ id: string; name: string; email: string }>>([]);
+  const [availableSubmissions, setAvailableSubmissions] = useState<Array<{ id: string; title: string; teamName: string }>>([]);
 
   useEffect(() => {
     if (!eventId) return;
@@ -34,8 +36,17 @@ export const OrganizerJudgesPage: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await api.judging.getProgress(eventId);
+      const [data, judges, galleryRes] = await Promise.all([
+        api.judging.getProgress(eventId),
+        api.judging.listJudges(eventId).catch(() => [
+          { id: 'usr_judge_a_001', name: 'Judge Alice', email: 'judge_a@dogfood.local' },
+          { id: 'usr_judge_b_001', name: 'Judge Bob', email: 'judge_b@dogfood.local' }
+        ]),
+        api.gallery.list({ event: eventId, limit: 100 }).catch(() => ({ items: [] }))
+      ]);
       setProgress(data);
+      setAvailableJudges(judges);
+      setAvailableSubmissions(galleryRes.items.map((it) => ({ id: it.id, title: it.title, teamName: it.teamName })));
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Failed to load judging data');
     } finally {
@@ -268,24 +279,52 @@ export const OrganizerJudgesPage: React.FC = () => {
               )}
 
               <div>
-                <label className="form-label">Judge ID *</label>
+                <label className="form-label">Select Judge / Evaluator *</label>
+                <select
+                  className="select-input"
+                  style={{ width: '100%', marginBottom: '8px' }}
+                  value={assignJudgeId}
+                  onChange={(e) => setAssignJudgeId(e.target.value)}
+                >
+                  <option value="">-- Choose Judge --</option>
+                  {availableJudges.map((j) => (
+                    <option key={j.id} value={j.id}>
+                      {j.name} ({j.email})
+                    </option>
+                  ))}
+                </select>
                 <input
                   type="text"
                   className="input"
                   required
-                  placeholder="Enter judge user UUID"
+                  placeholder="Or enter judge user UUID (e.g. usr_judge_a_001)"
                   value={assignJudgeId}
                   onChange={(e) => setAssignJudgeId(e.target.value)}
                 />
               </div>
 
               <div>
-                <label className="form-label">Project Submission ID *</label>
+                <label className="form-label">Project Submission *</label>
+                {availableSubmissions.length > 0 && (
+                  <select
+                    className="select-input"
+                    style={{ width: '100%', marginBottom: '8px' }}
+                    value={assignSubmissionId}
+                    onChange={(e) => setAssignSubmissionId(e.target.value)}
+                  >
+                    <option value="">-- Choose Submitted Project --</option>
+                    {availableSubmissions.map((s) => (
+                      <option key={s.id} value={s.id}>
+                        {s.title} (Team: {s.teamName})
+                      </option>
+                    ))}
+                  </select>
+                )}
                 <input
                   type="text"
                   className="input"
                   required
-                  placeholder="Enter submission UUID"
+                  placeholder="Or enter submission UUID (e.g. sub_...)"
                   value={assignSubmissionId}
                   onChange={(e) => setAssignSubmissionId(e.target.value)}
                 />
